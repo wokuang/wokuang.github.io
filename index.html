@@ -24,7 +24,7 @@
   
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
@@ -39,12 +39,6 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
-  
-    <script src="/js/marked.js"></script>
-    <script src="/js/comment.js"></script>
-    <script src="/js/timeago.min.js"></script>
-    <script src="/js/highlight.min.js"></script>
-	<script src="/js/spin.min.js"></script>
   
   <!-- analytics -->
   
@@ -121,9 +115,45 @@
 		
             
 		
+            
+		
         
         <!-- render other articles -->
         
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-03-13 </div>
+			<div class="article-title"><a href="/2020/03/13/use-hexo/" >開始使用 hexo</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>每每想要用 blog 紀錄資料時，都會遇到要選那種 blog。是要自己架好，還是用大公司的 blog 好。<br>另外，就是我喜歡用 local 的 editor 編輯，有需要時在上傳到 web 上。<br>剛好，逛到 <a href="https://rickhw.github.io/" target="_blank" rel="noopener">Thinking, Coding, and Learning</a> 這位大大的網站，才曉得可以搭配 hexo &amp; git 來使用</p>
+<p>這一整個，就是宅宅的最愛啊，所以就來試試看囉</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://hexo.io/zh-tw" target="_blank" rel="noopener">https://hexo.io/zh-tw</a> 官方文件，必看的啦</li>
+<li><a href="https://rickhw.github.io/" target="_blank" rel="noopener">Thinking, Coding, and Learning</a> 就是由這位大大，才開始嘗試 hexo 的啦</li>
+<li><a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="noopener">freemind theme</a> 就是這個 theme<ul>
+<li><a href="https://www.hahack.com/" target="_blank" rel="noopener">https://www.hahack.com/</a> 寫 theme 的大大</li>
+<li><a href="https://www.hahack.com/hexo-theme-freemind-blog/" target="_blank" rel="noopener">Freemind</a> freemind theme 的說明 blog</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/03/13/use-hexo/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
            
 			  
 	
@@ -193,25 +223,6 @@
 
 
 		
-			<div class="widget">
-    
-	    <h4 class="dsq-widget-title">Recent Comments</h4>
-		<div id="recent-comments"></div>
-		<script type="text/javascript">
-		    getRecentCommentsList({
-			   type: "github" ? "github" : "github",
-			   user: "wzpan",
-               repo: "hexo-theme-freemind-blog",
-               client_id: "bf7d4ba11877db88543e",
-               client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb",
-			   count: "5" ? "5" : 5,
-			   recent_comments_target: "#recent-comments"
-			});
-		</script>
-	
-</div>
-
-		
 			
 		
 			
@@ -221,6 +232,10 @@
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2020/03/13/use-hexo/" ><i class="fa fa-file-o"></i>開始使用 hexo</a>
+      </li>
     
       <li>
         <a href="/2020/03/13/hello-world/" ><i class="fa fa-file-o"></i>Hello World</a>
@@ -237,9 +252,7 @@
 	
 		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
 	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/wzpan" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/hahack" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
 	
 	</ul>
 </div>
@@ -299,22 +312,6 @@
 
 
 <!-- syntax highlighting -->
-
-  <script>
-  marked.setOptions({
-    highlight: function (code, lang) {
-        return hljs.highlightAuto(code).value;
-    }
-  });
-  function Highlighting(){
-    var markdowns = document.getElementsByClassName('markdown');
-    for(var i=0;i<markdowns.length;i++){
-        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
-    }
-  }
-  window.addEventListener('DOMContentLoaded', Highlighting, false);
-  window.addEventListener('load', Highlighting, false);
-  </script>
 
 
 </body>

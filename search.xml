@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>開始使用 hexo</title>
+      <link href="/2020/03/13/use-hexo/"/>
+      <url>/2020/03/13/use-hexo/</url>
+      
+        <content type="html"><![CDATA[<p>每每想要用 blog 紀錄資料時，都會遇到要選那種 blog。是要自己架好，還是用大公司的 blog 好。<br>另外，就是我喜歡用 local 的 editor 編輯，有需要時在上傳到 web 上。<br>剛好，逛到 <a href="https://rickhw.github.io/" target="_blank" rel="noopener">Thinking, Coding, and Learning</a> 這位大大的網站，才曉得可以搭配 hexo &amp; git 來使用</p><p>這一整個，就是宅宅的最愛啊，所以就來試試看囉</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://hexo.io/zh-tw" target="_blank" rel="noopener">https://hexo.io/zh-tw</a> 官方文件，必看的啦</li><li><a href="https://rickhw.github.io/" target="_blank" rel="noopener">Thinking, Coding, and Learning</a> 就是由這位大大，才開始嘗試 hexo 的啦</li><li><a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="noopener">freemind theme</a> 就是這個 theme<ul><li><a href="https://www.hahack.com/" target="_blank" rel="noopener">https://www.hahack.com/</a> 寫 theme 的大大</li><li><a href="https://www.hahack.com/hexo-theme-freemind-blog/" target="_blank" rel="noopener">Freemind</a> freemind theme 的說明 blog</li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/03/13/hello-world/"/>
       <url>/2020/03/13/hello-world/</url>
