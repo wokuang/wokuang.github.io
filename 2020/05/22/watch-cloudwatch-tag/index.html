@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>aws custom domain not work | 老布這麼說</title>
+  <title>watch_cloudwatch_tag | 老布這麼說</title>
   <meta name="author" content="老布">
   
   <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="aws custom domain not work"/>
+  <meta property="og:title" content="watch_cloudwatch_tag"/>
   <meta property="og:site_name" content="老布這麼說"/>
 
   
@@ -97,7 +97,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> aws custom domain not work</h1>
+			<h1 class="title title-inverse "> watch_cloudwatch_tag</h1>
 		</div>		
 	
 
@@ -117,33 +117,24 @@
 	<div class="mypage">		
 	  		
 
-	  <p>這幾天在測試的時候，發現 dev 環境的 API Gateway Custom domain names 壞了一段時間，也就是說連到 dev 的 custom url 出現連不到網頁的 error</p>
-<p>測試過程中，發現有如下的情形</p>
-<h2 id="出現的情形"><a href="#出現的情形" class="headerlink" title="出現的情形"></a>出現的情形</h2><ul>
-<li>測試 api 程式，出現 error 連不到網址</li>
-<li>直接由 browser 連，也連不到網址</li>
-<li>用 AWS 建立出來的 api gateway 連，是可以的。透過 custom domain 無法連</li>
-<li>查 R53 的 record 時，原來的對應消失了，就手動加回去</li>
-<li>手動加回 R53 record 後，用 nslookup 查 DNS 時，出現有時查得到、有時查不出來的情形</li>
+	  <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
+<li>近來在加 AWS resource 的 tag，其中 cloudwatch 的 tag，無法由 AWS console 來看。用程式加了之後，一直找不到 cloud watch 的 tag 是否有加成功</li>
 </ul>
-<p>綜合上述的情形，推測應該是由 AWS 建立出來的 ALB 怪怪的，需要重建  </p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
-<li>手動將 Custom domain names 設定刪除，然後重建。重建後，API mappings 也是手動加進去</li>
-<li>到 R53 的設定頁，將 DNS 設好</li>
-</ul>
-<h2 id="Endpoint-type-的種類"><a href="#Endpoint-type-的種類" class="headerlink" title="Endpoint type 的種類"></a>Endpoint type 的種類</h2><ul>
-<li>Regional<ul>
-<li>使用 ALB 的方式</li>
-</ul>
-</li>
-<li>Edge-optimized<ul>
-<li>使用 CloudFront 的方式</li>
-</ul>
+<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><ul>
+<li>找了一段時間後，才發現原來要用 aws logs help 來找，用 aws clodwatch 是找不到的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ aws logs list-tags-log-group --log-group-name &#x2F;aws&#x2F;lambda&#x2F;log-group-name</span><br><span class="line">&#123;</span><br><span class="line">    &quot;tags&quot;: &#123;</span><br><span class="line">        &quot;env&quot;: &quot;dev&quot;,</span><br><span class="line">        &quot;service&quot;: &quot;xxx-service&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-regional-api-custom-domain-create.html" target="_blank" rel="noopener">Setting up a regional custom domain name in API Gateway</a> API Gateway 的設定</li>
-<li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-api-gateway.html#routing-to-api-gateway-config" target="_blank" rel="noopener">Routing traffic to an Amazon API Gateway API by using your domain name</a> R53 的設定</li>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-using.html" target="_blank" rel="noopener">Using the AWS CLI</a></li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li>要看 aws cloud watch log 的話，可以用 awslogs，還滿好用的</li>
+<li><a href="https://github.com/jorgebastida/awslogs" target="_blank" rel="noopener">jorgebastida/awslogs</a></li>
+<li>要找需要看的 log group 時，還滿方便的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awslogs groups | grep -i v3 | grep -i dev</span><br></pre></td></tr></table></figure>
+
+
+</li>
 </ul>
 	  
 	</div>
@@ -156,14 +147,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2020/05/22/pip-success-but-not-found/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2020/04/23/data-collection-course/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2020/05/22/add-tag-on-serverless/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -214,7 +205,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-04-24 
+	2020-05-22 
 	</div>
 	
 
@@ -222,6 +213,14 @@
     
 
 	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/aws/">aws<span>2</span></a></li> <li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
+    </ul>
+	</div>
 	
 
 	<!-- toc -->
