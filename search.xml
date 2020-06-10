@@ -4,6 +4,67 @@
   
     
     <entry>
+      <title>survey_parquet_and_orc</title>
+      <link href="/2020/06/10/survey-parquet-and-orc/"/>
+      <url>/2020/06/10/survey-parquet-and-orc/</url>
+      
+        <content type="html"><![CDATA[<p>先說小結<br>It is up to the users whether you need SPACE EFFICIENCY [select ORC] or TIME EFFICIENCY [select PARQUET].</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://medium.com/@dhareshwarganesh/benchmarking-parquet-vs-orc-d52c39849aef" target="_blank" rel="noopener">Benchmarking PARQUET vs ORC</a></li><li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/406561/#outline__4_3" target="_blank" rel="noopener">Parquet與ORC：高效能列式儲存格式</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> data_analysis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>aws_glue_study_note</title>
+      <link href="/2020/06/02/aws-glue-study-note/"/>
+      <url>/2020/06/02/aws-glue-study-note/</url>
+      
+        <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul><li>Data Store</li></ul><h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul><li>設定 connection 後，無法連結到 RDS<ul><li>出現的 error code 為 “At least one security group must open all ingress ports.To limit traffic, the source security group in your inbound rule can be restricted to the same security group”</li><li>google 後，Error的情形為<a href="https://docs.aws.amazon.com/glue/latest/dg/glue-troubleshooting-errors.html#error-inbound-self-reference-rule" target="_blank" rel="noopener">Error: Inbound Rule in Security Group Required</a>，照著說明的方式進行，test connection 就通過囉</li><li>原因：security group 沒有設定好，沒有 allow security-group 本身所有的 tcp 都可以連</li><li><a href="https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html" target="_blank" rel="noopener">Setting Up a VPC to Connect to JDBC Data Stores</a></li></ul></li></ul><h2 id="轉換-json-的資料"><a href="#轉換-json-的資料" class="headerlink" title="轉換 json 的資料"></a>轉換 json 的資料</h2><ul><li><a href="https://medium.com/@ly.lee/transform-and-import-a-json-file-into-amazon-redshift-with-aws-glue-3371006e03ca" target="_blank" rel="noopener">Transform and Import a JSON file into Amazon Redshift with AWS Glue</a></li><li><a href="https://aws.amazon.com/tw/blogs/big-data/simplify-querying-nested-json-with-the-aws-glue-relationalize-transform/" target="_blank" rel="noopener">Simplify Querying Nested JSON with the AWS Glue Relationalize Transform</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li><li><a href="https://www.cdata.com/kb/tech/mysql-jdbc-aws-glue.rst" target="_blank" rel="noopener">Connect to MySQL Data in AWS Glue Jobs Using JDBC</a></li><li><a href="https://towardsdatascience.com/a-complete-guide-on-serverless-data-lake-using-aws-glue-athena-and-quicksight-3a8a24cfa4af" target="_blank" rel="noopener">A Complete Guide On Serverless Data Lake Using AWS Glue, Athena and QuickSight</a> 有滿完整的說明 glue &amp; athena </li><li><a href="https://medium.com/swlh/serverless-data-lake-storing-and-analysing-streaming-data-using-aws-60cf3bfe1efd" target="_blank" rel="noopener">Serverless Data Lake: Storing and Analysing Streaming Data using AWS</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> glue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>aws_parquet_data</title>
+      <link href="/2020/06/02/aws-parquet-data/"/>
+      <url>/2020/06/02/aws-parquet-data/</url>
+      
+        <content type="html"><![CDATA[<p>最近在嘗試使用 parquet &amp; AWS athena，剛好有 google 到一些資料，先隨手記錄一下</p><h2 id="有關-AWS-Glue-相關資料"><a href="#有關-AWS-Glue-相關資料" class="headerlink" title="有關 AWS Glue 相關資料"></a>有關 AWS Glue 相關資料</h2><ul><li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://aws.amazon.com/tw/blogs/big-data/how-factset-automated-exporting-data-from-amazon-dynamodb-to-amazon-s3-parquet-to-build-a-data-analytics-platform/" target="_blank" rel="noopener">How FactSet automated exporting data from Amazon DynamoDB to Amazon S3 Parquet to build a data analytics platform</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> parquet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>another_grep_rg_command</title>
       <link href="/2020/06/01/another-grep-rg-command/"/>
       <url>/2020/06/01/another-grep-rg-command/</url>
