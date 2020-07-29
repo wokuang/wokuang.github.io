@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>aws_cloud_watch_agent | 老布這麼說</title>
+  <title>aws_s3_signed_url | 老布這麼說</title>
   <meta name="author" content="老布">
   
   <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="aws_cloud_watch_agent"/>
+  <meta property="og:title" content="aws_s3_signed_url"/>
   <meta property="og:site_name" content="老布這麼說"/>
 
   
@@ -97,7 +97,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> aws_cloud_watch_agent</h1>
+			<h1 class="title title-inverse "> aws_s3_signed_url</h1>
 		</div>		
 	
 
@@ -117,24 +117,10 @@
 	<div class="mypage">		
 	  		
 
-	  <p>最近遇到 EC2 上，Disk 滿了，server 有問題的情形，加 EBS 後，想說應該來設定 alert<br>找 Cloud Watch 沒有這個 metrics<br>查了一下後，發現需要安裝 CloudWatch Agent，才能收集到 disk percent usage 的資料</p>
-<h2 id="使用-CloudWatch-Agent-的簡易步驟"><a href="#使用-CloudWatch-Agent-的簡易步驟" class="headerlink" title="使用 CloudWatch Agent 的簡易步驟"></a>使用 CloudWatch Agent 的簡易步驟</h2><ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html" target="_blank" rel="noopener">install CloudWatch Agent</a></li>
-<li>建立 IAM role，設定給 EC2<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html" target="_blank" rel="noopener">Create IAM Roles and Users for Use With CloudWatch Agent</a></li>
-</ul>
-</li>
-<li>建立 CloudWatch Agent config file<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file.html" target="_blank" rel="noopener">Create the CloudWatch Agent Configuration File</a></li>
-</ul>
-</li>
-<li>跑 CloudWatch Agent<ul>
-<li>收集的 metrics - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html" target="_blank" rel="noopener">Metrics Collected by the CloudWatch Agent</a></li>
-</ul>
-</li>
-</ul>
+	  <p>列一下用 S3 signed URL 相關的事項</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html" target="_blank" rel="noopener">Collecting Metrics and Logs from Amazon EC2 Instances and On-Premises Servers with the CloudWatch Agent</a></li>
+<li><a href="https://advancedweb.hu/how-s3-signed-urls-work/" target="_blank" rel="noopener">How S3 Signed URLs work</a></li>
+<li><a href="https://gumroad.com/l/aws-s3-signed-urls-handbook" target="_blank" rel="noopener">AWS S3 signed URLs handbook</a> e-book</li>
 </ul>
 	  
 	</div>
@@ -148,13 +134,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2020/06/22/aws-s3-signed-url/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/2020/06/22/Serverless-Data-Engineering/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2020/06/16/aws-tagging/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2020/06/18/aws-cloud-watch-agent/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -205,7 +191,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-06-18 
+	2020-06-22 
 	</div>
 	
 
@@ -218,7 +204,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/aws/">aws<span>8</span></a></li> <li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
+  <li><a href="/tags/aws/">aws<span>8</span></a></li> <li><a href="/tags/s3/">s3<span>1</span></a></li>
     </ul>
 	</div>
 	
