@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>aws-dynamodb-use</title>
+      <link href="/2020/07/31/aws-dynamodb-use/"/>
+      <url>/2020/07/31/aws-dynamodb-use/</url>
+      
+        <content type="html"><![CDATA[<p>列一下 python boto3 使用 dynamodb 的sample</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://dynobase.dev/dynamodb-python-with-boto3/#delete-item" target="_blank" rel="noopener">DynamoDB Python Boto3 Query Cheat Sheet</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> dynamodb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>use-vpc-flow-log</title>
       <link href="/2020/07/29/use-vpc-flow-log/"/>
       <url>/2020/07/29/use-vpc-flow-log/</url>
