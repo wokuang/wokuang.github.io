@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>mac_remote_to_another_mac | 老布這麼說</title>
+  <title>vim-plugin-used | 老布這麼說</title>
   <meta name="author" content="老布">
   
   <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="mac_remote_to_another_mac"/>
+  <meta property="og:title" content="vim-plugin-used"/>
   <meta property="og:site_name" content="老布這麼說"/>
 
   
@@ -97,7 +97,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> mac_remote_to_another_mac</h1>
+			<h1 class="title title-inverse "> vim-plugin-used</h1>
 		</div>		
 	
 
@@ -117,19 +117,25 @@
 	<div class="mypage">		
 	  		
 
-	  <p>紀錄一下，要將一台 mac remote share 給另一台的方式</p>
+	  <p>列一下，我有用到的 vim plugin，還有常用到的 設定 or keymap (key binding)</p>
+<h2 id="plugin-package-管理工具"><a href="#plugin-package-管理工具" class="headerlink" title="plugin (package) 管理工具"></a>plugin (package) 管理工具</h2><ul>
+<li><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">VundleVim/Vundle.vim</a></li>
+</ul>
+<h2 id="跟-auto-complete-相關"><a href="#跟-auto-complete-相關" class="headerlink" title="跟 auto-complete 相關"></a>跟 auto-complete 相關</h2><ul>
+<li><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">jiangmiao/auto-pairs</a> 自動補上括號，還滿好用的</li>
+</ul>
+<h2 id="跟-folder-結構有關"><a href="#跟-folder-結構有關" class="headerlink" title="跟 folder 結構有關"></a>跟 folder 結構有關</h2><p>之前用 vim 時，會不喜歡多一個 window 顯示 folder，隨著對 window 的熟悉，有開一個 folder 的側邊也滿好的</p>
 <ul>
-<li>要 share 的那台，需要開 screen sharing &amp; remote management<ul>
-<li>可以用 ssh &amp; share 畫面的方式，進入到這台機器</li>
+<li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">preservim/nerdtree</a> - A tree explorer plugin for vim</li>
+<li>設定 ctrl-n 為 toogle nerdtree 的出現</li>
+<li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li>
 </ul>
-</li>
-<li>要連到 remote 的機器<ul>
-<li>使用 “Screen Sharing” App 連到另一台 mac</li>
-</ul>
-</li>
-</ul>
+<h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.switchingtomac.com/tutorials/osx/how-to-use-a-mac-to-connect-to-another-mac-remotely/" target="_blank" rel="noopener">How To Use a Mac To Connect To Another Mac Remotely</a></li>
+<li><a href="https://medium.com/rahasak/vim-as-my-golang-and-python-ide-a08ac5f0fc15" target="_blank" rel="noopener">Vim as a Golang and Python IDE</a></li>
 </ul>
 	  
 	</div>
@@ -143,13 +149,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2020/09/17/my-vim-new-setup/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/2020/09/23/cheat-cli-tool/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2020/09/16/vs-code-start/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2020/09/23/go-tutorial/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -200,7 +206,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-09-17 
+	2020-09-23 
 	</div>
 	
 
@@ -213,7 +219,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/mac/">mac<span>1</span></a></li> <li><a href="/tags/remote/">remote<span>1</span></a></li>
+  <li><a href="/tags/vim/">vim<span>3</span></a></li> <li><a href="/tags/plugin/">plugin<span>1</span></a></li>
     </ul>
 	</div>
 	

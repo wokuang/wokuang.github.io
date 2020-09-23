@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title>cheat-cli-tool</title>
+      <link href="2020/09/23/cheat-cli-tool/"/>
+      <url>2020/09/23/cheat-cli-tool/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vim-plugin-used</title>
+      <link href="2020/09/23/vim-plugin-used/"/>
+      <url>2020/09/23/vim-plugin-used/</url>
+      
+        <content type="html"><![CDATA[<p>列一下，我有用到的 vim plugin，還有常用到的 設定 or keymap (key binding)</p><h2 id="plugin-package-管理工具"><a href="#plugin-package-管理工具" class="headerlink" title="plugin (package) 管理工具"></a>plugin (package) 管理工具</h2><ul><li><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">VundleVim/Vundle.vim</a></li></ul><h2 id="跟-auto-complete-相關"><a href="#跟-auto-complete-相關" class="headerlink" title="跟 auto-complete 相關"></a>跟 auto-complete 相關</h2><ul><li><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">jiangmiao/auto-pairs</a> 自動補上括號，還滿好用的</li></ul><h2 id="跟-folder-結構有關"><a href="#跟-folder-結構有關" class="headerlink" title="跟 folder 結構有關"></a>跟 folder 結構有關</h2><p>之前用 vim 時，會不喜歡多一個 window 顯示 folder，隨著對 window 的熟悉，有開一個 folder 的側邊也滿好的</p><ul><li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">preservim/nerdtree</a> - A tree explorer plugin for vim</li><li>設定 ctrl-n 為 toogle nerdtree 的出現</li><li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li></ul><h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure><h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://medium.com/rahasak/vim-as-my-golang-and-python-ide-a08ac5f0fc15" target="_blank" rel="noopener">Vim as a Golang and Python IDE</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+            <tag> plugin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go-tutorial</title>
+      <link href="2020/09/23/go-tutorial/"/>
+      <url>2020/09/23/go-tutorial/</url>
+      
+        <content type="html"><![CDATA[<p>最近在學習 go，列一下有試過的 &amp; 玩過的 tool</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><p><a href="https://tour.golang.org/" target="_blank" rel="noopener">A Tour of Go</a></p></li><li><p><a href="https://tutorials.botsfloor.com/top-online-courses-to-learn-go-programming-language-golang-for-beginners-c228c615946c" target="_blank" rel="noopener">13 Best Go Programming Tutorials — Learn Golang/Go</a> 線上課程，還沒有看過</p></li><li><p><a href="https://golang.org/" target="_blank" rel="noopener">Go offical page</a></p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+            <tag> tutorial </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>my-vim-new-setup</title>
+      <link href="2020/09/17/my-vim-new-setup/"/>
+      <url>2020/09/17/my-vim-new-setup/</url>
+      
+        <content type="html"><![CDATA[<p>藉由這次重新設定 &amp; 安裝 vim，同時整理一下目前使用 vim 的方式</p><h2 id="安裝-vim"><a href="#安裝-vim" class="headerlink" title="安裝 vim"></a>安裝 vim</h2><p>現在的 vim 想使用的進階功能，會用到 vim + python 的功能，所以需要重新安裝 vim。<br>目前用 brew install vim 滿方便，又快速的，就是要記得將執行 brew update，取得最近的 vim 設定</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ brew update</span><br><span class="line">$ brew install vim</span><br><span class="line">$ vim --version | grep -i python3</span><br><span class="line">+comments          +libcall           -python            +visual</span><br><span class="line">+conceal           +linebreak         +python3           +visualextra</span><br><span class="line">## 要確認 python3 有 enable 起來</span><br></pre></td></tr></table></figure><p>如果看到 python3 沒有 enable 的話，記得確認一下 vim 是那一版</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ which vim</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;vim</span><br><span class="line"># 在 &#x2F;user&#x2F;local 下的，才是用 brew 安裝的</span><br></pre></td></tr></table></figure><h2 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h2><ul><li>試用了不同的 theme，目前還是覺得 solarized 好看<ul><li><a href="https://github.com/altercation/vim-colors-solarized" target="_blank" rel="noopener">altercation/vim-colors-solarized</a><h2 id="package-management"><a href="#package-management" class="headerlink" title="package management"></a>package management</h2>套件管理(package management)，目前是使用 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">vundle</a> 來進行</li></ul></li><li><a href="https://medium.com/@racktar7743/vim-vim-%E7%9A%84%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-vundle-15484bad7d9" target="_blank" rel="noopener">Vim 的插件管理工具 Vundle</a></li></ul><h2 id="有安裝好用的-package"><a href="#有安裝好用的-package" class="headerlink" title="有安裝好用的 package"></a>有安裝好用的 package</h2><ul><li><a href="https://github.com/easymotion/vim-easymotion" target="_blank" rel="noopener">easymotion/vim-easymotion</a></li><li><a href="https://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/" target="_blank" rel="noopener">Powerline：漂亮的 Vim 狀態列與 Bash Shell 命令提示字串外掛</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/mbrochh/vim-as-a-python-ide" target="_blank" rel="noopener">mbrochh/vim-as-a-python-ide</a></li><li><a href="https://github.com/BroQiang/vim-go-ide" target="_blank" rel="noopener">broqiang/vim-go-ide</a> ** 可以看看需要的 Plugin</li><li><a href="https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b" target="_blank" rel="noopener">Powerline Setup for my VIM</a></li></ul><h2 id="Reference-vimrc"><a href="#Reference-vimrc" class="headerlink" title="Reference vimrc"></a>Reference vimrc</h2><ul><li><a href="https://github.com/chinghanho/.dotfiles/blob/4c53d90d3e1efffb3fdc1ebc44bdac1781154b19/.vimrc#L1-L39" target="_blank" rel="noopener">chinghanho/.dotfiles/.vimrc</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+            <tag> config </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mac_remote_to_another_mac</title>
       <link href="2020/09/17/mac-remote-to-another-mac/"/>
       <url>2020/09/17/mac-remote-to-another-mac/</url>
