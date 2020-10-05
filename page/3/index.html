@@ -119,6 +119,40 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-07-29 </div>
+			<div class="article-title"><a href="/2020/07/29/use-vpc-flow-log/" >use-vpc-flow-log</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近開始打 E2E 後，有遇到幾次在 VPC 中，出現 lambda 連不到 RDS 的情形，所以就開 VPC flow log 來看看<br>VPC flow log, 可以設定到 CloudWatch &amp; S3 中，考慮到 cloudwatch 太貴，想說就用 S3 來試試看</p>
+<h2 id="設定的動作"><a href="#設定的動作" class="headerlink" title="設定的動作"></a>設定的動作</h2><ul>
+<li>開啟 VPC flow log, <a href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html" target="_blank" rel="noopener">Publishing flow logs to Amazon S3</a></li>
+<li>設定 Anthena 可以 query, <a href="https://docs.aws.amazon.com/zh_tw/athena/latest/ug/vpc-flow-logs.html#create-vpc-logs-table" target="_blank" rel="noopener">查詢 Amazon VPC 流程日誌</a><ul>
+<li>先建立好 table 後，還需要 alter table 將日期設定為 partition 後，才查得到資料</li>
+</ul>
+</li>
+</ul>
+<h2 id="advance-reference"><a href="#advance-reference" class="headerlink" title="advance reference"></a>advance reference</h2><ul>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/analyzing-vpc-flow-logs-with-amazon-kinesis-firehose-amazon-athena-and-amazon-quicksight/" target="_blank" rel="noopener">Analyzing VPC Flow Logs with Amazon Kinesis Firehose, Amazon Athena, and Amazon QuickSight</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/07/29/use-vpc-flow-log/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-06-22 </div>
 			<div class="article-title"><a href="/2020/06/22/Serverless-Data-Engineering/" >Serverless Data Engineering</a></div>						
 		</h3>
@@ -417,44 +451,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-01 </div>
-			<div class="article-title"><a href="/2020/06/01/another-find/" >another_find</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近在試用 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> 時，有看到這個類似的 find 指令。裝了之後，覺得滿好用的</p>
-<ul>
-<li>使用 command<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fd PATTERN</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="gitHub-project"><a href="#gitHub-project" class="headerlink" title="gitHub project"></a>gitHub project</h2><ul>
-<li><a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener">sharkdp/fd</a><ul>
-<li>A simple, fast and user-friendly alternative to ‘find’</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/chinanf-boy/fd-zh" target="_blank" rel="noopener">翻译: <fd> 一种简单,快速和用户友好的 find 替代方案</a> </li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/01/another-find/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -505,48 +501,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/parquet/">parquet<span>2</span></a></li>
+			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
 		
-			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+			<li><a href="/tags/linux/">linux<span>2</span></a></li>
 		
-			<li><a href="/tags/dao/">dao<span>2</span></a></li>
-		
-			<li><a href="/tags/slide/">slide<span>1</span></a></li>
-		
-			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
-		
-			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
-		
-			<li><a href="/tags/AWS/">AWS<span>1</span></a></li>
-		
-			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
+			<li><a href="/tags/game/">game<span>1</span></a></li>
 		
 			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
 		
-			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
-		
-			<li><a href="/tags/find/">find<span>1</span></a></li>
-		
-			<li><a href="/tags/pip/">pip<span>2</span></a></li>
-		
-			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
-		
-			<li><a href="/tags/dynamodb/">dynamodb<span>1</span></a></li>
+			<li><a href="/tags/plugin/">plugin<span>1</span></a></li>
 		
 			<li><a href="/tags/analyzer/">analyzer<span>1</span></a></li>
 		
-			<li><a href="/tags/python/">python<span>6</span></a></li>
+			<li><a href="/tags/package/">package<span>1</span></a></li>
 		
-			<li><a href="/tags/tag/">tag<span>1</span></a></li>
+			<li><a href="/tags/setup/">setup<span>1</span></a></li>
 		
-			<li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
 		
-			<li><a href="/tags/book/">book<span>1</span></a></li>
+			<li><a href="/tags/click/">click<span>1</span></a></li>
 		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
+			<li><a href="/tags/REPL/">REPL<span>2</span></a></li>
+		
+			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
+		
+			<li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
+		
+			<li><a href="/tags/books/">books<span>1</span></a></li>
+		
+			<li><a href="/tags/mac/">mac<span>1</span></a></li>
+		
+			<li><a href="/tags/pip/">pip<span>3</span></a></li>
+		
+			<li><a href="/tags/go/">go<span>2</span></a></li>
+		
+			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
+		
+			<li><a href="/tags/online/">online<span>1</span></a></li>
+		
+			<li><a href="/tags/cli/">cli<span>4</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>52</span></a></li>
+		   <li><a href="/tags">...<span>53</span></a></li>
 		 
 		</ul>
 	</div>
@@ -557,6 +553,10 @@
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2020/10/05/pip-package/" ><i class="fa fa-file-o"></i>pip-package</a>
+      </li>
     
       <li>
         <a href="/2020/09/30/python-pip-tutorial/" ><i class="fa fa-file-o"></i>python-pip-tutorial</a>
@@ -572,10 +572,6 @@
     
       <li>
         <a href="/2020/09/30/go-prompt-example/" ><i class="fa fa-file-o"></i>go-prompt-example</a>
-      </li>
-    
-      <li>
-        <a href="/2020/09/29/python-fire-note/" ><i class="fa fa-file-o"></i>python-fire-note</a>
       </li>
     
   </ul>

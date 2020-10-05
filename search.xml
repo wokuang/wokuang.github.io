@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>pip-package</title>
+      <link href="2020/10/05/pip-package/"/>
+      <url>2020/10/05/pip-package/</url>
+      
+        <content type="html"><![CDATA[<h2 id="上傳-package-到-test-pypi-上"><a href="#上傳-package-到-test-pypi-上" class="headerlink" title="上傳 package 到 test pypi 上"></a>上傳 package 到 test pypi 上</h2><ul><li><code>python3 -m twine upload --repository testpypi dist/*</code></li><li><a href="https://twine.readthedocs.io/en/latest/" target="_blank" rel="noopener">twine document</a></li></ul><h2 id="由-test-pypi-安裝-package"><a href="#由-test-pypi-安裝-package" class="headerlink" title="由 test pypi 安裝 package"></a>由 test pypi 安裝 package</h2><p>  <code>python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg</code></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://python-packaging.readthedocs.io/en/latest/" target="_blank" rel="noopener">python-packaging</a> * 這篇要好好來讀一讀</li><li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/uploading_pypi.html" target="_blank" rel="noopener">Building and Uploading to PyPi</a> * 值得一看</li><li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li><li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html" target="_blank" rel="noopener">Making a Python Package</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> pip </tag>
+            
+            <tag> python </tag>
+            
+            <tag> package </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python-pip-tutorial</title>
       <link href="2020/09/30/python-pip-tutorial/"/>
       <url>2020/09/30/python-pip-tutorial/</url>
@@ -56,7 +79,7 @@
       <link href="2020/09/30/python-prompt-toolkit-example/"/>
       <url>2020/09/30/python-prompt-toolkit-example/</url>
       
-        <content type="html"><![CDATA[<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul><li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit/blob/master/PROJECTS.rst" target="_blank" rel="noopener">Projects using prompt_toolkit</a> example list page</li><li><a href="https://github.com/j-bennet/wharfee" target="_blank" rel="noopener">j-bennet/wharfee</a> : A CLI with autocompletion and syntax highlighting for Docker commands.</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="tutorial"><a href="#tutorial" class="headerlink" title="tutorial"></a>tutorial</h2><ul><li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit/tree/master/examples/tutorial" target="_blank" rel="noopener">python-prompt-toolkit tutorial</a><ul><li><a href="https://python-prompt-toolkit.readthedocs.io/en/stable/pages/tutorials/repl.html" target="_blank" rel="noopener">Tutorial: Build an SQLite REPL</a> - <strong>必讀的啦</strong></li></ul></li></ul><h2 id="參考的-project"><a href="#參考的-project" class="headerlink" title="參考的 project"></a>參考的 project</h2><ul><li><a href="https://github.com/httpie/http-prompt" target="_blank" rel="noopener">httpie/http-prompt</a> : An interactive command-line HTTP and API testing client built on top of HTTPie featuring autocomplete, syntax highlighting, and more.<ul><li><a href="https://www.ptt.cc/bbs/Python/M.1467897513.A.F6C.html" target="_blank" rel="noopener">心得 我如何在 GitHub 上拿到四千顆星</a> - HTTP Prompt 的開發者心得分享</li><li><a href="https://ithelp.ithome.com.tw/articles/10195555" target="_blank" rel="noopener">第 23 天：安裝/使用指令列 HTTP Client</a> - 含 http-prompt 說明</li></ul></li><li><a href="https://github.com/cloudnativelabs/kube-shell" target="_blank" rel="noopener">cloudnativelabs/kube-shell</a> - Kubernetes shell: An integrated shell for working with the Kubernetes</li></ul><h2 id="Example-List"><a href="#Example-List" class="headerlink" title="Example List"></a>Example List</h2><ul><li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit/blob/master/PROJECTS.rst" target="_blank" rel="noopener">Projects using prompt_toolkit</a> example list page</li><li><a href="https://github.com/j-bennet/wharfee" target="_blank" rel="noopener">j-bennet/wharfee</a> : A CLI with autocompletion and syntax highlighting for Docker commands.</li></ul>]]></content>
       
       
       

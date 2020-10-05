@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python-fire-note | 老布這麼說</title>
+  <title>pip-package | 老布這麼說</title>
   <meta name="author" content="老布">
   
   <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="python-fire-note"/>
+  <meta property="og:title" content="pip-package"/>
   <meta property="og:site_name" content="老布這麼說"/>
 
   
@@ -97,7 +97,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> python-fire-note</h1>
+			<h1 class="title title-inverse "> pip-package</h1>
 		</div>		
 	
 
@@ -117,20 +117,16 @@
 	<div class="mypage">		
 	  		
 
-	  <p>紀錄一下，找到的 python fire 相關資料</p>
-<ul>
-<li><a href="https://opensource.googleblog.com/2017/03/python-fire-command-line.html" target="_blank" rel="noopener">Introducing Python Fire, a library for automatically generating command line interfaces</a></li>
-<li><a href="https://github.com/google/python-fire" target="_blank" rel="noopener">google/python-fire</a><ul>
-<li><a href="https://github.com/google/python-fire/blob/master/docs/guide.md" target="_blank" rel="noopener">The Python Fire Guide</a> * 介紹 &amp; 範例文件<ul>
-<li><a href="https://blog.csdn.net/qq_17550379/article/details/79943740" target="_blank" rel="noopener">python fire使用指南</a> 上面這份文件的中文版</li>
+	  <h2 id="上傳-package-到-test-pypi-上"><a href="#上傳-package-到-test-pypi-上" class="headerlink" title="上傳 package 到 test pypi 上"></a>上傳 package 到 test pypi 上</h2><ul>
+<li><code>python3 -m twine upload --repository testpypi dist/*</code></li>
+<li><a href="https://twine.readthedocs.io/en/latest/" target="_blank" rel="noopener">twine document</a></li>
 </ul>
-</li>
-<li><a href="https://github.com/google/python-fire/blob/master/docs/using-cli.md" target="_blank" rel="noopener">Using a Fire CLI</a> * 說明如何使用 cli 的文件</li>
-</ul>
-</li>
-</ul>
+<h2 id="由-test-pypi-安裝-package"><a href="#由-test-pypi-安裝-package" class="headerlink" title="由 test pypi 安裝 package"></a>由 test pypi 安裝 package</h2><p>  <code>python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg</code></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://medium.com/@galea/automated-python-arguments-with-google-fire-600ec602c58b" target="_blank" rel="noopener">Automated python arguments with Google Fire</a></li>
+<li><a href="https://python-packaging.readthedocs.io/en/latest/" target="_blank" rel="noopener">python-packaging</a> * 這篇要好好來讀一讀</li>
+<li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/uploading_pypi.html" target="_blank" rel="noopener">Building and Uploading to PyPi</a> * 值得一看</li>
+<li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li>
+<li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html" target="_blank" rel="noopener">Making a Python Package</a></li>
 </ul>
 	  
 	</div>
@@ -143,14 +139,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2020/09/30/go-prompt-example/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2020/09/25/wordpress-gutenberg-block/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2020/09/30/python-pip-tutorial/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -201,7 +197,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-09-29 
+	2020-10-05 
 	</div>
 	
 
@@ -214,7 +210,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/python/">python<span>7</span></a></li> <li><a href="/tags/cli/">cli<span>4</span></a></li> <li><a href="/tags/REPL/">REPL<span>2</span></a></li>
+  <li><a href="/tags/pip/">pip<span>3</span></a></li> <li><a href="/tags/python/">python<span>7</span></a></li> <li><a href="/tags/package/">package<span>1</span></a></li>
     </ul>
 	</div>
 	
