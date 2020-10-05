@@ -130,6 +130,31 @@
 <li>設定 ctrl-n 為 toogle nerdtree 的出現</li>
 <li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li>
 </ul>
+<h2 id="file-search-tool"><a href="#file-search-tool" class="headerlink" title="file search tool"></a>file search tool</h2><ul>
+<li><a href="https://github.com/ctrlpvim/ctrlp.vim" target="_blank" rel="noopener">ctrlpvim/ctrlp.vim</a> * 滿強大的 file search 工具<ul>
+<li>可以用 :CtrlP 或是 或是 <code>&lt;c-p&gt;</code> 呼叫 CtrlP fuzzy find 的功能</li>
+<li>在 CtrlP 的模式下<ul>
+<li>Press <code>&lt;c-f&gt;</code> and <code>&lt;c-b&gt;</code> to cycle between modes.</li>
+<li>Press <code>&lt;c-d&gt;</code> to switch to filename only search instead of full path.</li>
+<li>Press <code>&lt;c-r&gt;</code> to switch to regexp mode.</li>
+<li>Use <code>&lt;c-j&gt;</code>, <code>&lt;c-k&gt;</code> or the arrow keys to navigate the result list.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><ul>
+<li>快速註解的方式</li>
+<li><a href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener">preservim/nerdcommenter</a></li>
+<li><a href="https://medium.com/@racktar7743/vim-%E5%BF%AB%E9%80%9F%E8%A8%BB%E8%A7%A3%E7%9A%84%E6%8F%92%E4%BB%B6-nerdcommenter-c14efb366439" target="_blank" rel="noopener">vim 快速註解的插件: nerdcommenter</a><ul>
+<li>我有將 leader key 換成 <code>,</code></li>
+<li>單行的 comment 會是 <code>, + cc</code> ，文件是的說明是 <code>[count]&lt;leader&gt;cc</code></li>
+<li>單行的 反註解 會是 <code>, + cu</code></li>
+<li><code>, + cA</code>，在這行的結尾加上 comment，並進入 insert mode，可以多試試看</li>
+</ul>
+</li>
+<li><a href="https://sites.google.com/site/kaiideanote/vim/02---scripts/nerdcommenter" target="_blank" rel="noopener">nerdcommenter 說明</a></li>
+</ul>
 <h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure>

@@ -4,6 +4,169 @@
   
     
     <entry>
+      <title>python-pip-tutorial</title>
+      <link href="2020/09/30/python-pip-tutorial/"/>
+      <url>2020/09/30/python-pip-tutorial/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://dzone.com/articles/executable-package-pip-install" target="_blank" rel="noopener">Build Your First pip Package</a></li><li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> pip </tag>
+            
+            <tag> python </tag>
+            
+            <tag> tutorial </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python-click-tutorial</title>
+      <link href="2020/09/30/python-click-tutorial/"/>
+      <url>2020/09/30/python-click-tutorial/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h2><ul><li><a href="http://zetcode.com/python/click/" target="_blank" rel="noopener">Python click tutorial</a></li><li><a href="https://www.kite.com/blog/python/python-command-line-click-tutorial/" target="_blank" rel="noopener">Python in the Command Line: A Tutorial on Click</a></li><li><a href="https://www.youtube.com/playlist?list=PLJ39kWiJXSizF1shhf2rHi-aA1yjt7rtX" target="_blank" rel="noopener">Python Click Tutorial( Building Command Line Apps)</a> - youtube tutorial</li><li><a href="https://medium.com/better-programming/python-click-building-your-first-command-line-interface-application-6947d5319ef7" target="_blank" rel="noopener">Create Your First CLI Application With Python Click</a></li><li><a href="https://dbader.org/blog/mastering-click-advanced-python-command-line-apps" target="_blank" rel="noopener">Mastering Click: Writing Advanced Python Command-Line Apps</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> tutorial </tag>
+            
+            <tag> cli </tag>
+            
+            <tag> click </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python-prompt-toolkit-example</title>
+      <link href="2020/09/30/python-prompt-toolkit-example/"/>
+      <url>2020/09/30/python-prompt-toolkit-example/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul><li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit/blob/master/PROJECTS.rst" target="_blank" rel="noopener">Projects using prompt_toolkit</a> example list page</li><li><a href="https://github.com/j-bennet/wharfee" target="_blank" rel="noopener">j-bennet/wharfee</a> : A CLI with autocompletion and syntax highlighting for Docker commands.</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> REPL </tag>
+            
+            <tag> prompt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go-prompt-example</title>
+      <link href="2020/09/30/go-prompt-example/"/>
+      <url>2020/09/30/go-prompt-example/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul><li><a href="https://github.com/c-bata/kube-prompt" target="_blank" rel="noopener">c-bata/kube-prompt</a> : An interactive kubernetes client featuring auto-complete.</li><li><a href="https://github.com/ktr0731/evans" target="_blank" rel="noopener">ktr0731/evans</a> : more expressive universal gRPC client</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/c-bata/go-prompt" target="_blank" rel="noopener">c-bata/go-prompt</a> : Building powerful interactive prompts in Go, inspired by python-prompt-toolkit.</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+            <tag> cli </tag>
+            
+            <tag> framework </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python-fire-note</title>
+      <link href="2020/09/29/python-fire-note/"/>
+      <url>2020/09/29/python-fire-note/</url>
+      
+        <content type="html"><![CDATA[<p>紀錄一下，找到的 python fire 相關資料</p><ul><li><a href="https://opensource.googleblog.com/2017/03/python-fire-command-line.html" target="_blank" rel="noopener">Introducing Python Fire, a library for automatically generating command line interfaces</a></li><li><a href="https://github.com/google/python-fire" target="_blank" rel="noopener">google/python-fire</a><ul><li><a href="https://github.com/google/python-fire/blob/master/docs/guide.md" target="_blank" rel="noopener">The Python Fire Guide</a> * 介紹 &amp; 範例文件<ul><li><a href="https://blog.csdn.net/qq_17550379/article/details/79943740" target="_blank" rel="noopener">python fire使用指南</a> 上面這份文件的中文版</li></ul></li><li><a href="https://github.com/google/python-fire/blob/master/docs/using-cli.md" target="_blank" rel="noopener">Using a Fire CLI</a> * 說明如何使用 cli 的文件</li></ul></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://medium.com/@galea/automated-python-arguments-with-google-fire-600ec602c58b" target="_blank" rel="noopener">Automated python arguments with Google Fire</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> cli </tag>
+            
+            <tag> REPL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress_gutenberg_block</title>
+      <link href="2020/09/25/wordpress-gutenberg-block/"/>
+      <url>2020/09/25/wordpress-gutenberg-block/</url>
+      
+        <content type="html"><![CDATA[<p>在用 wordpress 發表文章時，會遇到需要有 引文，感想 在文章中的區隔，因為新版的 wordpress 是用 gutenberg 來編輯文章的，所以在嘗試有何方式可以做到這一方面<br>目前想到有下列的方式，可以達成</p><h2 id="設定引言-amp-感想-block-的方式"><a href="#設定引言-amp-感想-block-的方式" class="headerlink" title="設定引言 &amp; 感想 block 的方式"></a>設定引言 &amp; 感想 block 的方式</h2><ul><li>使用 custom css 的方式來設定<ul><li>目前有做出一版這樣的方式，但是要自己記住 css 的名稱，覺得有些麻煩</li></ul></li><li>修改目前的 css 設定 (例如：引言的 css 設定)<ul><li>這似乎是最不建議的方式，要用這方式的話，應該要建立 child-template 來進行</li></ul></li><li>使用 wordpress plugin 來建立 custom block<ul><li><a href="https://wordpress.org/plugins/genesis-custom-blocks" target="_blank" rel="noopener">Genesis Custom Blocks / Plugin</a> 用 plugin 的方式來建立 custom block</li><li><a href="https://wordpress.org/plugins/lazy-blocks/" target="_blank" rel="noopener">Lazy Blocks – Gutenberg Blocks Constructor</a> 另一個用 plugin 來建立 custom block的方式</li></ul></li><li>直接使用 plugin 來設定需要的 custom block<ul><li><a href="https://publishpress.com/advanced-gutenberg/" target="_blank" rel="noopener">Advanced Gutenberg</a><ul><li>Custom Style for Blocks - You create custom CSS styles and making them available to end users. Name the style, and let the content editors use it when they need it.</li></ul></li></ul></li><li>建立新的 block 來設定 (custom block)<ul><li>這應該是最底層 &amp; 最需要一步一步來的方式。目前還沒有足夠的時間這麼做</li></ul></li></ul><h2 id="使用-Advanced-Gutenberg-的紀錄"><a href="#使用-Advanced-Gutenberg-的紀錄" class="headerlink" title="使用 Advanced Gutenberg 的紀錄"></a>使用 Advanced Gutenberg 的紀錄</h2><ul><li><a href="https://www.ostraining.com/blog/wordpress/advanced-gutenberg-blocks/" target="_blank" rel="noopener">How to Use the Advanced Gutenberg Blocks Plugin</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.wpbeginner.com/wp-tutorials/how-to-create-a-custom-gutenberg-block-in-wordpress/" target="_blank" rel="noopener">How to Create a Custom Gutenberg Block in WordPress (Easy Way)</a> 自己建立 block 的方式</li><li><a href="https://deliciousbrains.com/custom-gutenberg-block/" target="_blank" rel="noopener">How to Create Custom WordPress Editor Blocks in 2020</a> 寫的滿仔細，來細讀一下 </li><li><a href="https://wordpress.org/plugins/genesis-custom-blocks" target="_blank" rel="noopener">Genesis Custom Blocks / Plugin</a> 用 plugin 的方式來建立 custom block</li><li><a href="https://wordpress.org/plugins/lazy-blocks/" target="_blank" rel="noopener">Lazy Blocks – Gutenberg Blocks Constructor</a> 另一個用 plugin 來建立 custom block的方式</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> wordpress </tag>
+            
+            <tag> gutenberg-block </tag>
+            
+            <tag> gutenberg </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>unity_tutorial</title>
+      <link href="2020/09/24/unity-tutorial/"/>
+      <url>2020/09/24/unity-tutorial/</url>
+      
+        <content type="html"><![CDATA[<p>最近有看到 unity 的介紹，有想說前一段時間搜尋拆包的資料中，似乎常會用到 unity studio 來到資源檔<br>就順手找一下 unity，做個簡單的紀錄</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://medium.com/ericzhan-publication/%E5%88%86%E4%BA%AB-%E7%A8%8B%E5%BC%8F%E5%AD%B8%E7%BF%92%E5%A6%82%E4%BD%95%E9%96%8B%E5%A7%8B-3dd5df5ea116" target="_blank" rel="noopener">程式學習如何開始? 同場加映：我的Unity 讀書清單</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> unity </tag>
+            
+            <tag> game </tag>
+            
+            <tag> quick-note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cheat-cli-tool</title>
       <link href="2020/09/23/cheat-cli-tool/"/>
       <url>2020/09/23/cheat-cli-tool/</url>
@@ -31,7 +194,7 @@
       <link href="2020/09/23/vim-plugin-used/"/>
       <url>2020/09/23/vim-plugin-used/</url>
       
-        <content type="html"><![CDATA[<p>列一下，我有用到的 vim plugin，還有常用到的 設定 or keymap (key binding)</p><h2 id="plugin-package-管理工具"><a href="#plugin-package-管理工具" class="headerlink" title="plugin (package) 管理工具"></a>plugin (package) 管理工具</h2><ul><li><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">VundleVim/Vundle.vim</a></li></ul><h2 id="跟-auto-complete-相關"><a href="#跟-auto-complete-相關" class="headerlink" title="跟 auto-complete 相關"></a>跟 auto-complete 相關</h2><ul><li><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">jiangmiao/auto-pairs</a> 自動補上括號，還滿好用的</li></ul><h2 id="跟-folder-結構有關"><a href="#跟-folder-結構有關" class="headerlink" title="跟 folder 結構有關"></a>跟 folder 結構有關</h2><p>之前用 vim 時，會不喜歡多一個 window 顯示 folder，隨著對 window 的熟悉，有開一個 folder 的側邊也滿好的</p><ul><li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">preservim/nerdtree</a> - A tree explorer plugin for vim</li><li>設定 ctrl-n 為 toogle nerdtree 的出現</li><li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li></ul><h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure><h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://medium.com/rahasak/vim-as-my-golang-and-python-ide-a08ac5f0fc15" target="_blank" rel="noopener">Vim as a Golang and Python IDE</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>列一下，我有用到的 vim plugin，還有常用到的 設定 or keymap (key binding)</p><h2 id="plugin-package-管理工具"><a href="#plugin-package-管理工具" class="headerlink" title="plugin (package) 管理工具"></a>plugin (package) 管理工具</h2><ul><li><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">VundleVim/Vundle.vim</a></li></ul><h2 id="跟-auto-complete-相關"><a href="#跟-auto-complete-相關" class="headerlink" title="跟 auto-complete 相關"></a>跟 auto-complete 相關</h2><ul><li><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">jiangmiao/auto-pairs</a> 自動補上括號，還滿好用的</li></ul><h2 id="跟-folder-結構有關"><a href="#跟-folder-結構有關" class="headerlink" title="跟 folder 結構有關"></a>跟 folder 結構有關</h2><p>之前用 vim 時，會不喜歡多一個 window 顯示 folder，隨著對 window 的熟悉，有開一個 folder 的側邊也滿好的</p><ul><li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">preservim/nerdtree</a> - A tree explorer plugin for vim</li><li>設定 ctrl-n 為 toogle nerdtree 的出現</li><li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li></ul><h2 id="file-search-tool"><a href="#file-search-tool" class="headerlink" title="file search tool"></a>file search tool</h2><ul><li><a href="https://github.com/ctrlpvim/ctrlp.vim" target="_blank" rel="noopener">ctrlpvim/ctrlp.vim</a> * 滿強大的 file search 工具<ul><li>可以用 :CtrlP 或是 或是 <code>&lt;c-p&gt;</code> 呼叫 CtrlP fuzzy find 的功能</li><li>在 CtrlP 的模式下<ul><li>Press <code>&lt;c-f&gt;</code> and <code>&lt;c-b&gt;</code> to cycle between modes.</li><li>Press <code>&lt;c-d&gt;</code> to switch to filename only search instead of full path.</li><li>Press <code>&lt;c-r&gt;</code> to switch to regexp mode.</li><li>Use <code>&lt;c-j&gt;</code>, <code>&lt;c-k&gt;</code> or the arrow keys to navigate the result list.</li></ul></li></ul></li></ul><h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><ul><li>快速註解的方式</li><li><a href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener">preservim/nerdcommenter</a></li><li><a href="https://medium.com/@racktar7743/vim-%E5%BF%AB%E9%80%9F%E8%A8%BB%E8%A7%A3%E7%9A%84%E6%8F%92%E4%BB%B6-nerdcommenter-c14efb366439" target="_blank" rel="noopener">vim 快速註解的插件: nerdcommenter</a><ul><li>我有將 leader key 換成 <code>,</code></li><li>單行的 comment 會是 <code>, + cc</code> ，文件是的說明是 <code>[count]&lt;leader&gt;cc</code></li><li>單行的 反註解 會是 <code>, + cu</code></li><li><code>, + cA</code>，在這行的結尾加上 comment，並進入 insert mode，可以多試試看</li></ul></li><li><a href="https://sites.google.com/site/kaiideanote/vim/02---scripts/nerdcommenter" target="_blank" rel="noopener">nerdcommenter 說明</a></li></ul><h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure><h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://medium.com/rahasak/vim-as-my-golang-and-python-ide-a08ac5f0fc15" target="_blank" rel="noopener">Vim as a Golang and Python IDE</a></li></ul>]]></content>
       
       
       
@@ -52,7 +215,7 @@
       <link href="2020/09/23/go-tutorial/"/>
       <url>2020/09/23/go-tutorial/</url>
       
-        <content type="html"><![CDATA[<p>最近在學習 go，列一下有試過的 &amp; 玩過的 tool</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><p><a href="https://tour.golang.org/" target="_blank" rel="noopener">A Tour of Go</a></p></li><li><p><a href="https://tutorials.botsfloor.com/top-online-courses-to-learn-go-programming-language-golang-for-beginners-c228c615946c" target="_blank" rel="noopener">13 Best Go Programming Tutorials — Learn Golang/Go</a> 線上課程，還沒有看過</p></li><li><p><a href="https://golang.org/" target="_blank" rel="noopener">Go offical page</a></p></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>最近在學習 go，列一下有試過的 &amp; 玩過的 tool</p><h2 id="online-course"><a href="#online-course" class="headerlink" title="online course"></a>online course</h2><ul><li>coursera <a href="https://www.coursera.org/learn/golang-getting-started" target="_blank" rel="noopener">Getting Started with Go</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><p><a href="https://tour.golang.org/" target="_blank" rel="noopener">A Tour of Go</a></p></li><li><p><a href="https://golang.org/doc/#learning" target="_blank" rel="noopener">Go Document</a></p></li><li><p><a href="https://tutorials.botsfloor.com/top-online-courses-to-learn-go-programming-language-golang-for-beginners-c228c615946c" target="_blank" rel="noopener">13 Best Go Programming Tutorials — Learn Golang/Go</a> 線上課程，還沒有看過</p></li><li><p><a href="https://golang.org/" target="_blank" rel="noopener">Go offical page</a></p></li></ul>]]></content>
       
       
       

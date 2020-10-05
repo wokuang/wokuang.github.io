@@ -119,6 +119,248 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-09-17 </div>
+			<div class="article-title"><a href="/2020/09/17/my-vim-new-setup/" >my-vim-new-setup</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>藉由這次重新設定 &amp; 安裝 vim，同時整理一下目前使用 vim 的方式</p>
+<h2 id="安裝-vim"><a href="#安裝-vim" class="headerlink" title="安裝 vim"></a>安裝 vim</h2><p>現在的 vim 想使用的進階功能，會用到 vim + python 的功能，所以需要重新安裝 vim。<br>目前用 brew install vim 滿方便，又快速的，就是要記得將執行 brew update，取得最近的 vim 設定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ brew update</span><br><span class="line">$ brew install vim</span><br><span class="line">$ vim --version | grep -i python3</span><br><span class="line">+comments          +libcall           -python            +visual</span><br><span class="line">+conceal           +linebreak         +python3           +visualextra</span><br><span class="line">## 要確認 python3 有 enable 起來</span><br></pre></td></tr></table></figure>
+
+<p>如果看到 python3 沒有 enable 的話，記得確認一下 vim 是那一版</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ which vim</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;vim</span><br><span class="line"># 在 &#x2F;user&#x2F;local 下的，才是用 brew 安裝的</span><br></pre></td></tr></table></figure>
+<h2 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h2><ul>
+<li>試用了不同的 theme，目前還是覺得 solarized 好看<ul>
+<li><a href="https://github.com/altercation/vim-colors-solarized" target="_blank" rel="noopener">altercation/vim-colors-solarized</a><h2 id="package-management"><a href="#package-management" class="headerlink" title="package management"></a>package management</h2>套件管理(package management)，目前是使用 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">vundle</a> 來進行</li>
+</ul>
+</li>
+<li><a href="https://medium.com/@racktar7743/vim-vim-%E7%9A%84%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-vundle-15484bad7d9" target="_blank" rel="noopener">Vim 的插件管理工具 Vundle</a></li>
+</ul>
+<h2 id="有安裝好用的-package"><a href="#有安裝好用的-package" class="headerlink" title="有安裝好用的 package"></a>有安裝好用的 package</h2><ul>
+<li><a href="https://github.com/easymotion/vim-easymotion" target="_blank" rel="noopener">easymotion/vim-easymotion</a></li>
+<li><a href="https://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/" target="_blank" rel="noopener">Powerline：漂亮的 Vim 狀態列與 Bash Shell 命令提示字串外掛</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/mbrochh/vim-as-a-python-ide" target="_blank" rel="noopener">mbrochh/vim-as-a-python-ide</a></li>
+<li><a href="https://github.com/BroQiang/vim-go-ide" target="_blank" rel="noopener">broqiang/vim-go-ide</a> ** 可以看看需要的 Plugin</li>
+<li><a href="https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b" target="_blank" rel="noopener">Powerline Setup for my VIM</a></li>
+</ul>
+<h2 id="Reference-vimrc"><a href="#Reference-vimrc" class="headerlink" title="Reference vimrc"></a>Reference vimrc</h2><ul>
+<li><a href="https://github.com/chinghanho/.dotfiles/blob/4c53d90d3e1efffb3fdc1ebc44bdac1781154b19/.vimrc#L1-L39" target="_blank" rel="noopener">chinghanho/.dotfiles/.vimrc</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/17/my-vim-new-setup/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-17 </div>
+			<div class="article-title"><a href="/2020/09/17/mac-remote-to-another-mac/" >mac_remote_to_another_mac</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>紀錄一下，要將一台 mac remote share 給另一台的方式</p>
+<ul>
+<li>要 share 的那台，需要開 screen sharing &amp; remote management<ul>
+<li>可以用 ssh &amp; share 畫面的方式，進入到這台機器</li>
+</ul>
+</li>
+<li>要連到 remote 的機器<ul>
+<li>使用 “Screen Sharing” App 連到另一台 mac</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.switchingtomac.com/tutorials/osx/how-to-use-a-mac-to-connect-to-another-mac-remotely/" target="_blank" rel="noopener">How To Use a Mac To Connect To Another Mac Remotely</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/17/mac-remote-to-another-mac/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-16 </div>
+			<div class="article-title"><a href="/2020/09/16/vs-code-start/" >vs-code-start</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10225442" target="_blank" rel="noopener">Day 20: 使用 VS Code 來開發 Markdown</a></li>
+<li><a href="https://kingofamani.gitbooks.io/git-teach/content/chapter_6_gitbook/markdown.html" target="_blank" rel="noopener">markdown風格</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/16/vs-code-start/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-16 </div>
+			<div class="article-title"><a href="/2020/09/16/vs-code-and-vim/" >vs_code_and_vim</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>vim 是我很喜歡，也是目前最常用的 editor。<br>最近看 vs-code 滿好用的，就想說來試試看 vs-code &amp; vim 的整合，看看是否會喜歡這樣的方式</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.barbarianmeetscoding.com/blog/2019/02/08/boost-your-coding-fu-with-vscode-and-vim" target="_blank" rel="noopener">Boost Your Coding Fu With Visual Studio Code and Vim</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/16/vs-code-and-vim/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-14 </div>
+			<div class="article-title"><a href="/2020/09/14/iterm2-install-and-setting/" >zsh and iterm2 install then setting</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近剛換新的 Mac Book Pro，之前都是用 time machine 轉的。這次因為種種緣故，無法使用 time machine 換新機。就剛好趁這次，將一些許久都沒有用到的 tool &amp; folder 一次斷捨離吧。<br>藉著這次重新開始裝 iTerm &amp; 設定 zsh，紀錄一些必要的設定</p>
+<h2 id="簡易的步驟"><a href="#簡易的步驟" class="headerlink" title="簡易的步驟"></a>簡易的步驟</h2><ul>
+<li>安裝 <a href="https://ohmyz.sh/" target="_blank" rel="noopener">oh-my-zsh</a></li>
+<li>安裝 &amp; 修改 zsh theme to <a href="https://github.com/agnoster/agnoster-zsh-theme" target="_blank" rel="noopener">agnoster</a><ul>
+<li>裝好後，會發現有些 亂碼 &amp; 顏色不像，需要安裝 font &amp; color</li>
+</ul>
+</li>
+<li>安裝字型, <a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">Powerline Fonts</a></li>
+<li>安裝 color ，Solarized Dark</li>
+</ul>
+<h2 id="zsh-的-theme"><a href="#zsh-的-theme" class="headerlink" title="zsh 的 theme"></a>zsh 的 theme</h2><ul>
+<li>zsh <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes" target="_blank" rel="noopener">External themes</a>, 有許多的 theme 可以參考</li>
+</ul>
+<h2 id="在-vs-code-加上字型"><a href="#在-vs-code-加上字型" class="headerlink" title="在 vs code 加上字型"></a>在 vs code 加上字型</h2><ul>
+<li><a href="https://gist.github.com/480/3b41f449686a089f34edb45d00672f28" target="_blank" rel="noopener">MacOS X + oh my zsh + powerline fonts + visual studio code (vscode) terminal settings</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/@chialin/%E4%BD%BF%E7%94%A8-oh-my-zsh-%E7%9A%84-agnoster-theme-a07842f79f71" target="_blank" rel="noopener">使用 oh-my-zsh 的 agnoster theme</a></li>
+<li><a href="https://medium.com/@hazelwu/%E7%94%A8oh-my-zsh%E6%8A%8Aiterm%E8%AE%8A%E7%BE%8E%E7%BE%8E-8a18daa8eac" target="_blank" rel="noopener">用Oh My Zsh把iTerm變美美</a></li>
+<li><a href="https://pjchender.blogspot.com/2017/02/mac-terminal-iterm-2-oh-my-zsh.html" target="_blank" rel="noopener">為 MAC 的 Terminal 上色 - 透過 iTerm 2 和 Oh My Zsh 高亮你的終端機</a> * 這篇滿好的</li>
+<li><a href="https://wangwang4git.github.io/blog/2017/04/22/mac-iterm2-solarized-theme-config/" target="_blank" rel="noopener">Mac终端iTerm2 Solarized主题配置</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/14/iterm2-install-and-setting/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-03 </div>
+			<div class="article-title"><a href="/2020/09/03/sentry-with-aws-lambda/" >sentry_with_aws_lambda</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>用 sentry 來收集 aws lambda 的exception資料，底下列出一些參考文件</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://sentry.io/for/pythonawslambda/" target="_blank" rel="noopener">AWS Lambda Error and Performance Monitoring</a></li>
+<li><a href="https://docs.sentry.io/platforms/python/guides/aws-lambda/" target="_blank" rel="noopener">Sentry - AWS Lambda</a></li>
+<li><a href="https://github.com/getsentry/examples/tree/master/aws-lambda/python" target="_blank" rel="noopener">examples/aws-lambda/python/</a></li>
+<li><a href="https://docs.sentry.io/platforms/python/migration/" target="_blank" rel="noopener">sentry-python SDK Migration Guide</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/03/sentry-with-aws-lambda/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-08-11 </div>
+			<div class="article-title"><a href="/2020/08/11/python-analyzer/" >python_analyzer</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄一下 Facebook 有 open source python 靜態程式碼分析工具 <a href="https://engineering.fb.com/security/pysa/" target="_blank" rel="noopener">pysa</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.ithome.com.tw/news/139304" target="_blank" rel="noopener">臉書開源可偵測Python程式碼安全與隱私問題的工具Pysa</a></li>
+<li><a href="https://engineering.fb.com/security/pysa/" target="_blank" rel="noopener">Pysa: An open source static analysis tool to detect and prevent security issues in Python code</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/08/11/python-analyzer/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-08-03 </div>
 			<div class="article-title"><a href="/2020/08/03/online-slide/" >online_slide</a></div>						
 		</h3>
@@ -199,237 +441,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-22 </div>
-			<div class="article-title"><a href="/2020/06/22/Serverless-Data-Engineering/" >Serverless Data Engineering</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://medium.com/i-like-big-data-and-i-cannot-lie/serverless-data-engineering-aws-glue-lambda-athena-quicksight-de3ef177884f" target="_blank" rel="noopener">Serverless Data Engineering: AWS Glue + Lambda + Athena + QuickSight</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/22/Serverless-Data-Engineering/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-22 </div>
-			<div class="article-title"><a href="/2020/06/22/aws-s3-signed-url/" >aws_s3_signed_url</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>列一下用 S3 signed URL 相關的事項</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://advancedweb.hu/how-s3-signed-urls-work/" target="_blank" rel="noopener">How S3 Signed URLs work</a></li>
-<li><a href="https://gumroad.com/l/aws-s3-signed-urls-handbook" target="_blank" rel="noopener">AWS S3 signed URLs handbook</a> e-book</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/22/aws-s3-signed-url/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-18 </div>
-			<div class="article-title"><a href="/2020/06/18/aws-cloud-watch-agent/" >aws_cloud_watch_agent</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近遇到 EC2 上，Disk 滿了，server 有問題的情形，加 EBS 後，想說應該來設定 alert<br>找 Cloud Watch 沒有這個 metrics<br>查了一下後，發現需要安裝 CloudWatch Agent，才能收集到 disk percent usage 的資料</p>
-<h2 id="使用-CloudWatch-Agent-的簡易步驟"><a href="#使用-CloudWatch-Agent-的簡易步驟" class="headerlink" title="使用 CloudWatch Agent 的簡易步驟"></a>使用 CloudWatch Agent 的簡易步驟</h2><ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html" target="_blank" rel="noopener">install CloudWatch Agent</a></li>
-<li>建立 IAM role，設定給 EC2<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html" target="_blank" rel="noopener">Create IAM Roles and Users for Use With CloudWatch Agent</a></li>
-</ul>
-</li>
-<li>建立 CloudWatch Agent config file<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file.html" target="_blank" rel="noopener">Create the CloudWatch Agent Configuration File</a></li>
-</ul>
-</li>
-<li>跑 CloudWatch Agent<ul>
-<li>收集的 metrics - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html" target="_blank" rel="noopener">Metrics Collected by the CloudWatch Agent</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html" target="_blank" rel="noopener">Collecting Metrics and Logs from Amazon EC2 Instances and On-Premises Servers with the CloudWatch Agent</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/18/aws-cloud-watch-agent/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-16 </div>
-			<div class="article-title"><a href="/2020/06/16/aws-tagging/" >aws_tagging</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://blog.crazyfan.net/posts/2017/05/19/aws_tagging_strategies/" target="_blank" rel="noopener">AWS Tagging Strategies 筆記</a></li>
-<li><a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf" target="_blank" rel="noopener">aws-tagging-best-practices.pdf</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/16/aws-tagging/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-11 </div>
-			<div class="article-title"><a href="/2020/06/11/parquet-tutorial/" >parquet_tutorial</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://dev.to/codenation/processing-parquet-files-in-golang-1nni" target="_blank" rel="noopener">Processing parquet files in Golang</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/11/parquet-tutorial/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-10 </div>
-			<div class="article-title"><a href="/2020/06/10/survey-parquet-and-orc/" >survey_parquet_and_orc</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>先說小結<br>It is up to the users whether you need SPACE EFFICIENCY [select ORC] or TIME EFFICIENCY [select PARQUET].</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://medium.com/@dhareshwarganesh/benchmarking-parquet-vs-orc-d52c39849aef" target="_blank" rel="noopener">Benchmarking PARQUET vs ORC</a></li>
-<li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/406561/#outline__4_3" target="_blank" rel="noopener">Parquet與ORC：高效能列式儲存格式</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/10/survey-parquet-and-orc/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-02 </div>
-			<div class="article-title"><a href="/2020/06/02/aws-glue-study-note/" >aws_glue_study_note</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
-<li>Data Store</li>
-</ul>
-<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
-<li>設定 connection 後，無法連結到 RDS<ul>
-<li>出現的 error code 為 “At least one security group must open all ingress ports.To limit traffic, the source security group in your inbound rule can be restricted to the same security group”</li>
-<li>google 後，Error的情形為<a href="https://docs.aws.amazon.com/glue/latest/dg/glue-troubleshooting-errors.html#error-inbound-self-reference-rule" target="_blank" rel="noopener">Error: Inbound Rule in Security Group Required</a>，照著說明的方式進行，test connection 就通過囉</li>
-<li>原因：security group 沒有設定好，沒有 allow security-group 本身所有的 tcp 都可以連</li>
-<li><a href="https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html" target="_blank" rel="noopener">Setting Up a VPC to Connect to JDBC Data Stores</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="轉換-json-的資料"><a href="#轉換-json-的資料" class="headerlink" title="轉換 json 的資料"></a>轉換 json 的資料</h2><ul>
-<li><a href="https://medium.com/@ly.lee/transform-and-import-a-json-file-into-amazon-redshift-with-aws-glue-3371006e03ca" target="_blank" rel="noopener">Transform and Import a JSON file into Amazon Redshift with AWS Glue</a></li>
-<li><a href="https://aws.amazon.com/tw/blogs/big-data/simplify-querying-nested-json-with-the-aws-glue-relationalize-transform/" target="_blank" rel="noopener">Simplify Querying Nested JSON with the AWS Glue Relationalize Transform</a></li>
-</ul>
-<h2 id="連動的方式"><a href="#連動的方式" class="headerlink" title="連動的方式"></a>連動的方式</h2><ul>
-<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-after-crawler-workflow/" target="_blank" rel="noopener">How can I use AWS Glue workflows to automatically start a job when a crawler run completes?</a></li>
-<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-crawler-completes-lambda/" target="_blank" rel="noopener">How can I use a Lambda function to automatically start an AWS Glue job when a crawler run completes?</a></li>
-</ul>
-<h2 id="ETL-job"><a href="#ETL-job" class="headerlink" title="ETL job"></a>ETL job</h2><p>  目前 glue 的 job, 可以用 純 python or PySpark 來寫 script code, 我目前是用 PySpark 來嘗試</p>
-<ul>
-<li><a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python.html" target="_blank" rel="noopener">Program AWS Glue ETL Scripts in Python</a></li>
-<li><a href="https://github.com/aws-samples/aws-glue-samples" target="_blank" rel="noopener">AWS Glue ETL Code Samples</a> 有關 ETL job 的範例</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li>
-<li><a href="https://www.cdata.com/kb/tech/mysql-jdbc-aws-glue.rst" target="_blank" rel="noopener">Connect to MySQL Data in AWS Glue Jobs Using JDBC</a></li>
-<li><a href="https://towardsdatascience.com/a-complete-guide-on-serverless-data-lake-using-aws-glue-athena-and-quicksight-3a8a24cfa4af" target="_blank" rel="noopener">A Complete Guide On Serverless Data Lake Using AWS Glue, Athena and QuickSight</a> 有滿完整的說明 glue &amp; athena </li>
-<li><a href="https://medium.com/swlh/serverless-data-lake-storing-and-analysing-streaming-data-using-aws-60cf3bfe1efd" target="_blank" rel="noopener">Serverless Data Lake: Storing and Analysing Streaming Data using AWS</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/02/aws-glue-study-note/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -480,48 +491,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/books/">books<span>1</span></a></li>
+			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
 		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
+			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
+		
+			<li><a href="/tags/mac/">mac<span>1</span></a></li>
 		
 			<li><a href="/tags/analyzer/">analyzer<span>1</span></a></li>
 		
-			<li><a href="/tags/find/">find<span>1</span></a></li>
+			<li><a href="/tags/framework/">framework<span>1</span></a></li>
 		
-			<li><a href="/tags/python/">python<span>2</span></a></li>
-		
-			<li><a href="/tags/tool/">tool<span>1</span></a></li>
-		
-			<li><a href="/tags/tag/">tag<span>1</span></a></li>
+			<li><a href="/tags/plugin/">plugin<span>1</span></a></li>
 		
 			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
 		
-			<li><a href="/tags/go/">go<span>1</span></a></li>
+			<li><a href="/tags/click/">click<span>1</span></a></li>
 		
-			<li><a href="/tags/log/">log<span>1</span></a></li>
+			<li><a href="/tags/remote/">remote<span>1</span></a></li>
 		
-			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>3</span></a></li>
 		
-			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+			<li><a href="/tags/books/">books<span>1</span></a></li>
 		
-			<li><a href="/tags/setup/">setup<span>1</span></a></li>
+			<li><a href="/tags/unity/">unity<span>1</span></a></li>
+		
+			<li><a href="/tags/slide/">slide<span>1</span></a></li>
+		
+			<li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
+		
+			<li><a href="/tags/dao/">dao<span>2</span></a></li>
 		
 			<li><a href="/tags/book/">book<span>1</span></a></li>
 		
-			<li><a href="/tags/AWS/">AWS<span>1</span></a></li>
+			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
 		
-			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
+			<li><a href="/tags/online/">online<span>1</span></a></li>
 		
-			<li><a href="/tags/tutorial/">tutorial<span>1</span></a></li>
+			<li><a href="/tags/dynamodb/">dynamodb<span>1</span></a></li>
 		
-			<li><a href="/tags/s3/">s3<span>1</span></a></li>
-		
-			<li><a href="/tags/glue/">glue<span>1</span></a></li>
-		
-			<li><a href="/tags/data-analysis/">data_analysis<span>1</span></a></li>
+			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>42</span></a></li>
+		   <li><a href="/tags">...<span>52</span></a></li>
 		 
 		</ul>
 	</div>
@@ -534,23 +545,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2020/09/23/cheat-cli-tool/" ><i class="fa fa-file-o"></i>cheat-cli-tool</a>
+        <a href="/2020/09/30/python-pip-tutorial/" ><i class="fa fa-file-o"></i>python-pip-tutorial</a>
       </li>
     
       <li>
-        <a href="/2020/09/23/vim-plugin-used/" ><i class="fa fa-file-o"></i>vim-plugin-used</a>
+        <a href="/2020/09/30/python-click-tutorial/" ><i class="fa fa-file-o"></i>python-click-tutorial</a>
       </li>
     
       <li>
-        <a href="/2020/09/23/go-tutorial/" ><i class="fa fa-file-o"></i>go-tutorial</a>
+        <a href="/2020/09/30/python-prompt-toolkit-example/" ><i class="fa fa-file-o"></i>python-prompt-toolkit-example</a>
       </li>
     
       <li>
-        <a href="/2020/09/17/my-vim-new-setup/" ><i class="fa fa-file-o"></i>my-vim-new-setup</a>
+        <a href="/2020/09/30/go-prompt-example/" ><i class="fa fa-file-o"></i>go-prompt-example</a>
       </li>
     
       <li>
-        <a href="/2020/09/17/mac-remote-to-another-mac/" ><i class="fa fa-file-o"></i>mac_remote_to_another_mac</a>
+        <a href="/2020/09/29/python-fire-note/" ><i class="fa fa-file-o"></i>python-fire-note</a>
       </li>
     
   </ul>
