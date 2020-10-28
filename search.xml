@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>robot_framework</title>
+      <link href="2020/10/28/robot-framework/"/>
+      <url>2020/10/28/robot-framework/</url>
+      
+        <content type="html"><![CDATA[<p>最近需要 support SQA 的工作。在我的想象中，要將 SQA 做得好，需要有 automation testing ＆ daily buid 的互相配合<br>在 automation testing 中，來試試用 robot-framework 來撰寫 test case，以進行整合<br>robot-framework 中，可以用 python 來寫 custom test libraries 滿有趣的</p><h2 id="vim-plugin"><a href="#vim-plugin" class="headerlink" title="vim plugin"></a>vim plugin</h2><ul><li><a href="https://github.com/mfukar/robotframework-vim" target="_blank" rel="noopener">robotframework-vim</a> Vim plugin for development with Robot Framework.</li><li>安裝上述的 plugin，檔案中加上這行 <code># -*- coding: robot -*-</code> 或是用 <code>:setf robot</code></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst" target="_blank" rel="noopener">Robot Framework Quick Start Guide</a> 這份先看</li><li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html" target="_blank" rel="noopener">Robot Framework User Guide</a> ** 完整的 user guide</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> test-case </tag>
+            
+            <tag> robot-framework </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>csrf_info</title>
+      <link href="2020/10/15/csrf-info/"/>
+      <url>2020/10/15/csrf-info/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://blog.techbridge.cc/2017/02/25/csrf-introduction/" target="_blank" rel="noopener">讓我們來談談 CSRF</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> csrf </tag>
+            
+            <tag> crumb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>chrom-ssl-cert-invalid</title>
       <link href="2020/10/14/chrom-ssl-cert-invalid/"/>
       <url>2020/10/14/chrom-ssl-cert-invalid/</url>

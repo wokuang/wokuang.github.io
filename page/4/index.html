@@ -119,6 +119,59 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-06-16 </div>
+			<div class="article-title"><a href="/2020/06/16/aws-tagging/" >aws_tagging</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://blog.crazyfan.net/posts/2017/05/19/aws_tagging_strategies/" target="_blank" rel="noopener">AWS Tagging Strategies 筆記</a></li>
+<li><a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf" target="_blank" rel="noopener">aws-tagging-best-practices.pdf</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/16/aws-tagging/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-11 </div>
+			<div class="article-title"><a href="/2020/06/11/parquet-tutorial/" >parquet_tutorial</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dev.to/codenation/processing-parquet-files-in-golang-1nni" target="_blank" rel="noopener">Processing parquet files in Golang</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/11/parquet-tutorial/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-06-10 </div>
 			<div class="article-title"><a href="/2020/06/10/survey-parquet-and-orc/" >survey_parquet_and_orc</a></div>						
 		</h3>
@@ -420,91 +473,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-22 </div>
-			<div class="article-title"><a href="/2020/05/22/add-tag-on-serverless/" >add_tag_on_serverless</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
-<li>為了要細分 AWS cost 用到那部分，常見的方式為使用 Tag 來區分</li>
-</ul>
-<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><ul>
-<li>在 serverless.conf 中的 provider block  加 stackTags , 可以標註 tag<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">   stackTags:</span><br><span class="line">     owner: owner</span><br><span class="line">     env: $&#123;self:custom.stage&#125;</span><br><span class="line">     service: service</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="可以加強的部分"><a href="#可以加強的部分" class="headerlink" title="可以加強的部分"></a>可以加強的部分</h2><ul>
-<li>因為 stack tag，會有些 AWS resources 沒有加到 tag, 可以用 “Serverless Repository apps” 來加強</li>
-<li><a href="https://github.com/lumigo-io/SAR-Propagate-CFN-Tags" target="_blank" rel="noopener">lumigo-io/SAR-Propagate-CFN-Tags</a><ul>
-<li>SAR app to propagate CloudFormation’s stack tags to resources that are currently not propagated automatically - e.g. CloudWatch Logs</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.datree.io/resources/serverless-best-practices" target="_blank" rel="noopener">Top 10 Serverless best practices</a></li>
-<li><a href="https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/" target="_blank" rel="noopener">Serverless.yml Reference</a><ul>
-<li>Here is a list of all available properties in serverless.yml when the provider is set to aws.</li>
-</ul>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/22/add-tag-on-serverless/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-22 </div>
-			<div class="article-title"><a href="/2020/05/22/pip-success-but-not-found/" >pip_success_but_not_found</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
-<li>今天在 EC2 上，使用 virtualenv 來安裝 pandas 時，遇到 pip 有安裝成功，但是進去 ipython 時，找不到 pandas module 的情形</li>
-<li>找了一段時間後，發現 package 被安裝在 lib64 的path，而 pip 是找 lib folder，所以找不到 pandas module<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas&#x2F;tests&#x2F;io&#x2F;json&#x2F;__pycache__&#x2F;test_pandas.cpython-36.pyc</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas&#x2F;tests&#x2F;io&#x2F;json&#x2F;test_pandas.py</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas-1.0.3.dist-info</span><br></pre></td></tr></table></figure></li>
-<li>看起來應該是某版本的 amazon linux 的問題</li>
-</ul>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
-<li><p>用指定路徑的方式，來執行 pip</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install --upgrade --target &#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;dist-packages pandas</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>看 python 的 path</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import sys</span><br><span class="line">&gt;&gt;&gt; sys.path</span><br><span class="line">[&#39;&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib64&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib&#x2F;python3.6&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;lib-dynload&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;dist-packages&#39;, &#39;&#x2F;usr&#x2F;lib64&#x2F;python3.6&#39;, &#39;&#x2F;usr&#x2F;lib&#x2F;python3.6&#39;]</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Refrerence"><a href="#Refrerence" class="headerlink" title="Refrerence"></a>Refrerence</h2><ul>
-<li><a href="https://github.com/pypa/pip/issues/4464" target="_blank" rel="noopener">Packages installed by pip in lib64 are not recognized by pip</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/22/pip-success-but-not-found/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -555,48 +523,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/dao/">dao<span>2</span></a></li>
-		
-			<li><a href="/tags/linux/">linux<span>2</span></a></li>
-		
 			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
-		
-			<li><a href="/tags/vs-code/">vs-code<span>2</span></a></li>
-		
-			<li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
-		
-			<li><a href="/tags/cli-tool/">cli-tool<span>1</span></a></li>
-		
-			<li><a href="/tags/mac/">mac<span>1</span></a></li>
-		
-			<li><a href="/tags/click/">click<span>1</span></a></li>
-		
-			<li><a href="/tags/package/">package<span>1</span></a></li>
-		
-			<li><a href="/tags/books/">books<span>1</span></a></li>
-		
-			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
-		
-			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
-		
-			<li><a href="/tags/pip/">pip<span>3</span></a></li>
-		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
 		
 			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
 		
-			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
 		
-			<li><a href="/tags/slide/">slide<span>1</span></a></li>
+			<li><a href="/tags/glue/">glue<span>1</span></a></li>
+		
+			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
+		
+			<li><a href="/tags/css/">css<span>1</span></a></li>
+		
+			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+		
+			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
 		
 			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
 		
-			<li><a href="/tags/REPL/">REPL<span>2</span></a></li>
+			<li><a href="/tags/slide/">slide<span>1</span></a></li>
 		
-			<li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
+			<li><a href="/tags/pip/">pip<span>3</span></a></li>
+		
+			<li><a href="/tags/vim/">vim<span>3</span></a></li>
+		
+			<li><a href="/tags/find/">find<span>1</span></a></li>
+		
+			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
+		
+			<li><a href="/tags/serverless/">serverless<span>2</span></a></li>
+		
+			<li><a href="/tags/remote/">remote<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
+		
+			<li><a href="/tags/config/">config<span>1</span></a></li>
+		
+			<li><a href="/tags/s3/">s3<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>59</span></a></li>
+		   <li><a href="/tags">...<span>63</span></a></li>
 		 
 		</ul>
 	</div>
@@ -609,6 +577,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2020/10/28/robot-framework/" ><i class="fa fa-file-o"></i>robot_framework</a>
+      </li>
+    
+      <li>
+        <a href="/2020/10/15/csrf-info/" ><i class="fa fa-file-o"></i>csrf_info</a>
+      </li>
+    
+      <li>
         <a href="/2020/10/14/chrom-ssl-cert-invalid/" ><i class="fa fa-file-o"></i>chrom-ssl-cert-invalid</a>
       </li>
     
@@ -618,14 +594,6 @@
     
       <li>
         <a href="/2020/10/13/disable-tls-1-0-on-aws/" ><i class="fa fa-file-o"></i>disable-tls-1-0-on-aws</a>
-      </li>
-    
-      <li>
-        <a href="/2020/10/08/cli-page/" ><i class="fa fa-file-o"></i>cli-page</a>
-      </li>
-    
-      <li>
-        <a href="/2020/10/05/pip-package/" ><i class="fa fa-file-o"></i>pip-package</a>
       </li>
     
   </ul>
