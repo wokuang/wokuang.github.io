@@ -4,11 +4,133 @@
   
     
     <entry>
+      <title>snmp_related</title>
+      <link href="2020/11/11/snmp-related/"/>
+      <url>2020/11/11/snmp-related/</url>
+      
+        <content type="html"><![CDATA[<p>最近需要寫跟 snmp 相關的測試，就記錄一下囉</p><h2 id="可以試試的工具"><a href="#可以試試的工具" class="headerlink" title="可以試試的工具"></a>可以試試的工具</h2><ul><li><a href="https://www.opennms.com/opennms-platform/" target="_blank" rel="noopener">OpenNMS</a></li><li><a href="https://www.solarwinds.com/" target="_blank" rel="noopener">solarwinds</a></li></ul><h2 id="有關的-snmp-server-docker"><a href="#有關的-snmp-server-docker" class="headerlink" title="有關的 snmp server docker"></a>有關的 snmp server docker</h2><ul><li><p><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - Net-SNMP base image with Supervisor on CentOS</p><ul><li>目前有測試過，可以使用</li><li>跑 snmptrap receiver 的方式，設定 UDP port mapping (port publish)<ul><li><code>docker run -d --name trap_sink -p 1620:162/udp elcolio/net-snmp</code></li></ul></li><li>送出 trap 來，設定需要的 ip &amp; pprt<ul><li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public DESTINATION .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li><li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public 10.1.83.41:1620 .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li></ul></li></ul></li><li><p><a href="https://github.com/OpenNMS/opennms/tree/develop/opennms-container" target="_blank" rel="noopener">OpenNMS/opennms</a> - container</p><ul><li><a href="https://docs.opennms.org/opennms/releases/latest/guide-install/guide-install.html#_run_with_docker" target="_blank" rel="noopener">Run with Docker</a></li></ul></li></ul><h2 id="snmp-掃盲"><a href="#snmp-掃盲" class="headerlink" title="snmp 掃盲"></a>snmp 掃盲</h2><ul><li><a href="https://www.manageengine.com/tw/network-monitoring/what-is-snmp.html" target="_blank" rel="noopener">SNMP 教程</a></li><li><a href="https://www.itread01.com/content/1548945570.html" target="_blank" rel="noopener">snmp trap入門</a></li></ul><h2 id="檢查-udp-port-是否有open"><a href="#檢查-udp-port-是否有open" class="headerlink" title="檢查 udp port 是否有open"></a>檢查 udp port 是否有open</h2><ul><li><code>$ nc -zu 127.0.0.1 1610</code></li><li><a href="https://it001.pixnet.net/blog/post/325644661-it%E4%BA%8B%E4%BB%B6%E7%B0%BF-%E6%88%91%E6%83%B3%E6%B8%AC%E8%A9%A6udp%E6%9C%89%E6%B2%92%E6%9C%89%E9%80%9A%E6%80%8E%E9%BA%BC%E8%BE%A6" target="_blank" rel="noopener">IT事件簿-我想測試UDP有沒有通怎麼辦?</a></li><li><a href="http://taiwanwolf.blogspot.com/2011/06/port-tcp-udp.html" target="_blank" rel="noopener">如何檢測 Port 是否有活著 (TCP, UDP)</a></li></ul><h2 id="檢查有開哪些-port"><a href="#檢查有開哪些-port" class="headerlink" title="檢查有開哪些 port"></a>檢查有開哪些 port</h2><ul><li><code>sudo lsof -i -P -n | grep LISTEN</code></li><li><code>lsof -i -P -n</code></li><li><a href="https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/" target="_blank" rel="noopener">How to check if port is in use on Linux or Unix</a></li></ul><h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul><li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul><li>先裝好 Supervisord 的 docker，之後的服務可以用此為 base image</li><li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> 就是以此方式建立的</li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> snmp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>run_remote_docker_daemon</title>
+      <link href="2020/11/10/run-remote-docker-daemon/"/>
+      <url>2020/11/10/run-remote-docker-daemon/</url>
+      
+        <content type="html"><![CDATA[<p>最近需要用 python (using robot framework) 來操作 docker 的 start &amp; stop，找了一段時間<br>找到可以用 docker python SDK，來操作 remote 的 docker daemon<br>茲加以記錄</p><h2 id="Docker-Python-SDK"><a href="#Docker-Python-SDK" class="headerlink" title="Docker Python SDK"></a>Docker Python SDK</h2><ul><li><a href="https://docker-py.readthedocs.io/en/stable/index.html" target="_blank" rel="noopener">Docker SDK for Python</a></li><li><a href="https://docs.docker.com/engine/api/" target="_blank" rel="noopener">Develop with Docker Engine API</a></li><li><a href="https://github.com/docker/docker-py" target="_blank" rel="noopener">docker/docker-py</a> - A Python library for the Docker</li></ul><h2 id="Connect-to-Remote-Docker"><a href="#Connect-to-Remote-Docker" class="headerlink" title="Connect to Remote Docker"></a>Connect to Remote Docker</h2><ul><li><a href="https://nickjanetakis.com/blog/docker-tip-73-connecting-to-a-remote-docker-daemon" target="_blank" rel="noopener">Docker Tip #73: Connecting to a Remote Docker Daemon</a></li><li><a href="https://success.mirantis.com/article/how-do-i-enable-the-remote-api-for-dockerd" target="_blank" rel="noopener">How do I enable the remote API for dockerd</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> remote </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gherkin_test_case</title>
+      <link href="2020/11/09/gherkin-test-case/"/>
+      <url>2020/11/09/gherkin-test-case/</url>
+      
+        <content type="html"><![CDATA[<p>用 robot framework 一段時間後，讀到 <a href="https://github.com/robotframework/HowToWriteGoodTestCases" target="_blank" rel="noopener">How to write good test case</a>，有建議一種 test case 的寫法為 Gherkin，先行記錄囉</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.guru99.com/gherkin-test-cucumber.html" target="_blank" rel="noopener">What is Gherkin? Write Gherkin Test in Cucumber</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> test-case </tag>
+            
+            <tag> gherkin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tacacs_beginner</title>
+      <link href="2020/11/06/tacacs-beginner/"/>
+      <url>2020/11/06/tacacs-beginner/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/dchidell/docker-tacacs" target="_blank" rel="noopener">dchidell/docker-tacacs</a> - Basic lightweight tacacs+ container for testing Cisco devices<ul><li>可以使用自訂的 tac_user.cfg 設定檔</li></ul></li><li><a href="http://www.stben.net/tacacs/" target="_blank" rel="noopener">TACACS+ server</a><ul><li><a href="http://www.stben.net/tacacs/users_guide.html" target="_blank" rel="noopener">TAC_PLUS Developer’s Kit</a> - User guide</li></ul></li><li><a href="https://www.digi.com/resources/documentation/digidocs/90002291/os/user-tacacs-plus-c.htm" target="_blank" rel="noopener">Terminal Access Controller Access-Control System Plus (TACACS+)</a><ul><li><a href="https://www.digi.com/resources/documentation/digidocs/90002291/os/user-tacacs-plus-user-config-t.htm" target="_blank" rel="noopener">TACACS+ user configuration</a></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> tacacs </tag>
+            
+            <tag> AAA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker_beginner</title>
+      <link href="2020/11/06/docker-beginner/"/>
+      <url>2020/11/06/docker-beginner/</url>
+      
+        <content type="html"><![CDATA[<p>列一下相關的 docker 文件資料</p><h2 id="Docker-API-python"><a href="#Docker-API-python" class="headerlink" title="Docker API - python"></a>Docker API - python</h2><ul><li><a href="https://github.com/docker/docker-py" target="_blank" rel="noopener">docker/docker-py</a> - A Python library for the Docker</li><li><a href="https://docker-py.readthedocs.io/en/stable/" target="_blank" rel="noopener">Docker SDK for Python</a> - python SDK 文件</li><li><a href="https://docs.docker.com/engine/api/sdk/examples/" target="_blank" rel="noopener">Examples using the Docker Engine SDKs and Docker API</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><p><a href="https://philipzheng.gitbook.io/docker_practice/" target="_blank" rel="noopener">《Docker —— 從入門到實踐­》正體中文版</a> * 找時間讀一遍</p><ul><li><a href="https://philipzheng.gitbook.io/docker_practice/container/enter" target="_blank" rel="noopener">docker - 進入容器</a></li></ul></li><li><p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docker Get Started</a> - 官方文件，必讀</p></li><li><p><a href="https://docker-curriculum.com/" target="_blank" rel="noopener">A Docker Tutorial for Beginners</a></p></li><li><p><a href="https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes" target="_blank" rel="noopener">How To Remove Docker Images, Containers, and Volumes</a></p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>aws_sns_encryption</title>
+      <link href="2020/11/04/aws-sns-encryption/"/>
+      <url>2020/11/04/aws-sns-encryption/</url>
+      
+        <content type="html"><![CDATA[<p>最近在 serverless 上，加上 <a href="https://www.cloudconformity.com/" target="_blank" rel="noopener">cloud conformity</a>的檢查，檢查後會出現 Rule ID: SNS-006 <a href="https://www.cloudconformity.com/knowledge-base/aws/SNS/server-side-encryption.html" target="_blank" rel="noopener">SNS Topic Encrypted</a> 的 High level，就找了一下解法如下</p><h2 id="可以執行的範例-serverless-conf"><a href="#可以執行的範例-serverless-conf" class="headerlink" title="可以執行的範例 serverless conf"></a>可以執行的範例 serverless conf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">custom:</span><br><span class="line">  ...</span><br><span class="line">  alerts:</span><br><span class="line">    topics:</span><br><span class="line">      ok:</span><br><span class="line">        topic: sns-alerts-ok</span><br><span class="line">        </span><br><span class="line">      alarm:</span><br><span class="line">        topic: sns-alerts-alarm</span><br><span class="line">        </span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">functions:</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">resources:</span><br><span class="line">  - Resources:</span><br><span class="line">      AwsAlertsOk: # Append the following properties to the resource created by the plugin serverless-plugin-aws-alerts</span><br><span class="line">        Properties:</span><br><span class="line">          KmsMasterKeyId: enter-your-cmk-id-here</span><br><span class="line"></span><br><span class="line">      AwsAlertsAlarm: # Append the following properties to the resource created by the plugin serverless-plugin-aws-alerts</span><br><span class="line">        Properties:</span><br><span class="line">          KmsMasterKeyId: enter-your-cmk-id-here</span><br></pre></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/ACloudGuru/serverless-plugin-aws-alerts/issues/117" target="_blank" rel="noopener">Use encryption as default for SNS #117</a></li><li><a href="https://www.serverlessops.io/blog/serverless-ops-infrastructure-as-code-with-aws-serverless" target="_blank" rel="noopener">Serverless DevOps: Infrastructure As Code With AWS Serverless</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> sns </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>robot_framework</title>
       <link href="2020/10/28/robot-framework/"/>
       <url>2020/10/28/robot-framework/</url>
       
-        <content type="html"><![CDATA[<p>最近需要 support SQA 的工作。在我的想象中，要將 SQA 做得好，需要有 automation testing ＆ daily buid 的互相配合<br>在 automation testing 中，來試試用 robot-framework 來撰寫 test case，以進行整合<br>robot-framework 中，可以用 python 來寫 custom test libraries 滿有趣的</p><h2 id="vim-plugin"><a href="#vim-plugin" class="headerlink" title="vim plugin"></a>vim plugin</h2><ul><li><a href="https://github.com/mfukar/robotframework-vim" target="_blank" rel="noopener">robotframework-vim</a> Vim plugin for development with Robot Framework.</li><li>安裝上述的 plugin，檔案中加上這行 <code># -*- coding: robot -*-</code> 或是用 <code>:setf robot</code></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst" target="_blank" rel="noopener">Robot Framework Quick Start Guide</a> 這份先看</li><li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html" target="_blank" rel="noopener">Robot Framework User Guide</a> ** 完整的 user guide</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>最近需要 support SQA 的工作。在我的想象中，要將 SQA 做得好，需要有 automation testing ＆ daily buid 的互相配合<br>在 automation testing 中，來試試用 robot-framework 來撰寫 test case，以進行整合<br>robot-framework 中，可以用 python 來寫 custom test libraries 滿有趣的</p><h2 id="vim-plugin"><a href="#vim-plugin" class="headerlink" title="vim plugin"></a>vim plugin</h2><ul><li><a href="https://github.com/mfukar/robotframework-vim" target="_blank" rel="noopener">robotframework-vim</a> Vim plugin for development with Robot Framework.</li><li>安裝上述的 plugin，檔案中加上這行 <code># -*- coding: robot -*-</code> 或是用 <code>:setf robot</code></li></ul><h2 id="REST-API-testing"><a href="#REST-API-testing" class="headerlink" title="REST API testing"></a>REST API testing</h2><ul><li><a href="https://medium.com/@ravthiru/automate-rest-api-testing-with-robot-framework-ad1959057517" target="_blank" rel="noopener">Automate REST API testing with ROBOT framework</a></li><li><a href="https://interworks.com.mk/rest-api-testing-with-robot-framework/" target="_blank" rel="noopener">REST API TESTING WITH ROBOT FRAMEWORK</a></li><li><a href="https://github.com/asyrjasalo/RESTinstance" target="_blank" rel="noopener">asyrjasalo/RESTinstance</a> - Robot Framework library for RESTful JSON APIs<ul><li><a href="https://github.com/ravthiru/RoboFramework_REST_API" target="_blank" rel="noopener">ravthiru/RoboFramework_REST_API</a> 建立 docker image 的參考程式</li></ul></li><li><a href="https://github.com/MarketSquare/robotframework-requests" target="_blank" rel="noopener">MarketSquare/robotframework-requests</a> - 由 requests 來建立 robot framework<ul><li><a href="https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html" target="_blank" rel="noopener">Keywords documentation</a></li></ul></li></ul><h2 id="write-test-case"><a href="#write-test-case" class="headerlink" title="write test case"></a>write test case</h2><ul><li><a href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst" target="_blank" rel="noopener">How to write good test cases using Robot Framework</a></li></ul><h2 id="有關-test-case-的-structure"><a href="#有關-test-case-的-structure" class="headerlink" title="有關 test case 的 structure"></a>有關 test case 的 structure</h2><ul><li><a href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst#id21" target="_blank" rel="noopener">Test case structure</a> 分為 Workflow tests &amp; Data-driven tests<ul><li>目前的寫法為 Workflow tests</li></ul></li></ul><h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><ul><li><a href="https://blog.codecentric.de/en/2016/01/robot-framework-tutorial-2016-keywords/" target="_blank" rel="noopener">Robot Framework Tutorial 2016 – Keywords</a> ** 這篇值得一看</li><li><a href="https://medium.com/bryanyang0528/python-robot-framework-%E5%B7%A5%E4%BD%9C%E7%AD%86%E8%A8%98-%E4%B8%80-5282f6bf848a" target="_blank" rel="noopener">[Python] Robot Framework 工作筆記（一）</a></li><li><a href="http://cwd.dhemery.com/2009/11/wmaat/" target="_blank" rel="noopener">Writing Maintainable Automated Acceptance Tests</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst" target="_blank" rel="noopener">Robot Framework Quick Start Guide</a> 這份先看</li><li><a href="https://robotframework.org/#documentation" target="_blank" rel="noopener">Demo Project</a></li><li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html" target="_blank" rel="noopener">Robot Framework User Guide</a> ** 完整的 user guide ，滿重要的需要看過一遍</li><li><a href="http://robotframework.org/robotframework/#user-guide" target="_blank" rel="noopener">可以選擇看那部份的 User Guide</a></li><li><a href="https://dev.to/juperala/how-to-run-robot-framework-test-from-command-line-5aa" target="_blank" rel="noopener">How to run Robot Framework test from command line?</a> ** 由 command 執行 robot 的方式</li></ul><h2 id="TestRail"><a href="#TestRail" class="headerlink" title="TestRail"></a>TestRail</h2><ul><li><a href="https://medium.com/@rahul.mishra2690/testrail-integration-with-robot-framework-b5dde14b0225" target="_blank" rel="noopener">TestRail integration with Robot Framework</a></li></ul><h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul><li><a href="https://hub.docker.com/r/ivonet/robotframework-ride/" target="_blank" rel="noopener">Robotframework Ride IDE - docker</a></li></ul><h2 id="rst-相關資料"><a href="#rst-相關資料" class="headerlink" title="rst 相關資料"></a>rst 相關資料</h2><ul><li><a href="http://kevinchen.synology.me/TechnicalDocuments/Sphinx/rest_easyteach.html" target="_blank" rel="noopener">reStructuredText基本語法教學</a></li><li><a href="https://3vshej.cn/rstSyntax/index.html" target="_blank" rel="noopener">reStructuredText 语法</a></li><li><a href="https://docutils.sourceforge.io/docs/user/rst/quickstart.html" target="_blank" rel="noopener">A ReStructuredText Primer</a></li></ul>]]></content>
       
       
       

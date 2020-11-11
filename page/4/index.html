@@ -119,6 +119,187 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-08-03 </div>
+			<div class="article-title"><a href="/2020/08/03/online-slide/" >online_slide</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在背悟真篇，想說如果可以線上簡易的用 slide 來看，應該是滿好的<br>就找到囉這個服務 <a href="https://slides.com/" target="_blank" rel="noopener">slides</a>，來試用看看</p>
+
+	
+	</div>
+  <a type="button" href="/2020/08/03/online-slide/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-07-31 </div>
+			<div class="article-title"><a href="/2020/07/31/aws-dynamodb-use/" >aws-dynamodb-use</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>列一下 python boto3 使用 dynamodb 的sample</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dynobase.dev/dynamodb-python-with-boto3/#delete-item" target="_blank" rel="noopener">DynamoDB Python Boto3 Query Cheat Sheet</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/07/31/aws-dynamodb-use/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-07-29 </div>
+			<div class="article-title"><a href="/2020/07/29/use-vpc-flow-log/" >use-vpc-flow-log</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近開始打 E2E 後，有遇到幾次在 VPC 中，出現 lambda 連不到 RDS 的情形，所以就開 VPC flow log 來看看<br>VPC flow log, 可以設定到 CloudWatch &amp; S3 中，考慮到 cloudwatch 太貴，想說就用 S3 來試試看</p>
+<h2 id="設定的動作"><a href="#設定的動作" class="headerlink" title="設定的動作"></a>設定的動作</h2><ul>
+<li>開啟 VPC flow log, <a href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html" target="_blank" rel="noopener">Publishing flow logs to Amazon S3</a></li>
+<li>設定 Anthena 可以 query, <a href="https://docs.aws.amazon.com/zh_tw/athena/latest/ug/vpc-flow-logs.html#create-vpc-logs-table" target="_blank" rel="noopener">查詢 Amazon VPC 流程日誌</a><ul>
+<li>先建立好 table 後，還需要 alter table 將日期設定為 partition 後，才查得到資料</li>
+</ul>
+</li>
+</ul>
+<h2 id="advance-reference"><a href="#advance-reference" class="headerlink" title="advance reference"></a>advance reference</h2><ul>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/analyzing-vpc-flow-logs-with-amazon-kinesis-firehose-amazon-athena-and-amazon-quicksight/" target="_blank" rel="noopener">Analyzing VPC Flow Logs with Amazon Kinesis Firehose, Amazon Athena, and Amazon QuickSight</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/07/29/use-vpc-flow-log/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-22 </div>
+			<div class="article-title"><a href="/2020/06/22/Serverless-Data-Engineering/" >Serverless Data Engineering</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/i-like-big-data-and-i-cannot-lie/serverless-data-engineering-aws-glue-lambda-athena-quicksight-de3ef177884f" target="_blank" rel="noopener">Serverless Data Engineering: AWS Glue + Lambda + Athena + QuickSight</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/22/Serverless-Data-Engineering/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-22 </div>
+			<div class="article-title"><a href="/2020/06/22/aws-s3-signed-url/" >aws_s3_signed_url</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>列一下用 S3 signed URL 相關的事項</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://advancedweb.hu/how-s3-signed-urls-work/" target="_blank" rel="noopener">How S3 Signed URLs work</a></li>
+<li><a href="https://gumroad.com/l/aws-s3-signed-urls-handbook" target="_blank" rel="noopener">AWS S3 signed URLs handbook</a> e-book</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/22/aws-s3-signed-url/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-18 </div>
+			<div class="article-title"><a href="/2020/06/18/aws-cloud-watch-agent/" >aws_cloud_watch_agent</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近遇到 EC2 上，Disk 滿了，server 有問題的情形，加 EBS 後，想說應該來設定 alert<br>找 Cloud Watch 沒有這個 metrics<br>查了一下後，發現需要安裝 CloudWatch Agent，才能收集到 disk percent usage 的資料</p>
+<h2 id="使用-CloudWatch-Agent-的簡易步驟"><a href="#使用-CloudWatch-Agent-的簡易步驟" class="headerlink" title="使用 CloudWatch Agent 的簡易步驟"></a>使用 CloudWatch Agent 的簡易步驟</h2><ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html" target="_blank" rel="noopener">install CloudWatch Agent</a></li>
+<li>建立 IAM role，設定給 EC2<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html" target="_blank" rel="noopener">Create IAM Roles and Users for Use With CloudWatch Agent</a></li>
+</ul>
+</li>
+<li>建立 CloudWatch Agent config file<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file.html" target="_blank" rel="noopener">Create the CloudWatch Agent Configuration File</a></li>
+</ul>
+</li>
+<li>跑 CloudWatch Agent<ul>
+<li>收集的 metrics - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html" target="_blank" rel="noopener">Metrics Collected by the CloudWatch Agent</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html" target="_blank" rel="noopener">Collecting Metrics and Logs from Amazon EC2 Instances and On-Premises Servers with the CloudWatch Agent</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/18/aws-cloud-watch-agent/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-06-16 </div>
 			<div class="article-title"><a href="/2020/06/16/aws-tagging/" >aws_tagging</a></div>						
 		</h3>
@@ -249,230 +430,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-02 </div>
-			<div class="article-title"><a href="/2020/06/02/aws-parquet-data/" >aws_parquet_data</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近在嘗試使用 parquet &amp; AWS athena，剛好有 google 到一些資料，先隨手記錄一下</p>
-<h2 id="有關-AWS-Glue-相關資料"><a href="#有關-AWS-Glue-相關資料" class="headerlink" title="有關 AWS Glue 相關資料"></a>有關 AWS Glue 相關資料</h2><ul>
-<li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://aws.amazon.com/tw/blogs/big-data/how-factset-automated-exporting-data-from-amazon-dynamodb-to-amazon-s3-parquet-to-build-a-data-analytics-platform/" target="_blank" rel="noopener">How FactSet automated exporting data from Amazon DynamoDB to Amazon S3 Parquet to build a data analytics platform</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/02/aws-parquet-data/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-01 </div>
-			<div class="article-title"><a href="/2020/06/01/another-grep-rg-command/" >another_grep_rg_command</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<ul>
-<li><p>在看 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> 的介紹影片<a href="https://www.youtube.com/watch?v=qgG5Jhi_Els" target="_blank" rel="noopener">Vim universe. fzf - command line fuzzy finder</a> 時，有介紹到 rg 這個工具。用了之後，還真的滿快的啊</p>
-</li>
-<li><p>是一種方便使用 grep 的方式</p>
-</li>
-<li><p>使用 command</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rg SEARCH_KEYWORD PATH</span><br><span class="line">$ rg xxx .&#x2F;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="GitHub-project"><a href="#GitHub-project" class="headerlink" title="GitHub project"></a>GitHub project</h2><ul>
-<li><a href="https://github.com/BurntSushi/ripgrep" target="_blank" rel="noopener">BurntSushi/ripgrep</a></li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://mariusschulz.com/blog/fast-searching-with-ripgrep" target="_blank" rel="noopener">Fast Searching with ripgrep</a></li>
-<li><a href="https://www.hi-linux.com/posts/29245.html" target="_blank" rel="noopener">推荐一款命令行下最快的文本搜索神器 RipGrep</a></li>
-<li><a href="https://segmentfault.com/a/1190000016170184" target="_blank" rel="noopener">最快的文本搜索神器ripgrep – grep的最好代替者</a></li>
-<li><a href="https://github.com/chinanf-boy/ripgrep-zh" target="_blank" rel="noopener">中文翻译:&lt;BurntSushi/ripgrep&gt; 一个面向行的搜索工具</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/01/another-grep-rg-command/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-01 </div>
-			<div class="article-title"><a href="/2020/06/01/another-find/" >another_find</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近在試用 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> 時，有看到這個類似的 find 指令。裝了之後，覺得滿好用的</p>
-<ul>
-<li>使用 command<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fd PATTERN</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="gitHub-project"><a href="#gitHub-project" class="headerlink" title="gitHub project"></a>gitHub project</h2><ul>
-<li><a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener">sharkdp/fd</a><ul>
-<li>A simple, fast and user-friendly alternative to ‘find’</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/chinanf-boy/fd-zh" target="_blank" rel="noopener">翻译: <fd> 一种简单,快速和用户友好的 find 替代方案</a> </li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/01/another-find/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-23 </div>
-			<div class="article-title"><a href="/2020/05/23/Dao-Qinghua-Secret/" >Dao_Qinghua_Secret</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近剛好想看青華秘文，實體的書本不好買，就上網找來看囉</p>
-<h2 id="青華秘文"><a href="#青華秘文" class="headerlink" title="青華秘文"></a>青華秘文</h2><ul>
-<li><p><a href="https://ctext.org/wiki.pl?if=gb&res=775468" target="_blank" rel="noopener">《青華秘文》- 中國哲學書電子化計劃</a></p>
-</li>
-<li><p><a href="https://www.kanripo.org/text/KR5a0241/" target="_blank" rel="noopener">KR5a0241 玉清金笥青華祕文</a></p>
-</li>
-<li><p><a href="http://www.daotext.org/toc4.php?docid=2214" target="_blank" rel="noopener">青華秘文卷上</a></p>
-</li>
-<li><p><a href="http://www.daotext.org/toc4.php?docid=2215" target="_blank" rel="noopener">青華秘文卷中</a></p>
-</li>
-<li><p><a href="http://www.daotext.org/toc4.php?docid=2216" target="_blank" rel="noopener">青華秘文卷下</a></p>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/23/Dao-Qinghua-Secret/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-23 </div>
-			<div class="article-title"><a href="/2020/05/23/dao-classic-book/" >dao_classic_book</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近常會查看道教的典籍，茲蒐集目前找到，覺得還滿好的網站</p>
-<h2 id="典籍網站"><a href="#典籍網站" class="headerlink" title="典籍網站"></a>典籍網站</h2><ul>
-<li><a href="https://ctext.org/library.pl?if=gb&collection=132" target="_blank" rel="noopener">正統道藏(圖書館) - 中國哲學書電子化計劃</a> ** 還滿好的網站</li>
-<li><a href="https://www.kanripo.org/catalog?coll=DZ&label=%E6%AD%A3%E7%B5%B1%E9%81%93%E8%97%8F" target="_blank" rel="noopener">Kanseki Repository Catalog  正統道藏</a> ** 資料放在 gitHub 上，我滿喜歡這版的 </li>
-<li><a href="https://www.kanripo.org/catalog?coll=JY&label=%E9%81%93%E8%97%8F%E8%BC%AF%E8%A6%81" target="_blank" rel="noopener">Kanseki Repository Catalog 道藏輯要</a> </li>
-<li><a href="https://ctext.org/library.pl?if=gb&collection=132" target="_blank" rel="noopener">正統道藏(圖書館) - 中國哲學書電子化計劃</a></li>
-<li><a href="http://www.ctcwri.idv.tw/godking.htm" target="_blank" rel="noopener">道教學術資訊站</a></li>
-<li><a href="http://www.daotext.org" target="_blank" rel="noopener">道藏典籍全文数据库</a></li>
-<li><a href="https://taiwanebook.ncl.edu.tw/zh-tw" target="_blank" rel="noopener">台灣華文電子書</a> <ul>
-<li>這網站，我覺得掃描的品質滿好的。不過，就是道藏的資料不多，期待可以多多掃道藏</li>
-</ul>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/23/dao-classic-book/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-22 </div>
-			<div class="article-title"><a href="/2020/05/22/watch-cloudwatch-tag/" >watch_cloudwatch_tag</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
-<li>近來在加 AWS resource 的 tag，其中 cloudwatch 的 tag，無法由 AWS console 來看。用程式加了之後，一直找不到 cloud watch 的 tag 是否有加成功</li>
-</ul>
-<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><ul>
-<li>找了一段時間後，才發現原來要用 aws logs help 來找，用 aws clodwatch 是找不到的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ aws logs list-tags-log-group --log-group-name &#x2F;aws&#x2F;lambda&#x2F;log-group-name</span><br><span class="line">&#123;</span><br><span class="line">    &quot;tags&quot;: &#123;</span><br><span class="line">        &quot;env&quot;: &quot;dev&quot;,</span><br><span class="line">        &quot;service&quot;: &quot;xxx-service&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-using.html" target="_blank" rel="noopener">Using the AWS CLI</a></li>
-</ul>
-<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
-<li>要看 aws cloud watch log 的話，可以用 awslogs，還滿好用的</li>
-<li><a href="https://github.com/jorgebastida/awslogs" target="_blank" rel="noopener">jorgebastida/awslogs</a></li>
-<li>要找需要看的 log group 時，還滿方便的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awslogs groups | grep -i v3 | grep -i dev</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/22/watch-cloudwatch-tag/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -523,48 +480,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
+			<li><a href="/tags/docker/">docker<span>2</span></a></li>
 		
-			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
+			<li><a href="/tags/remote/">remote<span>2</span></a></li>
 		
-			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
+			<li><a href="/tags/cli/">cli<span>5</span></a></li>
 		
-			<li><a href="/tags/glue/">glue<span>1</span></a></li>
+			<li><a href="/tags/book/">book<span>1</span></a></li>
 		
-			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
 		
-			<li><a href="/tags/css/">css<span>1</span></a></li>
+			<li><a href="/tags/click/">click<span>1</span></a></li>
 		
-			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+			<li><a href="/tags/unity/">unity<span>1</span></a></li>
 		
-			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
-		
-			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
-		
-			<li><a href="/tags/slide/">slide<span>1</span></a></li>
-		
-			<li><a href="/tags/pip/">pip<span>3</span></a></li>
-		
-			<li><a href="/tags/vim/">vim<span>3</span></a></li>
-		
-			<li><a href="/tags/find/">find<span>1</span></a></li>
-		
-			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
-		
-			<li><a href="/tags/serverless/">serverless<span>2</span></a></li>
-		
-			<li><a href="/tags/remote/">remote<span>1</span></a></li>
-		
-			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+			<li><a href="/tags/python/">python<span>8</span></a></li>
 		
 			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
 		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
+			<li><a href="/tags/go/">go<span>2</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/cli-tool/">cli-tool<span>1</span></a></li>
+		
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+		
+			<li><a href="/tags/analyzer/">analyzer<span>1</span></a></li>
+		
+			<li><a href="/tags/css/">css<span>1</span></a></li>
 		
 			<li><a href="/tags/s3/">s3<span>1</span></a></li>
 		
+			<li><a href="/tags/log/">log<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>63</span></a></li>
+			<li><a href="/tags/AAA/">AAA<span>1</span></a></li>
+		
+			<li><a href="/tags/plugin/">plugin<span>1</span></a></li>
+		
+			<li><a href="/tags/package/">package<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>69</span></a></li>
 		 
 		</ul>
 	</div>
@@ -577,23 +534,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2020/10/28/robot-framework/" ><i class="fa fa-file-o"></i>robot_framework</a>
+        <a href="/2020/11/11/snmp-related/" ><i class="fa fa-file-o"></i>snmp_related</a>
       </li>
     
       <li>
-        <a href="/2020/10/15/csrf-info/" ><i class="fa fa-file-o"></i>csrf_info</a>
+        <a href="/2020/11/10/run-remote-docker-daemon/" ><i class="fa fa-file-o"></i>run_remote_docker_daemon</a>
       </li>
     
       <li>
-        <a href="/2020/10/14/chrom-ssl-cert-invalid/" ><i class="fa fa-file-o"></i>chrom-ssl-cert-invalid</a>
+        <a href="/2020/11/09/gherkin-test-case/" ><i class="fa fa-file-o"></i>gherkin_test_case</a>
       </li>
     
       <li>
-        <a href="/2020/10/14/css-font/" ><i class="fa fa-file-o"></i>css-font</a>
+        <a href="/2020/11/06/tacacs-beginner/" ><i class="fa fa-file-o"></i>tacacs_beginner</a>
       </li>
     
       <li>
-        <a href="/2020/10/13/disable-tls-1-0-on-aws/" ><i class="fa fa-file-o"></i>disable-tls-1-0-on-aws</a>
+        <a href="/2020/11/06/docker-beginner/" ><i class="fa fa-file-o"></i>docker_beginner</a>
       </li>
     
   </ul>

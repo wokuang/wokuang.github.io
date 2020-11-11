@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>snmp_related | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="snmp_related"/>
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> snmp_related</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>最近需要寫跟 snmp 相關的測試，就記錄一下囉</p>
+<h2 id="可以試試的工具"><a href="#可以試試的工具" class="headerlink" title="可以試試的工具"></a>可以試試的工具</h2><ul>
+<li><a href="https://www.opennms.com/opennms-platform/" target="_blank" rel="noopener">OpenNMS</a></li>
+<li><a href="https://www.solarwinds.com/" target="_blank" rel="noopener">solarwinds</a></li>
+</ul>
+<h2 id="有關的-snmp-server-docker"><a href="#有關的-snmp-server-docker" class="headerlink" title="有關的 snmp server docker"></a>有關的 snmp server docker</h2><ul>
+<li><p><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - Net-SNMP base image with Supervisor on CentOS</p>
+<ul>
+<li>目前有測試過，可以使用</li>
+<li>跑 snmptrap receiver 的方式，設定 UDP port mapping (port publish)<ul>
+<li><code>docker run -d --name trap_sink -p 1620:162/udp elcolio/net-snmp</code></li>
+</ul>
+</li>
+<li>送出 trap 來，設定需要的 ip &amp; pprt<ul>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public DESTINATION .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public 10.1.83.41:1620 .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/OpenNMS/opennms/tree/develop/opennms-container" target="_blank" rel="noopener">OpenNMS/opennms</a> - container</p>
+<ul>
+<li><a href="https://docs.opennms.org/opennms/releases/latest/guide-install/guide-install.html#_run_with_docker" target="_blank" rel="noopener">Run with Docker</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-掃盲"><a href="#snmp-掃盲" class="headerlink" title="snmp 掃盲"></a>snmp 掃盲</h2><ul>
+<li><a href="https://www.manageengine.com/tw/network-monitoring/what-is-snmp.html" target="_blank" rel="noopener">SNMP 教程</a></li>
+<li><a href="https://www.itread01.com/content/1548945570.html" target="_blank" rel="noopener">snmp trap入門</a></li>
+</ul>
+<h2 id="檢查-udp-port-是否有open"><a href="#檢查-udp-port-是否有open" class="headerlink" title="檢查 udp port 是否有open"></a>檢查 udp port 是否有open</h2><ul>
+<li><code>$ nc -zu 127.0.0.1 1610</code></li>
+<li><a href="https://it001.pixnet.net/blog/post/325644661-it%E4%BA%8B%E4%BB%B6%E7%B0%BF-%E6%88%91%E6%83%B3%E6%B8%AC%E8%A9%A6udp%E6%9C%89%E6%B2%92%E6%9C%89%E9%80%9A%E6%80%8E%E9%BA%BC%E8%BE%A6" target="_blank" rel="noopener">IT事件簿-我想測試UDP有沒有通怎麼辦?</a></li>
+<li><a href="http://taiwanwolf.blogspot.com/2011/06/port-tcp-udp.html" target="_blank" rel="noopener">如何檢測 Port 是否有活著 (TCP, UDP)</a></li>
+</ul>
+<h2 id="檢查有開哪些-port"><a href="#檢查有開哪些-port" class="headerlink" title="檢查有開哪些 port"></a>檢查有開哪些 port</h2><ul>
+<li><code>sudo lsof -i -P -n | grep LISTEN</code></li>
+<li><code>lsof -i -P -n</code></li>
+<li><a href="https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/" target="_blank" rel="noopener">How to check if port is in use on Linux or Unix</a></li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul>
+<li>先裝好 Supervisord 的 docker，之後的服務可以用此為 base image</li>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> 就是以此方式建立的</li>
+</ul>
+</li>
+</ul>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2020/11/10/run-remote-docker-daemon/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-11-11 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/snmp/">snmp<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2020 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

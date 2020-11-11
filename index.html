@@ -213,9 +213,260 @@
 		
             
 		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
         
         <!-- render other articles -->
         
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-11 </div>
+			<div class="article-title"><a href="/2020/11/11/snmp-related/" >snmp_related</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近需要寫跟 snmp 相關的測試，就記錄一下囉</p>
+<h2 id="可以試試的工具"><a href="#可以試試的工具" class="headerlink" title="可以試試的工具"></a>可以試試的工具</h2><ul>
+<li><a href="https://www.opennms.com/opennms-platform/" target="_blank" rel="noopener">OpenNMS</a></li>
+<li><a href="https://www.solarwinds.com/" target="_blank" rel="noopener">solarwinds</a></li>
+</ul>
+<h2 id="有關的-snmp-server-docker"><a href="#有關的-snmp-server-docker" class="headerlink" title="有關的 snmp server docker"></a>有關的 snmp server docker</h2><ul>
+<li><p><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - Net-SNMP base image with Supervisor on CentOS</p>
+<ul>
+<li>目前有測試過，可以使用</li>
+<li>跑 snmptrap receiver 的方式，設定 UDP port mapping (port publish)<ul>
+<li><code>docker run -d --name trap_sink -p 1620:162/udp elcolio/net-snmp</code></li>
+</ul>
+</li>
+<li>送出 trap 來，設定需要的 ip &amp; pprt<ul>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public DESTINATION .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public 10.1.83.41:1620 .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/OpenNMS/opennms/tree/develop/opennms-container" target="_blank" rel="noopener">OpenNMS/opennms</a> - container</p>
+<ul>
+<li><a href="https://docs.opennms.org/opennms/releases/latest/guide-install/guide-install.html#_run_with_docker" target="_blank" rel="noopener">Run with Docker</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-掃盲"><a href="#snmp-掃盲" class="headerlink" title="snmp 掃盲"></a>snmp 掃盲</h2><ul>
+<li><a href="https://www.manageengine.com/tw/network-monitoring/what-is-snmp.html" target="_blank" rel="noopener">SNMP 教程</a></li>
+<li><a href="https://www.itread01.com/content/1548945570.html" target="_blank" rel="noopener">snmp trap入門</a></li>
+</ul>
+<h2 id="檢查-udp-port-是否有open"><a href="#檢查-udp-port-是否有open" class="headerlink" title="檢查 udp port 是否有open"></a>檢查 udp port 是否有open</h2><ul>
+<li><code>$ nc -zu 127.0.0.1 1610</code></li>
+<li><a href="https://it001.pixnet.net/blog/post/325644661-it%E4%BA%8B%E4%BB%B6%E7%B0%BF-%E6%88%91%E6%83%B3%E6%B8%AC%E8%A9%A6udp%E6%9C%89%E6%B2%92%E6%9C%89%E9%80%9A%E6%80%8E%E9%BA%BC%E8%BE%A6" target="_blank" rel="noopener">IT事件簿-我想測試UDP有沒有通怎麼辦?</a></li>
+<li><a href="http://taiwanwolf.blogspot.com/2011/06/port-tcp-udp.html" target="_blank" rel="noopener">如何檢測 Port 是否有活著 (TCP, UDP)</a></li>
+</ul>
+<h2 id="檢查有開哪些-port"><a href="#檢查有開哪些-port" class="headerlink" title="檢查有開哪些 port"></a>檢查有開哪些 port</h2><ul>
+<li><code>sudo lsof -i -P -n | grep LISTEN</code></li>
+<li><code>lsof -i -P -n</code></li>
+<li><a href="https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/" target="_blank" rel="noopener">How to check if port is in use on Linux or Unix</a></li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul>
+<li>先裝好 Supervisord 的 docker，之後的服務可以用此為 base image</li>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> 就是以此方式建立的</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/11/snmp-related/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-10 </div>
+			<div class="article-title"><a href="/2020/11/10/run-remote-docker-daemon/" >run_remote_docker_daemon</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近需要用 python (using robot framework) 來操作 docker 的 start &amp; stop，找了一段時間<br>找到可以用 docker python SDK，來操作 remote 的 docker daemon<br>茲加以記錄</p>
+<h2 id="Docker-Python-SDK"><a href="#Docker-Python-SDK" class="headerlink" title="Docker Python SDK"></a>Docker Python SDK</h2><ul>
+<li><a href="https://docker-py.readthedocs.io/en/stable/index.html" target="_blank" rel="noopener">Docker SDK for Python</a></li>
+<li><a href="https://docs.docker.com/engine/api/" target="_blank" rel="noopener">Develop with Docker Engine API</a></li>
+<li><a href="https://github.com/docker/docker-py" target="_blank" rel="noopener">docker/docker-py</a> - A Python library for the Docker</li>
+</ul>
+<h2 id="Connect-to-Remote-Docker"><a href="#Connect-to-Remote-Docker" class="headerlink" title="Connect to Remote Docker"></a>Connect to Remote Docker</h2><ul>
+<li><a href="https://nickjanetakis.com/blog/docker-tip-73-connecting-to-a-remote-docker-daemon" target="_blank" rel="noopener">Docker Tip #73: Connecting to a Remote Docker Daemon</a></li>
+<li><a href="https://success.mirantis.com/article/how-do-i-enable-the-remote-api-for-dockerd" target="_blank" rel="noopener">How do I enable the remote API for dockerd</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/10/run-remote-docker-daemon/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-09 </div>
+			<div class="article-title"><a href="/2020/11/09/gherkin-test-case/" >gherkin_test_case</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>用 robot framework 一段時間後，讀到 <a href="https://github.com/robotframework/HowToWriteGoodTestCases" target="_blank" rel="noopener">How to write good test case</a>，有建議一種 test case 的寫法為 Gherkin，先行記錄囉</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.guru99.com/gherkin-test-cucumber.html" target="_blank" rel="noopener">What is Gherkin? Write Gherkin Test in Cucumber</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/09/gherkin-test-case/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-06 </div>
+			<div class="article-title"><a href="/2020/11/06/tacacs-beginner/" >tacacs_beginner</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/dchidell/docker-tacacs" target="_blank" rel="noopener">dchidell/docker-tacacs</a> - Basic lightweight tacacs+ container for testing Cisco devices<ul>
+<li>可以使用自訂的 tac_user.cfg 設定檔</li>
+</ul>
+</li>
+<li><a href="http://www.stben.net/tacacs/" target="_blank" rel="noopener">TACACS+ server</a><ul>
+<li><a href="http://www.stben.net/tacacs/users_guide.html" target="_blank" rel="noopener">TAC_PLUS Developer’s Kit</a> - User guide</li>
+</ul>
+</li>
+<li><a href="https://www.digi.com/resources/documentation/digidocs/90002291/os/user-tacacs-plus-c.htm" target="_blank" rel="noopener">Terminal Access Controller Access-Control System Plus (TACACS+)</a><ul>
+<li><a href="https://www.digi.com/resources/documentation/digidocs/90002291/os/user-tacacs-plus-user-config-t.htm" target="_blank" rel="noopener">TACACS+ user configuration</a></li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/06/tacacs-beginner/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-06 </div>
+			<div class="article-title"><a href="/2020/11/06/docker-beginner/" >docker_beginner</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>列一下相關的 docker 文件資料</p>
+<h2 id="Docker-API-python"><a href="#Docker-API-python" class="headerlink" title="Docker API - python"></a>Docker API - python</h2><ul>
+<li><a href="https://github.com/docker/docker-py" target="_blank" rel="noopener">docker/docker-py</a> - A Python library for the Docker</li>
+<li><a href="https://docker-py.readthedocs.io/en/stable/" target="_blank" rel="noopener">Docker SDK for Python</a> - python SDK 文件</li>
+<li><a href="https://docs.docker.com/engine/api/sdk/examples/" target="_blank" rel="noopener">Examples using the Docker Engine SDKs and Docker API</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><p><a href="https://philipzheng.gitbook.io/docker_practice/" target="_blank" rel="noopener">《Docker —— 從入門到實踐­》正體中文版</a> * 找時間讀一遍</p>
+<ul>
+<li><a href="https://philipzheng.gitbook.io/docker_practice/container/enter" target="_blank" rel="noopener">docker - 進入容器</a></li>
+</ul>
+</li>
+<li><p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docker Get Started</a> - 官方文件，必讀</p>
+</li>
+<li><p><a href="https://docker-curriculum.com/" target="_blank" rel="noopener">A Docker Tutorial for Beginners</a></p>
+</li>
+<li><p><a href="https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes" target="_blank" rel="noopener">How To Remove Docker Images, Containers, and Volumes</a></p>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/06/docker-beginner/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-04 </div>
+			<div class="article-title"><a href="/2020/11/04/aws-sns-encryption/" >aws_sns_encryption</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在 serverless 上，加上 <a href="https://www.cloudconformity.com/" target="_blank" rel="noopener">cloud conformity</a>的檢查，檢查後會出現 Rule ID: SNS-006 <a href="https://www.cloudconformity.com/knowledge-base/aws/SNS/server-side-encryption.html" target="_blank" rel="noopener">SNS Topic Encrypted</a> 的 High level，就找了一下解法如下</p>
+<h2 id="可以執行的範例-serverless-conf"><a href="#可以執行的範例-serverless-conf" class="headerlink" title="可以執行的範例 serverless conf"></a>可以執行的範例 serverless conf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">custom:</span><br><span class="line">  ...</span><br><span class="line">  alerts:</span><br><span class="line">    topics:</span><br><span class="line">      ok:</span><br><span class="line">        topic: sns-alerts-ok</span><br><span class="line">        </span><br><span class="line">      alarm:</span><br><span class="line">        topic: sns-alerts-alarm</span><br><span class="line">        </span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">functions:</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">resources:</span><br><span class="line">  - Resources:</span><br><span class="line">      AwsAlertsOk: # Append the following properties to the resource created by the plugin serverless-plugin-aws-alerts</span><br><span class="line">        Properties:</span><br><span class="line">          KmsMasterKeyId: enter-your-cmk-id-here</span><br><span class="line"></span><br><span class="line">      AwsAlertsAlarm: # Append the following properties to the resource created by the plugin serverless-plugin-aws-alerts</span><br><span class="line">        Properties:</span><br><span class="line">          KmsMasterKeyId: enter-your-cmk-id-here</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/ACloudGuru/serverless-plugin-aws-alerts/issues/117" target="_blank" rel="noopener">Use encryption as default for SNS #117</a></li>
+<li><a href="https://www.serverlessops.io/blog/serverless-ops-infrastructure-as-code-with-aws-serverless" target="_blank" rel="noopener">Serverless DevOps: Infrastructure As Code With AWS Serverless</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/04/aws-sns-encryption/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
            
 			  
 	
@@ -236,9 +487,49 @@
 <li><a href="https://github.com/mfukar/robotframework-vim" target="_blank" rel="noopener">robotframework-vim</a> Vim plugin for development with Robot Framework.</li>
 <li>安裝上述的 plugin，檔案中加上這行 <code># -*- coding: robot -*-</code> 或是用 <code>:setf robot</code></li>
 </ul>
+<h2 id="REST-API-testing"><a href="#REST-API-testing" class="headerlink" title="REST API testing"></a>REST API testing</h2><ul>
+<li><a href="https://medium.com/@ravthiru/automate-rest-api-testing-with-robot-framework-ad1959057517" target="_blank" rel="noopener">Automate REST API testing with ROBOT framework</a></li>
+<li><a href="https://interworks.com.mk/rest-api-testing-with-robot-framework/" target="_blank" rel="noopener">REST API TESTING WITH ROBOT FRAMEWORK</a></li>
+<li><a href="https://github.com/asyrjasalo/RESTinstance" target="_blank" rel="noopener">asyrjasalo/RESTinstance</a> - Robot Framework library for RESTful JSON APIs<ul>
+<li><a href="https://github.com/ravthiru/RoboFramework_REST_API" target="_blank" rel="noopener">ravthiru/RoboFramework_REST_API</a> 建立 docker image 的參考程式</li>
+</ul>
+</li>
+<li><a href="https://github.com/MarketSquare/robotframework-requests" target="_blank" rel="noopener">MarketSquare/robotframework-requests</a> - 由 requests 來建立 robot framework<ul>
+<li><a href="https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html" target="_blank" rel="noopener">Keywords documentation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="write-test-case"><a href="#write-test-case" class="headerlink" title="write test case"></a>write test case</h2><ul>
+<li><a href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst" target="_blank" rel="noopener">How to write good test cases using Robot Framework</a></li>
+</ul>
+<h2 id="有關-test-case-的-structure"><a href="#有關-test-case-的-structure" class="headerlink" title="有關 test case 的 structure"></a>有關 test case 的 structure</h2><ul>
+<li><a href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst#id21" target="_blank" rel="noopener">Test case structure</a> 分為 Workflow tests &amp; Data-driven tests<ul>
+<li>目前的寫法為 Workflow tests</li>
+</ul>
+</li>
+</ul>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><ul>
+<li><a href="https://blog.codecentric.de/en/2016/01/robot-framework-tutorial-2016-keywords/" target="_blank" rel="noopener">Robot Framework Tutorial 2016 – Keywords</a> ** 這篇值得一看</li>
+<li><a href="https://medium.com/bryanyang0528/python-robot-framework-%E5%B7%A5%E4%BD%9C%E7%AD%86%E8%A8%98-%E4%B8%80-5282f6bf848a" target="_blank" rel="noopener">[Python] Robot Framework 工作筆記（一）</a></li>
+<li><a href="http://cwd.dhemery.com/2009/11/wmaat/" target="_blank" rel="noopener">Writing Maintainable Automated Acceptance Tests</a></li>
+</ul>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst" target="_blank" rel="noopener">Robot Framework Quick Start Guide</a> 這份先看</li>
-<li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html" target="_blank" rel="noopener">Robot Framework User Guide</a> ** 完整的 user guide</li>
+<li><a href="https://robotframework.org/#documentation" target="_blank" rel="noopener">Demo Project</a></li>
+<li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html" target="_blank" rel="noopener">Robot Framework User Guide</a> ** 完整的 user guide ，滿重要的需要看過一遍</li>
+<li><a href="http://robotframework.org/robotframework/#user-guide" target="_blank" rel="noopener">可以選擇看那部份的 User Guide</a></li>
+<li><a href="https://dev.to/juperala/how-to-run-robot-framework-test-from-command-line-5aa" target="_blank" rel="noopener">How to run Robot Framework test from command line?</a> ** 由 command 執行 robot 的方式</li>
+</ul>
+<h2 id="TestRail"><a href="#TestRail" class="headerlink" title="TestRail"></a>TestRail</h2><ul>
+<li><a href="https://medium.com/@rahul.mishra2690/testrail-integration-with-robot-framework-b5dde14b0225" target="_blank" rel="noopener">TestRail integration with Robot Framework</a></li>
+</ul>
+<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul>
+<li><a href="https://hub.docker.com/r/ivonet/robotframework-ride/" target="_blank" rel="noopener">Robotframework Ride IDE - docker</a></li>
+</ul>
+<h2 id="rst-相關資料"><a href="#rst-相關資料" class="headerlink" title="rst 相關資料"></a>rst 相關資料</h2><ul>
+<li><a href="http://kevinchen.synology.me/TechnicalDocuments/Sphinx/rest_easyteach.html" target="_blank" rel="noopener">reStructuredText基本語法教學</a></li>
+<li><a href="https://3vshej.cn/rstSyntax/index.html" target="_blank" rel="noopener">reStructuredText 语法</a></li>
+<li><a href="https://docutils.sourceforge.io/docs/user/rst/quickstart.html" target="_blank" rel="noopener">A ReStructuredText Primer</a></li>
 </ul>
 
 	
@@ -332,202 +623,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-13 </div>
-			<div class="article-title"><a href="/2020/10/13/disable-tls-1-0-on-aws/" >disable-tls-1-0-on-aws</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="query-site"><a href="#query-site" class="headerlink" title="query site"></a>query site</h2><ul>
-<li>use <a href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener">Qualys</a> to confirm your changes</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.chowles.com/how-to-disable-tls-1-0-on-aws/" target="_blank" rel="noopener">How to Disable TLS 1.0 on Amazon Web Services (AWS)</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/13/disable-tls-1-0-on-aws/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-08 </div>
-			<div class="article-title"><a href="/2020/10/08/cli-page/" >cli-page</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>列一下，最近找到還滿有趣的 cli (command line tool)</p>
-<ul>
-<li><a href="https://github.com/rupa/z" target="_blank" rel="noopener">z</a></li>
-<li><a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener">fd</a> * 滿好用的 find cmd，可以多用用看</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://medium.com/swlh/my-favorite-cli-tools-c2fa484cee52" target="_blank" rel="noopener">My Favorite CLI Tools</a><ul>
-<li><a href="https://switowski.com/blog/favorite-cli-tools" target="_blank" rel="noopener">My Favorite CLI Tools</a></li>
-</ul>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/08/cli-page/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-05 </div>
-			<div class="article-title"><a href="/2020/10/05/pip-package/" >pip-package</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="上傳-package-到-test-pypi-上"><a href="#上傳-package-到-test-pypi-上" class="headerlink" title="上傳 package 到 test pypi 上"></a>上傳 package 到 test pypi 上</h2><ul>
-<li><code>python3 -m twine upload --repository testpypi dist/*</code></li>
-<li><a href="https://twine.readthedocs.io/en/latest/" target="_blank" rel="noopener">twine document</a></li>
-</ul>
-<h2 id="由-test-pypi-安裝-package"><a href="#由-test-pypi-安裝-package" class="headerlink" title="由 test pypi 安裝 package"></a>由 test pypi 安裝 package</h2><p>  <code>python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg</code></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://python-packaging.readthedocs.io/en/latest/" target="_blank" rel="noopener">python-packaging</a> * 這篇要好好來讀一讀</li>
-<li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/uploading_pypi.html" target="_blank" rel="noopener">Building and Uploading to PyPi</a> * 值得一看</li>
-<li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li>
-<li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html" target="_blank" rel="noopener">Making a Python Package</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/05/pip-package/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-09-30 </div>
-			<div class="article-title"><a href="/2020/09/30/python-pip-tutorial/" >python-pip-tutorial</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://dzone.com/articles/executable-package-pip-install" target="_blank" rel="noopener">Build Your First pip Package</a></li>
-<li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/09/30/python-pip-tutorial/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-09-30 </div>
-			<div class="article-title"><a href="/2020/09/30/python-click-tutorial/" >python-click-tutorial</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h2><ul>
-<li><a href="http://zetcode.com/python/click/" target="_blank" rel="noopener">Python click tutorial</a></li>
-<li><a href="https://www.kite.com/blog/python/python-command-line-click-tutorial/" target="_blank" rel="noopener">Python in the Command Line: A Tutorial on Click</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLJ39kWiJXSizF1shhf2rHi-aA1yjt7rtX" target="_blank" rel="noopener">Python Click Tutorial( Building Command Line Apps)</a> - youtube tutorial</li>
-<li><a href="https://medium.com/better-programming/python-click-building-your-first-command-line-interface-application-6947d5319ef7" target="_blank" rel="noopener">Create Your First CLI Application With Python Click</a></li>
-<li><a href="https://dbader.org/blog/mastering-click-advanced-python-command-line-apps" target="_blank" rel="noopener">Mastering Click: Writing Advanced Python Command-Line Apps</a></li>
-<li><a href="https://www.itread01.com/content/1497116288.html" target="_blank" rel="noopener">Python Click 學習筆記（轉）</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/09/30/python-click-tutorial/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-09-30 </div>
-			<div class="article-title"><a href="/2020/09/30/python-prompt-toolkit-example/" >python-prompt-toolkit-example</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="tutorial"><a href="#tutorial" class="headerlink" title="tutorial"></a>tutorial</h2><ul>
-<li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit/tree/master/examples/tutorial" target="_blank" rel="noopener">python-prompt-toolkit tutorial</a><ul>
-<li><a href="https://python-prompt-toolkit.readthedocs.io/en/stable/pages/tutorials/repl.html" target="_blank" rel="noopener">Tutorial: Build an SQLite REPL</a> - <strong>必讀的啦</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="參考的-project"><a href="#參考的-project" class="headerlink" title="參考的 project"></a>參考的 project</h2><ul>
-<li><a href="https://github.com/httpie/http-prompt" target="_blank" rel="noopener">httpie/http-prompt</a> : An interactive command-line HTTP and API testing client built on top of HTTPie featuring autocomplete, syntax highlighting, and more.<ul>
-<li><a href="https://www.ptt.cc/bbs/Python/M.1467897513.A.F6C.html" target="_blank" rel="noopener">心得 我如何在 GitHub 上拿到四千顆星</a> - HTTP Prompt 的開發者心得分享</li>
-<li><a href="https://ithelp.ithome.com.tw/articles/10195555" target="_blank" rel="noopener">第 23 天：安裝/使用指令列 HTTP Client</a> - 含 http-prompt 說明</li>
-</ul>
-</li>
-<li><a href="https://github.com/cloudnativelabs/kube-shell" target="_blank" rel="noopener">cloudnativelabs/kube-shell</a> - Kubernetes shell: An integrated shell for working with the Kubernetes</li>
-</ul>
-<h2 id="Example-List"><a href="#Example-List" class="headerlink" title="Example List"></a>Example List</h2><ul>
-<li><a href="https://github.com/prompt-toolkit/python-prompt-toolkit/blob/master/PROJECTS.rst" target="_blank" rel="noopener">Projects using prompt_toolkit</a> example list page</li>
-<li><a href="https://github.com/j-bennet/wharfee" target="_blank" rel="noopener">j-bennet/wharfee</a> : A CLI with autocompletion and syntax highlighting for Docker commands.</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/09/30/python-prompt-toolkit-example/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -578,48 +673,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/setup/">setup<span>1</span></a></li>
-		
-			<li><a href="/tags/parquet/">parquet<span>2</span></a></li>
-		
-			<li><a href="/tags/plugin/">plugin<span>1</span></a></li>
-		
-			<li><a href="/tags/REPL/">REPL<span>2</span></a></li>
-		
 			<li><a href="/tags/tag/">tag<span>1</span></a></li>
 		
-			<li><a href="/tags/remote/">remote<span>1</span></a></li>
-		
-			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
-		
-			<li><a href="/tags/game/">game<span>1</span></a></li>
-		
-			<li><a href="/tags/dynamodb/">dynamodb<span>1</span></a></li>
-		
-			<li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
-		
-			<li><a href="/tags/framework/">framework<span>1</span></a></li>
-		
-			<li><a href="/tags/css/">css<span>1</span></a></li>
-		
-			<li><a href="/tags/pip/">pip<span>3</span></a></li>
-		
-			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
-		
-			<li><a href="/tags/dao/">dao<span>2</span></a></li>
-		
-			<li><a href="/tags/click/">click<span>1</span></a></li>
+			<li><a href="/tags/gherkin/">gherkin<span>1</span></a></li>
 		
 			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
 		
-			<li><a href="/tags/vim/">vim<span>3</span></a></li>
+			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
 		
-			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
+		
+			<li><a href="/tags/aws/">aws<span>10</span></a></li>
+		
+			<li><a href="/tags/books/">books<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/slide/">slide<span>1</span></a></li>
+		
+			<li><a href="/tags/remote/">remote<span>2</span></a></li>
+		
+			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
+		
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
+		
+			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
+		
+			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
 		
 			<li><a href="/tags/find/">find<span>1</span></a></li>
 		
+			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>63</span></a></li>
+			<li><a href="/tags/dao/">dao<span>2</span></a></li>
+		
+			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
+		
+			<li><a href="/tags/framework/">framework<span>1</span></a></li>
+		
+			<li><a href="/tags/log/">log<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>69</span></a></li>
 		 
 		</ul>
 	</div>
@@ -632,23 +727,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2020/10/28/robot-framework/" ><i class="fa fa-file-o"></i>robot_framework</a>
+        <a href="/2020/11/11/snmp-related/" ><i class="fa fa-file-o"></i>snmp_related</a>
       </li>
     
       <li>
-        <a href="/2020/10/15/csrf-info/" ><i class="fa fa-file-o"></i>csrf_info</a>
+        <a href="/2020/11/10/run-remote-docker-daemon/" ><i class="fa fa-file-o"></i>run_remote_docker_daemon</a>
       </li>
     
       <li>
-        <a href="/2020/10/14/chrom-ssl-cert-invalid/" ><i class="fa fa-file-o"></i>chrom-ssl-cert-invalid</a>
+        <a href="/2020/11/09/gherkin-test-case/" ><i class="fa fa-file-o"></i>gherkin_test_case</a>
       </li>
     
       <li>
-        <a href="/2020/10/14/css-font/" ><i class="fa fa-file-o"></i>css-font</a>
+        <a href="/2020/11/06/tacacs-beginner/" ><i class="fa fa-file-o"></i>tacacs_beginner</a>
       </li>
     
       <li>
-        <a href="/2020/10/13/disable-tls-1-0-on-aws/" ><i class="fa fa-file-o"></i>disable-tls-1-0-on-aws</a>
+        <a href="/2020/11/06/docker-beginner/" ><i class="fa fa-file-o"></i>docker_beginner</a>
       </li>
     
   </ul>
