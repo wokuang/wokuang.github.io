@@ -143,19 +143,71 @@
 </ul>
 </li>
 </ul>
+<h2 id="net-snmp-的資料"><a href="#net-snmp-的資料" class="headerlink" title="net-snmp 的資料"></a>net-snmp 的資料</h2><ul>
+<li><a href="http://www.net-snmp.org/" target="_blank" rel="noopener">Net-SNMP</a> - offical site</li>
+<li><a href="http://www.net-snmp.org/wiki/index.php/Tutorials" target="_blank" rel="noopener">net-snmp tutorial</a></li>
+</ul>
+<h2 id="接收-snmp-trap-的方式"><a href="#接收-snmp-trap-的方式" class="headerlink" title="接收 snmp trap 的方式"></a>接收 snmp trap 的方式</h2><ul>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - 以這個為 base，調整為自己需要的 snmptrapd.conf </li>
+<li>參考的 snmptrapd.conf<pre><code>authCommunity   log,execute,net public
+disableAuthorization yes
+traphandle public /usr/bin/python /usr/bin/snmptrap-parser.py</code></pre></li>
+<li><a href="https://github.com/OpensourceICTSolutions/zabbix-snmp-trap-parser/blob/master/snmptrap-parser.py" target="_blank" rel="noopener">OpensourceICTSolutions/zabbix-snmp-trap-parser</a> - 用 python zabbix parser 來接收資料<ul>
+<li><a href="https://blog.zabbix.com/parsing-snmp-traps-with-python-or-bash-a-net-snmp-perl-alternative/11577/" target="_blank" rel="noopener">Parsing SNMP Traps with Python or Bash – A net-snmp-perl alternative</a></li>
+</ul>
+</li>
+<li>參考的 net-snmp 文件<ul>
+<li><a href="http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd" target="_blank" rel="noopener">TUT:Configuring snmptrapd</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-三個主要元件"><a href="#snmp-三個主要元件" class="headerlink" title="snmp 三個主要元件"></a>snmp 三個主要元件</h2><ul>
+<li>SNMP 管理者（SNMP Manager）<ul>
+<li>是 SNMP 的主要管理軟體，安裝於『網路管理系統』（Network Management System）上，它負責向所管轄的管理設備索取管理訊息，或設定網路組態，為 SNMP 管理環境的主要控制設備。</li>
+</ul>
+</li>
+<li>SNMP 代理者（SNMP Agent）<ul>
+<li>一般安裝於被管理的網路設備上，例如，路由器、主機電腦、橋接器等。SNMP Agent 收集網路設備上訊息，再以 SNMP 通訊協定和 SNMP Manager 通訊，達到管理的目的。</li>
+</ul>
+</li>
+<li>被管理物件（Managed Object）<ul>
+<li>一般指被管理設備內之各種管理物件。例如，被管理之設備為橋接器，而其被管理物件為橋接器的有關設備，譬如，網路介面卡、緩衝器空間、過濾資料庫等等。被管理物件皆以『管理訊息結構』方式表達，且以樹狀識別碼（Tree Identified）方式，儲存於『管理訊息資料庫』（Management Information Base, MIB）上。</li>
+</ul>
+</li>
+</ul>
 <h2 id="snmp-掃盲"><a href="#snmp-掃盲" class="headerlink" title="snmp 掃盲"></a>snmp 掃盲</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" target="_blank" rel="noopener">Simple Network Management Protocol</a></li>
+<li><a href="http://www.cc.ntu.edu.tw/chinese/epaper/0047/20181220_4707.html" target="_blank" rel="noopener">淺談簡單網路管理協定(SNMP)</a></li>
 <li><a href="https://www.manageengine.com/tw/network-monitoring/what-is-snmp.html" target="_blank" rel="noopener">SNMP 教程</a></li>
+<li><a href="http://www.tsnien.idv.tw/Internet_WebBook/chap16/16-4%20SNMP%20%E9%81%8B%E4%BD%9C%E7%A8%8B%E5%BA%8F.html" target="_blank" rel="noopener">SNMP 運作程序</a></li>
 <li><a href="https://www.itread01.com/content/1548945570.html" target="_blank" rel="noopener">snmp trap入門</a></li>
+<li><a href="https://www.dgbas.gov.tw/public/Data/7121215394071.pdf" target="_blank" rel="noopener">SNMP 通訊藍本間功能與特色的差異</a> - pdf 資料</li>
+</ul>
+<h2 id="snmp-default-port"><a href="#snmp-default-port" class="headerlink" title="snmp default port"></a>snmp default port</h2><ul>
+<li>161 UTP port <ul>
+<li>來傳送及請求訊息</li>
+</ul>
+</li>
+<li>162 UTP port <ul>
+<li>接收來自待管裝置的trap訊息</li>
+</ul>
+</li>
 </ul>
 <h2 id="檢查-udp-port-是否有open"><a href="#檢查-udp-port-是否有open" class="headerlink" title="檢查 udp port 是否有open"></a>檢查 udp port 是否有open</h2><ul>
 <li><code>$ nc -zu 127.0.0.1 1610</code></li>
+<li><code>$ nc -vz -u 127.0.0.1 162</code></li>
 <li><a href="https://it001.pixnet.net/blog/post/325644661-it%E4%BA%8B%E4%BB%B6%E7%B0%BF-%E6%88%91%E6%83%B3%E6%B8%AC%E8%A9%A6udp%E6%9C%89%E6%B2%92%E6%9C%89%E9%80%9A%E6%80%8E%E9%BA%BC%E8%BE%A6" target="_blank" rel="noopener">IT事件簿-我想測試UDP有沒有通怎麼辦?</a></li>
 <li><a href="http://taiwanwolf.blogspot.com/2011/06/port-tcp-udp.html" target="_blank" rel="noopener">如何檢測 Port 是否有活著 (TCP, UDP)</a></li>
 </ul>
 <h2 id="檢查有開哪些-port"><a href="#檢查有開哪些-port" class="headerlink" title="檢查有開哪些 port"></a>檢查有開哪些 port</h2><ul>
 <li><code>sudo lsof -i -P -n | grep LISTEN</code></li>
 <li><code>lsof -i -P -n</code></li>
+<li><code>netstat -ntulp</code></li>
 <li><a href="https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/" target="_blank" rel="noopener">How to check if port is in use on Linux or Unix</a></li>
+</ul>
+<h2 id="python-相關的-snmp-library"><a href="#python-相關的-snmp-library" class="headerlink" title="python 相關的 snmp library"></a>python 相關的 snmp library</h2><ul>
+<li><a href="https://bytesofgigabytes.com/snmp-protocol/python-snmp-trap-receiver/" target="_blank" rel="noopener">Python SNMP trap receiver</a></li>
+<li><a href="https://github.com/etingof/pysnmp" target="_blank" rel="noopener">etingof/pysnmp</a></li>
 </ul>
 <h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
 <li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul>
@@ -163,6 +215,8 @@
 <li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> 就是以此方式建立的</li>
 </ul>
 </li>
+<li><a href="http://www.tsnien.idv.tw/Internet_WebBook/Internet.html" target="_blank" rel="noopener">TCP/IP 協定與 Internet 網路</a></li>
+<li><a href="http://www.tsnien.idv.tw/" target="_blank" rel="noopener">翻轉工作室</a></li>
 </ul>
 	  
 	</div>
