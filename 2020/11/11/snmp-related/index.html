@@ -209,6 +209,12 @@ traphandle public /usr/bin/python /usr/bin/snmptrap-parser.py</code></pre></li>
 <li><a href="https://bytesofgigabytes.com/snmp-protocol/python-snmp-trap-receiver/" target="_blank" rel="noopener">Python SNMP trap receiver</a></li>
 <li><a href="https://github.com/etingof/pysnmp" target="_blank" rel="noopener">etingof/pysnmp</a></li>
 </ul>
+<h2 id="要小心的雷"><a href="#要小心的雷" class="headerlink" title="要小心的雷"></a>要小心的雷</h2><ul>
+<li><a href="https://net-snmp-users.narkive.com/u5NFeeQ4/snmptrapd-traphandle-called-twice" target="_blank" rel="noopener">[snmptrapd] traphandle called twice</a><ul>
+<li>snmptrapd 會去讀預設的 snmptrapd.conf，如果在執行中又下了 <code>-c /etc/snmptrapd.conf</code>，就會讀兩次 conf 檔</li>
+</ul>
+</li>
+</ul>
 <h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
 <li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul>
 <li>先裝好 Supervisord 的 docker，之後的服務可以用此為 base image</li>
@@ -229,9 +235,9 @@ traphandle public /usr/bin/python /usr/bin/snmptrap-parser.py</code></pre></li>
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
-        
+				
+    	<li class="prev"><a href="/2020/11/17/dao-repent/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 

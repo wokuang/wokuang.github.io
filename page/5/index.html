@@ -119,6 +119,88 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-06-10 </div>
+			<div class="article-title"><a href="/2020/06/10/survey-parquet-and-orc/" >survey_parquet_and_orc</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>先說小結<br>It is up to the users whether you need SPACE EFFICIENCY [select ORC] or TIME EFFICIENCY [select PARQUET].</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/@dhareshwarganesh/benchmarking-parquet-vs-orc-d52c39849aef" target="_blank" rel="noopener">Benchmarking PARQUET vs ORC</a></li>
+<li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/406561/#outline__4_3" target="_blank" rel="noopener">Parquet與ORC：高效能列式儲存格式</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/10/survey-parquet-and-orc/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-02 </div>
+			<div class="article-title"><a href="/2020/06/02/aws-glue-study-note/" >aws_glue_study_note</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li>Data Store</li>
+</ul>
+<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
+<li>設定 connection 後，無法連結到 RDS<ul>
+<li>出現的 error code 為 “At least one security group must open all ingress ports.To limit traffic, the source security group in your inbound rule can be restricted to the same security group”</li>
+<li>google 後，Error的情形為<a href="https://docs.aws.amazon.com/glue/latest/dg/glue-troubleshooting-errors.html#error-inbound-self-reference-rule" target="_blank" rel="noopener">Error: Inbound Rule in Security Group Required</a>，照著說明的方式進行，test connection 就通過囉</li>
+<li>原因：security group 沒有設定好，沒有 allow security-group 本身所有的 tcp 都可以連</li>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html" target="_blank" rel="noopener">Setting Up a VPC to Connect to JDBC Data Stores</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="轉換-json-的資料"><a href="#轉換-json-的資料" class="headerlink" title="轉換 json 的資料"></a>轉換 json 的資料</h2><ul>
+<li><a href="https://medium.com/@ly.lee/transform-and-import-a-json-file-into-amazon-redshift-with-aws-glue-3371006e03ca" target="_blank" rel="noopener">Transform and Import a JSON file into Amazon Redshift with AWS Glue</a></li>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/simplify-querying-nested-json-with-the-aws-glue-relationalize-transform/" target="_blank" rel="noopener">Simplify Querying Nested JSON with the AWS Glue Relationalize Transform</a></li>
+</ul>
+<h2 id="連動的方式"><a href="#連動的方式" class="headerlink" title="連動的方式"></a>連動的方式</h2><ul>
+<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-after-crawler-workflow/" target="_blank" rel="noopener">How can I use AWS Glue workflows to automatically start a job when a crawler run completes?</a></li>
+<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-crawler-completes-lambda/" target="_blank" rel="noopener">How can I use a Lambda function to automatically start an AWS Glue job when a crawler run completes?</a></li>
+</ul>
+<h2 id="ETL-job"><a href="#ETL-job" class="headerlink" title="ETL job"></a>ETL job</h2><p>  目前 glue 的 job, 可以用 純 python or PySpark 來寫 script code, 我目前是用 PySpark 來嘗試</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python.html" target="_blank" rel="noopener">Program AWS Glue ETL Scripts in Python</a></li>
+<li><a href="https://github.com/aws-samples/aws-glue-samples" target="_blank" rel="noopener">AWS Glue ETL Code Samples</a> 有關 ETL job 的範例</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li>
+<li><a href="https://www.cdata.com/kb/tech/mysql-jdbc-aws-glue.rst" target="_blank" rel="noopener">Connect to MySQL Data in AWS Glue Jobs Using JDBC</a></li>
+<li><a href="https://towardsdatascience.com/a-complete-guide-on-serverless-data-lake-using-aws-glue-athena-and-quicksight-3a8a24cfa4af" target="_blank" rel="noopener">A Complete Guide On Serverless Data Lake Using AWS Glue, Athena and QuickSight</a> 有滿完整的說明 glue &amp; athena </li>
+<li><a href="https://medium.com/swlh/serverless-data-lake-storing-and-analysing-streaming-data-using-aws-60cf3bfe1efd" target="_blank" rel="noopener">Serverless Data Lake: Storing and Analysing Streaming Data using AWS</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/02/aws-glue-study-note/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-06-02 </div>
 			<div class="article-title"><a href="/2020/06/02/aws-parquet-data/" >aws_parquet_data</a></div>						
 		</h3>
@@ -423,107 +505,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-04-24 </div>
-			<div class="article-title"><a href="/2020/04/24/aws-custom-domain-not-work/" >aws custom domain not work</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>這幾天在測試的時候，發現 dev 環境的 API Gateway Custom domain names 壞了一段時間，也就是說連到 dev 的 custom url 出現連不到網頁的 error</p>
-<p>測試過程中，發現有如下的情形</p>
-<h2 id="出現的情形"><a href="#出現的情形" class="headerlink" title="出現的情形"></a>出現的情形</h2><ul>
-<li>測試 api 程式，出現 error 連不到網址</li>
-<li>直接由 browser 連，也連不到網址</li>
-<li>用 AWS 建立出來的 api gateway 連，是可以的。透過 custom domain 無法連</li>
-<li>查 R53 的 record 時，原來的對應消失了，就手動加回去</li>
-<li>手動加回 R53 record 後，用 nslookup 查 DNS 時，出現有時查得到、有時查不出來的情形</li>
-</ul>
-<p>綜合上述的情形，推測應該是由 AWS 建立出來的 ALB 怪怪的，需要重建  </p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
-<li>手動將 Custom domain names 設定刪除，然後重建。重建後，API mappings 也是手動加進去</li>
-<li>到 R53 的設定頁，將 DNS 設好</li>
-</ul>
-<h2 id="Endpoint-type-的種類"><a href="#Endpoint-type-的種類" class="headerlink" title="Endpoint type 的種類"></a>Endpoint type 的種類</h2><ul>
-<li>Regional<ul>
-<li>使用 ALB 的方式</li>
-</ul>
-</li>
-<li>Edge-optimized<ul>
-<li>使用 CloudFront 的方式</li>
-</ul>
-</li>
-</ul>
-<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-regional-api-custom-domain-create.html" target="_blank" rel="noopener">Setting up a regional custom domain name in API Gateway</a> API Gateway 的設定</li>
-<li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-api-gateway.html#routing-to-api-gateway-config" target="_blank" rel="noopener">Routing traffic to an Amazon API Gateway API by using your domain name</a> R53 的設定</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/04/24/aws-custom-domain-not-work/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-04-23 </div>
-			<div class="article-title"><a href="/2020/04/23/data-collection-course/" >資料整理課程小筆記</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>這一段時間，剛好有空可以學習之前購買的 <a href="https://hahow.in/" target="_blank" rel="noopener">HaHow</a> 課程，用此篇紀錄聽此課程的心得</p>
-<h2 id="網路資料蒐集"><a href="#網路資料蒐集" class="headerlink" title="網路資料蒐集"></a>網路資料蒐集</h2><ul>
-<li>由 google 開始搜尋，search 後，將前 n 筆的網頁，都點開來。散開為廣度</li>
-<li>先找一筆網頁來看，通常第一筆為 wiki，看 wiki 資料時，由其中找出第一手資料的來源<ul>
-<li>看第一手資料網站，接著這次往深度的搜尋，就可以告一段落</li>
-</ul>
-</li>
-<li>跳到另一筆 google search 的結果，看資料，試著找出第一手資料來源</li>
-<li>當多個 google 出來的資料不一致時，要看資料是否是你要找的、是否是講同一件事、資料的來源</li>
-<li>上述的方式，為螞蟻窩搜尋法</li>
-<li>資料的來源<ul>
-<li>專業單位 -&gt; 維基百科 -&gt; 網路文章</li>
-</ul>
-</li>
-</ul>
-<h2 id="學術網路的蒐集"><a href="#學術網路的蒐集" class="headerlink" title="學術網路的蒐集"></a>學術網路的蒐集</h2><ul>
-<li>由 google 開始，<a href="https://scholar.google.com.tw/?hl=zh-TW" target="_blank" rel="noopener">google 學術搜尋</a>開始找</li>
-<li>可以找 <a href="https://www.sciencedirect.com/" target="_blank" rel="noopener">Science Direct</a><ul>
-<li>論文資料，可由 DOI 數位物件識別碼（Digital Object Identifier) 連回原論文網站</li>
-</ul>
-</li>
-<li>PubMed</li>
-<li>中文論文，可以由 <a href="https://www.airitilibrary.com/" target="_blank" rel="noopener">Airiti Library華藝線上圖書館</a> 找</li>
-</ul>
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><ul>
-<li><a href="https://hahow.in/courses/5afe4dad7d3f43001e61b8a2/main?item=5afe4ef07d3f43001e61b8c6" target="_blank" rel="noopener">啾啾鞋的資料彙整術 - 別淹沒在資訊海！</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/04/23/data-collection-course/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -574,48 +555,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
-		
-			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
-		
-			<li><a href="/tags/css/">css<span>1</span></a></li>
-		
-			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
-		
-			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
-		
-			<li><a href="/tags/tacacs/">tacacs<span>1</span></a></li>
-		
-			<li><a href="/tags/click/">click<span>1</span></a></li>
-		
-			<li><a href="/tags/slide/">slide<span>1</span></a></li>
-		
-			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
-		
-			<li><a href="/tags/books/">books<span>1</span></a></li>
-		
-			<li><a href="/tags/tool/">tool<span>1</span></a></li>
-		
-			<li><a href="/tags/setup/">setup<span>1</span></a></li>
-		
 			<li><a href="/tags/parquet/">parquet<span>2</span></a></li>
-		
-			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
 		
 			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
 		
-			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
+			<li><a href="/tags/linux/">linux<span>2</span></a></li>
 		
-			<li><a href="/tags/s3/">s3<span>1</span></a></li>
+			<li><a href="/tags/css/">css<span>1</span></a></li>
 		
-			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
+			<li><a href="/tags/dynamodb/">dynamodb<span>1</span></a></li>
 		
-			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>3</span></a></li>
 		
-			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+			<li><a href="/tags/glue/">glue<span>1</span></a></li>
+		
+			<li><a href="/tags/book/">book<span>1</span></a></li>
+		
+			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
+		
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
+		
+			<li><a href="/tags/font/">font<span>1</span></a></li>
+		
+			<li><a href="/tags/cli-tool/">cli-tool<span>1</span></a></li>
+		
+			<li><a href="/tags/gutenberg-block/">gutenberg-block<span>1</span></a></li>
+		
+			<li><a href="/tags/tag/">tag<span>1</span></a></li>
+		
+			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
+		
+			<li><a href="/tags/dao/">dao<span>3</span></a></li>
+		
+			<li><a href="/tags/unity/">unity<span>1</span></a></li>
+		
+			<li><a href="/tags/config/">config<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>69</span></a></li>
+		   <li><a href="/tags">...<span>72</span></a></li>
 		 
 		</ul>
 	</div>
@@ -628,6 +609,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2020/11/20/funny-search-engine/" ><i class="fa fa-file-o"></i>funny_search_engine</a>
+      </li>
+    
+      <li>
+        <a href="/2020/11/17/dao-repent/" ><i class="fa fa-file-o"></i>dao_repent</a>
+      </li>
+    
+      <li>
         <a href="/2020/11/11/snmp-related/" ><i class="fa fa-file-o"></i>snmp_related</a>
       </li>
     
@@ -637,14 +626,6 @@
     
       <li>
         <a href="/2020/11/09/gherkin-test-case/" ><i class="fa fa-file-o"></i>gherkin_test_case</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/06/tacacs-beginner/" ><i class="fa fa-file-o"></i>tacacs_beginner</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/06/docker-beginner/" ><i class="fa fa-file-o"></i>docker_beginner</a>
       </li>
     
   </ul>
