@@ -119,6 +119,145 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-09-17 </div>
+			<div class="article-title"><a href="/2020/09/17/my-vim-new-setup/" >my-vim-new-setup</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>藉由這次重新設定 &amp; 安裝 vim，同時整理一下目前使用 vim 的方式</p>
+<h2 id="安裝-vim"><a href="#安裝-vim" class="headerlink" title="安裝 vim"></a>安裝 vim</h2><p>現在的 vim 想使用的進階功能，會用到 vim + python 的功能，所以需要重新安裝 vim。<br>目前用 brew install vim 滿方便，又快速的，就是要記得將執行 brew update，取得最近的 vim 設定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ brew update</span><br><span class="line">$ brew install vim</span><br><span class="line">$ vim --version | grep -i python3</span><br><span class="line">+comments          +libcall           -python            +visual</span><br><span class="line">+conceal           +linebreak         +python3           +visualextra</span><br><span class="line">## 要確認 python3 有 enable 起來</span><br></pre></td></tr></table></figure>
+
+<p>如果看到 python3 沒有 enable 的話，記得確認一下 vim 是那一版</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ which vim</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;vim</span><br><span class="line"># 在 &#x2F;user&#x2F;local 下的，才是用 brew 安裝的</span><br></pre></td></tr></table></figure>
+<h2 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h2><ul>
+<li>試用了不同的 theme，目前還是覺得 solarized 好看<ul>
+<li><a href="https://github.com/altercation/vim-colors-solarized" target="_blank" rel="noopener">altercation/vim-colors-solarized</a><h2 id="package-management"><a href="#package-management" class="headerlink" title="package management"></a>package management</h2>套件管理(package management)，目前是使用 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">vundle</a> 來進行</li>
+</ul>
+</li>
+<li><a href="https://medium.com/@racktar7743/vim-vim-%E7%9A%84%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-vundle-15484bad7d9" target="_blank" rel="noopener">Vim 的插件管理工具 Vundle</a></li>
+</ul>
+<h2 id="有安裝好用的-package"><a href="#有安裝好用的-package" class="headerlink" title="有安裝好用的 package"></a>有安裝好用的 package</h2><ul>
+<li><a href="https://github.com/easymotion/vim-easymotion" target="_blank" rel="noopener">easymotion/vim-easymotion</a></li>
+<li><a href="https://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/" target="_blank" rel="noopener">Powerline：漂亮的 Vim 狀態列與 Bash Shell 命令提示字串外掛</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/mbrochh/vim-as-a-python-ide" target="_blank" rel="noopener">mbrochh/vim-as-a-python-ide</a></li>
+<li><a href="https://github.com/BroQiang/vim-go-ide" target="_blank" rel="noopener">broqiang/vim-go-ide</a> ** 可以看看需要的 Plugin</li>
+<li><a href="https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b" target="_blank" rel="noopener">Powerline Setup for my VIM</a></li>
+</ul>
+<h2 id="Reference-vimrc"><a href="#Reference-vimrc" class="headerlink" title="Reference vimrc"></a>Reference vimrc</h2><ul>
+<li><a href="https://github.com/chinghanho/.dotfiles/blob/4c53d90d3e1efffb3fdc1ebc44bdac1781154b19/.vimrc#L1-L39" target="_blank" rel="noopener">chinghanho/.dotfiles/.vimrc</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/17/my-vim-new-setup/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-17 </div>
+			<div class="article-title"><a href="/2020/09/17/mac-remote-to-another-mac/" >mac_remote_to_another_mac</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>紀錄一下，要將一台 mac remote share 給另一台的方式</p>
+<ul>
+<li>要 share 的那台，需要開 screen sharing &amp; remote management<ul>
+<li>可以用 ssh &amp; share 畫面的方式，進入到這台機器</li>
+</ul>
+</li>
+<li>要連到 remote 的機器<ul>
+<li>使用 “Screen Sharing” App 連到另一台 mac</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.switchingtomac.com/tutorials/osx/how-to-use-a-mac-to-connect-to-another-mac-remotely/" target="_blank" rel="noopener">How To Use a Mac To Connect To Another Mac Remotely</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/17/mac-remote-to-another-mac/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-16 </div>
+			<div class="article-title"><a href="/2020/09/16/vs-code-start/" >vs-code-start</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10225442" target="_blank" rel="noopener">Day 20: 使用 VS Code 來開發 Markdown</a></li>
+<li><a href="https://kingofamani.gitbooks.io/git-teach/content/chapter_6_gitbook/markdown.html" target="_blank" rel="noopener">markdown風格</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/16/vs-code-start/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-16 </div>
+			<div class="article-title"><a href="/2020/09/16/vs-code-and-vim/" >vs_code_and_vim</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>vim 是我很喜歡，也是目前最常用的 editor。<br>最近看 vs-code 滿好用的，就想說來試試看 vs-code &amp; vim 的整合，看看是否會喜歡這樣的方式</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.barbarianmeetscoding.com/blog/2019/02/08/boost-your-coding-fu-with-vscode-and-vim" target="_blank" rel="noopener">Boost Your Coding Fu With Visual Studio Code and Vim</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/16/vs-code-and-vim/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-09-14 </div>
 			<div class="article-title"><a href="/2020/09/14/iterm2-install-and-setting/" >zsh and iterm2 install then setting</a></div>						
 		</h3>
@@ -302,129 +441,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-22 </div>
-			<div class="article-title"><a href="/2020/06/22/Serverless-Data-Engineering/" >Serverless Data Engineering</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://medium.com/i-like-big-data-and-i-cannot-lie/serverless-data-engineering-aws-glue-lambda-athena-quicksight-de3ef177884f" target="_blank" rel="noopener">Serverless Data Engineering: AWS Glue + Lambda + Athena + QuickSight</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/22/Serverless-Data-Engineering/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-22 </div>
-			<div class="article-title"><a href="/2020/06/22/aws-s3-signed-url/" >aws_s3_signed_url</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>列一下用 S3 signed URL 相關的事項</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://advancedweb.hu/how-s3-signed-urls-work/" target="_blank" rel="noopener">How S3 Signed URLs work</a></li>
-<li><a href="https://gumroad.com/l/aws-s3-signed-urls-handbook" target="_blank" rel="noopener">AWS S3 signed URLs handbook</a> e-book</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/22/aws-s3-signed-url/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-18 </div>
-			<div class="article-title"><a href="/2020/06/18/aws-cloud-watch-agent/" >aws_cloud_watch_agent</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>最近遇到 EC2 上，Disk 滿了，server 有問題的情形，加 EBS 後，想說應該來設定 alert<br>找 Cloud Watch 沒有這個 metrics<br>查了一下後，發現需要安裝 CloudWatch Agent，才能收集到 disk percent usage 的資料</p>
-<h2 id="使用-CloudWatch-Agent-的簡易步驟"><a href="#使用-CloudWatch-Agent-的簡易步驟" class="headerlink" title="使用 CloudWatch Agent 的簡易步驟"></a>使用 CloudWatch Agent 的簡易步驟</h2><ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html" target="_blank" rel="noopener">install CloudWatch Agent</a></li>
-<li>建立 IAM role，設定給 EC2<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html" target="_blank" rel="noopener">Create IAM Roles and Users for Use With CloudWatch Agent</a></li>
-</ul>
-</li>
-<li>建立 CloudWatch Agent config file<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file.html" target="_blank" rel="noopener">Create the CloudWatch Agent Configuration File</a></li>
-</ul>
-</li>
-<li>跑 CloudWatch Agent<ul>
-<li>收集的 metrics - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html" target="_blank" rel="noopener">Metrics Collected by the CloudWatch Agent</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html" target="_blank" rel="noopener">Collecting Metrics and Logs from Amazon EC2 Instances and On-Premises Servers with the CloudWatch Agent</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/18/aws-cloud-watch-agent/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-06-16 </div>
-			<div class="article-title"><a href="/2020/06/16/aws-tagging/" >aws_tagging</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://blog.crazyfan.net/posts/2017/05/19/aws_tagging_strategies/" target="_blank" rel="noopener">AWS Tagging Strategies 筆記</a></li>
-<li><a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf" target="_blank" rel="noopener">aws-tagging-best-practices.pdf</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/06/16/aws-tagging/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -475,48 +491,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/unity/">unity<span>1</span></a></li>
+			<li><a href="/tags/repent/">repent<span>1</span></a></li>
 		
-			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+			<li><a href="/tags/Internet-Exchange/">Internet Exchange<span>1</span></a></li>
 		
-			<li><a href="/tags/books/">books<span>1</span></a></li>
+			<li><a href="/tags/test-case/">test-case<span>2</span></a></li>
 		
-			<li><a href="/tags/vs-code/">vs-code<span>2</span></a></li>
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
 		
-			<li><a href="/tags/remote/">remote<span>2</span></a></li>
+			<li><a href="/tags/book/">book<span>1</span></a></li>
 		
-			<li><a href="/tags/mac/">mac<span>1</span></a></li>
+			<li><a href="/tags/cli-tool/">cli-tool<span>1</span></a></li>
 		
-			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
-		
-			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
-		
-			<li><a href="/tags/data-analysis/">data_analysis<span>1</span></a></li>
-		
-			<li><a href="/tags/aws/">aws<span>10</span></a></li>
-		
-			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
-		
-			<li><a href="/tags/game/">game<span>1</span></a></li>
+			<li><a href="/tags/serverless/">serverless<span>2</span></a></li>
 		
 			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
 		
-			<li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
+			<li><a href="/tags/analyzer/">analyzer<span>1</span></a></li>
 		
-			<li><a href="/tags/online/">online<span>1</span></a></li>
+			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+		
+			<li><a href="/tags/game/">game<span>1</span></a></li>
+		
+			<li><a href="/tags/vs-code/">vs-code<span>2</span></a></li>
+		
+			<li><a href="/tags/aws/">aws<span>10</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/log/">log<span>1</span></a></li>
+		
+			<li><a href="/tags/python/">python<span>8</span></a></li>
+		
+			<li><a href="/tags/css/">css<span>1</span></a></li>
 		
 			<li><a href="/tags/AAA/">AAA<span>1</span></a></li>
 		
-			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
-		
-			<li><a href="/tags/tag/">tag<span>1</span></a></li>
-		
-			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
-		
 			<li><a href="/tags/go/">go<span>2</span></a></li>
 		
+			<li><a href="/tags/snmp/">snmp<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>73</span></a></li>
+		
+		   <li><a href="/tags">...<span>80</span></a></li>
 		 
 		</ul>
 	</div>
@@ -529,23 +545,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2020/12/07/docker-connect-https-fail/" ><i class="fa fa-file-o"></i>docker_connect_https_fail</a>
+      </li>
+    
+      <li>
+        <a href="/2020/11/25/web-security/" ><i class="fa fa-file-o"></i>web_security</a>
+      </li>
+    
+      <li>
+        <a href="/2020/11/25/peering-db/" ><i class="fa fa-file-o"></i>peering_db</a>
+      </li>
+    
+      <li>
+        <a href="/2020/11/25/vespa-search/" ><i class="fa fa-file-o"></i>vespa_search</a>
+      </li>
+    
+      <li>
         <a href="/2020/11/24/powerline-use/" ><i class="fa fa-file-o"></i>powerline_use</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/20/funny-search-engine/" ><i class="fa fa-file-o"></i>funny_search_engine</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/17/dao-repent/" ><i class="fa fa-file-o"></i>dao_repent</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/11/snmp-related/" ><i class="fa fa-file-o"></i>snmp_related</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/10/run-remote-docker-daemon/" ><i class="fa fa-file-o"></i>run_remote_docker_daemon</a>
       </li>
     
   </ul>
