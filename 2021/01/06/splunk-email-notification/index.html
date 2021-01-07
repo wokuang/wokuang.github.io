@@ -118,9 +118,15 @@
 	  		
 
 	  <p>記錄使用 email 來收 splunk alert 時，遇到的情形</p>
-<h2 id="修改-sender"><a href="#修改-sender" class="headerlink" title="修改 sender"></a>修改 sender</h2><ul>
-<li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a><ul>
-<li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 區段</li>
+<h2 id="修改-mail-notificition-的相關設定"><a href="#修改-mail-notificition-的相關設定" class="headerlink" title="修改 mail notificition 的相關設定"></a>修改 mail notificition 的相關設定</h2><ul>
+<li>修改 from email<ul>
+<li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a></li>
+<li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 變數</li>
+</ul>
+</li>
+<li>修改信件中的 hostname<ul>
+<li><a href="https://community.splunk.com/t5/Alerting/Is-there-a-way-to-modify-alert-url-results-url-in-email-alerts/m-p/117927" target="_blank" rel="noopener">Is there a way to modify alert url $results.url$ in email alerts?</a></li>
+<li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add hostname 變數</li>
 </ul>
 </li>
 </ul>

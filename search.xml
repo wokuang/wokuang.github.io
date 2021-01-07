@@ -8,9 +8,19 @@
       <link href="2021/01/06/aws-smtp-server/"/>
       <url>2021/01/06/aws-smtp-server/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>在測試 splunk 時，要用 email alert 時，需要先設定 smtp server<br>因為現在公司的 smtp server 現在滿多的，也不容易找到外部的 smtp server 可以用，就用 aws smtp service 囉</p><h2 id="簡單的流程-log"><a href="#簡單的流程-log" class="headerlink" title="簡單的流程 log"></a>簡單的流程 log</h2><ul><li>申請 smtp credentials，有分 region</li><li>要用來發現的 email (mail from)，需要先經過驗證</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-smtp.html" target="_blank" rel="noopener">Using the Amazon SES SMTP interface to send email</a></li><li><a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-smtp-client-command-line.html" target="_blank" rel="noopener">Test your connection to the Amazon SES SMTP interface using the command line</a></li></ul>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> smtp </tag>
+            
+            <tag> ses </tag>
+            
+        </tags>
       
     </entry>
     
@@ -21,7 +31,7 @@
       <link href="2021/01/06/splunk-email-notification/"/>
       <url>2021/01/06/splunk-email-notification/</url>
       
-        <content type="html"><![CDATA[<p>記錄使用 email 來收 splunk alert 時，遇到的情形</p><h2 id="修改-sender"><a href="#修改-sender" class="headerlink" title="修改 sender"></a>修改 sender</h2><ul><li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a><ul><li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 區段</li></ul></li></ul><h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><ul><li><a href="https://community.splunk.com/t5/Alerting/Why-is-my-triggered-alert-email-not-sending/m-p/188385" target="_blank" rel="noopener">Why is my triggered alert email not sending?</a><ul><li>直接來去看 log , log path: <code>~/splunk/var/log/splunk/python.log</code></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>記錄使用 email 來收 splunk alert 時，遇到的情形</p><h2 id="修改-mail-notificition-的相關設定"><a href="#修改-mail-notificition-的相關設定" class="headerlink" title="修改 mail notificition 的相關設定"></a>修改 mail notificition 的相關設定</h2><ul><li>修改 from email<ul><li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a></li><li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 變數</li></ul></li><li>修改信件中的 hostname<ul><li><a href="https://community.splunk.com/t5/Alerting/Is-there-a-way-to-modify-alert-url-results-url-in-email-alerts/m-p/117927" target="_blank" rel="noopener">Is there a way to modify alert url $results.url$ in email alerts?</a></li><li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add hostname 變數</li></ul></li></ul><h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><ul><li><a href="https://community.splunk.com/t5/Alerting/Why-is-my-triggered-alert-email-not-sending/m-p/188385" target="_blank" rel="noopener">Why is my triggered alert email not sending?</a><ul><li>直接來去看 log , log path: <code>~/splunk/var/log/splunk/python.log</code></li></ul></li></ul>]]></content>
       
       
       

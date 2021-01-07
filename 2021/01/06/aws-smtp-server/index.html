@@ -117,7 +117,16 @@
 	<div class="mypage">		
 	  		
 
-	  	  
+	  <p>在測試 splunk 時，要用 email alert 時，需要先設定 smtp server<br>因為現在公司的 smtp server 現在滿多的，也不容易找到外部的 smtp server 可以用，就用 aws smtp service 囉</p>
+<h2 id="簡單的流程-log"><a href="#簡單的流程-log" class="headerlink" title="簡單的流程 log"></a>簡單的流程 log</h2><ul>
+<li>申請 smtp credentials，有分 region</li>
+<li>要用來發現的 email (mail from)，需要先經過驗證</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-smtp.html" target="_blank" rel="noopener">Using the Amazon SES SMTP interface to send email</a></li>
+<li><a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-smtp-client-command-line.html" target="_blank" rel="noopener">Test your connection to the Amazon SES SMTP interface using the command line</a></li>
+</ul>
+	  
 	</div>
 
 	<!-- recommended posts -->
@@ -194,6 +203,14 @@
     
 
 	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/aws/">aws<span>11</span></a></li> <li><a href="/tags/smtp/">smtp<span>1</span></a></li> <li><a href="/tags/ses/">ses<span>1</span></a></li>
+    </ul>
+	</div>
 	
 
 	<!-- toc -->

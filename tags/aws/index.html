@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>aws | 老布這麼說</title>
+  <title>AWS | 老布這麼說</title>
   <meta name="author" content="老布">
   
   <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
@@ -96,7 +96,7 @@
 
 <!-- title -->
 <div class="page-header page-header-inverse ">
-  <h1 class="archive-title-tag title title-inverse ">aws</h1>
+  <h1 class="archive-title-tag title title-inverse ">AWS</h1>
 </div>
 
 <div class="row page">
@@ -115,8 +115,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2020-11-04 </div>
-			<div class="article-title"><a href="/2020/11/04/aws-sns-encryption/" >aws_sns_encryption</a></div>						
+			<div class="date"> 2020-10-13 </div>
+			<div class="article-title"><a href="/2020/10/13/disable-tls-1-0-on-aws/" >disable-tls-1-0-on-aws</a></div>						
 		</h3>
 	
 
@@ -125,17 +125,16 @@
   <div class="row">
 	
 	
-		<p>最近在 serverless 上，加上 <a href="https://www.cloudconformity.com/" target="_blank" rel="noopener">cloud conformity</a>的檢查，檢查後會出現 Rule ID: SNS-006 <a href="https://www.cloudconformity.com/knowledge-base/aws/SNS/server-side-encryption.html" target="_blank" rel="noopener">SNS Topic Encrypted</a> 的 High level，就找了一下解法如下</p>
-<h2 id="可以執行的範例-serverless-conf"><a href="#可以執行的範例-serverless-conf" class="headerlink" title="可以執行的範例 serverless conf"></a>可以執行的範例 serverless conf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">custom:</span><br><span class="line">  ...</span><br><span class="line">  alerts:</span><br><span class="line">    topics:</span><br><span class="line">      ok:</span><br><span class="line">        topic: sns-alerts-ok</span><br><span class="line">        </span><br><span class="line">      alarm:</span><br><span class="line">        topic: sns-alerts-alarm</span><br><span class="line">        </span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">functions:</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">resources:</span><br><span class="line">  - Resources:</span><br><span class="line">      AwsAlertsOk: # Append the following properties to the resource created by the plugin serverless-plugin-aws-alerts</span><br><span class="line">        Properties:</span><br><span class="line">          KmsMasterKeyId: enter-your-cmk-id-here</span><br><span class="line"></span><br><span class="line">      AwsAlertsAlarm: # Append the following properties to the resource created by the plugin serverless-plugin-aws-alerts</span><br><span class="line">        Properties:</span><br><span class="line">          KmsMasterKeyId: enter-your-cmk-id-here</span><br></pre></td></tr></table></figure>
-
+		<h2 id="query-site"><a href="#query-site" class="headerlink" title="query site"></a>query site</h2><ul>
+<li>use <a href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener">Qualys</a> to confirm your changes</li>
+</ul>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/ACloudGuru/serverless-plugin-aws-alerts/issues/117" target="_blank" rel="noopener">Use encryption as default for SNS #117</a></li>
-<li><a href="https://www.serverlessops.io/blog/serverless-ops-infrastructure-as-code-with-aws-serverless" target="_blank" rel="noopener">Serverless DevOps: Infrastructure As Code With AWS Serverless</a></li>
+<li><a href="https://www.chowles.com/how-to-disable-tls-1-0-on-aws/" target="_blank" rel="noopener">How to Disable TLS 1.0 on Amazon Web Services (AWS)</a></li>
 </ul>
 
 	
 	</div>
-  <a type="button" href="/2020/11/04/aws-sns-encryption/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2020/10/13/disable-tls-1-0-on-aws/#more" class="btn btn-default more">Read More</a>
 </div>
 
 	       
@@ -143,8 +142,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2020-07-31 </div>
-			<div class="article-title"><a href="/2020/07/31/aws-dynamodb-use/" >aws-dynamodb-use</a></div>						
+			<div class="date"> 2020-06-16 </div>
+			<div class="article-title"><a href="/2020/06/16/aws-tagging/" >aws_tagging</a></div>						
 		</h3>
 	
 
@@ -153,25 +152,199 @@
   <div class="row">
 	
 	
-		<p>列一下 python boto3 使用 dynamodb 的sample</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://dynobase.dev/dynamodb-python-with-boto3/#delete-item" target="_blank" rel="noopener">DynamoDB Python Boto3 Query Cheat Sheet</a></li>
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://blog.crazyfan.net/posts/2017/05/19/aws_tagging_strategies/" target="_blank" rel="noopener">AWS Tagging Strategies 筆記</a></li>
+<li><a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf" target="_blank" rel="noopener">aws-tagging-best-practices.pdf</a></li>
 </ul>
 
 	
 	</div>
-  <a type="button" href="/2020/07/31/aws-dynamodb-use/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2020/06/16/aws-tagging/#more" class="btn btn-default more">Read More</a>
 </div>
 
 	       
-		     
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
 	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-07-29 </div>
-			<div class="article-title"><a href="/2020/07/29/use-vpc-flow-log/" >use-vpc-flow-log</a></div>						
-		</h3>
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
+		
+			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
+		
+			<li><a href="/tags/cli/">cli<span>5</span></a></li>
+		
+			<li><a href="/tags/web-security/">web-security<span>1</span></a></li>
+		
+			<li><a href="/tags/sns/">sns<span>1</span></a></li>
+		
+			<li><a href="/tags/AAA/">AAA<span>1</span></a></li>
+		
+			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
+		
+			<li><a href="/tags/go/">go<span>2</span></a></li>
+		
+			<li><a href="/tags/gherkin/">gherkin<span>1</span></a></li>
+		
+			<li><a href="/tags/tacacs/">tacacs<span>1</span></a></li>
+		
+			<li><a href="/tags/developer/">developer<span>1</span></a></li>
+		
+			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
+		
+			<li><a href="/tags/font/">font<span>1</span></a></li>
+		
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
+		
+			<li><a href="/tags/funny/">funny<span>1</span></a></li>
+		
+			<li><a href="/tags/log/">log<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/docker/">docker<span>3</span></a></li>
+		
+			<li><a href="/tags/css/">css<span>1</span></a></li>
+		
+			<li><a href="/tags/find/">find<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>93</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2021/01/06/aws-smtp-server/" ><i class="fa fa-file-o"></i>aws-smtp-server</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/06/splunk-email-notification/" ><i class="fa fa-file-o"></i>splunk-email-notification</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/06/splunk-trouble-shooting/" ><i class="fa fa-file-o"></i>splunk-trouble-shooting</a>
+      </li>
+    
+      <li>
+        <a href="/2020/12/17/develop-Splunk-Apps/" ><i class="fa fa-file-o"></i>develop-Splunk-Apps</a>
+      </li>
+    
+      <li>
+        <a href="/2020/12/17/Splunk-AppInspect/" ><i class="fa fa-file-o"></i>Splunk-AppInspect</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
 	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2021 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>
 
 
 		     <div class="entry">
@@ -406,55 +579,22 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-22 </div>
-			<div class="article-title"><a href="/2020/05/22/add-tag-on-serverless/" >add_tag_on_serverless</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
-<li>為了要細分 AWS cost 用到那部分，常見的方式為使用 Tag 來區分</li>
-</ul>
-<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><ul>
-<li>在 serverless.conf 中的 provider block  加 stackTags , 可以標註 tag<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">   stackTags:</span><br><span class="line">     owner: owner</span><br><span class="line">     env: $&#123;self:custom.stage&#125;</span><br><span class="line">     service: service</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="可以加強的部分"><a href="#可以加強的部分" class="headerlink" title="可以加強的部分"></a>可以加強的部分</h2><ul>
-<li>因為 stack tag，會有些 AWS resources 沒有加到 tag, 可以用 “Serverless Repository apps” 來加強</li>
-<li><a href="https://github.com/lumigo-io/SAR-Propagate-CFN-Tags" target="_blank" rel="noopener">lumigo-io/SAR-Propagate-CFN-Tags</a><ul>
-<li>SAR app to propagate CloudFormation’s stack tags to resources that are currently not propagated automatically - e.g. CloudWatch Logs</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.datree.io/resources/serverless-best-practices" target="_blank" rel="noopener">Top 10 Serverless best practices</a></li>
-<li><a href="https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/" target="_blank" rel="noopener">Serverless.yml Reference</a><ul>
-<li>Here is a list of all available properties in serverless.yml when the provider is set to aws.</li>
-</ul>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/22/add-tag-on-serverless/#more" class="btn btn-default more">Read More</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
 	         <div class="pagination">
 <ul class="pagination">
 	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+		   <li class="next"> <a href="/tags/aws/page/2/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
 </ul>
 </div>
 
@@ -485,48 +625,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/slide/">slide<span>1</span></a></li>
+			<li><a href="/tags/alert/">alert<span>1</span></a></li>
 		
-			<li><a href="/tags/sns/">sns<span>1</span></a></li>
+			<li><a href="/tags/uba/">uba<span>1</span></a></li>
 		
-			<li><a href="/tags/tool/">tool<span>1</span></a></li>
+			<li><a href="/tags/s3/">s3<span>1</span></a></li>
 		
-			<li><a href="/tags/app/">app<span>1</span></a></li>
+			<li><a href="/tags/web-security/">web-security<span>1</span></a></li>
 		
-			<li><a href="/tags/https/">https<span>1</span></a></li>
+			<li><a href="/tags/ses/">ses<span>1</span></a></li>
 		
-			<li><a href="/tags/cmd/">cmd<span>2</span></a></li>
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
 		
-			<li><a href="/tags/splunk-app/">splunk-app<span>1</span></a></li>
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
 		
-			<li><a href="/tags/data-analysis/">data_analysis<span>1</span></a></li>
+			<li><a href="/tags/smtp/">smtp<span>1</span></a></li>
+		
+			<li><a href="/tags/font/">font<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/dao/">dao<span>3</span></a></li>
+		
+			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+		
+			<li><a href="/tags/glue/">glue<span>1</span></a></li>
+		
+			<li><a href="/tags/search/">search<span>1</span></a></li>
+		
+			<li><a href="/tags/funny/">funny<span>1</span></a></li>
 		
 			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
 		
-			<li><a href="/tags/docker/">docker<span>3</span></a></li>
+			<li><a href="/tags/vs-code/">vs-code<span>2</span></a></li>
 		
-			<li><a href="/tags/vespa/">vespa<span>1</span></a></li>
+			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
 		
-			<li><a href="/tags/cli/">cli<span>5</span></a></li>
+			<li><a href="/tags/books/">books<span>1</span></a></li>
 		
-			<li><a href="/tags/developer/">developer<span>1</span></a></li>
-		
-			<li><a href="/tags/snmp/">snmp<span>1</span></a></li>
-		
-			<li><a href="/tags/package/">package<span>1</span></a></li>
-		
-			<li><a href="/tags/dev/">dev<span>1</span></a></li>
-		
-			<li><a href="/tags/pip/">pip<span>3</span></a></li>
-		
-			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
-		
-			<li><a href="/tags/knowledge-object/">knowledge-object<span>1</span></a></li>
-		
-			<li><a href="/tags/test-case/">test-case<span>2</span></a></li>
+			<li><a href="/tags/splunk/">splunk<span>8</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>91</span></a></li>
+		   <li><a href="/tags">...<span>93</span></a></li>
 		 
 		</ul>
 	</div>
