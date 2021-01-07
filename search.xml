@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>aws-smtp-server</title>
+      <link href="2021/01/06/aws-smtp-server/"/>
+      <url>2021/01/06/aws-smtp-server/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>splunk-email-notification</title>
+      <link href="2021/01/06/splunk-email-notification/"/>
+      <url>2021/01/06/splunk-email-notification/</url>
+      
+        <content type="html"><![CDATA[<p>記錄使用 email 來收 splunk alert 時，遇到的情形</p><h2 id="修改-sender"><a href="#修改-sender" class="headerlink" title="修改 sender"></a>修改 sender</h2><ul><li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a><ul><li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 區段</li></ul></li></ul><h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><ul><li><a href="https://community.splunk.com/t5/Alerting/Why-is-my-triggered-alert-email-not-sending/m-p/188385" target="_blank" rel="noopener">Why is my triggered alert email not sending?</a><ul><li>直接來去看 log , log path: <code>~/splunk/var/log/splunk/python.log</code></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> splunk </tag>
+            
+            <tag> alert </tag>
+            
+            <tag> email </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>splunk-trouble-shooting</title>
+      <link href="2021/01/06/splunk-trouble-shooting/"/>
+      <url>2021/01/06/splunk-trouble-shooting/</url>
+      
+        <content type="html"><![CDATA[<p>最近在測試使用 splunk app，要 trouble shooting 需要花些功夫</p><h2 id="可以-trouble-shooting-的方式"><a href="#可以-trouble-shooting-的方式" class="headerlink" title="可以 trouble shooting 的方式"></a>可以 trouble shooting 的方式</h2><ul><li>使用 query 的方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index&#x3D;_internal &quot; error &quot; NOT debug source&#x3D;*splunkd.log* earliest&#x3D;-24h latest&#x3D;now</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> splunk </tag>
+            
+            <tag> trouble-shooting </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>develop-Splunk-Apps</title>
       <link href="2020/12/17/develop-Splunk-Apps/"/>
       <url>2020/12/17/develop-Splunk-Apps/</url>
@@ -33,7 +90,7 @@
       <link href="2020/12/17/Splunk-AppInspect/"/>
       <url>2020/12/17/Splunk-AppInspect/</url>
       
-        <content type="html"><![CDATA[<p>List Splunk AppInspect 的相關資料，當寫好一個 splunk app 時，可以使用 AppInspect 檢查 app 的寫法是否符合 splunk 的 specs</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://dev.splunk.com/enterprise/docs/developapps/testvalidate/appinspect/" target="_blank" rel="noopener">Validate quality of apps or add-ons for Splunk Cloud or Splunk Enterprise with Splunk AppInspect</a></li><li><a href="https://splunkbase.splunk.com/develop/" target="_blank" rel="noopener">Dev Resources</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>List Splunk AppInspect 的相關資料，當寫好一個 splunk app 時，可以使用 AppInspect 檢查 app 的寫法是否符合 splunk 的 specs</p><h2 id="sample-command"><a href="#sample-command" class="headerlink" title="sample command"></a>sample command</h2><p><code>$  splunk-appinspect inspect --included-tags splunk_appinspect $SPLUNK_HOME/etc/apps/[SPLUNK_APP_NAME]</code></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://dev.splunk.com/enterprise/docs/developapps/testvalidate/appinspect/" target="_blank" rel="noopener">Validate quality of apps or add-ons for Splunk Cloud or Splunk Enterprise with Splunk AppInspect</a></li><li><a href="https://splunkbase.splunk.com/develop/" target="_blank" rel="noopener">Dev Resources</a></li></ul>]]></content>
       
       
       

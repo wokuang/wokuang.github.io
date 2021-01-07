@@ -251,9 +251,103 @@
 		
             
 		
+            
+		
+            
+		
+            
+		
         
         <!-- render other articles -->
         
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-01-06 </div>
+			<div class="article-title"><a href="/2021/01/06/aws-smtp-server/" >aws-smtp-server</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		
+	
+	</div>
+  <a type="button" href="/2021/01/06/aws-smtp-server/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-01-06 </div>
+			<div class="article-title"><a href="/2021/01/06/splunk-email-notification/" >splunk-email-notification</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄使用 email 來收 splunk alert 時，遇到的情形</p>
+<h2 id="修改-sender"><a href="#修改-sender" class="headerlink" title="修改 sender"></a>修改 sender</h2><ul>
+<li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a><ul>
+<li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 區段</li>
+</ul>
+</li>
+</ul>
+<h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><ul>
+<li><a href="https://community.splunk.com/t5/Alerting/Why-is-my-triggered-alert-email-not-sending/m-p/188385" target="_blank" rel="noopener">Why is my triggered alert email not sending?</a><ul>
+<li>直接來去看 log , log path: <code>~/splunk/var/log/splunk/python.log</code></li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/01/06/splunk-email-notification/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-01-06 </div>
+			<div class="article-title"><a href="/2021/01/06/splunk-trouble-shooting/" >splunk-trouble-shooting</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在測試使用 splunk app，要 trouble shooting 需要花些功夫</p>
+<h2 id="可以-trouble-shooting-的方式"><a href="#可以-trouble-shooting-的方式" class="headerlink" title="可以 trouble shooting 的方式"></a>可以 trouble shooting 的方式</h2><ul>
+<li>使用 query 的方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index&#x3D;_internal &quot; error &quot; NOT debug source&#x3D;*splunkd.log* earliest&#x3D;-24h latest&#x3D;now</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/01/06/splunk-trouble-shooting/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
            
 			  
 	
@@ -299,6 +393,7 @@
 	
 	
 		<p>List Splunk AppInspect 的相關資料，當寫好一個 splunk app 時，可以使用 AppInspect 檢查 app 的寫法是否符合 splunk 的 specs</p>
+<h2 id="sample-command"><a href="#sample-command" class="headerlink" title="sample command"></a>sample command</h2><p><code>$  splunk-appinspect inspect --included-tags splunk_appinspect $SPLUNK_HOME/etc/apps/[SPLUNK_APP_NAME]</code></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="https://dev.splunk.com/enterprise/docs/developapps/testvalidate/appinspect/" target="_blank" rel="noopener">Validate quality of apps or add-ons for Splunk Cloud or Splunk Enterprise with Splunk AppInspect</a></li>
 <li><a href="https://splunkbase.splunk.com/develop/" target="_blank" rel="noopener">Dev Resources</a></li>
@@ -694,94 +789,6 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-11-25 </div>
-			<div class="article-title"><a href="/2020/11/25/web-security/" >web_security</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="如何看-wifi-詳細資料"><a href="#如何看-wifi-詳細資料" class="headerlink" title="如何看 wifi 詳細資料"></a>如何看 wifi 詳細資料</h2><ul>
-<li>在 MacOS 上按住 Option 鍵，再去點 WiFi，就可以顯示詳細資訊</li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_WLAN_channels" target="_blank" rel="noopener">List of WLAN channels</a></li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://ithelp.ithome.com.tw/users/20129897/ironman/3431" target="_blank" rel="noopener">從 0 開始的 Web Security 系列</a></li>
-<li><a href="https://ithelp.ithome.com.tw/users/20130271/ironman/3662" target="_blank" rel="noopener">那些年還給老師的TCP/IP五層結構 - 用Python進行網路封包分析</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/11/25/web-security/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-11-25 </div>
-			<div class="article-title"><a href="/2020/11/25/peering-db/" >peering_db</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.peeringdb.com/" target="_blank" rel="noopener">peering DB</a></li>
-<li><a href="https://www.peeringdb.com/advanced_search?country__in=TW&reftag=ix" target="_blank" rel="noopener">Taiwan IX</a> - Internet Exchange</li>
-</ul>
-<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
-<li><a href="http://jodies.de/ipcalc" target="_blank" rel="noopener">ipcalc</a> - IP Calculator</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/11/25/peering-db/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-11-25 </div>
-			<div class="article-title"><a href="/2020/11/25/vespa-search/" >vespa_search</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>以前有用過的 search engine，現在 open source 囉，加以記錄囉</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/vespa-engine/vespa" target="_blank" rel="noopener">vespa-engine/vespa</a> - Vespa is an engine for low-latency computation over large data sets.</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/11/25/vespa-search/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -832,48 +839,48 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/REPL/">REPL<span>2</span></a></li>
-		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
-		
-			<li><a href="/tags/vim/">vim<span>4</span></a></li>
-		
-			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+			<li><a href="/tags/remote/">remote<span>2</span></a></li>
 		
 			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
 		
-			<li><a href="/tags/web-security/">web-security<span>1</span></a></li>
+			<li><a href="/tags/https/">https<span>1</span></a></li>
 		
-			<li><a href="/tags/serverless/">serverless<span>2</span></a></li>
-		
-			<li><a href="/tags/Internet-Exchange/">Internet Exchange<span>1</span></a></li>
-		
-			<li><a href="/tags/tool/">tool<span>1</span></a></li>
-		
-			<li><a href="/tags/linux/">linux<span>2</span></a></li>
+			<li><a href="/tags/analyzer/">analyzer<span>1</span></a></li>
 		
 			<li><a href="/tags/funny/">funny<span>1</span></a></li>
 		
+			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
+		
+			<li><a href="/tags/find/">find<span>1</span></a></li>
+		
+			<li><a href="/tags/unity/">unity<span>1</span></a></li>
+		
+			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
+		
+			<li><a href="/tags/alert/">alert<span>1</span></a></li>
+		
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
+		
+			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
+		
+			<li><a href="/tags/vs-code/">vs-code<span>2</span></a></li>
+		
 			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
 		
-			<li><a href="/tags/css/">css<span>1</span></a></li>
+			<li><a href="/tags/dynamodb/">dynamodb<span>1</span></a></li>
 		
-			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
+			<li><a href="/tags/sns/">sns<span>1</span></a></li>
 		
-			<li><a href="/tags/powerline/">powerline<span>1</span></a></li>
+			<li><a href="/tags/tacacs/">tacacs<span>1</span></a></li>
 		
-			<li><a href="/tags/test-case/">test-case<span>2</span></a></li>
+			<li><a href="/tags/ssl/">ssl<span>1</span></a></li>
 		
-			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+			<li><a href="/tags/peering/">peering<span>1</span></a></li>
 		
-			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
-		
-			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
-		
-			<li><a href="/tags/splunk/">splunk<span>6</span></a></li>
+			<li><a href="/tags/gherkin/">gherkin<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>88</span></a></li>
+		   <li><a href="/tags">...<span>91</span></a></li>
 		 
 		</ul>
 	</div>
@@ -886,23 +893,23 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/01/06/aws-smtp-server/" ><i class="fa fa-file-o"></i>aws-smtp-server</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/06/splunk-email-notification/" ><i class="fa fa-file-o"></i>splunk-email-notification</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/06/splunk-trouble-shooting/" ><i class="fa fa-file-o"></i>splunk-trouble-shooting</a>
+      </li>
+    
+      <li>
         <a href="/2020/12/17/develop-Splunk-Apps/" ><i class="fa fa-file-o"></i>develop-Splunk-Apps</a>
       </li>
     
       <li>
         <a href="/2020/12/17/Splunk-AppInspect/" ><i class="fa fa-file-o"></i>Splunk-AppInspect</a>
-      </li>
-    
-      <li>
-        <a href="/2020/12/17/Splunk-User-Behavior-Analytics/" ><i class="fa fa-file-o"></i>Splunk-User-Behavior-Analyt...</a>
-      </li>
-    
-      <li>
-        <a href="/2020/12/17/Splunk-Infrastructure-Overview/" ><i class="fa fa-file-o"></i>Splunk-Infrastructure-Overv...</a>
-      </li>
-    
-      <li>
-        <a href="/2020/12/17/splunk-knowledge-object/" ><i class="fa fa-file-o"></i>splunk_knowledge_object</a>
       </li>
     
   </ul>
@@ -935,7 +942,7 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2020 老布
+  &copy; 2021 老布
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
 </p> </footer>

@@ -119,6 +119,129 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-05-23 </div>
+			<div class="article-title"><a href="/2020/05/23/dao-classic-book/" >dao_classic_book</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近常會查看道教的典籍，茲蒐集目前找到，覺得還滿好的網站</p>
+<h2 id="典籍網站"><a href="#典籍網站" class="headerlink" title="典籍網站"></a>典籍網站</h2><ul>
+<li><a href="https://ctext.org/library.pl?if=gb&collection=132" target="_blank" rel="noopener">正統道藏(圖書館) - 中國哲學書電子化計劃</a> ** 還滿好的網站</li>
+<li><a href="https://www.kanripo.org/catalog?coll=DZ&label=%E6%AD%A3%E7%B5%B1%E9%81%93%E8%97%8F" target="_blank" rel="noopener">Kanseki Repository Catalog  正統道藏</a> ** 資料放在 gitHub 上，我滿喜歡這版的 </li>
+<li><a href="https://www.kanripo.org/catalog?coll=JY&label=%E9%81%93%E8%97%8F%E8%BC%AF%E8%A6%81" target="_blank" rel="noopener">Kanseki Repository Catalog 道藏輯要</a> </li>
+<li><a href="https://ctext.org/library.pl?if=gb&collection=132" target="_blank" rel="noopener">正統道藏(圖書館) - 中國哲學書電子化計劃</a></li>
+<li><a href="http://www.ctcwri.idv.tw/godking.htm" target="_blank" rel="noopener">道教學術資訊站</a></li>
+<li><a href="http://www.daotext.org" target="_blank" rel="noopener">道藏典籍全文数据库</a></li>
+<li><a href="https://taiwanebook.ncl.edu.tw/zh-tw" target="_blank" rel="noopener">台灣華文電子書</a> <ul>
+<li>這網站，我覺得掃描的品質滿好的。不過，就是道藏的資料不多，期待可以多多掃道藏</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/23/dao-classic-book/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/watch-cloudwatch-tag/" >watch_cloudwatch_tag</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
+<li>近來在加 AWS resource 的 tag，其中 cloudwatch 的 tag，無法由 AWS console 來看。用程式加了之後，一直找不到 cloud watch 的 tag 是否有加成功</li>
+</ul>
+<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><ul>
+<li>找了一段時間後，才發現原來要用 aws logs help 來找，用 aws clodwatch 是找不到的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ aws logs list-tags-log-group --log-group-name &#x2F;aws&#x2F;lambda&#x2F;log-group-name</span><br><span class="line">&#123;</span><br><span class="line">    &quot;tags&quot;: &#123;</span><br><span class="line">        &quot;env&quot;: &quot;dev&quot;,</span><br><span class="line">        &quot;service&quot;: &quot;xxx-service&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-using.html" target="_blank" rel="noopener">Using the AWS CLI</a></li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li>要看 aws cloud watch log 的話，可以用 awslogs，還滿好用的</li>
+<li><a href="https://github.com/jorgebastida/awslogs" target="_blank" rel="noopener">jorgebastida/awslogs</a></li>
+<li>要找需要看的 log group 時，還滿方便的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awslogs groups | grep -i v3 | grep -i dev</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/watch-cloudwatch-tag/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/add-tag-on-serverless/" >add_tag_on_serverless</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
+<li>為了要細分 AWS cost 用到那部分，常見的方式為使用 Tag 來區分</li>
+</ul>
+<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><ul>
+<li>在 serverless.conf 中的 provider block  加 stackTags , 可以標註 tag<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">   stackTags:</span><br><span class="line">     owner: owner</span><br><span class="line">     env: $&#123;self:custom.stage&#125;</span><br><span class="line">     service: service</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="可以加強的部分"><a href="#可以加強的部分" class="headerlink" title="可以加強的部分"></a>可以加強的部分</h2><ul>
+<li>因為 stack tag，會有些 AWS resources 沒有加到 tag, 可以用 “Serverless Repository apps” 來加強</li>
+<li><a href="https://github.com/lumigo-io/SAR-Propagate-CFN-Tags" target="_blank" rel="noopener">lumigo-io/SAR-Propagate-CFN-Tags</a><ul>
+<li>SAR app to propagate CloudFormation’s stack tags to resources that are currently not propagated automatically - e.g. CloudWatch Logs</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.datree.io/resources/serverless-best-practices" target="_blank" rel="noopener">Top 10 Serverless best practices</a></li>
+<li><a href="https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/" target="_blank" rel="noopener">Serverless.yml Reference</a><ul>
+<li>Here is a list of all available properties in serverless.yml when the provider is set to aws.</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/add-tag-on-serverless/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-05-22 </div>
 			<div class="article-title"><a href="/2020/05/22/pip-success-but-not-found/" >pip_success_but_not_found</a></div>						
 		</h3>
@@ -441,93 +564,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-03-13 </div>
-			<div class="article-title"><a href="/2020/03/13/use-hexo/" >開始使用 hexo</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>每每想要用 blog 紀錄資料時，都會遇到要選那種 blog。是要自己架好，還是用大公司的 blog 好。<br>另外，就是我喜歡用 local 的 editor 編輯，有需要時在上傳到 web 上。<br>剛好，逛到 <a href="https://rickhw.github.io/" target="_blank" rel="noopener">Thinking, Coding, and Learning</a> 這位大大的網站，才曉得可以搭配 hexo &amp; git 來使用</p>
-<p>這一整個，就是宅宅的最愛啊，所以就來試試看囉</p>
-<h2 id="列出常用的-command"><a href="#列出常用的-command" class="headerlink" title="列出常用的 command"></a>列出常用的 command</h2><ul>
-<li>新增一篇文章<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] title</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="第一次建立時的參考文章"><a href="#第一次建立時的參考文章" class="headerlink" title="第一次建立時的參考文章"></a>第一次建立時的參考文章</h2><ul>
-<li><a href="https://kknews.cc/code/na8pa2g.html" target="_blank" rel="noopener">hexo——輕量、簡易、高逼格的博客（手把手教學）</a></li>
-<li><a href="https://hsuanwei.codes/2019/03/01/Hexo-blog/" target="_blank" rel="noopener">如何優雅地架設個人網站？Hexo博客教學</a></li>
-<li><a href="https://isdaniel.github.io/github-hexo-appveyor/" target="_blank" rel="noopener">建立自己Blog系列(一) 介紹 Github (hosting) + Hexo (Blog) + Appveyor(CICD)</a></li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://hexo.io/zh-tw" target="_blank" rel="noopener">https://hexo.io/zh-tw</a> 官方文件，必看的啦<ul>
-<li><a href="https://hexo.io/zh-tw/docs/writing" target="_blank" rel="noopener">寫作</a></li>
-<li><a href="https://hexo.io/zh-tw/docs/tag-plugins" target="_blank" rel="noopener">標籤外掛（Tag Plugins）</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">hexojs/hexo</a> hexo github, A fast, simple &amp; powerful blog framework, powered by Node.js. <a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a></li>
-<li><a href="https://rickhw.github.io/" target="_blank" rel="noopener">Thinking, Coding, and Learning</a> 就是由這位大大，才開始嘗試 hexo 的啦</li>
-<li><a href="http://gonghonglou.com/2016/02/03/firstblog/" target="_blank" rel="noopener">Mac上搭建基于GitHub的Hexo博客</a></li>
-<li><a href="https://ed521.github.io/2019/07/hexo-install/" target="_blank" rel="noopener">教學 使用 GitHub Pages + Hexo 來架設個人部落格</a></li>
-<li><a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="noopener">freemind theme</a> 就是這個 theme<ul>
-<li><a href="https://www.hahack.com/" target="_blank" rel="noopener">https://www.hahack.com/</a> 寫 theme 的大大</li>
-<li><a href="https://www.hahack.com/hexo-theme-freemind-blog/" target="_blank" rel="noopener">Freemind</a> freemind theme 的說明 blog</li>
-</ul>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/03/13/use-hexo/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-03-13 </div>
-			<div class="article-title"><a href="/2020/03/13/hello-world/" >Hello World</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-	
-	</div>
-  <a type="button" href="/2020/03/13/hello-world/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -544,7 +580,7 @@
         <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
 		
-          <li class="next disabled"><a>Next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/page/8/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -578,48 +614,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
+			<li><a href="/tags/dao/">dao<span>3</span></a></li>
 		
-			<li><a href="/tags/tool/">tool<span>1</span></a></li>
+			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
 		
-			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
+			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+		
+			<li><a href="/tags/funny/">funny<span>1</span></a></li>
+		
+			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
 		
 			<li><a href="/tags/tag/">tag<span>1</span></a></li>
 		
-			<li><a href="/tags/log/">log<span>1</span></a></li>
+			<li><a href="/tags/framework/">framework<span>1</span></a></li>
+		
+			<li><a href="/tags/vim/">vim<span>4</span></a></li>
 		
 			<li><a href="/tags/snmp/">snmp<span>1</span></a></li>
 		
-			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
-		
-			<li><a href="/tags/sns/">sns<span>1</span></a></li>
-		
-			<li><a href="/tags/framework/">framework<span>1</span></a></li>
-		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
-		
-			<li><a href="/tags/Internet-Exchange/">Internet Exchange<span>1</span></a></li>
-		
-			<li><a href="/tags/knowledge-object/">knowledge-object<span>1</span></a></li>
-		
 			<li><a href="/tags/python/">python<span>8</span></a></li>
 		
-			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+			<li><a href="/tags/powerline/">powerline<span>1</span></a></li>
 		
-			<li><a href="/tags/slide/">slide<span>1</span></a></li>
+			<li><a href="/tags/uba/">uba<span>1</span></a></li>
 		
-			<li><a href="/tags/ssl/">ssl<span>1</span></a></li>
+			<li><a href="/tags/test-case/">test-case<span>2</span></a></li>
 		
 			<li><a href="/tags/gutenberg-block/">gutenberg-block<span>1</span></a></li>
 		
-			<li><a href="/tags/dao/">dao<span>3</span></a></li>
+			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
 		
-			<li><a href="/tags/cli-tool/">cli-tool<span>1</span></a></li>
+			<li><a href="/tags/serverless/">serverless<span>2</span></a></li>
 		
-			<li><a href="/tags/developer/">developer<span>1</span></a></li>
+			<li><a href="/tags/https/">https<span>1</span></a></li>
+		
+			<li><a href="/tags/tacacs/">tacacs<span>1</span></a></li>
+		
+			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+		
+			<li><a href="/tags/appInspect/">appInspect<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>88</span></a></li>
+		   <li><a href="/tags">...<span>91</span></a></li>
 		 
 		</ul>
 	</div>
@@ -632,23 +668,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/01/06/aws-smtp-server/" ><i class="fa fa-file-o"></i>aws-smtp-server</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/06/splunk-email-notification/" ><i class="fa fa-file-o"></i>splunk-email-notification</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/06/splunk-trouble-shooting/" ><i class="fa fa-file-o"></i>splunk-trouble-shooting</a>
+      </li>
+    
+      <li>
         <a href="/2020/12/17/develop-Splunk-Apps/" ><i class="fa fa-file-o"></i>develop-Splunk-Apps</a>
       </li>
     
       <li>
         <a href="/2020/12/17/Splunk-AppInspect/" ><i class="fa fa-file-o"></i>Splunk-AppInspect</a>
-      </li>
-    
-      <li>
-        <a href="/2020/12/17/Splunk-User-Behavior-Analytics/" ><i class="fa fa-file-o"></i>Splunk-User-Behavior-Analyt...</a>
-      </li>
-    
-      <li>
-        <a href="/2020/12/17/Splunk-Infrastructure-Overview/" ><i class="fa fa-file-o"></i>Splunk-Infrastructure-Overv...</a>
-      </li>
-    
-      <li>
-        <a href="/2020/12/17/splunk-knowledge-object/" ><i class="fa fa-file-o"></i>splunk_knowledge_object</a>
       </li>
     
   </ul>
@@ -681,7 +717,7 @@
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2020 老布
+  &copy; 2021 老布
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
 </p> </footer>
