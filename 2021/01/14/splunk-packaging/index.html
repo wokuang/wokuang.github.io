@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>another_grep_rg_command | 老布這麼說</title>
+  <title>splunk-packaging | 老布這麼說</title>
   <meta name="author" content="老布">
   
   <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="another_grep_rg_command"/>
+  <meta property="og:title" content="splunk-packaging"/>
   <meta property="og:site_name" content="老布這麼說"/>
 
   
@@ -97,7 +97,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> another_grep_rg_command</h1>
+			<h1 class="title title-inverse "> splunk-packaging</h1>
 		</div>		
 	
 
@@ -117,24 +117,22 @@
 	<div class="mypage">		
 	  		
 
-	  <ul>
-<li><p>在看 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> 的介紹影片<a href="https://www.youtube.com/watch?v=qgG5Jhi_Els" target="_blank" rel="noopener">Vim universe. fzf - command line fuzzy finder</a> 時，有介紹到 rg 這個工具。用了之後，還真的滿快的啊</p>
-</li>
-<li><p>是一種方便使用 grep 的方式</p>
-</li>
-<li><p>使用 command</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rg SEARCH_KEYWORD PATH</span><br><span class="line">$ rg xxx .&#x2F;</span><br></pre></td></tr></table></figure>
-
-</li>
+	  <p>列出使用 Splunk Packaging Toolkit 的記錄</p>
+<h2 id="cmd-document"><a href="#cmd-document" class="headerlink" title="cmd document"></a>cmd document</h2><ul>
+<li><a href="https://dev.splunk.com/enterprise/docs/releaseapps/packagingtoolkit/pkgtoolkitref/packagingtoolkitcli/#slim-validate" target="_blank" rel="noopener">Packaging Toolkit CLI</a></li>
+<li><a href="https://dev.splunk.com/enterprise/docs/releaseapps/packagingtoolkit/installpkgtoolkit/" target="_blank" rel="noopener">install</a></li>
 </ul>
-<h2 id="GitHub-project"><a href="#GitHub-project" class="headerlink" title="GitHub project"></a>GitHub project</h2><ul>
-<li><a href="https://github.com/BurntSushi/ripgrep" target="_blank" rel="noopener">BurntSushi/ripgrep</a></li>
+<h2 id="cmd-list"><a href="#cmd-list" class="headerlink" title="cmd list"></a>cmd list</h2><ul>
+<li>cmd: <code>slim</code>, <code>slim &lt;command&gt; --help</code></li>
+<li><code>slim generate-manifest</code></li>
+<li><code>slim package</code><ul>
+<li><code>slim package [-h] [--debug] [--quiet] [-o &lt;output-dir&gt;] [-r &lt;repository&gt;] [-u &lt;level&gt;] &lt;app-source&gt;</code></li>
+</ul>
+</li>
+<li><code>slim validate</code></li>
 </ul>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://mariusschulz.com/blog/fast-searching-with-ripgrep" target="_blank" rel="noopener">Fast Searching with ripgrep</a></li>
-<li><a href="https://www.hi-linux.com/posts/29245.html" target="_blank" rel="noopener">推荐一款命令行下最快的文本搜索神器 RipGrep</a></li>
-<li><a href="https://segmentfault.com/a/1190000016170184" target="_blank" rel="noopener">最快的文本搜索神器ripgrep – grep的最好代替者</a></li>
-<li><a href="https://github.com/chinanf-boy/ripgrep-zh" target="_blank" rel="noopener">中文翻译:&lt;BurntSushi/ripgrep&gt; 一个面向行的搜索工具</a></li>
+<li><a href="https://dev.splunk.com/enterprise/docs/releaseapps/packagingtoolkit/" target="_blank" rel="noopener">Package apps for Splunk Cloud or Splunk Enterprise using the Splunk Packaging Toolkit</a></li>
 </ul>
 	  
 	</div>
@@ -148,13 +146,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2020/06/02/aws-parquet-data/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/2021/01/14/aws-api-gateway-401/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2020/06/01/another-find/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2021/01/14/useful-splunk-cmd/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -205,7 +203,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-06-01 
+	2021-01-14 
 	</div>
 	
 
@@ -218,7 +216,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/linux/">linux<span>2</span></a></li> <li><a href="/tags/cmd/">cmd<span>3</span></a></li> <li><a href="/tags/grep/">grep<span>1</span></a></li>
+  <li><a href="/tags/splunk/">splunk<span>10</span></a></li> <li><a href="/tags/pack/">pack<span>1</span></a></li> <li><a href="/tags/packaging/">packaging<span>1</span></a></li>
     </ul>
 	</div>
 	
