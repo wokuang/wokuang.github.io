@@ -119,6 +119,235 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-11-24 </div>
+			<div class="article-title"><a href="/2020/11/24/powerline-use/" >powerline_use</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>目前是用 powerline 來當作 vim status bar 的顯示，記錄一下用 powerline 遇到的情形</p>
+<h2 id="遇到的-issue"><a href="#遇到的-issue" class="headerlink" title="遇到的 issue"></a>遇到的 issue</h2><ul>
+<li>在 pip powerline 時，出現 “SyntaxError: keyword argument repeated” error<ul>
+<li><a href="https://github.com/powerline/powerline/issues/34" target="_blank" rel="noopener">setup.py syntax error #34</a></li>
+<li>解法：要安裝 powerline-status package, <code>$ pip install powerline-status</code> </li>
+<li><a href="https://powerline.readthedocs.io/en/latest/installation.html#pip-installation" target="_blank" rel="noopener">pip-installation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/powerline/powerline" target="_blank" rel="noopener">powerline/powerline</a> - Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/24/powerline-use/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-20 </div>
+			<div class="article-title"><a href="/2020/11/20/funny-search-engine/" >funny_search_engine</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="滿有趣的-search-engine-site"><a href="#滿有趣的-search-engine-site" class="headerlink" title="滿有趣的 search engine site"></a>滿有趣的 search engine site</h2><ul>
+<li><a href="https://lmgtfy.app/" target="_blank" rel="noopener">lmgtfy</a></li>
+<li><a href="https://lmgtfy.app/?q=how+to+google" target="_blank" rel="noopener">How to google 範例</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/20/funny-search-engine/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-17 </div>
+			<div class="article-title"><a href="/2020/11/17/dao-repent/" >dao_repent</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近要來讀讀道教的懺文，需要讀的過程，同時也找找、了解有關道教的懺悔</p>
+<h2 id="寶懺的組成"><a href="#寶懺的組成" class="headerlink" title="寶懺的組成"></a>寶懺的組成</h2><ul>
+<li>寶懺有二種組成形式<ul>
+<li>一種就是懺文和諸天尊聖號</li>
+<li>一種就是懺文和經句，但在拜的過程中，哪位祖師的寶懺就在經句後加這位祖師聖號。</li>
+</ul>
+</li>
+</ul>
+<h2 id="滿有感的"><a href="#滿有感的" class="headerlink" title="滿有感的"></a>滿有感的</h2><ul>
+<li>道教內有句話，叫做有經必有懺</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://kknews.cc/zh-tw/culture/j22oqal.html" target="_blank" rel="noopener">道教也有懺悔嗎？為什麼說人人都需要懺悔？</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/17/dao-repent/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-11 </div>
+			<div class="article-title"><a href="/2020/11/11/snmp-related/" >snmp_related</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近需要寫跟 snmp 相關的測試，就記錄一下囉</p>
+<h2 id="可以試試的工具"><a href="#可以試試的工具" class="headerlink" title="可以試試的工具"></a>可以試試的工具</h2><ul>
+<li><a href="https://www.opennms.com/opennms-platform/" target="_blank" rel="noopener">OpenNMS</a></li>
+<li><a href="https://www.solarwinds.com/" target="_blank" rel="noopener">solarwinds</a></li>
+</ul>
+<h2 id="有關的-snmp-server-docker"><a href="#有關的-snmp-server-docker" class="headerlink" title="有關的 snmp server docker"></a>有關的 snmp server docker</h2><ul>
+<li><p><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - Net-SNMP base image with Supervisor on CentOS</p>
+<ul>
+<li>目前有測試過，可以使用</li>
+<li>跑 snmptrap receiver 的方式，設定 UDP port mapping (port publish)<ul>
+<li><code>docker run -d --name trap_sink -p 1620:162/udp elcolio/net-snmp</code></li>
+</ul>
+</li>
+<li>送出 trap 來，設定需要的 ip &amp; pprt<ul>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public DESTINATION .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public 10.1.83.41:1620 .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/OpenNMS/opennms/tree/develop/opennms-container" target="_blank" rel="noopener">OpenNMS/opennms</a> - container</p>
+<ul>
+<li><a href="https://docs.opennms.org/opennms/releases/latest/guide-install/guide-install.html#_run_with_docker" target="_blank" rel="noopener">Run with Docker</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="net-snmp-的資料"><a href="#net-snmp-的資料" class="headerlink" title="net-snmp 的資料"></a>net-snmp 的資料</h2><ul>
+<li><a href="http://www.net-snmp.org/" target="_blank" rel="noopener">Net-SNMP</a> - offical site</li>
+<li><a href="http://www.net-snmp.org/wiki/index.php/Tutorials" target="_blank" rel="noopener">net-snmp tutorial</a></li>
+</ul>
+<h2 id="接收-snmp-trap-的方式"><a href="#接收-snmp-trap-的方式" class="headerlink" title="接收 snmp trap 的方式"></a>接收 snmp trap 的方式</h2><ul>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - 以這個為 base，調整為自己需要的 snmptrapd.conf </li>
+<li>參考的 snmptrapd.conf<pre><code>authCommunity   log,execute,net public
+disableAuthorization yes
+traphandle public /usr/bin/python /usr/bin/snmptrap-parser.py</code></pre></li>
+<li><a href="https://github.com/OpensourceICTSolutions/zabbix-snmp-trap-parser/blob/master/snmptrap-parser.py" target="_blank" rel="noopener">OpensourceICTSolutions/zabbix-snmp-trap-parser</a> - 用 python zabbix parser 來接收資料<ul>
+<li><a href="https://blog.zabbix.com/parsing-snmp-traps-with-python-or-bash-a-net-snmp-perl-alternative/11577/" target="_blank" rel="noopener">Parsing SNMP Traps with Python or Bash – A net-snmp-perl alternative</a></li>
+</ul>
+</li>
+<li>參考的 net-snmp 文件<ul>
+<li><a href="http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd" target="_blank" rel="noopener">TUT:Configuring snmptrapd</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-三個主要元件"><a href="#snmp-三個主要元件" class="headerlink" title="snmp 三個主要元件"></a>snmp 三個主要元件</h2><ul>
+<li>SNMP 管理者（SNMP Manager）<ul>
+<li>是 SNMP 的主要管理軟體，安裝於『網路管理系統』（Network Management System）上，它負責向所管轄的管理設備索取管理訊息，或設定網路組態，為 SNMP 管理環境的主要控制設備。</li>
+</ul>
+</li>
+<li>SNMP 代理者（SNMP Agent）<ul>
+<li>一般安裝於被管理的網路設備上，例如，路由器、主機電腦、橋接器等。SNMP Agent 收集網路設備上訊息，再以 SNMP 通訊協定和 SNMP Manager 通訊，達到管理的目的。</li>
+</ul>
+</li>
+<li>被管理物件（Managed Object）<ul>
+<li>一般指被管理設備內之各種管理物件。例如，被管理之設備為橋接器，而其被管理物件為橋接器的有關設備，譬如，網路介面卡、緩衝器空間、過濾資料庫等等。被管理物件皆以『管理訊息結構』方式表達，且以樹狀識別碼（Tree Identified）方式，儲存於『管理訊息資料庫』（Management Information Base, MIB）上。</li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-掃盲"><a href="#snmp-掃盲" class="headerlink" title="snmp 掃盲"></a>snmp 掃盲</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" target="_blank" rel="noopener">Simple Network Management Protocol</a></li>
+<li><a href="http://www.cc.ntu.edu.tw/chinese/epaper/0047/20181220_4707.html" target="_blank" rel="noopener">淺談簡單網路管理協定(SNMP)</a></li>
+<li><a href="https://www.manageengine.com/tw/network-monitoring/what-is-snmp.html" target="_blank" rel="noopener">SNMP 教程</a></li>
+<li><a href="http://www.tsnien.idv.tw/Internet_WebBook/chap16/16-4%20SNMP%20%E9%81%8B%E4%BD%9C%E7%A8%8B%E5%BA%8F.html" target="_blank" rel="noopener">SNMP 運作程序</a></li>
+<li><a href="https://www.itread01.com/content/1548945570.html" target="_blank" rel="noopener">snmp trap入門</a></li>
+<li><a href="https://www.dgbas.gov.tw/public/Data/7121215394071.pdf" target="_blank" rel="noopener">SNMP 通訊藍本間功能與特色的差異</a> - pdf 資料</li>
+</ul>
+<h2 id="snmp-default-port"><a href="#snmp-default-port" class="headerlink" title="snmp default port"></a>snmp default port</h2><ul>
+<li>161 UTP port <ul>
+<li>來傳送及請求訊息</li>
+</ul>
+</li>
+<li>162 UTP port <ul>
+<li>接收來自待管裝置的trap訊息</li>
+</ul>
+</li>
+</ul>
+<h2 id="檢查-udp-port-是否有open"><a href="#檢查-udp-port-是否有open" class="headerlink" title="檢查 udp port 是否有open"></a>檢查 udp port 是否有open</h2><ul>
+<li><code>$ nc -zu 127.0.0.1 1610</code></li>
+<li><code>$ nc -vz -u 127.0.0.1 162</code></li>
+<li><a href="https://it001.pixnet.net/blog/post/325644661-it%E4%BA%8B%E4%BB%B6%E7%B0%BF-%E6%88%91%E6%83%B3%E6%B8%AC%E8%A9%A6udp%E6%9C%89%E6%B2%92%E6%9C%89%E9%80%9A%E6%80%8E%E9%BA%BC%E8%BE%A6" target="_blank" rel="noopener">IT事件簿-我想測試UDP有沒有通怎麼辦?</a></li>
+<li><a href="http://taiwanwolf.blogspot.com/2011/06/port-tcp-udp.html" target="_blank" rel="noopener">如何檢測 Port 是否有活著 (TCP, UDP)</a></li>
+</ul>
+<h2 id="檢查有開哪些-port"><a href="#檢查有開哪些-port" class="headerlink" title="檢查有開哪些 port"></a>檢查有開哪些 port</h2><ul>
+<li><code>sudo lsof -i -P -n | grep LISTEN</code></li>
+<li><code>lsof -i -P -n</code></li>
+<li><code>netstat -ntulp</code></li>
+<li><a href="https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/" target="_blank" rel="noopener">How to check if port is in use on Linux or Unix</a></li>
+</ul>
+<h2 id="python-相關的-snmp-library"><a href="#python-相關的-snmp-library" class="headerlink" title="python 相關的 snmp library"></a>python 相關的 snmp library</h2><ul>
+<li><a href="https://bytesofgigabytes.com/snmp-protocol/python-snmp-trap-receiver/" target="_blank" rel="noopener">Python SNMP trap receiver</a></li>
+<li><a href="https://github.com/etingof/pysnmp" target="_blank" rel="noopener">etingof/pysnmp</a></li>
+</ul>
+<h2 id="要小心的雷"><a href="#要小心的雷" class="headerlink" title="要小心的雷"></a>要小心的雷</h2><ul>
+<li><a href="https://net-snmp-users.narkive.com/u5NFeeQ4/snmptrapd-traphandle-called-twice" target="_blank" rel="noopener">[snmptrapd] traphandle called twice</a><ul>
+<li>snmptrapd 會去讀預設的 snmptrapd.conf，如果在執行中又下了 <code>-c /etc/snmptrapd.conf</code>，就會讀兩次 conf 檔</li>
+</ul>
+</li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul>
+<li>先裝好 Supervisord 的 docker，之後的服務可以用此為 base image</li>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> 就是以此方式建立的</li>
+</ul>
+</li>
+<li><a href="http://www.tsnien.idv.tw/Internet_WebBook/Internet.html" target="_blank" rel="noopener">TCP/IP 協定與 Internet 網路</a></li>
+<li><a href="http://www.tsnien.idv.tw/" target="_blank" rel="noopener">翻轉工作室</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/11/snmp-related/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-11-10 </div>
 			<div class="article-title"><a href="/2020/11/10/run-remote-docker-daemon/" >run_remote_docker_daemon</a></div>						
 		</h3>
@@ -355,119 +584,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-15 </div>
-			<div class="article-title"><a href="/2020/10/15/csrf-info/" >csrf_info</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://blog.techbridge.cc/2017/02/25/csrf-introduction/" target="_blank" rel="noopener">讓我們來談談 CSRF</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/15/csrf-info/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-14 </div>
-			<div class="article-title"><a href="/2020/10/14/chrom-ssl-cert-invalid/" >chrom-ssl-cert-invalid</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>在測試階段的時候，會用自己簽的 SSL，最近用 chrom 開這類的 page 時，會出現 Your connection is not private 的訊息，錯誤碼是  NET::ERR_CERT_INVALID<br>可以輸入 <code>thisisunsafe</code> 這幾個字來解這個問題</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://medium.com/@dblazeski/chrome-bypass-net-err-cert-invalid-for-development-daefae43eb12" target="_blank" rel="noopener">Chrome: Bypass NET::ERR_CERT_INVALID for development</a></li>
-<li><a href="https://ephrain.net/chrome-%E6%9C%89-neterr_cert_invalid-%E9%8C%AF%E8%AA%A4%E7%9A%84%E7%B6%B2%E9%A0%81%E9%80%B2%E4%B8%8D%E5%8E%BB%EF%BC%9F/" target="_blank" rel="noopener">Chrome 有 NET::ERR_CERT_INVALID 錯誤的網頁進不去？</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/14/chrom-ssl-cert-invalid/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-14 </div>
-			<div class="article-title"><a href="/2020/10/14/css-font/" >css-font</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>近期需要修改網站某些區塊的字型，所以找了一下 CSS &amp; 中文字型設定的相關方式<br>手機上要顯示，標楷體主要是使用 google font 來進行</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="http://www.flycan.com/article/css/google-fonts-webfont-2474.html" target="_blank" rel="noopener">Google Fonts 線上字體推出 5 款免費的中文網頁字型</a></li>
-<li><a href="https://ithelp.ithome.com.tw/questions/10192541" target="_blank" rel="noopener">網頁中的中文標楷體有方法可以顯示在行動裝置嗎?</a></li>
-<li><a href="https://www.wibibi.com/info.php?tid=93" target="_blank" rel="noopener">CSS font-size 文字大小</a></li>
-<li><a href="https://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html" target="_blank" rel="noopener">網頁中英文字型(font-family)跨平台設定最佳化</a> - 網頁上的設定，在手機上需要用 google font</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/14/css-font/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-10-13 </div>
-			<div class="article-title"><a href="/2020/10/13/disable-tls-1-0-on-aws/" >disable-tls-1-0-on-aws</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="query-site"><a href="#query-site" class="headerlink" title="query site"></a>query site</h2><ul>
-<li>use <a href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener">Qualys</a> to confirm your changes</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.chowles.com/how-to-disable-tls-1-0-on-aws/" target="_blank" rel="noopener">How to Disable TLS 1.0 on Amazon Web Services (AWS)</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/10/13/disable-tls-1-0-on-aws/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -518,48 +634,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
-		
-			<li><a href="/tags/debug/">debug<span>1</span></a></li>
-		
-			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
-		
-			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
-		
-			<li><a href="/tags/font/">font<span>1</span></a></li>
-		
-			<li><a href="/tags/cmd/">cmd<span>3</span></a></li>
-		
-			<li><a href="/tags/dao/">dao<span>3</span></a></li>
-		
-			<li><a href="/tags/ses/">ses<span>1</span></a></li>
-		
-			<li><a href="/tags/unity/">unity<span>1</span></a></li>
-		
-			<li><a href="/tags/s3/">s3<span>1</span></a></li>
-		
-			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
-		
-			<li><a href="/tags/linux/">linux<span>2</span></a></li>
+			<li><a href="/tags/tool/">tool<span>1</span></a></li>
 		
 			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
 		
-			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
+			<li><a href="/tags/debug/">debug<span>1</span></a></li>
+		
+			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
+		
+			<li><a href="/tags/quality/">quality<span>1</span></a></li>
 		
 			<li><a href="/tags/ssl/">ssl<span>1</span></a></li>
 		
-			<li><a href="/tags/web-security/">web-security<span>1</span></a></li>
+			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
 		
-			<li><a href="/tags/tacacs/">tacacs<span>1</span></a></li>
+			<li><a href="/tags/docker/">docker<span>3</span></a></li>
 		
-			<li><a href="/tags/appInspect/">appInspect<span>1</span></a></li>
+			<li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
+		
+			<li><a href="/tags/vespa/">vespa<span>1</span></a></li>
+		
+			<li><a href="/tags/s3/">s3<span>1</span></a></li>
+		
+			<li><a href="/tags/developer/">developer<span>1</span></a></li>
+		
+			<li><a href="/tags/security/">security<span>1</span></a></li>
 		
 			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
 		
-			<li><a href="/tags/python/">python<span>8</span></a></li>
+			<li><a href="/tags/regex/">regex<span>1</span></a></li>
+		
+			<li><a href="/tags/setup/">setup<span>1</span></a></li>
+		
+			<li><a href="/tags/book/">book<span>1</span></a></li>
+		
+			<li><a href="/tags/online/">online<span>1</span></a></li>
+		
+			<li><a href="/tags/python/">python<span>9</span></a></li>
+		
+			<li><a href="/tags/trouble-shooting/">trouble-shooting<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>97</span></a></li>
+		   <li><a href="/tags">...<span>103</span></a></li>
 		 
 		</ul>
 	</div>
@@ -572,23 +688,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/01/27/web-quality/" ><i class="fa fa-file-o"></i>web-quality</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/26/regex-doc/" ><i class="fa fa-file-o"></i>regex_doc</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/26/splunk-cim/" ><i class="fa fa-file-o"></i>splunk-cim</a>
+      </li>
+    
+      <li>
+        <a href="/2021/01/25/python-flow-base/" ><i class="fa fa-file-o"></i>python-flow-base</a>
+      </li>
+    
+      <li>
         <a href="/2021/01/14/aws-api-gateway-401/" ><i class="fa fa-file-o"></i>aws-api-gateway-401</a>
-      </li>
-    
-      <li>
-        <a href="/2021/01/14/splunk-packaging/" ><i class="fa fa-file-o"></i>splunk-packaging</a>
-      </li>
-    
-      <li>
-        <a href="/2021/01/14/useful-splunk-cmd/" ><i class="fa fa-file-o"></i>useful_splunk_cmd</a>
-      </li>
-    
-      <li>
-        <a href="/2021/01/06/aws-smtp-server/" ><i class="fa fa-file-o"></i>aws-smtp-server</a>
-      </li>
-    
-      <li>
-        <a href="/2021/01/06/splunk-email-notification/" ><i class="fa fa-file-o"></i>splunk-email-notification</a>
       </li>
     
   </ul>
