@@ -120,6 +120,51 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/add-tag-on-serverless/" >add_tag_on_serverless</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
+<li>為了要細分 AWS cost 用到那部分，常見的方式為使用 Tag 來區分</li>
+</ul>
+<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><ul>
+<li>在 serverless.conf 中的 provider block  加 stackTags , 可以標註 tag<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">   stackTags:</span><br><span class="line">     owner: owner</span><br><span class="line">     env: $&#123;self:custom.stage&#125;</span><br><span class="line">     service: service</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="可以加強的部分"><a href="#可以加強的部分" class="headerlink" title="可以加強的部分"></a>可以加強的部分</h2><ul>
+<li>因為 stack tag，會有些 AWS resources 沒有加到 tag, 可以用 “Serverless Repository apps” 來加強</li>
+<li><a href="https://github.com/lumigo-io/SAR-Propagate-CFN-Tags" target="_blank" rel="noopener">lumigo-io/SAR-Propagate-CFN-Tags</a><ul>
+<li>SAR app to propagate CloudFormation’s stack tags to resources that are currently not propagated automatically - e.g. CloudWatch Logs</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.datree.io/resources/serverless-best-practices" target="_blank" rel="noopener">Top 10 Serverless best practices</a></li>
+<li><a href="https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/" target="_blank" rel="noopener">Serverless.yml Reference</a><ul>
+<li>Here is a list of all available properties in serverless.yml when the provider is set to aws.</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/add-tag-on-serverless/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
 			<div class="article-title"><a href="/2020/05/22/pip-success-but-not-found/" >pip_success_but_not_found</a></div>						
 		</h3>
 	
@@ -578,48 +623,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
-		
-			<li><a href="/tags/performance/">performance<span>1</span></a></li>
-		
-			<li><a href="/tags/knowledge-object/">knowledge-object<span>1</span></a></li>
-		
-			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
-		
-			<li><a href="/tags/dao/">dao<span>3</span></a></li>
-		
-			<li><a href="/tags/tag/">tag<span>1</span></a></li>
-		
-			<li><a href="/tags/flow/">flow<span>1</span></a></li>
-		
-			<li><a href="/tags/grep/">grep<span>1</span></a></li>
-		
-			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
-		
-			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
-		
-			<li><a href="/tags/game/">game<span>1</span></a></li>
-		
-			<li><a href="/tags/font/">font<span>1</span></a></li>
-		
-			<li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
-		
-			<li><a href="/tags/cmd/">cmd<span>3</span></a></li>
-		
-			<li><a href="/tags/tool/">tool<span>1</span></a></li>
-		
-			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+			<li><a href="/tags/developer/">developer<span>1</span></a></li>
 		
 			<li><a href="/tags/CIM/">CIM<span>1</span></a></li>
 		
-			<li><a href="/tags/s3/">s3<span>1</span></a></li>
+			<li><a href="/tags/serverless/">serverless<span>2</span></a></li>
 		
-			<li><a href="/tags/trouble-shooting/">trouble-shooting<span>1</span></a></li>
+			<li><a href="/tags/api-gateway/">api-gateway<span>1</span></a></li>
 		
-			<li><a href="/tags/ses/">ses<span>1</span></a></li>
+			<li><a href="/tags/web-security/">web-security<span>1</span></a></li>
+		
+			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
+		
+			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
+		
+			<li><a href="/tags/parquet/">parquet<span>2</span></a></li>
+		
+			<li><a href="/tags/packaging/">packaging<span>1</span></a></li>
+		
+			<li><a href="/tags/splunk-app/">splunk-app<span>1</span></a></li>
+		
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
+		
+			<li><a href="/tags/test-case/">test-case<span>2</span></a></li>
+		
+			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+		
+			<li><a href="/tags/vs-code/">vs-code<span>3</span></a></li>
+		
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
+		
+			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
+		
+			<li><a href="/tags/knowledge-object/">knowledge-object<span>1</span></a></li>
+		
+			<li><a href="/tags/package/">package<span>1</span></a></li>
+		
+			<li><a href="/tags/online/">online<span>1</span></a></li>
+		
+			<li><a href="/tags/repent/">repent<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>103</span></a></li>
+		   <li><a href="/tags">...<span>104</span></a></li>
 		 
 		</ul>
 	</div>
@@ -630,6 +675,10 @@
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2021/01/28/learn-visual-studio-code/" ><i class="fa fa-file-o"></i>learn-visual-studio-code</a>
+      </li>
     
       <li>
         <a href="/2021/01/27/web-quality/" ><i class="fa fa-file-o"></i>web-quality</a>
@@ -645,10 +694,6 @@
     
       <li>
         <a href="/2021/01/25/python-flow-base/" ><i class="fa fa-file-o"></i>python-flow-base</a>
-      </li>
-    
-      <li>
-        <a href="/2021/01/14/aws-api-gateway-401/" ><i class="fa fa-file-o"></i>aws-api-gateway-401</a>
       </li>
     
   </ul>

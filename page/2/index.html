@@ -119,6 +119,41 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2021-01-06 </div>
+			<div class="article-title"><a href="/2021/01/06/splunk-trouble-shooting/" >splunk-trouble-shooting</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在測試使用 splunk app，要 trouble shooting 需要花些功夫</p>
+<h2 id="splunk-log-path"><a href="#splunk-log-path" class="headerlink" title="splunk log path"></a>splunk log path</h2><ul>
+<li>在 <code>$SPLUNK_HOME/var/log/splunk</code> folder 中，有需要的 log folder<ul>
+<li>for example <code>/opt/splunk/var/log/splunk</code>, linux 中的 path</li>
+</ul>
+</li>
+</ul>
+<h2 id="可以-trouble-shooting-的方式"><a href="#可以-trouble-shooting-的方式" class="headerlink" title="可以 trouble shooting 的方式"></a>可以 trouble shooting 的方式</h2><ul>
+<li>使用 query 的方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index&#x3D;_internal &quot; error &quot; NOT debug source&#x3D;*splunkd.log* earliest&#x3D;-24h latest&#x3D;now</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/01/06/splunk-trouble-shooting/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-12-17 </div>
 			<div class="article-title"><a href="/2020/12/17/develop-Splunk-Apps/" >develop-Splunk-Apps</a></div>						
 		</h3>
@@ -674,33 +709,6 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-11-25 </div>
-			<div class="article-title"><a href="/2020/11/25/vespa-search/" >vespa_search</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>以前有用過的 search engine，現在 open source 囉，加以記錄囉</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/vespa-engine/vespa" target="_blank" rel="noopener">vespa-engine/vespa</a> - Vespa is an engine for low-latency computation over large data sets.</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/11/25/vespa-search/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -751,48 +759,48 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/debug/">debug<span>1</span></a></li>
+			<li><a href="/tags/gherkin/">gherkin<span>1</span></a></li>
 		
-			<li><a href="/tags/email/">email<span>1</span></a></li>
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
 		
-			<li><a href="/tags/knowledge-object/">knowledge-object<span>1</span></a></li>
+			<li><a href="/tags/game/">game<span>1</span></a></li>
 		
-			<li><a href="/tags/powerline/">powerline<span>1</span></a></li>
-		
-			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
-		
-			<li><a href="/tags/ssl/">ssl<span>1</span></a></li>
-		
-			<li><a href="/tags/package/">package<span>1</span></a></li>
+			<li><a href="/tags/log/">log<span>1</span></a></li>
 		
 			<li><a href="/tags/sns/">sns<span>1</span></a></li>
 		
-			<li><a href="/tags/AAA/">AAA<span>1</span></a></li>
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
 		
-			<li><a href="/tags/cmd/">cmd<span>3</span></a></li>
+			<li><a href="/tags/ses/">ses<span>1</span></a></li>
 		
-			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
+			<li><a href="/tags/elearn/">elearn<span>1</span></a></li>
 		
-			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+			<li><a href="/tags/cheat/">cheat<span>1</span></a></li>
 		
-			<li><a href="/tags/regex/">regex<span>1</span></a></li>
+			<li><a href="/tags/snmp/">snmp<span>1</span></a></li>
 		
-			<li><a href="/tags/python/">python<span>9</span></a></li>
+			<li><a href="/tags/Internet-Exchange/">Internet Exchange<span>1</span></a></li>
 		
-			<li><a href="/tags/cloud-watch/">cloud-watch<span>1</span></a></li>
+			<li><a href="/tags/docker/">docker<span>3</span></a></li>
 		
-			<li><a href="/tags/web/">web<span>1</span></a></li>
+			<li><a href="/tags/developer/">developer<span>1</span></a></li>
 		
-			<li><a href="/tags/tacacs/">tacacs<span>1</span></a></li>
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
 		
-			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>4</span></a></li>
 		
-			<li><a href="/tags/security/">security<span>1</span></a></li>
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
 		
-			<li><a href="/tags/api-gateway/">api-gateway<span>1</span></a></li>
+			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
+		
+			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
+		
+			<li><a href="/tags/flow/">flow<span>1</span></a></li>
+		
+			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>103</span></a></li>
+		   <li><a href="/tags">...<span>104</span></a></li>
 		 
 		</ul>
 	</div>
@@ -803,6 +811,10 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2021/01/28/learn-visual-studio-code/" ><i class="fa fa-file-o"></i>learn-visual-studio-code</a>
+      </li>
     
       <li>
         <a href="/2021/01/27/web-quality/" ><i class="fa fa-file-o"></i>web-quality</a>
@@ -818,10 +830,6 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
     
       <li>
         <a href="/2021/01/25/python-flow-base/" ><i class="fa fa-file-o"></i>python-flow-base</a>
-      </li>
-    
-      <li>
-        <a href="/2021/01/14/aws-api-gateway-401/" ><i class="fa fa-file-o"></i>aws-api-gateway-401</a>
       </li>
     
   </ul>

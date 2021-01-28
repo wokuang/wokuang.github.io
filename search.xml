@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>learn-visual-studio-code</title>
+      <link href="2021/01/28/learn-visual-studio-code/"/>
+      <url>2021/01/28/learn-visual-studio-code/</url>
+      
+        <content type="html"><![CDATA[<h2 id="List-Some-ShoutCut"><a href="#List-Some-ShoutCut" class="headerlink" title="List Some ShoutCut"></a>List Some ShoutCut</h2><ul><li>`Ctrl + `` : toggle terminal wondow 滿常用的</li><li><code>Command + B</code> : toggle side menu </li></ul><h2 id="Docuemnt"><a href="#Docuemnt" class="headerlink" title="Docuemnt"></a>Docuemnt</h2><ul><li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener">visual studio code document</a></li><li><a href="https://code.visualstudio.com/docs/getstarted/userinterface" target="_blank" rel="noopener">vs code User Interface</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/jamesqquick/Learn-VS-Code" target="_blank" rel="noopener">jamesqquick/Learn-VS-Code</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vs-code </tag>
+            
+            <tag> elearn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web-quality</title>
       <link href="2021/01/27/web-quality/"/>
       <url>2021/01/27/web-quality/</url>
