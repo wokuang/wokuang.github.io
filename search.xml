@@ -4,11 +4,120 @@
   
     
     <entry>
+      <title>checklist-google-doc</title>
+      <link href="2021/02/25/checklist-google-doc/"/>
+      <url>2021/02/25/checklist-google-doc/</url>
+      
+        <content type="html"><![CDATA[<p>剛剛用 google document 時，覺得可以加 checklist 應該滿方便的，就找了一下方式</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://sites.google.com/site/bhsinstructionaltechcoach/student-of-the-month/interactive-checklists-in-google-docs" target="_blank" rel="noopener">Interactive Checklists in Google Docs</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> gdoc </tag>
+            
+            <tag> checklist </tag>
+            
+            <tag> google </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cloud-formation-interface</title>
+      <link href="2021/02/22/cloud-formation-interface/"/>
+      <url>2021/02/22/cloud-formation-interface/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="http://www.cyberkeeda.com/2020/07/aws-cloudformation-interface-metadata.html" target="_blank" rel="noopener">AWS CloudFormation Interface Metadata</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> cloud-formation </tag>
+            
+            <tag> interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>public-access-s3-object</title>
+      <link href="2021/02/18/public-access-s3-object/"/>
+      <url>2021/02/18/public-access-s3-object/</url>
+      
+        <content type="html"><![CDATA[<p>單純的將 s3 object 分享出來，但是 open s3 bucket access</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/read-access-objects-s3-bucket/" target="_blank" rel="noopener">How can I grant public read access to some objects in my Amazon S3 bucket?</a><ul><li>要記得先修改 bucket level 的 permission</li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> s3 </tag>
+            
+            <tag> public-access </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AWS-Well-Architected</title>
+      <link href="2021/02/18/AWS-Well-Architected/"/>
+      <url>2021/02/18/AWS-Well-Architected/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://wellarchitectedlabs.com/" target="_blank" rel="noopener">AWS Well-Architected Labs</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> Well-Architected </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>aws-cloud-formation</title>
+      <link href="2021/02/01/aws-cloud-formation/"/>
+      <url>2021/02/01/aws-cloud-formation/</url>
+      
+        <content type="html"><![CDATA[<h2 id="在-VS-Code-上寫-colud-formation"><a href="#在-VS-Code-上寫-colud-formation" class="headerlink" title="在 VS-Code 上寫 colud-formation"></a>在 VS-Code 上寫 colud-formation</h2><ul><li><a href="https://hodgkins.io/up-your-cloudformation-game-with-vscode#tabs-spaces-and-line-endings" target="_blank" rel="noopener">Up your AWS CloudFormation game with Visual Studio Code</a></li><li><a href="https://shazi.info/%E4%BD%BF%E7%94%A8-vscode-%E6%92%B0%E5%AF%AB-cloudformation-%E5%BF%85%E8%A3%9D%E5%A5%97%E4%BB%B6/" target="_blank" rel="noopener">使用 VSCode 撰寫 CloudFormation 必裝套件</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> cloud-formation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>learn-visual-studio-code</title>
       <link href="2021/01/28/learn-visual-studio-code/"/>
       <url>2021/01/28/learn-visual-studio-code/</url>
       
-        <content type="html"><![CDATA[<h2 id="試試-vim-plugin-的整合"><a href="#試試-vim-plugin-的整合" class="headerlink" title="試試 vim plugin 的整合"></a>試試 vim plugin 的整合</h2><h2 id="有關-workspace-的部分"><a href="#有關-workspace-的部分" class="headerlink" title="有關 workspace 的部分"></a>有關 workspace 的部分</h2><h2 id="List-Some-ShoutCut"><a href="#List-Some-ShoutCut" class="headerlink" title="List Some ShoutCut"></a>List Some ShoutCut</h2><ul><li>`Ctrl + `` : toggle terminal wondow 滿常用的</li><li><code>Command + Shift + P</code> : open the command pallet<ul><li>you can search for any command</li></ul></li><li><code>Ctrl + Tab</code>, <code>Ctrl + Shift + Tab</code> : 在多個開啟的檔案中，做切換</li><li><code>Command + 1, 2 ..</code> : 在開啟的不同檔案 tab (grid) 中切換</li><li><code>Command + P</code> : 搜尋 file and open file</li><li><code>Command + D</code> : 在一個字上，按下幾次 <code>Command + D</code>, 可以選取同樣的字串，一起修改</li><li><code>Command + B</code> : toggle side menu </li><li>zen mode - 可以來試試看<ul><li>先按 <code>Command + K</code>, 放掉按鍵後按 <code>Z</code></li></ul></li></ul><h2 id="Navigating-and-Manipulating-Text"><a href="#Navigating-and-Manipulating-Text" class="headerlink" title="Navigating and Manipulating Text"></a>Navigating and Manipulating Text</h2><ul><li><code>Command + D</code> : 在一個字上，按下幾次 <code>Command + D</code>, 可以選取同樣的字串，一起修改</li><li><code>Command + Option + Shift</code> : 可以 verital 多個 cursor</li></ul><h2 id="Docuemnt"><a href="#Docuemnt" class="headerlink" title="Docuemnt"></a>Docuemnt</h2><ul><li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener">visual studio code document</a></li><li><a href="https://code.visualstudio.com/docs/getstarted/userinterface" target="_blank" rel="noopener">vs code User Interface</a></li><li><a href="https://code.visualstudio.com/docs/editor/intellisense" target="_blank" rel="noopener">vs code intellisense</a></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/jamesqquick/Learn-VS-Code" target="_blank" rel="noopener">jamesqquick/Learn-VS-Code</a></li><li><a href="https://emmet.io/" target="_blank" rel="noopener">Emmet</a> — the essential toolkit for web-developers</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="有關-workspace-的部分"><a href="#有關-workspace-的部分" class="headerlink" title="有關 workspace 的部分"></a>有關 workspace 的部分</h2><h2 id="List-Some-ShoutCut"><a href="#List-Some-ShoutCut" class="headerlink" title="List Some ShoutCut"></a>List Some ShoutCut</h2><ul><li>`Ctrl + `` : toggle terminal wondow 滿常用的</li><li><code>Command + Shift + P</code> : open the command pallet<ul><li>you can search for any command</li></ul></li><li><code>Ctrl + Tab</code>, <code>Ctrl + Shift + Tab</code> : 在多個開啟的檔案中，做切換</li><li><code>Command + 1, 2 ..</code> : 在開啟的不同檔案 tab (grid) 中切換</li><li><code>Command + P</code> : 搜尋 file and open file</li><li><code>Command + D</code> : 在一個字上，按下幾次 <code>Command + D</code>, 可以選取同樣的字串，一起修改</li><li><code>Command + B</code> : toggle side menu </li><li>zen mode - 可以來試試看<ul><li>先按 <code>Command + K</code>, 放掉按鍵後按 <code>Z</code></li></ul></li></ul><h2 id="Navigating-and-Manipulating-Text"><a href="#Navigating-and-Manipulating-Text" class="headerlink" title="Navigating and Manipulating Text"></a>Navigating and Manipulating Text</h2><ul><li><code>Command + D</code> : 在一個字上，按下幾次 <code>Command + D</code>, 可以選取同樣的字串，一起修改</li><li><code>Command + Option + Shift</code> : 可以 verital 多個 cursor</li></ul><h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><ul><li><a href="https://github.com/tonsky/FiraCode" target="_blank" rel="noopener">tonsky/FiraCode</a></li></ul><h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h2><ul><li><a href="https://marketplace.visualstudio.com/vscode" target="_blank" rel="noopener">vs code marketplace</a></li></ul><h2 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h2><ul><li>cobalt 2 : search cobalt</li><li>Solarized</li></ul><h2 id="Power-Extension"><a href="#Power-Extension" class="headerlink" title="Power Extension"></a>Power Extension</h2><ul><li>Bracket Pair Colorizer</li><li>Advanced New File</li><li>Better Comments</li><li>todo hightlight</li><li>polacode</li><li>open in browser</li><li>vscode-icons</li><li>settings sync - 要來用用看</li><li>gitlens</li><li>dotenv</li><li>editorconfig for vs code</li><li>bookmarks</li><li>project manager</li></ul><h2 id="Some-Power-Extension-about-javascript-but-I-am-not-used"><a href="#Some-Power-Extension-about-javascript-but-I-am-not-used" class="headerlink" title="Some Power Extension (about javascript) but I am not used"></a>Some Power Extension (about javascript) but I am not used</h2><ul><li>quokka</li><li>auto close tag</li><li>live server</li><li>javascript es6 snippets</li><li>search noder_modules</li><li>import cost</li><li>eslint</li><li>intellisense for css</li></ul><h2 id="Docuemnt"><a href="#Docuemnt" class="headerlink" title="Docuemnt"></a>Docuemnt</h2><ul><li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener">visual studio code document</a></li><li><a href="https://code.visualstudio.com/docs/getstarted/userinterface" target="_blank" rel="noopener">vs code User Interface</a></li><li><a href="https://code.visualstudio.com/docs/editor/intellisense" target="_blank" rel="noopener">vs code intellisense</a></li></ul><h2 id="試試-vim-plugin-的整合"><a href="#試試-vim-plugin-的整合" class="headerlink" title="試試 vim plugin 的整合"></a>試試 vim plugin 的整合</h2><ul><li><a href="https://github.com/VSCodeVim/Vim" target="_blank" rel="noopener">VSCodeVim/Vim</a> - Vim for Visual Studio Code<ul><li>To enable key-repeating execute the following in your Terminal and restart VS Code - Mac 中，需要設定的部分<ul><li><code>$ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code</code></li></ul></li></ul></li></ul><h2 id="vs-code-and-vim"><a href="#vs-code-and-vim" class="headerlink" title="vs-code and vim"></a>vs-code and vim</h2><ul><li><a href="https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/" target="_blank" rel="noopener">Boost Your Coding Fu With VSCode and Vim</a> ** 值得一看的資料</li><li><a href="https://larrylu.blog/vscode-tips-fe3320f9032a" target="_blank" rel="noopener">VSCode 如何提高我的寫扣效率</a> * 可以多多參考</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://github.com/jamesqquick/Learn-VS-Code" target="_blank" rel="noopener">jamesqquick/Learn-VS-Code</a></li><li><a href="https://emmet.io/" target="_blank" rel="noopener">Emmet</a> — the essential toolkit for web-developers</li></ul>]]></content>
       
       
       
@@ -1086,7 +1195,7 @@
       <link href="2020/09/16/vs-code-and-vim/"/>
       <url>2020/09/16/vs-code-and-vim/</url>
       
-        <content type="html"><![CDATA[<p>vim 是我很喜歡，也是目前最常用的 editor。<br>最近看 vs-code 滿好用的，就想說來試試看 vs-code &amp; vim 的整合，看看是否會喜歡這樣的方式</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.barbarianmeetscoding.com/blog/2019/02/08/boost-your-coding-fu-with-vscode-and-vim" target="_blank" rel="noopener">Boost Your Coding Fu With Visual Studio Code and Vim</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>vim 是我很喜歡，也是目前最常用的 editor。<br>最近看 vs-code 滿好用的，就想說來試試看 vs-code &amp; vim 的整合，看看是否會喜歡這樣的方式</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.barbarianmeetscoding.com/blog/2019/02/08/boost-your-coding-fu-with-vscode-and-vim" target="_blank" rel="noopener">Boost Your Coding Fu With Visual Studio Code and Vim</a></li><li><a href="https://zhuanlan.zhihu.com/p/188499395" target="_blank" rel="noopener">在VSCode里面配置Vim正确姿势（细节解析）</a></li></ul>]]></content>
       
       
       
