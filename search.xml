@@ -4,6 +4,90 @@
   
     
     <entry>
+      <title>ebook-collection</title>
+      <link href="2021/03/05/ebook-collection/"/>
+      <url>2021/03/05/ebook-collection/</url>
+      
+        <content type="html"><![CDATA[<p>最近剛好迷上 呂世浩 教授的史記課程，<a href="https://www.coursera.org/learn/shiji" target="_blank" rel="noopener">史記 (Shi Ji)</a>, <a href="https://www.coursera.org/learn/qin-shi-huang" target="_blank" rel="noopener">中國古代歷史與人物：秦始皇（Qin Shi Huang)</a>，較興起了想要用 電子閱讀器 來看史記的想法<br>找了找 amazon kindle 後，發現單純的史記版本並不好找，大多數都是包含著註解的版本，史記三家注的版本也還滿不錯的，也是不容易找到<br>就想說，是否可以自己遍電子書，自己上傳到 ereader 上來看</p><p>目前還在想法的成型中，先加以記錄</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://easytorich.com/why-to-make-ebooks/" target="_blank" rel="noopener">為什麼要做電子書？製作時間與獲利大揭密！</a></li></ul><h2 id="中國國學電子書"><a href="#中國國學電子書" class="headerlink" title="中國國學電子書"></a>中國國學電子書</h2><ul><li><a href="https://ctext.org/zh" target="_blank" rel="noopener">中國哲學書電子化計劃</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ebook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>saas-elearning-solution</title>
+      <link href="2021/02/26/saas-elearning-solution/"/>
+      <url>2021/02/26/saas-elearning-solution/</url>
+      
+        <content type="html"><![CDATA[<p>最近在看 elearning &amp; aws marketplace 時，有看到 saas elearning solution 滿有趣的，先加以記錄囉</p><p>Becoming a seller on AWS Marketplace</p><ul><li><a href="https://aws.amazon.com/marketplace/management/touri" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/management/touri</a></li></ul><p>Shop at AWS Marketplace</p><ul><li><a href="https://aws.amazon.com/marketplace" target="_blank" rel="noopener">https://aws.amazon.com/marketplace</a></li></ul><table><thead><tr><th>Product</th><th>Direct Link</th></tr></thead><tbody><tr><td>The whole eLearning category</td><td><a href="https://aws.amazon.com/marketplace/b/6297422083?page=1&amp;filters=FulfillmentOptionType&amp;FulfillmentOptionType=Saas" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/b/6297422083?page=1&amp;filters=FulfillmentOptionType&amp;FulfillmentOptionType=Saas</a></td></tr><tr><td>Cybrary</td><td><a href="https://aws.amazon.com/marketplace/pp/B0842SM4QL?qid=1604543486659&amp;sr=0-11&amp;ref_=brs_res_product_title" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/pp/B0842SM4QL?qid=1604543486659&amp;sr=0-11&amp;ref_=brs_res_product_title</a></td></tr><tr><td>Couresra</td><td><a href="https://aws.amazon.com/marketplace/pp/B08K3MJFRN?qid=1604543549297&amp;sr=0-5&amp;ref_=brs_res_product_title" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/pp/B08K3MJFRN?qid=1604543549297&amp;sr=0-5&amp;ref_=brs_res_product_title</a></td></tr><tr><td>Datacamp</td><td><a href="https://aws.amazon.com/marketplace/pp/B0821WKB12?qid=1604543549297&amp;sr=0-8&amp;ref_=brs_res_product_title" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/pp/B0821WKB12?qid=1604543549297&amp;sr=0-8&amp;ref_=brs_res_product_title</a></td></tr><tr><td>Pluralsight</td><td><a href="https://aws.amazon.com/marketplace/pp/B07TK3KTDL?qid=1604542155479&amp;sr=0-3&amp;ref_=brs_res_product_titlekkkk" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/pp/B07TK3KTDL?qid=1604542155479&amp;sr=0-3&amp;ref_=brs_res_product_titlekkkk</a></td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> aws </tag>
+            
+            <tag> marketplace </tag>
+            
+            <tag> elearning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hackmd</title>
+      <link href="2021/02/26/hackmd/"/>
+      <url>2021/02/26/hackmd/</url>
+      
+        <content type="html"><![CDATA[<p>最近剛好有逛到 jserv 的<a href="https://hackmd.io/@sysprog/linux-kernel-internal#" target="_blank" rel="noopener">「Linux 核心設計」系列講座</a>，看到 jserv 大大有用 hackmd 來寫課程說明<br>自己也很想來試試看囉</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://hackmd.io/c/tutorials-tw/%2Fs%2Ftutorials-tw" target="_blank" rel="noopener">HackMD 使用教學</a></li><li><a href="https://hackmd.io/@sysprog/linux-kernel-internal#" target="_blank" rel="noopener">「Linux 核心設計」系列講座</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hackmd </tag>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>processing-lang</title>
+      <link href="2021/02/25/processing-lang/"/>
+      <url>2021/02/25/processing-lang/</url>
+      
+        <content type="html"><![CDATA[<p>偶然中看到的語法，覺得還滿有趣的 <a href="https://processing.org/" target="_blank" rel="noopener">Processing</a></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://zh.m.wikibooks.org/wiki/Processing%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">Processing入門指南</a></li><li><a href="https://ithelp.ithome.com.tw/articles/10157459" target="_blank" rel="noopener">用程式描繪世界 - 閱讀The Nature of Code</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> language </tag>
+            
+            <tag> processing </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>checklist-google-doc</title>
       <link href="2021/02/25/checklist-google-doc/"/>
       <url>2021/02/25/checklist-google-doc/</url>
