@@ -119,6 +119,83 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2021-01-06 </div>
+			<div class="article-title"><a href="/2021/01/06/splunk-email-notification/" >splunk-email-notification</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄使用 email 來收 splunk alert 時，遇到的情形</p>
+<h2 id="修改-mail-notificition-的相關設定"><a href="#修改-mail-notificition-的相關設定" class="headerlink" title="修改 mail notificition 的相關設定"></a>修改 mail notificition 的相關設定</h2><ul>
+<li>修改 from email<ul>
+<li><a href="https://community.splunk.com/t5/Alerting/How-to-change-the-quot-FROM-quot-address-when-alert-emails-are/m-p/167563" target="_blank" rel="noopener">How to change the “FROM” address when alert emails are sent?</a></li>
+<li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add from 變數</li>
+</ul>
+</li>
+<li>修改信件中的 hostname<ul>
+<li><a href="https://community.splunk.com/t5/Alerting/Is-there-a-way-to-modify-alert-url-results-url-in-email-alerts/m-p/117927" target="_blank" rel="noopener">Is there a way to modify alert url $results.url$ in email alerts?</a></li>
+<li>編輯檔案 <code>/opt/splunk/etc/system/local/alert_actions.conf</code> add hostname 變數</li>
+</ul>
+</li>
+</ul>
+<h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><ul>
+<li><a href="https://community.splunk.com/t5/Alerting/Why-is-my-triggered-alert-email-not-sending/m-p/188385" target="_blank" rel="noopener">Why is my triggered alert email not sending?</a><ul>
+<li>直接來去看 log , log path: <code>~/splunk/var/log/splunk/python.log</code></li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/01/06/splunk-email-notification/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-01-06 </div>
+			<div class="article-title"><a href="/2021/01/06/splunk-trouble-shooting/" >splunk-trouble-shooting</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在測試使用 splunk app，要 trouble shooting 需要花些功夫</p>
+<h2 id="splunk-log-path"><a href="#splunk-log-path" class="headerlink" title="splunk log path"></a>splunk log path</h2><ul>
+<li>在 <code>$SPLUNK_HOME/var/log/splunk</code> folder 中，有需要的 log folder<ul>
+<li>for example <code>/opt/splunk/var/log/splunk</code>, linux 中的 path</li>
+</ul>
+</li>
+</ul>
+<h2 id="可以-trouble-shooting-的方式"><a href="#可以-trouble-shooting-的方式" class="headerlink" title="可以 trouble shooting 的方式"></a>可以 trouble shooting 的方式</h2><ul>
+<li>使用 query 的方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index&#x3D;_internal &quot; error &quot; NOT debug source&#x3D;*splunkd.log* earliest&#x3D;-24h latest&#x3D;now</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/01/06/splunk-trouble-shooting/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-12-17 </div>
 			<div class="article-title"><a href="/2020/12/17/develop-Splunk-Apps/" >develop-Splunk-Apps</a></div>						
 		</h3>
@@ -644,63 +721,6 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-11-25 </div>
-			<div class="article-title"><a href="/2020/11/25/peering-db/" >peering_db</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.peeringdb.com/" target="_blank" rel="noopener">peering DB</a></li>
-<li><a href="https://www.peeringdb.com/advanced_search?country__in=TW&reftag=ix" target="_blank" rel="noopener">Taiwan IX</a> - Internet Exchange</li>
-</ul>
-<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
-<li><a href="http://jodies.de/ipcalc" target="_blank" rel="noopener">ipcalc</a> - IP Calculator</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/11/25/peering-db/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-11-25 </div>
-			<div class="article-title"><a href="/2020/11/25/vespa-search/" >vespa_search</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>以前有用過的 search engine，現在 open source 囉，加以記錄囉</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/vespa-engine/vespa" target="_blank" rel="noopener">vespa-engine/vespa</a> - Vespa is an engine for low-latency computation over large data sets.</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/11/25/vespa-search/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -751,48 +771,48 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/splunk-app/">splunk-app<span>1</span></a></li>
+			<li><a href="/tags/grep/">grep<span>1</span></a></li>
 		
-			<li><a href="/tags/ssl/">ssl<span>1</span></a></li>
+			<li><a href="/tags/trouble-shooting/">trouble-shooting<span>1</span></a></li>
 		
-			<li><a href="/tags/online/">online<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>4</span></a></li>
 		
-			<li><a href="/tags/funny/">funny<span>1</span></a></li>
+			<li><a href="/tags/Well-Architected/">Well-Architected<span>1</span></a></li>
 		
-			<li><a href="/tags/log/">log<span>1</span></a></li>
+			<li><a href="/tags/CIM/">CIM<span>1</span></a></li>
+		
+			<li><a href="/tags/framework/">framework<span>1</span></a></li>
+		
+			<li><a href="/tags/book/">book<span>1</span></a></li>
 		
 			<li><a href="/tags/REPL/">REPL<span>2</span></a></li>
 		
-			<li><a href="/tags/language/">language<span>1</span></a></li>
+			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
 		
-			<li><a href="/tags/repent/">repent<span>1</span></a></li>
+			<li><a href="/tags/plugin/">plugin<span>1</span></a></li>
 		
-			<li><a href="/tags/peering/">peering<span>1</span></a></li>
+			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
 		
-			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+			<li><a href="/tags/snmp/">snmp<span>1</span></a></li>
 		
-			<li><a href="/tags/quality/">quality<span>1</span></a></li>
+			<li><a href="/tags/package/">package<span>1</span></a></li>
 		
-			<li><a href="/tags/iTerm/">iTerm<span>1</span></a></li>
+			<li><a href="/tags/hackmd/">hackmd<span>1</span></a></li>
 		
-			<li><a href="/tags/pip/">pip<span>3</span></a></li>
+			<li><a href="/tags/app/">app<span>1</span></a></li>
 		
-			<li><a href="/tags/aws/">aws<span>16</span></a></li>
+			<li><a href="/tags/click/">click<span>1</span></a></li>
 		
-			<li><a href="/tags/wordpress/">wordpress<span>2</span></a></li>
+			<li><a href="/tags/https/">https<span>1</span></a></li>
 		
-			<li><a href="/tags/security/">security<span>1</span></a></li>
+			<li><a href="/tags/tutorial/">tutorial<span>3</span></a></li>
 		
-			<li><a href="/tags/alert/">alert<span>1</span></a></li>
+			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
 		
-			<li><a href="/tags/email/">email<span>1</span></a></li>
-		
-			<li><a href="/tags/public-access/">public-access<span>1</span></a></li>
-		
-			<li><a href="/tags/remote/">remote<span>2</span></a></li>
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>118</span></a></li>
+		   <li><a href="/tags">...<span>121</span></a></li>
 		 
 		</ul>
 	</div>
@@ -805,6 +825,14 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/03/10/try-mito/" ><i class="fa fa-file-o"></i>try-mito</a>
+      </li>
+    
+      <li>
+        <a href="/2021/03/05/get-ctext/" ><i class="fa fa-file-o"></i>get-ctext</a>
+      </li>
+    
+      <li>
         <a href="/2021/03/05/ebook-collection/" ><i class="fa fa-file-o"></i>ebook-collection</a>
       </li>
     
@@ -814,14 +842,6 @@ access = read : [ &lt;comma-separated list of roles&gt;], write : [ comma-separa
     
       <li>
         <a href="/2021/02/26/hackmd/" ><i class="fa fa-file-o"></i>hackmd</a>
-      </li>
-    
-      <li>
-        <a href="/2021/02/25/processing-lang/" ><i class="fa fa-file-o"></i>processing-lang</a>
-      </li>
-    
-      <li>
-        <a href="/2021/02/25/checklist-google-doc/" ><i class="fa fa-file-o"></i>checklist-google-doc</a>
       </li>
     
   </ul>

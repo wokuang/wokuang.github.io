@@ -119,6 +119,75 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-06-18 </div>
+			<div class="article-title"><a href="/2020/06/18/aws-cloud-watch-agent/" >aws_cloud_watch_agent</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近遇到 EC2 上，Disk 滿了，server 有問題的情形，加 EBS 後，想說應該來設定 alert<br>找 Cloud Watch 沒有這個 metrics<br>查了一下後，發現需要安裝 CloudWatch Agent，才能收集到 disk percent usage 的資料</p>
+<h2 id="使用-CloudWatch-Agent-的簡易步驟"><a href="#使用-CloudWatch-Agent-的簡易步驟" class="headerlink" title="使用 CloudWatch Agent 的簡易步驟"></a>使用 CloudWatch Agent 的簡易步驟</h2><ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html" target="_blank" rel="noopener">install CloudWatch Agent</a></li>
+<li>建立 IAM role，設定給 EC2<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html" target="_blank" rel="noopener">Create IAM Roles and Users for Use With CloudWatch Agent</a></li>
+</ul>
+</li>
+<li>建立 CloudWatch Agent config file<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file.html" target="_blank" rel="noopener">Create the CloudWatch Agent Configuration File</a></li>
+</ul>
+</li>
+<li>跑 CloudWatch Agent<ul>
+<li>收集的 metrics - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html" target="_blank" rel="noopener">Metrics Collected by the CloudWatch Agent</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html" target="_blank" rel="noopener">Collecting Metrics and Logs from Amazon EC2 Instances and On-Premises Servers with the CloudWatch Agent</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/18/aws-cloud-watch-agent/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-16 </div>
+			<div class="article-title"><a href="/2020/06/16/aws-tagging/" >aws_tagging</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://blog.crazyfan.net/posts/2017/05/19/aws_tagging_strategies/" target="_blank" rel="noopener">AWS Tagging Strategies 筆記</a></li>
+<li><a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf" target="_blank" rel="noopener">aws-tagging-best-practices.pdf</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/16/aws-tagging/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-06-11 </div>
 			<div class="article-title"><a href="/2020/06/11/parquet-tutorial/" >parquet_tutorial</a></div>						
 		</h3>
@@ -404,93 +473,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-22 </div>
-			<div class="article-title"><a href="/2020/05/22/watch-cloudwatch-tag/" >watch_cloudwatch_tag</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
-<li>近來在加 AWS resource 的 tag，其中 cloudwatch 的 tag，無法由 AWS console 來看。用程式加了之後，一直找不到 cloud watch 的 tag 是否有加成功</li>
-</ul>
-<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><ul>
-<li>找了一段時間後，才發現原來要用 aws logs help 來找，用 aws clodwatch 是找不到的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ aws logs list-tags-log-group --log-group-name &#x2F;aws&#x2F;lambda&#x2F;log-group-name</span><br><span class="line">&#123;</span><br><span class="line">    &quot;tags&quot;: &#123;</span><br><span class="line">        &quot;env&quot;: &quot;dev&quot;,</span><br><span class="line">        &quot;service&quot;: &quot;xxx-service&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-using.html" target="_blank" rel="noopener">Using the AWS CLI</a></li>
-</ul>
-<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
-<li>要看 aws cloud watch log 的話，可以用 awslogs，還滿好用的</li>
-<li><a href="https://github.com/jorgebastida/awslogs" target="_blank" rel="noopener">jorgebastida/awslogs</a></li>
-<li>要找需要看的 log group 時，還滿方便的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awslogs groups | grep -i v3 | grep -i dev</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/22/watch-cloudwatch-tag/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-22 </div>
-			<div class="article-title"><a href="/2020/05/22/add-tag-on-serverless/" >add_tag_on_serverless</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
-<li>為了要細分 AWS cost 用到那部分，常見的方式為使用 Tag 來區分</li>
-</ul>
-<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><ul>
-<li>在 serverless.conf 中的 provider block  加 stackTags , 可以標註 tag<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">   stackTags:</span><br><span class="line">     owner: owner</span><br><span class="line">     env: $&#123;self:custom.stage&#125;</span><br><span class="line">     service: service</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="可以加強的部分"><a href="#可以加強的部分" class="headerlink" title="可以加強的部分"></a>可以加強的部分</h2><ul>
-<li>因為 stack tag，會有些 AWS resources 沒有加到 tag, 可以用 “Serverless Repository apps” 來加強</li>
-<li><a href="https://github.com/lumigo-io/SAR-Propagate-CFN-Tags" target="_blank" rel="noopener">lumigo-io/SAR-Propagate-CFN-Tags</a><ul>
-<li>SAR app to propagate CloudFormation’s stack tags to resources that are currently not propagated automatically - e.g. CloudWatch Logs</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.datree.io/resources/serverless-best-practices" target="_blank" rel="noopener">Top 10 Serverless best practices</a></li>
-<li><a href="https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/" target="_blank" rel="noopener">Serverless.yml Reference</a><ul>
-<li>Here is a list of all available properties in serverless.yml when the provider is set to aws.</li>
-</ul>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2020/05/22/add-tag-on-serverless/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -541,48 +523,48 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/chrom/">chrom<span>1</span></a></li>
+			<li><a href="/tags/test-case/">test-case<span>2</span></a></li>
 		
-			<li><a href="/tags/regex/">regex<span>1</span></a></li>
+			<li><a href="/tags/gdoc/">gdoc<span>1</span></a></li>
 		
-			<li><a href="/tags/config/">config<span>1</span></a></li>
+			<li><a href="/tags/setup/">setup<span>1</span></a></li>
 		
-			<li><a href="/tags/funny/">funny<span>1</span></a></li>
+			<li><a href="/tags/docker/">docker<span>3</span></a></li>
 		
-			<li><a href="/tags/dev/">dev<span>1</span></a></li>
+			<li><a href="/tags/splunk-app/">splunk-app<span>1</span></a></li>
 		
-			<li><a href="/tags/iTerm2/">iTerm2<span>1</span></a></li>
+			<li><a href="/tags/grep/">grep<span>1</span></a></li>
 		
-			<li><a href="/tags/powerline/">powerline<span>1</span></a></li>
+			<li><a href="/tags/ssl/">ssl<span>1</span></a></li>
 		
-			<li><a href="/tags/log/">log<span>1</span></a></li>
+			<li><a href="/tags/flow/">flow<span>1</span></a></li>
 		
-			<li><a href="/tags/lambda/">lambda<span>1</span></a></li>
+			<li><a href="/tags/package/">package<span>1</span></a></li>
 		
-			<li><a href="/tags/trouble-shooting/">trouble-shooting<span>1</span></a></li>
+			<li><a href="/tags/cmd/">cmd<span>3</span></a></li>
 		
-			<li><a href="/tags/cli-tool/">cli-tool<span>1</span></a></li>
+			<li><a href="/tags/public-access/">public-access<span>1</span></a></li>
 		
-			<li><a href="/tags/knowledge-object/">knowledge-object<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>4</span></a></li>
 		
-			<li><a href="/tags/blog/">blog<span>1</span></a></li>
+			<li><a href="/tags/language/">language<span>1</span></a></li>
 		
-			<li><a href="/tags/repent/">repent<span>1</span></a></li>
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
 		
-			<li><a href="/tags/REPL/">REPL<span>2</span></a></li>
-		
-			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
-		
-			<li><a href="/tags/dynamodb/">dynamodb<span>1</span></a></li>
-		
-			<li><a href="/tags/pack/">pack<span>1</span></a></li>
+			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
 		
 			<li><a href="/tags/prompt/">prompt<span>1</span></a></li>
 		
-			<li><a href="/tags/debug/">debug<span>1</span></a></li>
+			<li><a href="/tags/ctext/">ctext<span>1</span></a></li>
+		
+			<li><a href="/tags/books/">books<span>1</span></a></li>
+		
+			<li><a href="/tags/api-gateway/">api-gateway<span>1</span></a></li>
+		
+			<li><a href="/tags/Well-Architected/">Well-Architected<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>118</span></a></li>
+		   <li><a href="/tags">...<span>121</span></a></li>
 		 
 		</ul>
 	</div>
@@ -595,6 +577,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/03/10/try-mito/" ><i class="fa fa-file-o"></i>try-mito</a>
+      </li>
+    
+      <li>
+        <a href="/2021/03/05/get-ctext/" ><i class="fa fa-file-o"></i>get-ctext</a>
+      </li>
+    
+      <li>
         <a href="/2021/03/05/ebook-collection/" ><i class="fa fa-file-o"></i>ebook-collection</a>
       </li>
     
@@ -604,14 +594,6 @@
     
       <li>
         <a href="/2021/02/26/hackmd/" ><i class="fa fa-file-o"></i>hackmd</a>
-      </li>
-    
-      <li>
-        <a href="/2021/02/25/processing-lang/" ><i class="fa fa-file-o"></i>processing-lang</a>
-      </li>
-    
-      <li>
-        <a href="/2021/02/25/checklist-google-doc/" ><i class="fa fa-file-o"></i>checklist-google-doc</a>
       </li>
     
   </ul>
