@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CIM | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">CIM</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-01-26 </div>
+			<div class="article-title"><a href="/2021/01/26/splunk-cim/" >splunk-cim</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<ul>
+<li><p>列出目前系統中有的 CIM</p>
+<ul>
+<li>於 web 中 search <code>| datamodelsimple type=models</code></li>
+</ul>
+</li>
+<li><p>確定要符合那種 data model</p>
+<ul>
+<li>可由 “Splunk Common Information Model” App 來看</li>
+<li><a href="http://localhost:8000/en-US/app/Splunk_SA_CIM/cim_setup?action=edit" target="_blank" rel="noopener">http://localhost:8000/en-US/app/Splunk_SA_CIM/cim_setup?action=edit</a></li>
+<li><a href="https://docs.splunk.com/Documentation/CIM/4.18.0/User/Overview" target="_blank" rel="noopener">https://docs.splunk.com/Documentation/CIM/4.18.0/User/Overview</a> =&gt; 也可由這邊選 data models</li>
+</ul>
+</li>
+<li><p>接著設定 data model</p>
+<ul>
+<li>由 Settings -&gt; Data models -&gt; 選對應的 data model</li>
+<li>進行 tag 的設定<ul>
+<li>由 Settings -&gt; Event Types 進行新增</li>
+<li>透過設定檔, <code>app/default/tags.conf</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>建立需要的 lookup table</p>
+<ul>
+<li>可以由 <code>| inputlookup lookup_defintion</code> 可以看到 lookup 的定義</li>
+<li>定義 lookup table</li>
+<li>設定 lookup 欄位定義</li>
+</ul>
+</li>
+<li><p>設定 lookup 欄位的步驟</p>
+<ul>
+<li>建立 &amp; copy csv 檔案<ul>
+<li>檔案放置於, <code>app/lookup</code> 目錄中</li>
+</ul>
+</li>
+<li>定義 lookup define 資料<ul>
+<li>編輯檔案，<code>app/default/transforms.conf</code></li>
+</ul>
+</li>
+<li>使用 lookup 來 alias 欄位<ul>
+<li>編輯檔案，<code>app/default/props.conf</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>regex</p>
+<ul>
+<li>可以由 regex101 (<a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a> ) 這個 site 來測試</li>
+</ul>
+</li>
+<li><p>進行 CIM validate 的工具</p>
+<ul>
+<li><a href="https://splunkbase.splunk.com/app/2968/" target="_blank" rel="noopener">SA-cim_validator</a></li>
+<li>安裝時，無法由 splunk base 進行安裝。自行 copy to $SPLUNK/etc/apps 目錄中，手動安裝<ul>
+<li><a href="https://github.com/hire-vladimir/SA-cim_vladiator" target="_blank" rel="noopener">hire-vladimir/SA-cim_vladiator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="一些筆記"><a href="#一些筆記" class="headerlink" title="一些筆記"></a>一些筆記</h2><ul>
+<li><p>Two Knowledge Objects included in the CIM</p>
+<ul>
+<li>Tags</li>
+<li>Fields</li>
+</ul>
+</li>
+<li><p>Process for Tags</p>
+<ul>
+<li>Identity<ul>
+<li>identity the data model and dataset revelant to your event</li>
+</ul>
+</li>
+<li>Observe<ul>
+<li>Which Tags are required for the dataset ?</li>
+<li>Are there any constraints ?</li>
+</ul>
+</li>
+<li>Apply<ul>
+<li>create event types and tag them with the appropriate tags </li>
+</ul>
+</li>
+<li>Verify<ul>
+<li>verify the tags work as expected using Pivot tool</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Process of Fields</p>
+<ul>
+<li>Compare the fileds in the data model with the fields in your data</li>
+<li>Map your fields name to the CIM filed names<ul>
+<li>Aliases</li>
+<li>Extractions</li>
+<li>Lookups</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Two Way to validate your data</p>
+<ul>
+<li>using the Pivot editor</li>
+<li>searching the data model itself</li>
+</ul>
+</li>
+<li><p>Six steps in the data normalization pipeline</p>
+<ul>
+<li>get data in</li>
+<li>examine data</li>
+<li>tag events</li>
+<li>verify tags</li>
+<li>normalize field</li>
+<li>validate against data model</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://splunkbase.splunk.com/app/1621/" target="_blank" rel="noopener">Splunk Common Information Model (CIM)</a> - splunk app<ul>
+<li><a href="https://docs.splunk.com/Documentation/CIM/latest/User/Overview" target="_blank" rel="noopener">Common Information Model Add-on Manual</a></li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/01/26/splunk-cim/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/gitbook/">gitbook<span>5</span></a></li>
+		
+			<li><a href="/tags/management/">management<span>1</span></a></li>
+		
+			<li><a href="/tags/public-access/">public-access<span>1</span></a></li>
+		
+			<li><a href="/tags/app/">app<span>3</span></a></li>
+		
+			<li><a href="/tags/golang/">golang<span>1</span></a></li>
+		
+			<li><a href="/tags/cloud-watch/">cloud-watch<span>2</span></a></li>
+		
+			<li><a href="/tags/rd/">rd<span>1</span></a></li>
+		
+			<li><a href="/tags/uba/">uba<span>1</span></a></li>
+		
+			<li><a href="/tags/azure/">azure<span>1</span></a></li>
+		
+			<li><a href="/tags/ssh/">ssh<span>2</span></a></li>
+		
+			<li><a href="/tags/resource-group/">resource_group<span>1</span></a></li>
+		
+			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
+		
+			<li><a href="/tags/s3/">s3<span>8</span></a></li>
+		
+			<li><a href="/tags/microservice/">microservice<span>1</span></a></li>
+		
+			<li><a href="/tags/waf/">waf<span>1</span></a></li>
+		
+			<li><a href="/tags/parquet/">parquet<span>5</span></a></li>
+		
+			<li><a href="/tags/architecture/">architecture<span>1</span></a></li>
+		
+			<li><a href="/tags/ide/">ide<span>1</span></a></li>
+		
+			<li><a href="/tags/out-sourcing/">out-sourcing<span>1</span></a></li>
+		
+			<li><a href="/tags/IDE/">IDE<span>3</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

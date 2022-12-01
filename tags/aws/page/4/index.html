@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Page 4 | aws | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">aws</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-03-10 </div>
+			<div class="article-title"><a href="/2022/03/10/aws-cognito-custom-message/" >aws-cognito-custom-message</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>使用 cognito 時，通常會想要客制化寄信出來的 message</p>
+<h2 id="目前的作法"><a href="#目前的作法" class="headerlink" title="目前的作法"></a>目前的作法</h2><ul>
+<li>因為需要在寄出來的信件中，顯示相關的 customer attribute，目前找到 &amp; 使用的方式為 trigger lambda 的方式</li>
+<li>修改 trigger 為 “Custom message”<ul>
+<li><code>aws cognito-idp update-user-pool --user-pool-id $POOL_ID --lambda-config CustomMessage=&quot;arn:aws:lambda:us-west-2:xxxTest&quot;</code></li>
+</ul>
+</li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-custom-message.html" target="_blank" rel="noopener">Custom message Lambda trigger - Amazon Cognito</a></li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html" target="_blank" rel="noopener">Customizing user pool workflows with Lambda triggers - Amazon Cognito</a></li>
+<li><a href="https://stackoverflow.com/questions/41891501/cognito-customise-messages-and-include-user-attributes" target="_blank" rel="noopener">spring - Cognito Customise Messages and Include User Attributes - Stack Overflow</a> AWS console 介面中的 Message customizations Tab 無法設定使用 customer attribute</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dev.to/awscommunity-asean/message-customization-on-cognito-2bme" target="_blank" rel="noopener">Message Customization on Cognito - DEV Community</a> 主要依照這篇來實作</li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-custom-message.html" target="_blank" rel="noopener">Custom message Lambda trigger - Amazon Cognito</a></li>
+<li><a href="https://shazi.info/how-to-custom-sender-email-sms-with-3rd-party-in-aws-cognito/" target="_blank" rel="noopener">How to custom sender Email/SMS with 3rd party in AWS Cognito – Mr. 沙先生</a></li>
+<li><a href="https://www.maxivanov.io/send-aws-cognito-emails-with-3rd-party-esps/" target="_blank" rel="noopener">Send AWS Cognito emails with 3rd party ESPs</a></li>
+<li><a href="https://abrialstha.medium.com/creating-the-customsms-trigger-in-aws-cognito-using-lambda-3192d26b790d" target="_blank" rel="noopener">Creating the CustomSMS Trigger in AWS Cognito using lambda | by Abiral Sthapit | Medium</a></li>
+<li><a href="https://stackoverflow.com/questions/56865198/how-to-send-a-custom-message-for-custommessage-admincreateuser-trigger" target="_blank" rel="noopener">python - How to send a custom message for CustomMessage_AdminCreateUser trigger? - Stack Overflow</a> 可以參考 TriggerEnum 的作法</li>
+<li><a href="https://www.integralist.co.uk/posts/cognito/#terraform-example" target="_blank" rel="noopener">Authentication with AWS Cognito ⋆ Mark McDonnell</a> 可以參考的 terraform example</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/03/10/aws-cognito-custom-message/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-30 </div>
+			<div class="article-title"><a href="/2021/12/30/aws-tool-experience/" >aws-tool-experience</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近使用 AWS console, AWS cli, serverless framework, terraform 後，有歸納出一個經驗來</p>
+<p>就是要嘗試使用一個新的服務 或是 功能時，一開始的時候，先以 AWS console or AWS cli 的方式，先一步一步的依照 教學 or tutorial 來建立 &amp; 練習<br>有了手動建立的經驗後，會對這個服務的功能 &amp; 操作有一定基礎的認識</p>
+<p>接著，就是找看看 terraform &amp; serverless 的方式來自動化、重複性的可以建立需要的服務<br>這樣，就會有見樹又見林的了解</p>
+<p>另外，就是 terraform 的使用，也是先用就基本的 terraform resource 就好，先不用 module 的方式，可以加深自己對 AWS 的認識 &amp; 了解</p>
+
+	
+	</div>
+  <a type="button" href="/2021/12/30/aws-tool-experience/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-29 </div>
+			<div class="article-title"><a href="/2021/12/29/aws-ecs-api-gateway/" >aws-ecs-api-gateway</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>用 api-gateway 為前端，來串到 ECS 中的 micro service</p>
+<h2 id="有關的-terraform-文件"><a href="#有關的-terraform-文件" class="headerlink" title="有關的 terraform 文件"></a>有關的 terraform 文件</h2><ul>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecs_service" target="_blank" rel="noopener">aws_ecs_service | Resources | hashicorp/aws | Terraform Registry</a></li>
+</ul>
+<h2 id="設定-aws-ecs-service-時，遇到的問題"><a href="#設定-aws-ecs-service-時，遇到的問題" class="headerlink" title="設定 aws ecs service 時，遇到的問題"></a>設定 aws ecs service 時，遇到的問題</h2><ul>
+<li>在設定的過程中，花滿多時間在測試要如何建立 load_balancer<ul>
+<li><a href="https://github.com/aws-ia/terraform-aws-ecs-fargate/blob/main/main.tf" target="_blank" rel="noopener">terraform-aws-ecs-fargate/main.tf at main · aws-ia/terraform-aws-ecs-fargate</a> 這篇可以參考建立 load_balancer &amp; security_group</li>
+</ul>
+</li>
+<li>在建立 load_balancer 時，遇到的另外一個問題是，當使用 S3 bucket 來記錄 access_log 時，有遇到權限的問題<ul>
+<li><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy" target="_blank" rel="noopener">Enable access logs for your Classic Load Balancer - Elastic Load Balancing</a> AWS 說明資料</li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elb_service_account" target="_blank" rel="noopener">aws_elb_service_account | Data Sources | hashicorp/aws | Terraform Registry</a></li>
+<li>參考上面的資料，加設一段 <code>data &quot;aws_elb_service_account&quot; &quot;main&quot; {}</code> 來設定 service account 權限</li>
+<li><a href="https://stackoverflow.com/questions/64001362/terraform-enabling-access-load-balancer-logs-invalidconfigurationrequest-acce" target="_blank" rel="noopener">amazon web services - Terraform - Enabling Access Load balancer logs InvalidConfigurationRequest: Access Denied for bucket - Stack Overflow</a> 參考這篇文章，加以修改後，可以進行 access log</li>
+<li><a href="https://github.com/cloudposse/terraform-aws-lb-s3-bucket/search?q=aws_elb_service_account" target="_blank" rel="noopener">Search · aws_elb_service_account</a> 參考別人 module 的寫法</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-with-microservices-deployed-on-amazon-ecs/" target="_blank" rel="noopener">Using Amazon API Gateway with microservices deployed on Amazon ECS | AWS Compute Blog</a> 手動建立的方式</li>
+<li><a href="https://medium.com/swlh/deploy-container-in-ecs-fargate-behind-api-gateway-nlb-for-secure-optimal-accessibility-with-95542d5867c3" target="_blank" rel="noopener">Deploy Container in ECS Fargate behind API Gateway &amp; NLB for Secure Optimal Accessibility (with Terraform) | by Lukonde Mwila | The Startup | Medium</a> 這篇很值得參考<ul>
+<li><a href="https://github.com/LukeMwila/aws-apigateway-vpc-ecs-fargate" target="_blank" rel="noopener">LukeMwila/aws-apigateway-vpc-ecs-fargate: Source code to run a containerised application in AWS ECS Fargate inside a VPC’s private subnets. An API Gateway is used as the doorway to the private network using a VPC link to access the VPC. An NLB is for optimal performance of accessing the application.</a> source code 看這邊 </li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/29/aws-ecs-api-gateway/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-29 </div>
+			<div class="article-title"><a href="/2021/12/29/aws-ecs-services/" >aws-ecs-services</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>想要將 speedtest 跑在 AWS 上，所以來試試看 AWS ECS services 的方式</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html" target="_blank" rel="noopener">Amazon ECS services - Amazon Elastic Container Service</a></li>
+<li><a href="https://github.com/jonascheng/speedtest-go" target="_blank" rel="noopener">jonascheng/speedtest-go</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/29/aws-ecs-services/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-29 </div>
+			<div class="article-title"><a href="/2021/12/29/aws-lake-formation/" >aws-lake-formation</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在 AWS 上建立 data lake 的過程中，目前遇到要分享資料時，會有一定的困難 &amp; 複雜度，看了 AWS 的說明後，是建議使用 lake formation 來做 data lake sharing 的管控，就來試試看 lake formation 囉</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><p><a href="https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-lake-formation.html" target="_blank" rel="noopener">What Is AWS Lake Formation? - AWS Lake Formation</a></p>
+</li>
+<li><p><a href="https://lakeformation.workshop.aws" target="_blank" rel="noopener">https://lakeformation.workshop.aws</a> workshop bookmark</p>
+<ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/78572df7-d2ee-4f78-b698-7cafdb55135d/en-US" target="_blank" rel="noopener">AWS Lake Formation Workshop</a></li>
+</ul>
+</li>
+<li><p><a href="https://aws.amazon.com/blogs/big-data/controlling-data-lake-access-across-multiple-aws-accounts-using-aws-lake-formation/" target="_blank" rel="noopener">Controlling data lake access across multiple AWS accounts using AWS Lake Formation | AWS Big Data Blog</a> 兩個帳號中，分享 data lake access</p>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/29/aws-lake-formation/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-26 </div>
+			<div class="article-title"><a href="/2021/12/26/aws-identity/" >aws-identity</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>有時間要來看看，以便了解 Identity federation 如何運作</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/identity/federation/" target="_blank" rel="noopener">Federation – Amazon Web Services (AWS)</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/26/aws-identity/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-25 </div>
+			<div class="article-title"><a href="/2021/12/25/aws-sdk/" >aws-sdk</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>List AWS javascript SDK resource</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/aws/aws-sdk-js" target="_blank" rel="noopener">aws/aws-sdk-js: AWS SDK for JavaScript in the browser and Node.js</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/top-level-namespace.html" target="_blank" rel="noopener">Top Level Namespace — AWS SDK for JavaScript</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/25/aws-sdk/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-25 </div>
+			<div class="article-title"><a href="/2021/12/25/aws-cognito-basic/" >aws-cognito-basic</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄下，自己覺得應該要了解 Cognito 的 basic 知識</p>
+<h2 id="Cognito-item"><a href="#Cognito-item" class="headerlink" title="Cognito item"></a>Cognito item</h2><ul>
+<li>user pools</li>
+<li>identity pools</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/@sumindaniro/user-authentication-and-authorization-with-aws-cognito-d204492dd1d0" target="_blank" rel="noopener">User Authentication and Authorization with AWS Cognito | by Suminda Niroshan | Medium</a> AWS cognito tutorial 流程</li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html" target="_blank" rel="noopener">Identity pools (federated identities) authentication flow - Amazon Cognito</a></li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/saml-identity-provider.html" target="_blank" rel="noopener">SAML identity providers (identity pools) - Amazon Cognito</a></li>
+<li><a href="https://www.integralist.co.uk/posts/cognito/#terraform-example" target="_blank" rel="noopener">Authentication with AWS Cognito ⋆ Mark McDonnell</a> 可以參考的 terraform example</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/25/aws-cognito-basic/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-25 </div>
+			<div class="article-title"><a href="/2021/12/25/aws-sso-cognito/" >aws-sso-cognito</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在串接 Cognito 連到 QuickSight 的過程中，一直遇到問題<br>想想，原因是出在自己對 Cognito, Identiry Authentication, SSO , SAML 等技術不熟悉<br>就先將目前看到，可能有用的 page 先記錄下來，留存參考</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.sphereinc.com/blogs/how-to-build-sso-solution-on-top-of-amazon-cognito/" target="_blank" rel="noopener">How to Build SSO solution on top of Amazon Cognito - Sphere Partners</a></li>
+<li><a href="https://aws.amazon.com/cognito/getting-started/" target="_blank" rel="noopener">Getting Started | Amazon Cognito | Amazon Web Services (AWS)</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/25/aws-sso-cognito/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-23 </div>
+			<div class="article-title"><a href="/2021/12/23/aws-quicksight-cognito/" >aws-quicksight-cognito</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>因為需要提供 PM 來 login 建立好的 QuickSight，所以嘗試使用 cognito 來進行 account 的管理，透過 cognito login 後，開始使用 QuickSight 服務</p>
+<h2 id="遇到的-error"><a href="#遇到的-error" class="headerlink" title="遇到的 error"></a>遇到的 error</h2><ul>
+<li><a href="https://docs.aws.amazon.com/quicksight/latest/user/troubleshoot-webidentity-federation.html" target="_blank" rel="noopener">Individuals in my organization get an “External Login is Unauthorized” message when they try to access Amazon QuickSight - Amazon QuickSight</a> 遇到這個問題，看了很久，還沒有找到解法</li>
+<li>經過一段時間的嘗試、google 後，主要是需要用 AssumeRoleWithWebIdentity 的方式，來設定 session name，以便產生需要的 amazon credentials data<ul>
+<li>而 AssumeRoleWithWebIdentity 中，是用到 sts 來取得 amazon credentials</li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/WebIdentityCredentials.html" target="_blank" rel="noopener">Class: AWS.WebIdentityCredentials — AWS SDK for JavaScript</a> javascript SDK 的取法</li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRoleWithWebIdentity-property" target="_blank" rel="noopener">Class: AWS.STS — AWS SDK for JavaScript</a> STS 中關於 AssumeRoleWithWebIdentity 的說明</li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role-with-web-identity.html" target="_blank" rel="noopener">assume-role-with-web-identity — AWS CLI 1.22.26 Command Reference</a> local 測試，command line 的作法</li>
+</ul>
+</li>
+</ul>
+<h2 id="嘗試的作法"><a href="#嘗試的作法" class="headerlink" title="嘗試的作法"></a>嘗試的作法</h2><ul>
+<li><a href="https://aws.amazon.com/blogs/big-data/federate-amazon-quicksight-access-with-okta/" target="_blank" rel="noopener">Federate Amazon QuickSight access with Okta | AWS Big Data Blog</a></li>
+<li><a href="https://docs.aws.amazon.com/quicksight/latest/user/external-identity-providers.html" target="_blank" rel="noopener">Using identity federation and single sign-on (SSO) with Amazon QuickSight - Amazon QuickSight</a></li>
+</ul>
+<h2 id="解-jwt-的方式"><a href="#解-jwt-的方式" class="headerlink" title="解 jwt 的方式"></a>解 jwt 的方式</h2><ul>
+<li><a href="https://github.com/auth0/jwt-decode" target="_blank" rel="noopener">auth0/jwt-decode: Decode JWT tokens; useful for browser applications.</a> 用這個 github 中的檔案</li>
+<li><a href="https://github.com/awslabs/aws-jwt-verify" target="_blank" rel="noopener">awslabs/aws-jwt-verify: NodeJS library for verifying JWTs signed by Amazon Cognito, and any OIDC-compatible IDP that signs JWTs with RS256</a></li>
+</ul>
+<h2 id="需要-enhance-的部分"><a href="#需要-enhance-的部分" class="headerlink" title="需要 enhance 的部分"></a>需要 enhance 的部分</h2><ul>
+<li>使用 QuickSight API 來新增 QuickSight User &amp; Assign group，以方便使用 quicksight</li>
+</ul>
+<h2 id="Background-Knowledge"><a href="#Background-Knowledge" class="headerlink" title="Background Knowledge"></a>Background Knowledge</h2><ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html" target="_blank" rel="noopener">Identity providers and federation - AWS Identity and Access Management</a> 這篇需要好好讀一讀，特別是有關 web identity federation 的部分</li>
+<li><a href="https://aws.amazon.com/blogs/security/enable-your-federated-users-to-work-in-the-aws-management-console-for-up-to-12-hours/" target="_blank" rel="noopener">Enable Your Federated Users to Work in the AWS Management Console for up to 12 Hours | AWS Security Blog</a> 說明 identity federation 的 blog</li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html" target="_blank" rel="noopener">Enabling custom identity broker access to the AWS console - AWS Identity and Access Management</a> 使用 getSigninToken 的方式進行, 參考這篇的 python code 加以修改<ul>
+<li><a href="https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/python/example_code/sts/sts_temporary_credentials/federated_url.py" target="_blank" rel="noopener">aws-doc-sdk-examples/federated_url.py at main · awsdocs/aws-doc-sdk-examples</a> 範例的 python code</li>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sts.html#STS.Client.assume_role_with_web_identity" target="_blank" rel="noopener">STS — Boto3 Docs 1.20.26 documentation</a> 有關 sts boto3 的說明 </li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/ac8dc849-3d95-43e3-b380-aa38f0dc31e4/en-US/user-based-embedding" target="_blank" rel="noopener">QuickSight Workshops - User-based Embedding</a> 主要依照這份來修改，將 lambda &amp; api-gateway 另外用 serverless framework 來建立</li>
+<li><a href="https://noise.getoto.net/2017/10/06/use-amazon-quicksight-federated-single-sign-on-with-amazon-cognito-user-pools/" target="_blank" rel="noopener">Use Amazon QuickSight Federated Single Sign-On with Amazon Cognito User Pools | Noise</a> 另一種整合 cognito &amp; quicksight 的方式。試過後，由 cognito auth 的 account 導至 quicksight 後，因為是透過 IAM login，會是同一個 quicksight 帳號，暫時不用這個方式</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/23/aws-quicksight-cognito/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+		
+    	<li class="prev"><a href="/tags/aws/page/3/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i> Prev</a></li>
+  		
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+		   <li class="next"> <a href="/tags/aws/page/5/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/practices/">practices<span>1</span></a></li>
+		
+			<li><a href="/tags/sha256/">sha256<span>1</span></a></li>
+		
+			<li><a href="/tags/regex/">regex<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/devel/">devel<span>1</span></a></li>
+		
+			<li><a href="/tags/aws-sdk/">aws-sdk<span>1</span></a></li>
+		
+			<li><a href="/tags/packaging/">packaging<span>1</span></a></li>
+		
+			<li><a href="/tags/speech/">speech<span>1</span></a></li>
+		
+			<li><a href="/tags/note/">note<span>2</span></a></li>
+		
+			<li><a href="/tags/data/">data<span>1</span></a></li>
+		
+			<li><a href="/tags/tool/">tool<span>5</span></a></li>
+		
+			<li><a href="/tags/issue/">issue<span>1</span></a></li>
+		
+			<li><a href="/tags/elearn/">elearn<span>1</span></a></li>
+		
+			<li><a href="/tags/ms-team/">ms-team<span>1</span></a></li>
+		
+			<li><a href="/tags/api-gateway/">api-gateway<span>10</span></a></li>
+		
+			<li><a href="/tags/voice/">voice<span>1</span></a></li>
+		
+			<li><a href="/tags/powerline/">powerline<span>1</span></a></li>
+		
+			<li><a href="/tags/redis/">redis<span>1</span></a></li>
+		
+			<li><a href="/tags/tools/">tools<span>2</span></a></li>
+		
+			<li><a href="/tags/tunnel/">tunnel<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

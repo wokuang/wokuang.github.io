@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>robot_framework | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="robot_framework"/>
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> robot_framework</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>最近需要 support SQA 的工作。在我的想象中，要將 SQA 做得好，需要有 automation testing ＆ daily buid 的互相配合<br>在 automation testing 中，來試試用 robot-framework 來撰寫 test case，以進行整合<br>robot-framework 中，可以用 python 來寫 custom test libraries 滿有趣的</p>
+<h2 id="vim-plugin"><a href="#vim-plugin" class="headerlink" title="vim plugin"></a>vim plugin</h2><ul>
+<li><a href="https://github.com/mfukar/robotframework-vim" target="_blank" rel="noopener">robotframework-vim</a> Vim plugin for development with Robot Framework.</li>
+<li>安裝上述的 plugin，檔案中加上這行 <code># -*- coding: robot -*-</code> 或是用 <code>:setf robot</code></li>
+</ul>
+<h2 id="REST-API-testing"><a href="#REST-API-testing" class="headerlink" title="REST API testing"></a>REST API testing</h2><ul>
+<li><a href="https://medium.com/@ravthiru/automate-rest-api-testing-with-robot-framework-ad1959057517" target="_blank" rel="noopener">Automate REST API testing with ROBOT framework</a></li>
+<li><a href="https://interworks.com.mk/rest-api-testing-with-robot-framework/" target="_blank" rel="noopener">REST API TESTING WITH ROBOT FRAMEWORK</a></li>
+<li><a href="https://github.com/asyrjasalo/RESTinstance" target="_blank" rel="noopener">asyrjasalo/RESTinstance</a> - Robot Framework library for RESTful JSON APIs<ul>
+<li><a href="https://github.com/ravthiru/RoboFramework_REST_API" target="_blank" rel="noopener">ravthiru/RoboFramework_REST_API</a> 建立 docker image 的參考程式</li>
+</ul>
+</li>
+<li><a href="https://github.com/MarketSquare/robotframework-requests" target="_blank" rel="noopener">MarketSquare/robotframework-requests</a> - 由 requests 來建立 robot framework<ul>
+<li><a href="https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html" target="_blank" rel="noopener">Keywords documentation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="write-test-case"><a href="#write-test-case" class="headerlink" title="write test case"></a>write test case</h2><ul>
+<li><a href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst" target="_blank" rel="noopener">How to write good test cases using Robot Framework</a></li>
+</ul>
+<h2 id="有關-test-case-的-structure"><a href="#有關-test-case-的-structure" class="headerlink" title="有關 test case 的 structure"></a>有關 test case 的 structure</h2><ul>
+<li><a href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst#id21" target="_blank" rel="noopener">Test case structure</a> 分為 Workflow tests &amp; Data-driven tests<ul>
+<li>目前的寫法為 Workflow tests</li>
+</ul>
+</li>
+</ul>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><ul>
+<li><a href="https://blog.codecentric.de/en/2016/01/robot-framework-tutorial-2016-keywords/" target="_blank" rel="noopener">Robot Framework Tutorial 2016 – Keywords</a> ** 這篇值得一看</li>
+<li><a href="https://medium.com/bryanyang0528/python-robot-framework-%E5%B7%A5%E4%BD%9C%E7%AD%86%E8%A8%98-%E4%B8%80-5282f6bf848a" target="_blank" rel="noopener">[Python] Robot Framework 工作筆記（一）</a></li>
+<li><a href="http://cwd.dhemery.com/2009/11/wmaat/" target="_blank" rel="noopener">Writing Maintainable Automated Acceptance Tests</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst" target="_blank" rel="noopener">Robot Framework Quick Start Guide</a> 這份先看</li>
+<li><a href="https://robotframework.org/#documentation" target="_blank" rel="noopener">Demo Project</a></li>
+<li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html" target="_blank" rel="noopener">Robot Framework User Guide</a> ** 完整的 user guide ，滿重要的需要看過一遍</li>
+<li><a href="http://robotframework.org/robotframework/#user-guide" target="_blank" rel="noopener">可以選擇看那部份的 User Guide</a></li>
+<li><a href="https://dev.to/juperala/how-to-run-robot-framework-test-from-command-line-5aa" target="_blank" rel="noopener">How to run Robot Framework test from command line?</a> ** 由 command 執行 robot 的方式</li>
+</ul>
+<h2 id="TestRail"><a href="#TestRail" class="headerlink" title="TestRail"></a>TestRail</h2><ul>
+<li><a href="https://medium.com/@rahul.mishra2690/testrail-integration-with-robot-framework-b5dde14b0225" target="_blank" rel="noopener">TestRail integration with Robot Framework</a></li>
+</ul>
+<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul>
+<li><a href="https://hub.docker.com/r/ivonet/robotframework-ride/" target="_blank" rel="noopener">Robotframework Ride IDE - docker</a></li>
+</ul>
+<h2 id="rst-相關資料"><a href="#rst-相關資料" class="headerlink" title="rst 相關資料"></a>rst 相關資料</h2><ul>
+<li><a href="http://kevinchen.synology.me/TechnicalDocuments/Sphinx/rest_easyteach.html" target="_blank" rel="noopener">reStructuredText基本語法教學</a></li>
+<li><a href="https://3vshej.cn/rstSyntax/index.html" target="_blank" rel="noopener">reStructuredText 语法</a></li>
+<li><a href="https://docutils.sourceforge.io/docs/user/rst/quickstart.html" target="_blank" rel="noopener">A ReStructuredText Primer</a></li>
+</ul>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2020/11/04/aws-sns-encryption/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2020/10/15/csrf-info/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-10-28 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/python/">python<span>27</span></a></li> <li><a href="/tags/test-case/">test-case<span>2</span></a></li> <li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

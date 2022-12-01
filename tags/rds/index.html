@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>rds | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">rds</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-04 </div>
+			<div class="article-title"><a href="/2022/10/04/aws-rds-proxy-sqlalchemy/" >aws-rds-proxy-sqlalchemy</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄使用 sqlalchemy 透過 PyMySQL 連線到 RDS proxy 遇到的問題</p>
+<h2 id="進行-ssl-tls-連線的方式"><a href="#進行-ssl-tls-連線的方式" class="headerlink" title="進行 ssl/tls 連線的方式"></a>進行 ssl/tls 連線的方式</h2><ul>
+<li>設定 ssl_args</li>
+<li>code example<br><code>ssl_args = {&#39;ssl&#39;: {&#39;use&#39;: True}}
+echo_sql = True if os.environ.get(&#39;SQLALCHEMY_ECHO&#39;) == &#39;true&#39; else False
+engine = db.create_engine(conn_sqlalchemy_str, echo=echo_sql, poolclass=NullPool, connect_args=ssl_args)</code></li>
+</ul>
+<h2 id="連線到-RDS-proxy-解法"><a href="#連線到-RDS-proxy-解法" class="headerlink" title="連線到 RDS proxy 解法"></a>連線到 RDS proxy 解法</h2><ul>
+<li>遇到的問題<ul>
+<li>有使用<code>rds_client.generate_db_auth_token</code> 取得 token，不過連到 DB 還是會出現</li>
+<li><code>[ERROR] OperationalError: (pymysql.err.OperationalError) (1045, &quot;Access denied for user &#39;master&#39;@&#39;172.31.58.218&#39; (using password: NO)&quot;)</code></li>
+</ul>
+</li>
+<li>解法<ul>
+<li>關閉 IAM auth 的方式，改為使用傳統的 auth</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/MbuguaFrancis/rds-proxy-python-lambda/blob/master/rds-proxy.py" target="_blank" rel="noopener">rds-proxy-python-lambda/rds-proxy.py at master · MbuguaFrancis/rds-proxy-python-lambda</a></li>
+<li><a href="https://www.796t.com/post/MzAzazQ=.html" target="_blank" rel="noopener">在SQLAlchemy中使用SSL - PYTHON _程式人</a></li>
+<li><a href="https://aws.amazon.com/blogs/compute/using-amazon-rds-proxy-with-aws-lambda/" target="_blank" rel="noopener">Using Amazon RDS Proxy with AWS Lambda | AWS Compute Blog</a></li>
+<li><a href="https://aws.plainenglish.io/have-your-lambda-functions-connect-to-rds-through-rds-proxy-c94072560eee" target="_blank" rel="noopener">Have your Lambda Functions Connect to RDS through RDS Proxy | by Michael Zaghi | AWS in Plain English</a></li>
+<li><a href="https://mbio.medium.com/aws-lambda-rds-proxy-iam-authentication-538987146239" target="_blank" rel="noopener">Use AWS Lambda with RDS Proxy and IAM authentication | Medium</a></li>
+<li><a href="https://pymysql.readthedocs.io/en/latest/modules/connections.html" target="_blank" rel="noopener">Connection Object — PyMySQL 0.7.2 documentation</a><ul>
+<li><code>ssl – A dict of arguments similar to mysql_ssl_set()’s parameters.</code> 主要是這邊的說明</li>
+<li><a href="https://dev.mysql.com/doc/c-api/5.7/en/mysql-ssl-set.html" target="_blank" rel="noopener">MySQL :: MySQL 5.7 C API Developer Guide :: 5.4.75 mysql_ssl_set()</a></li>
+</ul>
+</li>
+<li><a href="https://medium.com/@james.li/working-with-aws-rds-proxy-endpoint-on-read-replica-with-sqlalchemy-6209353151f1" target="_blank" rel="noopener">Working with AWS RDS proxy endpoint on read replica with SQLAlchemy | by James Li | Medium</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/10/04/aws-rds-proxy-sqlalchemy/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-08-17 </div>
+			<div class="article-title"><a href="/2022/08/17/rds-ssh-tunnel/" >rds-ssh-tunnel</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="ssh-tunnel-設定的參考"><a href="#ssh-tunnel-設定的參考" class="headerlink" title="ssh tunnel 設定的參考"></a>ssh tunnel 設定的參考</h2><ul>
+<li><code>ssh -i &lt;identity_file&gt; -f -l &lt;bastion-host-username&gt; -L &lt;local-port-you-connect-to&gt;:&lt;rds-endpoint&gt;:&lt;rds:listening-port&gt; &lt;bastion-host-public-ip&gt; -v</code></li>
+<li>Example Command<ul>
+<li><code>ssh -i &quot;private_key.pem&quot; -f -l ec2-user -L 5432:172.31.39.62:5432  3.133.141.189 -v</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/rds-connect-using-bastion-host-linux/" target="_blank" rel="noopener">Connect to an Amazon RDS DB instance using a bastion host from a Linux machine</a><ul>
+<li>有成功使用 Syntax 1 的方式連</li>
+</ul>
+</li>
+<li><a href="https://reflectoring.io/connect-rds-byjumphost/" target="_blank" rel="noopener">Using a Jump host to access an RDS database in a private subnet</a></li>
+<li><a href="https://www.ateam-oracle.com/post/simplify-your-day-with-ssh-config-file-entries-and-self-closing-tunnels" target="_blank" rel="noopener">Simplify your day with SSH config file entries and self closing tunnels</a> <ul>
+<li>原本想說直接設定在 ssh config 就好，不過，試的過程有遇到問題，還試不出來</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/08/17/rds-ssh-tunnel/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/public-access/">public-access<span>1</span></a></li>
+		
+			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
+		
+			<li><a href="/tags/8bitdo/">8bitdo<span>1</span></a></li>
+		
+			<li><a href="/tags/anomaly/">anomaly<span>1</span></a></li>
+		
+			<li><a href="/tags/chrome/">chrome<span>1</span></a></li>
+		
+			<li><a href="/tags/syslog/">syslog<span>1</span></a></li>
+		
+			<li><a href="/tags/gitbook/">gitbook<span>5</span></a></li>
+		
+			<li><a href="/tags/crontab/">crontab<span>1</span></a></li>
+		
+			<li><a href="/tags/issue/">issue<span>1</span></a></li>
+		
+			<li><a href="/tags/step-function/">step-function<span>4</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
+		
+			<li><a href="/tags/content-type/">content-type<span>1</span></a></li>
+		
+			<li><a href="/tags/kms/">kms<span>1</span></a></li>
+		
+			<li><a href="/tags/pysa/">pysa<span>1</span></a></li>
+		
+			<li><a href="/tags/ranking/">ranking<span>1</span></a></li>
+		
+			<li><a href="/tags/checklist/">checklist<span>1</span></a></li>
+		
+			<li><a href="/tags/redshift/">redshift<span>1</span></a></li>
+		
+			<li><a href="/tags/cloud-watch/">cloud-watch<span>2</span></a></li>
+		
+			<li><a href="/tags/sha256/">sha256<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>plugin | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">plugin</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-23 </div>
+			<div class="article-title"><a href="/2020/09/23/vim-plugin-used/" >vim-plugin-used</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>列一下，我有用到的 vim plugin，還有常用到的 設定 or keymap (key binding)</p>
+<h2 id="plugin-package-管理工具"><a href="#plugin-package-管理工具" class="headerlink" title="plugin (package) 管理工具"></a>plugin (package) 管理工具</h2><ul>
+<li><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">VundleVim/Vundle.vim</a></li>
+</ul>
+<h2 id="跟-auto-complete-相關"><a href="#跟-auto-complete-相關" class="headerlink" title="跟 auto-complete 相關"></a>跟 auto-complete 相關</h2><ul>
+<li><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">jiangmiao/auto-pairs</a> 自動補上括號，還滿好用的</li>
+</ul>
+<h2 id="跟-folder-結構有關"><a href="#跟-folder-結構有關" class="headerlink" title="跟 folder 結構有關"></a>跟 folder 結構有關</h2><p>之前用 vim 時，會不喜歡多一個 window 顯示 folder，隨著對 window 的熟悉，有開一個 folder 的側邊也滿好的</p>
+<ul>
+<li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">preservim/nerdtree</a> - A tree explorer plugin for vim</li>
+<li>設定 ctrl-n 為 toogle nerdtree 的出現</li>
+<li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li>
+</ul>
+<h2 id="file-search-tool"><a href="#file-search-tool" class="headerlink" title="file search tool"></a>file search tool</h2><ul>
+<li><a href="https://github.com/ctrlpvim/ctrlp.vim" target="_blank" rel="noopener">ctrlpvim/ctrlp.vim</a> * 滿強大的 file search 工具<ul>
+<li>可以用 :CtrlP 或是 或是 <code>&lt;c-p&gt;</code> 呼叫 CtrlP fuzzy find 的功能</li>
+<li>在 CtrlP 的模式下<ul>
+<li>Press <code>&lt;c-f&gt;</code> and <code>&lt;c-b&gt;</code> to cycle between modes.</li>
+<li>Press <code>&lt;c-d&gt;</code> to switch to filename only search instead of full path.</li>
+<li>Press <code>&lt;c-r&gt;</code> to switch to regexp mode.</li>
+<li>Use <code>&lt;c-j&gt;</code>, <code>&lt;c-k&gt;</code> or the arrow keys to navigate the result list.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><ul>
+<li>快速註解的方式</li>
+<li><a href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener">preservim/nerdcommenter</a></li>
+<li><a href="https://medium.com/@racktar7743/vim-%E5%BF%AB%E9%80%9F%E8%A8%BB%E8%A7%A3%E7%9A%84%E6%8F%92%E4%BB%B6-nerdcommenter-c14efb366439" target="_blank" rel="noopener">vim 快速註解的插件: nerdcommenter</a><ul>
+<li>我有將 leader key 換成 <code>,</code></li>
+<li>單行的 comment 會是 <code>, + cc</code> ，文件是的說明是 <code>[count]&lt;leader&gt;cc</code></li>
+<li>單行的 反註解 會是 <code>, + cu</code></li>
+<li><code>, + cA</code>，在這行的結尾加上 comment，並進入 insert mode，可以多試試看</li>
+</ul>
+</li>
+<li><a href="https://sites.google.com/site/kaiideanote/vim/02---scripts/nerdcommenter" target="_blank" rel="noopener">nerdcommenter 說明</a></li>
+</ul>
+<h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/rahasak/vim-as-my-golang-and-python-ide-a08ac5f0fc15" target="_blank" rel="noopener">Vim as a Golang and Python IDE</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/23/vim-plugin-used/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/csrf/">csrf<span>1</span></a></li>
+		
+			<li><a href="/tags/airtable/">airtable<span>1</span></a></li>
+		
+			<li><a href="/tags/ranking/">ranking<span>1</span></a></li>
+		
+			<li><a href="/tags/chrome/">chrome<span>1</span></a></li>
+		
+			<li><a href="/tags/airflow/">airflow<span>4</span></a></li>
+		
+			<li><a href="/tags/public-access/">public-access<span>1</span></a></li>
+		
+			<li><a href="/tags/guide/">guide<span>1</span></a></li>
+		
+			<li><a href="/tags/framework/">framework<span>1</span></a></li>
+		
+			<li><a href="/tags/unread/">unread<span>1</span></a></li>
+		
+			<li><a href="/tags/tip/">tip<span>2</span></a></li>
+		
+			<li><a href="/tags/resource-group/">resource_group<span>1</span></a></li>
+		
+			<li><a href="/tags/jetbrains/">jetbrains<span>1</span></a></li>
+		
+			<li><a href="/tags/factory/">factory<span>1</span></a></li>
+		
+			<li><a href="/tags/add-on/">add/on<span>1</span></a></li>
+		
+			<li><a href="/tags/RDS/">RDS<span>1</span></a></li>
+		
+			<li><a href="/tags/snmp/">snmp<span>1</span></a></li>
+		
+			<li><a href="/tags/boto3/">boto3<span>1</span></a></li>
+		
+			<li><a href="/tags/data-pipeline/">data-pipeline<span>1</span></a></li>
+		
+			<li><a href="/tags/PostgreSQL/">PostgreSQL<span>1</span></a></li>
+		
+			<li><a href="/tags/ide/">ide<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

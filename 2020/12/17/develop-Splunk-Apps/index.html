@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>develop-Splunk-Apps | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="develop-Splunk-Apps"/>
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> develop-Splunk-Apps</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>記錄一下，要開發 splunk app 時，需要閱讀的資料 &amp; 閱讀的記錄</p>
+<h2 id="Visualize-data-in-a-Splunk-app-for-Splunk-Cloud-or-Splunk-Enterprise"><a href="#Visualize-data-in-a-Splunk-app-for-Splunk-Cloud-or-Splunk-Enterprise" class="headerlink" title="Visualize data in a Splunk app for Splunk Cloud or Splunk Enterprise"></a><a href="https://dev.splunk.com/enterprise/docs/developapps/visualizedata/" target="_blank" rel="noopener">Visualize data in a Splunk app for Splunk Cloud or Splunk Enterprise</a></h2><h2 id="開發工具"><a href="#開發工具" class="headerlink" title="開發工具"></a>開發工具</h2><ul>
+<li><a href="https://www.splunk.com/en_us/blog/it/splunk-enterprise-visual-studio-code-better-together.html" target="_blank" rel="noopener">Splunk&gt;Blogs: Splunk Enterprise + Visual Studio Code = Better Together</a> * 要來試試看</li>
+</ul>
+<h2 id="一些可以先事前看看的文件"><a href="#一些可以先事前看看的文件" class="headerlink" title="一些可以先事前看看的文件"></a>一些可以先事前看看的文件</h2><ul>
+<li>Before you create a Splunk app</li>
+<li><a href="https://dev.splunk.com/enterprise/docs/developapps/appanatomy/" target="_blank" rel="noopener">Anatomy of a Splunk app in Splunk Cloud or Splunk Enterprise</a> * 可以清楚的了解 app 的架構，重要</li>
+<li><a href="https://dev.splunk.com/enterprise/docs/developapps/fileprecedence/" target="_blank" rel="noopener">Understand file precedence in apps for Splunk Cloud or Splunk Enterprise</a> * 要看檔案如何找時，滿有用的</li>
+<li><a href="https://dev.splunk.com/enterprise/docs/developapps/assetcaching/" target="_blank" rel="noopener">Understand asset caching and state changes in Splunk Enterprise</a></li>
+<li><a href="https://docs.splunk.com/Documentation/Splunk/latest/Admin/StartSplunk" target="_blank" rel="noopener">Start and stop Splunk Enterprise</a> in the Splunk Enterprise Admin Manual</li>
+</ul>
+<h2 id="Splunk-conf-material"><a href="#Splunk-conf-material" class="headerlink" title="Splunk conf material"></a>Splunk conf material</h2><ul>
+<li><a href="https://conf.splunk.com/watch/conf-online.html?search.track=1518804348605006Mcgu#/" target="_blank" rel="noopener">splunk developer 相關的 topic</a></li>
+<li><a href="https://conf.splunk.com/watch/conf-online.html?search=Publishing%20your%20app%20on%20Splunkbase#/" target="_blank" rel="noopener">DEV1722C - Publishing your app on Splunkbase</a><ul>
+<li><a href="https://conf.splunk.com/files/2020/recordings/DEV1722C.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://conf.splunk.com/files/2020/slides/DEV1722C.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+<li>FN1390 - App Sorcery - Building Splunk Apps With Best Practice<ul>
+<li><a href="https://conf.splunk.com/files/2018/recordings/app-sorcery-building-splunk-fn1390.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://static.rainfocus.com/splunk/splunkconf18/sess/1523356573150001cs3W/finalPDF/FN1390_AppSourceryBuildingSplunk_Final_1538795908568001Cuzs.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+<li>FN1097 - App Sorcery 2: Building Better Splunk Apps with Best Practice<ul>
+<li><a href="https://conf.splunk.com/files/2019/recordings/FN1097.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://conf.splunk.com/files/2019/slides/FN1097.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+<li><a href="https://conf.splunk.com/watch/conf-online.html?search=dev1545#/" target="_blank" rel="noopener">DEV1545 - Go From Dashboards to Applications With Ease: SplunkJS and Splunk Python for Non-Developers</a><ul>
+<li><a href="https://conf.splunk.com/files/2018/recordings/go-from-dashboards-to-dev1545.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://static.rainfocus.com/splunk/splunkconf18/sess/1523479078077001AMoo/finalPDF/DEV1545_GoFromDashboardsToApplications_Final_1538663931596001GCsE.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+<li><a href="https://conf.splunk.com/watch/conf-online.html?search.track=1518804348605006Mcgu&search=Worst%20practices%20for%20building%20Splunk%20Apps#/" target="_blank" rel="noopener">DEV1293 - Worst practices for building Splunk Apps and Add-ons and how to avoid them</a><ul>
+<li><a href="https://conf.splunk.com/files/2018/recordings/worst-practices-for-building-dev1293.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://static.rainfocus.com/splunk/splunkconf18/sess/1522963226479001O5Yv/finalPDF/DEV1293_WorstPracticesForBuilding_FInal_15386638818910012PoE.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><ul>
+<li><a href="https://dev.splunk.com/enterprise/docs/releaseapps/splunkbase/" target="_blank" rel="noopener">Publish apps for Splunk Cloud or Splunk Enterprise to Splunkbase</a></li>
+<li>DEV1722C - Publishing your app on Splunkbase<ul>
+<li><a href="https://conf.splunk.com/files/2020/recordings/DEV1722C.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://conf.splunk.com/files/2020/slides/DEV1722C.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><ul>
+<li>DEV1188C - Debugging Splunk Apps, Add-ons, and Configurations using Visual Studio Code<ul>
+<li><a href="https://conf.splunk.com/files/2020/recordings/DEV1188C.mp4" target="_blank" rel="noopener">session video</a>, <a href="https://conf.splunk.com/files/2020/slides/DEV1188C.pdf" target="_blank" rel="noopener">session slides</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="大神的-blog"><a href="#大神的-blog" class="headerlink" title="大神的 blog"></a>大神的 blog</h2><ul>
+<li><a href="https://www.dvsplunk.com/tech/" target="_blank" rel="noopener">David Veuve - Tech Blog</a></li>
+<li><a href="https://www.dvsplunk.com/splunk.html" target="_blank" rel="noopener">Splunk Presentations</a></li>
+<li><a href="https://www.dvsplunk.com/apps.html" target="_blank" rel="noopener">Splunk Apps</a></li>
+</ul>
+<h2 id="教學-site"><a href="#教學-site" class="headerlink" title="教學 site"></a>教學 site</h2><ul>
+<li><a href="https://www.learnsplunk.com/" target="_blank" rel="noopener">learnsplunk</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://splunkbase.splunk.com/develop/" target="_blank" rel="noopener">splunkbase - develop page</a></li>
+<li><a href="https://dev.splunk.com/enterprise/docs/developapps/visualizedata/" target="_blank" rel="noopener">App fundamentals</a></li>
+<li><a href="https://dev.splunk.com/enterprise/docs/developapps/" target="_blank" rel="noopener">Building a Splunk App</a> * 這篇很重要，必讀</li>
+<li><a href="https://dev.splunk.com/enterprise/docs/releaseapps/packagingtoolkit/" target="_blank" rel="noopener">Package a Splunk App</a> - Package apps for Splunk Cloud or Splunk Enterprise using the Splunk Packaging Toolkit</li>
+</ul>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2021/01/06/splunk-trouble-shooting/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2020/12/17/Splunk-AppInspect/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-12-17 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/splunk/">splunk<span>14</span></a></li> <li><a href="/tags/splunk-app/">splunk-app<span>1</span></a></li> <li><a href="/tags/developer/">developer<span>1</span></a></li> <li><a href="/tags/dev/">dev<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

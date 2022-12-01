@@ -1,0 +1,685 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vim | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">vim</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-08-12 </div>
+			<div class="article-title"><a href="/2022/08/12/goland-vim/" >goland-vim</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄一下在 goland 使用 vim plugin 的資料，plugin <code>IdeaVim</code></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.jetbrains.com/help/idea/using-product-as-the-vim-editor.html" target="_blank" rel="noopener">Emulate Vim in IntelliJ IDEA | IntelliJ IDEA</a></li>
+<li><a href="https://github.com/JetBrains/ideavim" target="_blank" rel="noopener">JetBrains/ideavim: Vim emulation plugin for IDEs based on the IntelliJ Platform</a> - Vim emulation plugin for IDEs based on the IntelliJ Platform</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/08/12/goland-vim/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-08-12 </div>
+			<div class="article-title"><a href="/2022/08/12/IDE-goland-key-repeat/" >IDE-goland-key-repeat</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近開始嘗試寫 GoLand，寫的過程中，發現沒有一個好用的 IDE，在寫 go code 上，滿不方便的<br>尤其是，目前對於要如何找 API document 是有個滿大的困擾的</p>
+<p>所以囉，就安裝了 JetBrains 的 GoLand 來試用。<br>因為，我習慣了用 vim 來編輯，就也是希望能在 GoLand 中，可以用 vim 的 keybinding</p>
+<p>安裝好 plugin 後，就發現無法一直按著 h j k l 來移動<br>這對於一個 vim 的使用者來說，很不方便，就找找看變更的方式囉</p>
+<h2 id="修改的流程"><a href="#修改的流程" class="headerlink" title="修改的流程"></a>修改的流程</h2><ul>
+<li>找到對應要修改的 identifier<ul>
+<li><code>$ cat /Applications/GoLand.app/Contents/Info.plist | grep -A 5 -B 5 -i BundleIdentifier</code></li>
+</ul>
+</li>
+<li>修改設定<ul>
+<li><code>defaults write com.jetbrains.goland ApplePressAndHoldEnabled -bool false</code></li>
+</ul>
+</li>
+<li>重啟 GoLand</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://stackoverflow.com/questions/15107321/intellij-idea-auto-repetition-of-letter-keys" target="_blank" rel="noopener">macos - Intellij-idea: auto-repetition of letter keys - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/39606031/intellij-key-repeating-idea-vim" target="_blank" rel="noopener">IntelliJ key repeating idea.vim - Stack Overflow</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/08/12/IDE-goland-key-repeat/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-04-08 </div>
+			<div class="article-title"><a href="/2022/04/08/vim-code-navigate/" >vim-code-navigate</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="在-code-中，快速的移動"><a href="#在-code-中，快速的移動" class="headerlink" title="在 code 中，快速的移動"></a>在 code 中，快速的移動</h2><ul>
+<li>go to definition<ul>
+<li><code>gd</code></li>
+</ul>
+</li>
+<li>回到之前的 location<ul>
+<li><code>Ctrl+O</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://vim.fandom.com/wiki/Go_to_definition_using_g" target="_blank" rel="noopener">Go to definition using g | Vim Tips Wiki | Fandom</a></li>
+<li><a href="https://stackoverflow.com/questions/53911/in-vim-how-do-i-go-back-to-where-i-was-before-a-search" target="_blank" rel="noopener">vi - In vim, how do I go back to where I was before a search? - Stack Overflow</a></li>
+<li><a href="https://blog.bespinian.io/posts/efficient-navigation-in-vim/" target="_blank" rel="noopener">Efficient Navigation in Vim · bespinian Blog</a> 這篇值得一看</li>
+<li><a href="https://susamn.medium.com/its-time-to-navigate-effectively-in-vim-a-visual-article-e23afab7f2e" target="_blank" rel="noopener">It’s time to Navigate effectively in Vim, a visual article | by Supratim Samanta | Medium</a> 主要說明如何於 text 中 move</li>
+<li><a href="https://subscription.packtpub.com/book/data/9781789341096/4/ch04lvl1sec32/navigating-the-code-base-with-tags" target="_blank" rel="noopener">Navigating the code base with tags | Mastering Vim</a> </li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/04/08/vim-code-navigate/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-09-23 </div>
+			<div class="article-title"><a href="/2021/09/23/Vimium/" >Vimium</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在重新玩 vim 的過程中，有找到一個 for chrome 的 extension<br>試了之後，還滿好玩的，加以記錄之</p>
+<h2 id="目前常用到的-cmd-是？"><a href="#目前常用到的-cmd-是？" class="headerlink" title="目前常用到的 cmd 是？"></a>目前常用到的 cmd 是？</h2><ul>
+<li><code>d/u</code>：下一頁，上一頁</li>
+<li><code>x</code>：關閉 tab</li>
+<li><code>gt/gT</code>：切換到下一個 tab, 上一個 tab</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb" target="_blank" rel="noopener">Vimium</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/369189706" target="_blank" rel="noopener">第3期（win） | 方便快捷，浏览器利器——Vimium（详解）</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/09/23/Vimium/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-09-23 </div>
+			<div class="article-title"><a href="/2021/09/23/vim-theme/" >vim-theme</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近有花了一些時間看一下 vim<br>就剛好有看到一個滿有趣的 theme - Dracula theme，這在 dark mode 的 theme 聽說還滿有名的</p>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><p>在試用 dracula theme 時，有看到幾篇還滿不錯的文章，就加以記錄囉</p>
+<ul>
+<li><a href="https://blog.csdn.net/AugustDY/article/details/99320037" target="_blank" rel="noopener">利用iTerm2+oh-my-zsh+Dracula主题打造我的Mac终端利器</a></li>
+<li><a href="https://medium.com/@mandy.michael/finding-the-right-theme-efcd4fb1bd41" target="_blank" rel="noopener">Finding the right theme</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://draculatheme.com/vim" target="_blank" rel="noopener">dracula theme vim</a></li>
+<li><a href="https://draculatheme.com/pro" target="_blank" rel="noopener">Dracula PRO</a> - 用了一小段時間後，有買 pro 來使用，滿好用的啦<ul>
+<li>其中還有附一本 audio book 說</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/09/23/vim-theme/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-09-07 </div>
+			<div class="article-title"><a href="/2021/09/07/vim-tip-2021-09-06/" >vim-tip-2021-09-06</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>一直以來都喜歡，也習慣用 vim。想說，多多用些大家常用的 package 來幫助日常的 coding<br>也試著將 coding 的部分，多以不離開 vim 就可以做到的方式，來多多練習</p>
+<p>nerdtree 一直都是滿多人推薦在 vim 中使用的，有安裝但是沒有特別使用，這次想說多來用用看</p>
+<ul>
+<li>目前常用的 command<ul>
+<li><code>Ctrl-N</code>：開啟 &amp; 關閉 nerdtree</li>
+<li><code>Ctrl-W L</code>, <code>Ctrl-L</code>：切換到 右邊的視窗</li>
+<li><code>Ctrl-W H</code>，<code>Ctrl-H</code>：切換到 左邊的視窗</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">nerdtree</a> - A tree explorer plugin for vim.</li>
+</ul>
+<h2 id="教學"><a href="#教學" class="headerlink" title="教學"></a>教學</h2><ul>
+<li><a href="https://noob.tw/vim/" target="_blank" rel="noopener">vim：想打造雲端工作環境？你可以試試這個</a></li>
+<li><a href="https://noob.tw/vundle/" target="_blank" rel="noopener">Vundle：管理 vim 套件的工具</a> * 目前我也是用 vundle 來管理套件</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/09/07/vim-tip-2021-09-06/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-09-07 </div>
+			<div class="article-title"><a href="/2021/09/07/vim-tip-2021-09-07/" >vim-tip-2021-09-07</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>列一下，今天學到的 vim 技巧<br>如何在 NERDTree 中，新增一個檔案</p>
+<ul>
+<li>在想要新增的目錄中，按下 <code>m</code> 開啟 NERDTree Filesystem Menu  </li>
+<li>接著按下 <code>a</code>，新增一個 child node</li>
+</ul>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://sookocheff.com/post/vim/creating-a-new-file-or-directoryin-vim-using-nerdtree/" target="_blank" rel="noopener">Creating a new file or directory in Vim using NERDTree</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/09/07/vim-tip-2021-09-07/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-11-24 </div>
+			<div class="article-title"><a href="/2020/11/24/powerline-use/" >powerline_use</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>目前是用 powerline 來當作 vim status bar 的顯示，記錄一下用 powerline 遇到的情形</p>
+<h2 id="遇到的-issue"><a href="#遇到的-issue" class="headerlink" title="遇到的 issue"></a>遇到的 issue</h2><ul>
+<li>在 pip powerline 時，出現 “SyntaxError: keyword argument repeated” error<ul>
+<li><a href="https://github.com/powerline/powerline/issues/34" target="_blank" rel="noopener">setup.py syntax error #34</a></li>
+<li>解法：要安裝 powerline-status package, <code>$ pip install powerline-status</code> </li>
+<li><a href="https://powerline.readthedocs.io/en/latest/installation.html#pip-installation" target="_blank" rel="noopener">pip-installation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/powerline/powerline" target="_blank" rel="noopener">powerline/powerline</a> - Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/11/24/powerline-use/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-23 </div>
+			<div class="article-title"><a href="/2020/09/23/vim-plugin-used/" >vim-plugin-used</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>列一下，我有用到的 vim plugin，還有常用到的 設定 or keymap (key binding)</p>
+<h2 id="plugin-package-管理工具"><a href="#plugin-package-管理工具" class="headerlink" title="plugin (package) 管理工具"></a>plugin (package) 管理工具</h2><ul>
+<li><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">VundleVim/Vundle.vim</a></li>
+</ul>
+<h2 id="跟-auto-complete-相關"><a href="#跟-auto-complete-相關" class="headerlink" title="跟 auto-complete 相關"></a>跟 auto-complete 相關</h2><ul>
+<li><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">jiangmiao/auto-pairs</a> 自動補上括號，還滿好用的</li>
+</ul>
+<h2 id="跟-folder-結構有關"><a href="#跟-folder-結構有關" class="headerlink" title="跟 folder 結構有關"></a>跟 folder 結構有關</h2><p>之前用 vim 時，會不喜歡多一個 window 顯示 folder，隨著對 window 的熟悉，有開一個 folder 的側邊也滿好的</p>
+<ul>
+<li><a href="https://github.com/preservim/nerdtree" target="_blank" rel="noopener">preservim/nerdtree</a> - A tree explorer plugin for vim</li>
+<li>設定 ctrl-n 為 toogle nerdtree 的出現</li>
+<li>在 nerdtree 中，按下 t 時，會將檔案開在新的 tab</li>
+</ul>
+<h2 id="file-search-tool"><a href="#file-search-tool" class="headerlink" title="file search tool"></a>file search tool</h2><ul>
+<li><a href="https://github.com/ctrlpvim/ctrlp.vim" target="_blank" rel="noopener">ctrlpvim/ctrlp.vim</a> * 滿強大的 file search 工具<ul>
+<li>可以用 :CtrlP 或是 或是 <code>&lt;c-p&gt;</code> 呼叫 CtrlP fuzzy find 的功能</li>
+<li>在 CtrlP 的模式下<ul>
+<li>Press <code>&lt;c-f&gt;</code> and <code>&lt;c-b&gt;</code> to cycle between modes.</li>
+<li>Press <code>&lt;c-d&gt;</code> to switch to filename only search instead of full path.</li>
+<li>Press <code>&lt;c-r&gt;</code> to switch to regexp mode.</li>
+<li>Use <code>&lt;c-j&gt;</code>, <code>&lt;c-k&gt;</code> or the arrow keys to navigate the result list.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><ul>
+<li>快速註解的方式</li>
+<li><a href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener">preservim/nerdcommenter</a></li>
+<li><a href="https://medium.com/@racktar7743/vim-%E5%BF%AB%E9%80%9F%E8%A8%BB%E8%A7%A3%E7%9A%84%E6%8F%92%E4%BB%B6-nerdcommenter-c14efb366439" target="_blank" rel="noopener">vim 快速註解的插件: nerdcommenter</a><ul>
+<li>我有將 leader key 換成 <code>,</code></li>
+<li>單行的 comment 會是 <code>, + cc</code> ，文件是的說明是 <code>[count]&lt;leader&gt;cc</code></li>
+<li>單行的 反註解 會是 <code>, + cu</code></li>
+<li><code>, + cA</code>，在這行的結尾加上 comment，並進入 insert mode，可以多試試看</li>
+</ul>
+</li>
+<li><a href="https://sites.google.com/site/kaiideanote/vim/02---scripts/nerdcommenter" target="_blank" rel="noopener">nerdcommenter 說明</a></li>
+</ul>
+<h2 id="vim-tab-movement"><a href="#vim-tab-movement" class="headerlink" title="vim tab movement"></a>vim tab movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot; easier moving between tabs</span><br><span class="line">map &lt;Leader&gt;n &lt;esc&gt;:tabprevious&lt;CR&gt;</span><br><span class="line">map &lt;Leader&gt;m &lt;esc&gt;:tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="vim-window-movement"><a href="#vim-window-movement" class="headerlink" title="vim window movement"></a>vim window movement</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;&quot;&quot;&quot; windows split shortcut</span><br><span class="line">nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;</span><br><span class="line">nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;</span><br><span class="line">nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;</span><br><span class="line">nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/rahasak/vim-as-my-golang-and-python-ide-a08ac5f0fc15" target="_blank" rel="noopener">Vim as a Golang and Python IDE</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/23/vim-plugin-used/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-17 </div>
+			<div class="article-title"><a href="/2020/09/17/my-vim-new-setup/" >my-vim-new-setup</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>藉由這次重新設定 &amp; 安裝 vim，同時整理一下目前使用 vim 的方式</p>
+<h2 id="安裝-vim"><a href="#安裝-vim" class="headerlink" title="安裝 vim"></a>安裝 vim</h2><p>現在的 vim 想使用的進階功能，會用到 vim + python 的功能，所以需要重新安裝 vim。<br>目前用 brew install vim 滿方便，又快速的，就是要記得將執行 brew update，取得最近的 vim 設定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ brew update</span><br><span class="line">$ brew install vim</span><br><span class="line">$ vim --version | grep -i python3</span><br><span class="line">+comments          +libcall           -python            +visual</span><br><span class="line">+conceal           +linebreak         +python3           +visualextra</span><br><span class="line">## 要確認 python3 有 enable 起來</span><br></pre></td></tr></table></figure>
+
+<p>如果看到 python3 沒有 enable 的話，記得確認一下 vim 是那一版</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ which vim</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;vim</span><br><span class="line"># 在 &#x2F;user&#x2F;local 下的，才是用 brew 安裝的</span><br></pre></td></tr></table></figure>
+<h2 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h2><ul>
+<li>試用了不同的 theme，目前還是覺得 solarized 好看<ul>
+<li><a href="https://github.com/altercation/vim-colors-solarized" target="_blank" rel="noopener">altercation/vim-colors-solarized</a><h2 id="package-management"><a href="#package-management" class="headerlink" title="package management"></a>package management</h2>套件管理(package management)，目前是使用 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">vundle</a> 來進行</li>
+</ul>
+</li>
+<li><a href="https://medium.com/@racktar7743/vim-vim-%E7%9A%84%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-vundle-15484bad7d9" target="_blank" rel="noopener">Vim 的插件管理工具 Vundle</a></li>
+</ul>
+<h2 id="有安裝好用的-package"><a href="#有安裝好用的-package" class="headerlink" title="有安裝好用的 package"></a>有安裝好用的 package</h2><ul>
+<li><a href="https://github.com/easymotion/vim-easymotion" target="_blank" rel="noopener">easymotion/vim-easymotion</a></li>
+<li><a href="https://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/" target="_blank" rel="noopener">Powerline：漂亮的 Vim 狀態列與 Bash Shell 命令提示字串外掛</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/mbrochh/vim-as-a-python-ide" target="_blank" rel="noopener">mbrochh/vim-as-a-python-ide</a></li>
+<li><a href="https://github.com/BroQiang/vim-go-ide" target="_blank" rel="noopener">broqiang/vim-go-ide</a> ** 可以看看需要的 Plugin</li>
+<li><a href="https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b" target="_blank" rel="noopener">Powerline Setup for my VIM</a></li>
+</ul>
+<h2 id="Reference-vimrc"><a href="#Reference-vimrc" class="headerlink" title="Reference vimrc"></a>Reference vimrc</h2><ul>
+<li><a href="https://github.com/chinghanho/.dotfiles/blob/4c53d90d3e1efffb3fdc1ebc44bdac1781154b19/.vimrc#L1-L39" target="_blank" rel="noopener">chinghanho/.dotfiles/.vimrc</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/17/my-vim-new-setup/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+		   <li class="next"> <a href="/tags/vim/page/2/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/dynamodb/">dynamodb<span>3</span></a></li>
+		
+			<li><a href="/tags/oop/">oop<span>1</span></a></li>
+		
+			<li><a href="/tags/out-sourcing/">out-sourcing<span>1</span></a></li>
+		
+			<li><a href="/tags/bluetooth/">bluetooth<span>1</span></a></li>
+		
+			<li><a href="/tags/architecture/">architecture<span>1</span></a></li>
+		
+			<li><a href="/tags/db-engine/">db-engine<span>1</span></a></li>
+		
+			<li><a href="/tags/private-id/">private_id<span>1</span></a></li>
+		
+			<li><a href="/tags/uba/">uba<span>1</span></a></li>
+		
+			<li><a href="/tags/dimensional-mode/">dimensional_mode<span>1</span></a></li>
+		
+			<li><a href="/tags/sentry/">sentry<span>1</span></a></li>
+		
+			<li><a href="/tags/https/">https<span>1</span></a></li>
+		
+			<li><a href="/tags/shuowen/">shuowen<span>1</span></a></li>
+		
+			<li><a href="/tags/unread/">unread<span>1</span></a></li>
+		
+			<li><a href="/tags/unity/">unity<span>1</span></a></li>
+		
+			<li><a href="/tags/website/">website<span>1</span></a></li>
+		
+			<li><a href="/tags/analyzer/">analyzer<span>1</span></a></li>
+		
+			<li><a href="/tags/folder/">folder<span>1</span></a></li>
+		
+			<li><a href="/tags/dictionary/">dictionary<span>1</span></a></li>
+		
+			<li><a href="/tags/management/">management<span>1</span></a></li>
+		
+			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

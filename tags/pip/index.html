@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>pip | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">pip</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-10-05 </div>
+			<div class="article-title"><a href="/2020/10/05/pip-package/" >pip-package</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="上傳-package-到-test-pypi-上"><a href="#上傳-package-到-test-pypi-上" class="headerlink" title="上傳 package 到 test pypi 上"></a>上傳 package 到 test pypi 上</h2><ul>
+<li><code>python3 -m twine upload --repository testpypi dist/*</code></li>
+<li><a href="https://twine.readthedocs.io/en/latest/" target="_blank" rel="noopener">twine document</a></li>
+</ul>
+<h2 id="由-test-pypi-安裝-package"><a href="#由-test-pypi-安裝-package" class="headerlink" title="由 test pypi 安裝 package"></a>由 test pypi 安裝 package</h2><p>  <code>python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg</code></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://python-packaging.readthedocs.io/en/latest/" target="_blank" rel="noopener">python-packaging</a> * 這篇要好好來讀一讀</li>
+<li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/uploading_pypi.html" target="_blank" rel="noopener">Building and Uploading to PyPi</a> * 值得一看</li>
+<li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li>
+<li><a href="https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html" target="_blank" rel="noopener">Making a Python Package</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/10/05/pip-package/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-30 </div>
+			<div class="article-title"><a href="/2020/09/30/python-pip-tutorial/" >python-pip-tutorial</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dzone.com/articles/executable-package-pip-install" target="_blank" rel="noopener">Build Your First pip Package</a></li>
+<li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/30/python-pip-tutorial/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/pip-success-but-not-found/" >pip_success_but_not_found</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
+<li>今天在 EC2 上，使用 virtualenv 來安裝 pandas 時，遇到 pip 有安裝成功，但是進去 ipython 時，找不到 pandas module 的情形</li>
+<li>找了一段時間後，發現 package 被安裝在 lib64 的path，而 pip 是找 lib folder，所以找不到 pandas module<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas&#x2F;tests&#x2F;io&#x2F;json&#x2F;__pycache__&#x2F;test_pandas.cpython-36.pyc</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas&#x2F;tests&#x2F;io&#x2F;json&#x2F;test_pandas.py</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas-1.0.3.dist-info</span><br></pre></td></tr></table></figure></li>
+<li>看起來應該是某版本的 amazon linux 的問題</li>
+</ul>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
+<li><p>用指定路徑的方式，來執行 pip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install --upgrade --target &#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;dist-packages pandas</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>看 python 的 path</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import sys</span><br><span class="line">&gt;&gt;&gt; sys.path</span><br><span class="line">[&#39;&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib64&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib&#x2F;python3.6&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;lib-dynload&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;dist-packages&#39;, &#39;&#x2F;usr&#x2F;lib64&#x2F;python3.6&#39;, &#39;&#x2F;usr&#x2F;lib&#x2F;python3.6&#39;]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Refrerence"><a href="#Refrerence" class="headerlink" title="Refrerence"></a>Refrerence</h2><ul>
+<li><a href="https://github.com/pypa/pip/issues/4464" target="_blank" rel="noopener">Packages installed by pip in lib64 are not recognized by pip</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/pip-success-but-not-found/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/WMS/">WMS<span>1</span></a></li>
+		
+			<li><a href="/tags/reverse-proxy/">reverse-proxy<span>1</span></a></li>
+		
+			<li><a href="/tags/console/">console<span>1</span></a></li>
+		
+			<li><a href="/tags/decimal/">decimal<span>1</span></a></li>
+		
+			<li><a href="/tags/calendar/">calendar<span>1</span></a></li>
+		
+			<li><a href="/tags/data-scientist/">data-scientist<span>1</span></a></li>
+		
+			<li><a href="/tags/bluetooth/">bluetooth<span>1</span></a></li>
+		
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
+		
+			<li><a href="/tags/debug/">debug<span>1</span></a></li>
+		
+			<li><a href="/tags/step-function/">step-function<span>4</span></a></li>
+		
+			<li><a href="/tags/multiple-account/">multiple-account<span>1</span></a></li>
+		
+			<li><a href="/tags/lifecycle/">lifecycle<span>1</span></a></li>
+		
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+		
+			<li><a href="/tags/kubernetes/">kubernetes<span>1</span></a></li>
+		
+			<li><a href="/tags/gmail/">gmail<span>1</span></a></li>
+		
+			<li><a href="/tags/skip-test/">skip-test<span>1</span></a></li>
+		
+			<li><a href="/tags/iMazing/">iMazing<span>1</span></a></li>
+		
+			<li><a href="/tags/robot-framework/">robot-framework<span>1</span></a></li>
+		
+			<li><a href="/tags/sql/">sql<span>1</span></a></li>
+		
+			<li><a href="/tags/Well-Architected/">Well-Architected<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

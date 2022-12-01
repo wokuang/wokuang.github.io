@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>aws-quicksight-cognito | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="aws-quicksight-cognito"/>
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> aws-quicksight-cognito</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>因為需要提供 PM 來 login 建立好的 QuickSight，所以嘗試使用 cognito 來進行 account 的管理，透過 cognito login 後，開始使用 QuickSight 服務</p>
+<h2 id="遇到的-error"><a href="#遇到的-error" class="headerlink" title="遇到的 error"></a>遇到的 error</h2><ul>
+<li><a href="https://docs.aws.amazon.com/quicksight/latest/user/troubleshoot-webidentity-federation.html" target="_blank" rel="noopener">Individuals in my organization get an “External Login is Unauthorized” message when they try to access Amazon QuickSight - Amazon QuickSight</a> 遇到這個問題，看了很久，還沒有找到解法</li>
+<li>經過一段時間的嘗試、google 後，主要是需要用 AssumeRoleWithWebIdentity 的方式，來設定 session name，以便產生需要的 amazon credentials data<ul>
+<li>而 AssumeRoleWithWebIdentity 中，是用到 sts 來取得 amazon credentials</li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/WebIdentityCredentials.html" target="_blank" rel="noopener">Class: AWS.WebIdentityCredentials — AWS SDK for JavaScript</a> javascript SDK 的取法</li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRoleWithWebIdentity-property" target="_blank" rel="noopener">Class: AWS.STS — AWS SDK for JavaScript</a> STS 中關於 AssumeRoleWithWebIdentity 的說明</li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role-with-web-identity.html" target="_blank" rel="noopener">assume-role-with-web-identity — AWS CLI 1.22.26 Command Reference</a> local 測試，command line 的作法</li>
+</ul>
+</li>
+</ul>
+<h2 id="嘗試的作法"><a href="#嘗試的作法" class="headerlink" title="嘗試的作法"></a>嘗試的作法</h2><ul>
+<li><a href="https://aws.amazon.com/blogs/big-data/federate-amazon-quicksight-access-with-okta/" target="_blank" rel="noopener">Federate Amazon QuickSight access with Okta | AWS Big Data Blog</a></li>
+<li><a href="https://docs.aws.amazon.com/quicksight/latest/user/external-identity-providers.html" target="_blank" rel="noopener">Using identity federation and single sign-on (SSO) with Amazon QuickSight - Amazon QuickSight</a></li>
+</ul>
+<h2 id="解-jwt-的方式"><a href="#解-jwt-的方式" class="headerlink" title="解 jwt 的方式"></a>解 jwt 的方式</h2><ul>
+<li><a href="https://github.com/auth0/jwt-decode" target="_blank" rel="noopener">auth0/jwt-decode: Decode JWT tokens; useful for browser applications.</a> 用這個 github 中的檔案</li>
+<li><a href="https://github.com/awslabs/aws-jwt-verify" target="_blank" rel="noopener">awslabs/aws-jwt-verify: NodeJS library for verifying JWTs signed by Amazon Cognito, and any OIDC-compatible IDP that signs JWTs with RS256</a></li>
+</ul>
+<h2 id="需要-enhance-的部分"><a href="#需要-enhance-的部分" class="headerlink" title="需要 enhance 的部分"></a>需要 enhance 的部分</h2><ul>
+<li>使用 QuickSight API 來新增 QuickSight User &amp; Assign group，以方便使用 quicksight</li>
+</ul>
+<h2 id="Background-Knowledge"><a href="#Background-Knowledge" class="headerlink" title="Background Knowledge"></a>Background Knowledge</h2><ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html" target="_blank" rel="noopener">Identity providers and federation - AWS Identity and Access Management</a> 這篇需要好好讀一讀，特別是有關 web identity federation 的部分</li>
+<li><a href="https://aws.amazon.com/blogs/security/enable-your-federated-users-to-work-in-the-aws-management-console-for-up-to-12-hours/" target="_blank" rel="noopener">Enable Your Federated Users to Work in the AWS Management Console for up to 12 Hours | AWS Security Blog</a> 說明 identity federation 的 blog</li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html" target="_blank" rel="noopener">Enabling custom identity broker access to the AWS console - AWS Identity and Access Management</a> 使用 getSigninToken 的方式進行, 參考這篇的 python code 加以修改<ul>
+<li><a href="https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/python/example_code/sts/sts_temporary_credentials/federated_url.py" target="_blank" rel="noopener">aws-doc-sdk-examples/federated_url.py at main · awsdocs/aws-doc-sdk-examples</a> 範例的 python code</li>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sts.html#STS.Client.assume_role_with_web_identity" target="_blank" rel="noopener">STS — Boto3 Docs 1.20.26 documentation</a> 有關 sts boto3 的說明 </li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/ac8dc849-3d95-43e3-b380-aa38f0dc31e4/en-US/user-based-embedding" target="_blank" rel="noopener">QuickSight Workshops - User-based Embedding</a> 主要依照這份來修改，將 lambda &amp; api-gateway 另外用 serverless framework 來建立</li>
+<li><a href="https://noise.getoto.net/2017/10/06/use-amazon-quicksight-federated-single-sign-on-with-amazon-cognito-user-pools/" target="_blank" rel="noopener">Use Amazon QuickSight Federated Single Sign-On with Amazon Cognito User Pools | Noise</a> 另一種整合 cognito &amp; quicksight 的方式。試過後，由 cognito auth 的 account 導至 quicksight 後，因為是透過 IAM login，會是同一個 quicksight 帳號，暫時不用這個方式</li>
+</ul>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2021/12/25/aws-sso-cognito/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2021/12/14/aws-quicksight/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2021-12-23 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/aws/">aws<span>75</span></a></li> <li><a href="/tags/cognito/">cognito<span>5</span></a></li> <li><a href="/tags/quicksight/">quicksight<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

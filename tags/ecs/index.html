@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ecs | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">ecs</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-29 </div>
+			<div class="article-title"><a href="/2021/12/29/aws-ecs-api-gateway/" >aws-ecs-api-gateway</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>用 api-gateway 為前端，來串到 ECS 中的 micro service</p>
+<h2 id="有關的-terraform-文件"><a href="#有關的-terraform-文件" class="headerlink" title="有關的 terraform 文件"></a>有關的 terraform 文件</h2><ul>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecs_service" target="_blank" rel="noopener">aws_ecs_service | Resources | hashicorp/aws | Terraform Registry</a></li>
+</ul>
+<h2 id="設定-aws-ecs-service-時，遇到的問題"><a href="#設定-aws-ecs-service-時，遇到的問題" class="headerlink" title="設定 aws ecs service 時，遇到的問題"></a>設定 aws ecs service 時，遇到的問題</h2><ul>
+<li>在設定的過程中，花滿多時間在測試要如何建立 load_balancer<ul>
+<li><a href="https://github.com/aws-ia/terraform-aws-ecs-fargate/blob/main/main.tf" target="_blank" rel="noopener">terraform-aws-ecs-fargate/main.tf at main · aws-ia/terraform-aws-ecs-fargate</a> 這篇可以參考建立 load_balancer &amp; security_group</li>
+</ul>
+</li>
+<li>在建立 load_balancer 時，遇到的另外一個問題是，當使用 S3 bucket 來記錄 access_log 時，有遇到權限的問題<ul>
+<li><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy" target="_blank" rel="noopener">Enable access logs for your Classic Load Balancer - Elastic Load Balancing</a> AWS 說明資料</li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elb_service_account" target="_blank" rel="noopener">aws_elb_service_account | Data Sources | hashicorp/aws | Terraform Registry</a></li>
+<li>參考上面的資料，加設一段 <code>data &quot;aws_elb_service_account&quot; &quot;main&quot; {}</code> 來設定 service account 權限</li>
+<li><a href="https://stackoverflow.com/questions/64001362/terraform-enabling-access-load-balancer-logs-invalidconfigurationrequest-acce" target="_blank" rel="noopener">amazon web services - Terraform - Enabling Access Load balancer logs InvalidConfigurationRequest: Access Denied for bucket - Stack Overflow</a> 參考這篇文章，加以修改後，可以進行 access log</li>
+<li><a href="https://github.com/cloudposse/terraform-aws-lb-s3-bucket/search?q=aws_elb_service_account" target="_blank" rel="noopener">Search · aws_elb_service_account</a> 參考別人 module 的寫法</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-with-microservices-deployed-on-amazon-ecs/" target="_blank" rel="noopener">Using Amazon API Gateway with microservices deployed on Amazon ECS | AWS Compute Blog</a> 手動建立的方式</li>
+<li><a href="https://medium.com/swlh/deploy-container-in-ecs-fargate-behind-api-gateway-nlb-for-secure-optimal-accessibility-with-95542d5867c3" target="_blank" rel="noopener">Deploy Container in ECS Fargate behind API Gateway &amp; NLB for Secure Optimal Accessibility (with Terraform) | by Lukonde Mwila | The Startup | Medium</a> 這篇很值得參考<ul>
+<li><a href="https://github.com/LukeMwila/aws-apigateway-vpc-ecs-fargate" target="_blank" rel="noopener">LukeMwila/aws-apigateway-vpc-ecs-fargate: Source code to run a containerised application in AWS ECS Fargate inside a VPC’s private subnets. An API Gateway is used as the doorway to the private network using a VPC link to access the VPC. An NLB is for optimal performance of accessing the application.</a> source code 看這邊 </li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/29/aws-ecs-api-gateway/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-29 </div>
+			<div class="article-title"><a href="/2021/12/29/aws-ecs-services/" >aws-ecs-services</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>想要將 speedtest 跑在 AWS 上，所以來試試看 AWS ECS services 的方式</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html" target="_blank" rel="noopener">Amazon ECS services - Amazon Elastic Container Service</a></li>
+<li><a href="https://github.com/jonascheng/speedtest-go" target="_blank" rel="noopener">jonascheng/speedtest-go</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/29/aws-ecs-services/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-04 </div>
+			<div class="article-title"><a href="/2021/12/04/aws-ecs-python/" >aws-ecs-python</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄一下 python &amp; 相關 ECS 的資料，可以來玩玩 side project</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/bb-tutorials-and-thoughts/how-to-run-python-apis-on-aws-ecs-f6bfe2f890ca" target="_blank" rel="noopener">How To Run Python APIs on AWS ECS | by Bhargav Bachina | Bachina Labs | Oct, 2021 | Medium</a></li>
+<li><a href="https://acloudguru.com/blog/engineering/deploying-a-containerized-flask-application-with-aws-ecs-and-docker" target="_blank" rel="noopener">Deploying a Containerized Flask Application with AWS ECS and Docker | A Cloud Guru</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/04/aws-ecs-python/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-11-05 </div>
+			<div class="article-title"><a href="/2021/11/05/aws-ecs-step-function/" >aws-ecs-step-function</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在 ETL 設計的過程中，想要用 step-function 來執行 ECS task</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://iam-j.github.io/ecs/pipelines/aws-step-function-run/" target="_blank" rel="noopener">AWS Step function to run ECS task</a> * 這說明簡要，可以先看，之後再看複雜的 case</li>
+<li><a href="https://nuvalence.io/blog/aws-step-function-integration-with-ecs-or-fargate-tasks-data-in-and-out" target="_blank" rel="noopener">AWS Step Function Integration with ECS or Fargate Tasks: Data In and Out — Nuvalence</a></li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-ecs.html" target="_blank" rel="noopener">Manage Amazon ECS or Fargate Tasks with Step Functions - AWS Step Functions</a> * 這篇要看看</li>
+<li><a href="https://github.com/aws-samples/aws-stepfunctions-ecs-fargate-process" target="_blank" rel="noopener">aws-samples/aws-stepfunctions-ecs-fargate-process</a></li>
+<li><a href="https://github.com/aws-samples/amazon-ecs-and-aws-step-functions-design-patterns-starter-kit" target="_blank" rel="noopener">aws-samples/amazon-ecs-and-aws-step-functions-design-patterns-starter-kit</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/11/05/aws-ecs-step-function/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/security/">security<span>1</span></a></li>
+		
+			<li><a href="/tags/gutenberg-block/">gutenberg-block<span>1</span></a></li>
+		
+			<li><a href="/tags/terraform/">terraform<span>7</span></a></li>
+		
+			<li><a href="/tags/TLS/">TLS<span>1</span></a></li>
+		
+			<li><a href="/tags/ETL/">ETL<span>4</span></a></li>
+		
+			<li><a href="/tags/vcenter/">vcenter<span>1</span></a></li>
+		
+			<li><a href="/tags/vmware/">vmware<span>1</span></a></li>
+		
+			<li><a href="/tags/data-analysis/">data_analysis<span>1</span></a></li>
+		
+			<li><a href="/tags/scrapy/">scrapy<span>1</span></a></li>
+		
+			<li><a href="/tags/flask/">flask<span>1</span></a></li>
+		
+			<li><a href="/tags/powerline/">powerline<span>1</span></a></li>
+		
+			<li><a href="/tags/dao/">dao<span>3</span></a></li>
+		
+			<li><a href="/tags/anomaly/">anomaly<span>1</span></a></li>
+		
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+		
+			<li><a href="/tags/ecs/">ecs<span>4</span></a></li>
+		
+			<li><a href="/tags/add-on/">add/on<span>1</span></a></li>
+		
+			<li><a href="/tags/serverless/">serverless<span>9</span></a></li>
+		
+			<li><a href="/tags/database/">database<span>1</span></a></li>
+		
+			<li><a href="/tags/DataGrip/">DataGrip<span>1</span></a></li>
+		
+			<li><a href="/tags/development/">development<span>2</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

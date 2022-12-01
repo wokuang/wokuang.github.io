@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>glue | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">glue</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-02 </div>
+			<div class="article-title"><a href="/2020/06/02/aws-glue-study-note/" >aws_glue_study_note</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li>Data Store</li>
+</ul>
+<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
+<li>設定 connection 後，無法連結到 RDS<ul>
+<li>出現的 error code 為 “At least one security group must open all ingress ports.To limit traffic, the source security group in your inbound rule can be restricted to the same security group”</li>
+<li>google 後，Error的情形為<a href="https://docs.aws.amazon.com/glue/latest/dg/glue-troubleshooting-errors.html#error-inbound-self-reference-rule" target="_blank" rel="noopener">Error: Inbound Rule in Security Group Required</a>，照著說明的方式進行，test connection 就通過囉</li>
+<li>原因：security group 沒有設定好，沒有 allow security-group 本身所有的 tcp 都可以連</li>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html" target="_blank" rel="noopener">Setting Up a VPC to Connect to JDBC Data Stores</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="轉換-json-的資料"><a href="#轉換-json-的資料" class="headerlink" title="轉換 json 的資料"></a>轉換 json 的資料</h2><ul>
+<li><a href="https://medium.com/@ly.lee/transform-and-import-a-json-file-into-amazon-redshift-with-aws-glue-3371006e03ca" target="_blank" rel="noopener">Transform and Import a JSON file into Amazon Redshift with AWS Glue</a></li>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/simplify-querying-nested-json-with-the-aws-glue-relationalize-transform/" target="_blank" rel="noopener">Simplify Querying Nested JSON with the AWS Glue Relationalize Transform</a></li>
+</ul>
+<h2 id="連動的方式"><a href="#連動的方式" class="headerlink" title="連動的方式"></a>連動的方式</h2><ul>
+<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-after-crawler-workflow/" target="_blank" rel="noopener">How can I use AWS Glue workflows to automatically start a job when a crawler run completes?</a></li>
+<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-crawler-completes-lambda/" target="_blank" rel="noopener">How can I use a Lambda function to automatically start an AWS Glue job when a crawler run completes?</a></li>
+</ul>
+<h2 id="ETL-job"><a href="#ETL-job" class="headerlink" title="ETL job"></a>ETL job</h2><p>  目前 glue 的 job, 可以用 純 python or PySpark 來寫 script code, 我目前是用 PySpark 來嘗試</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python.html" target="_blank" rel="noopener">Program AWS Glue ETL Scripts in Python</a></li>
+<li><a href="https://github.com/aws-samples/aws-glue-samples" target="_blank" rel="noopener">AWS Glue ETL Code Samples</a> 有關 ETL job 的範例</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li>
+<li><a href="https://www.cdata.com/kb/tech/mysql-jdbc-aws-glue.rst" target="_blank" rel="noopener">Connect to MySQL Data in AWS Glue Jobs Using JDBC</a></li>
+<li><a href="https://towardsdatascience.com/a-complete-guide-on-serverless-data-lake-using-aws-glue-athena-and-quicksight-3a8a24cfa4af" target="_blank" rel="noopener">A Complete Guide On Serverless Data Lake Using AWS Glue, Athena and QuickSight</a> 有滿完整的說明 glue &amp; athena </li>
+<li><a href="https://medium.com/swlh/serverless-data-lake-storing-and-analysing-streaming-data-using-aws-60cf3bfe1efd" target="_blank" rel="noopener">Serverless Data Lake: Storing and Analysing Streaming Data using AWS</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/02/aws-glue-study-note/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/pattern/">pattern<span>1</span></a></li>
+		
+			<li><a href="/tags/out-sourcing/">out-sourcing<span>1</span></a></li>
+		
+			<li><a href="/tags/lake-formation/">lake-formation<span>1</span></a></li>
+		
+			<li><a href="/tags/module/">module<span>1</span></a></li>
+		
+			<li><a href="/tags/grep/">grep<span>1</span></a></li>
+		
+			<li><a href="/tags/content-type/">content-type<span>1</span></a></li>
+		
+			<li><a href="/tags/response-type/">response-type<span>1</span></a></li>
+		
+			<li><a href="/tags/software/">software<span>1</span></a></li>
+		
+			<li><a href="/tags/two-user/">two-user<span>1</span></a></li>
+		
+			<li><a href="/tags/plugin/">plugin<span>1</span></a></li>
+		
+			<li><a href="/tags/config/">config<span>1</span></a></li>
+		
+			<li><a href="/tags/multiple-object/">multiple-object<span>1</span></a></li>
+		
+			<li><a href="/tags/elearning/">elearning<span>1</span></a></li>
+		
+			<li><a href="/tags/data-lake/">data-lake<span>1</span></a></li>
+		
+			<li><a href="/tags/dimensional-mode/">dimensional_mode<span>1</span></a></li>
+		
+			<li><a href="/tags/read-json/">read_json<span>1</span></a></li>
+		
+			<li><a href="/tags/car/">car<span>1</span></a></li>
+		
+			<li><a href="/tags/keyboard/">keyboard<span>1</span></a></li>
+		
+			<li><a href="/tags/environment/">environment<span>1</span></a></li>
+		
+			<li><a href="/tags/click/">click<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

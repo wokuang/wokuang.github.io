@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>snmp_related | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="snmp_related"/>
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> snmp_related</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>最近需要寫跟 snmp 相關的測試，就記錄一下囉</p>
+<h2 id="可以試試的工具"><a href="#可以試試的工具" class="headerlink" title="可以試試的工具"></a>可以試試的工具</h2><ul>
+<li><a href="https://www.opennms.com/opennms-platform/" target="_blank" rel="noopener">OpenNMS</a></li>
+<li><a href="https://www.solarwinds.com/" target="_blank" rel="noopener">solarwinds</a></li>
+</ul>
+<h2 id="有關的-snmp-server-docker"><a href="#有關的-snmp-server-docker" class="headerlink" title="有關的 snmp server docker"></a>有關的 snmp server docker</h2><ul>
+<li><p><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - Net-SNMP base image with Supervisor on CentOS</p>
+<ul>
+<li>目前有測試過，可以使用</li>
+<li>跑 snmptrap receiver 的方式，設定 UDP port mapping (port publish)<ul>
+<li><code>docker run -d --name trap_sink -p 1620:162/udp elcolio/net-snmp</code></li>
+</ul>
+</li>
+<li>送出 trap 來，設定需要的 ip &amp; pprt<ul>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public DESTINATION .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+<li><code>docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public 10.1.83.41:1620 .1.3.6.1.6.3 &quot;&quot; 0 0 coldStart.0</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/OpenNMS/opennms/tree/develop/opennms-container" target="_blank" rel="noopener">OpenNMS/opennms</a> - container</p>
+<ul>
+<li><a href="https://docs.opennms.org/opennms/releases/latest/guide-install/guide-install.html#_run_with_docker" target="_blank" rel="noopener">Run with Docker</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="net-snmp-的資料"><a href="#net-snmp-的資料" class="headerlink" title="net-snmp 的資料"></a>net-snmp 的資料</h2><ul>
+<li><a href="http://www.net-snmp.org/" target="_blank" rel="noopener">Net-SNMP</a> - offical site</li>
+<li><a href="http://www.net-snmp.org/wiki/index.php/Tutorials" target="_blank" rel="noopener">net-snmp tutorial</a></li>
+</ul>
+<h2 id="接收-snmp-trap-的方式"><a href="#接收-snmp-trap-的方式" class="headerlink" title="接收 snmp trap 的方式"></a>接收 snmp trap 的方式</h2><ul>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> - 以這個為 base，調整為自己需要的 snmptrapd.conf </li>
+<li>參考的 snmptrapd.conf<pre><code>authCommunity   log,execute,net public
+disableAuthorization yes
+traphandle public /usr/bin/python /usr/bin/snmptrap-parser.py</code></pre></li>
+<li><a href="https://github.com/OpensourceICTSolutions/zabbix-snmp-trap-parser/blob/master/snmptrap-parser.py" target="_blank" rel="noopener">OpensourceICTSolutions/zabbix-snmp-trap-parser</a> - 用 python zabbix parser 來接收資料<ul>
+<li><a href="https://blog.zabbix.com/parsing-snmp-traps-with-python-or-bash-a-net-snmp-perl-alternative/11577/" target="_blank" rel="noopener">Parsing SNMP Traps with Python or Bash – A net-snmp-perl alternative</a></li>
+</ul>
+</li>
+<li>參考的 net-snmp 文件<ul>
+<li><a href="http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd" target="_blank" rel="noopener">TUT:Configuring snmptrapd</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-三個主要元件"><a href="#snmp-三個主要元件" class="headerlink" title="snmp 三個主要元件"></a>snmp 三個主要元件</h2><ul>
+<li>SNMP 管理者（SNMP Manager）<ul>
+<li>是 SNMP 的主要管理軟體，安裝於『網路管理系統』（Network Management System）上，它負責向所管轄的管理設備索取管理訊息，或設定網路組態，為 SNMP 管理環境的主要控制設備。</li>
+</ul>
+</li>
+<li>SNMP 代理者（SNMP Agent）<ul>
+<li>一般安裝於被管理的網路設備上，例如，路由器、主機電腦、橋接器等。SNMP Agent 收集網路設備上訊息，再以 SNMP 通訊協定和 SNMP Manager 通訊，達到管理的目的。</li>
+</ul>
+</li>
+<li>被管理物件（Managed Object）<ul>
+<li>一般指被管理設備內之各種管理物件。例如，被管理之設備為橋接器，而其被管理物件為橋接器的有關設備，譬如，網路介面卡、緩衝器空間、過濾資料庫等等。被管理物件皆以『管理訊息結構』方式表達，且以樹狀識別碼（Tree Identified）方式，儲存於『管理訊息資料庫』（Management Information Base, MIB）上。</li>
+</ul>
+</li>
+</ul>
+<h2 id="snmp-掃盲"><a href="#snmp-掃盲" class="headerlink" title="snmp 掃盲"></a>snmp 掃盲</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" target="_blank" rel="noopener">Simple Network Management Protocol</a></li>
+<li><a href="http://www.cc.ntu.edu.tw/chinese/epaper/0047/20181220_4707.html" target="_blank" rel="noopener">淺談簡單網路管理協定(SNMP)</a></li>
+<li><a href="https://www.manageengine.com/tw/network-monitoring/what-is-snmp.html" target="_blank" rel="noopener">SNMP 教程</a></li>
+<li><a href="http://www.tsnien.idv.tw/Internet_WebBook/chap16/16-4%20SNMP%20%E9%81%8B%E4%BD%9C%E7%A8%8B%E5%BA%8F.html" target="_blank" rel="noopener">SNMP 運作程序</a></li>
+<li><a href="https://www.itread01.com/content/1548945570.html" target="_blank" rel="noopener">snmp trap入門</a></li>
+<li><a href="https://www.dgbas.gov.tw/public/Data/7121215394071.pdf" target="_blank" rel="noopener">SNMP 通訊藍本間功能與特色的差異</a> - pdf 資料</li>
+</ul>
+<h2 id="snmp-default-port"><a href="#snmp-default-port" class="headerlink" title="snmp default port"></a>snmp default port</h2><ul>
+<li>161 UTP port <ul>
+<li>來傳送及請求訊息</li>
+</ul>
+</li>
+<li>162 UTP port <ul>
+<li>接收來自待管裝置的trap訊息</li>
+</ul>
+</li>
+</ul>
+<h2 id="檢查-udp-port-是否有open"><a href="#檢查-udp-port-是否有open" class="headerlink" title="檢查 udp port 是否有open"></a>檢查 udp port 是否有open</h2><ul>
+<li><code>$ nc -zu 127.0.0.1 1610</code></li>
+<li><code>$ nc -vz -u 127.0.0.1 162</code></li>
+<li><a href="https://it001.pixnet.net/blog/post/325644661-it%E4%BA%8B%E4%BB%B6%E7%B0%BF-%E6%88%91%E6%83%B3%E6%B8%AC%E8%A9%A6udp%E6%9C%89%E6%B2%92%E6%9C%89%E9%80%9A%E6%80%8E%E9%BA%BC%E8%BE%A6" target="_blank" rel="noopener">IT事件簿-我想測試UDP有沒有通怎麼辦?</a></li>
+<li><a href="http://taiwanwolf.blogspot.com/2011/06/port-tcp-udp.html" target="_blank" rel="noopener">如何檢測 Port 是否有活著 (TCP, UDP)</a></li>
+</ul>
+<h2 id="檢查有開哪些-port"><a href="#檢查有開哪些-port" class="headerlink" title="檢查有開哪些 port"></a>檢查有開哪些 port</h2><ul>
+<li><code>sudo lsof -i -P -n | grep LISTEN</code></li>
+<li><code>lsof -i -P -n</code></li>
+<li><code>netstat -ntulp</code></li>
+<li><a href="https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/" target="_blank" rel="noopener">How to check if port is in use on Linux or Unix</a></li>
+</ul>
+<h2 id="python-相關的-snmp-library"><a href="#python-相關的-snmp-library" class="headerlink" title="python 相關的 snmp library"></a>python 相關的 snmp library</h2><ul>
+<li><a href="https://bytesofgigabytes.com/snmp-protocol/python-snmp-trap-receiver/" target="_blank" rel="noopener">Python SNMP trap receiver</a></li>
+<li><a href="https://github.com/etingof/pysnmp" target="_blank" rel="noopener">etingof/pysnmp</a></li>
+</ul>
+<h2 id="要小心的雷"><a href="#要小心的雷" class="headerlink" title="要小心的雷"></a>要小心的雷</h2><ul>
+<li><a href="https://net-snmp-users.narkive.com/u5NFeeQ4/snmptrapd-traphandle-called-twice" target="_blank" rel="noopener">[snmptrapd] traphandle called twice</a><ul>
+<li>snmptrapd 會去讀預設的 snmptrapd.conf，如果在執行中又下了 <code>-c /etc/snmptrapd.conf</code>，就會讀兩次 conf 檔</li>
+</ul>
+</li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li><a href="https://github.com/colebrumley/supervisor" target="_blank" rel="noopener">CentOS + Supervisord Docker image</a> - CentOS + Supervisord Docker image<ul>
+<li>先裝好 Supervisord 的 docker，之後的服務可以用此為 base image</li>
+<li><a href="https://github.com/colebrumley/net-snmp" target="_blank" rel="noopener">colebrumley/net-snmp</a> 就是以此方式建立的</li>
+</ul>
+</li>
+<li><a href="http://www.tsnien.idv.tw/Internet_WebBook/Internet.html" target="_blank" rel="noopener">TCP/IP 協定與 Internet 網路</a></li>
+<li><a href="http://www.tsnien.idv.tw/" target="_blank" rel="noopener">翻轉工作室</a></li>
+</ul>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2020/11/17/dao-repent/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2020/11/10/run-remote-docker-daemon/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-11-11 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/snmp/">snmp<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>tcdump | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">tcdump</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-10-15 </div>
+			<div class="article-title"><a href="/2021/10/15/qradar-syslog/" >qradar-syslog</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>因為 QRadar license 的關係，這幾天又重灌了一次 QRadar server<br>重新裝好後，發現收不到 device 送過來的 syslog，就找了一下解法</p>
+<p>做法上，是建議先在 QRadar server 上，用 tcpdump 來確認是否有流量進來<br>`</p>
+<h1 id="For-TCP-Syslog-type"><a href="#For-TCP-Syslog-type" class="headerlink" title="For TCP Syslog, type"></a>For TCP Syslog, type</h1><p>$ tcpdump -s 0 -A host Device_Address and port 514</p>
+<h1 id="For-UDP-Syslog-type"><a href="#For-UDP-Syslog-type" class="headerlink" title="For UDP Syslog, type"></a>For UDP Syslog, type</h1><p>$ tcpdump -s 0 -A host Device_Address and udp port 514<br>`</p>
+<p>試了 tcpdump 的 command，不曉得為何沒有看到流量進行，但是由送 syslog 的 client 端看，又是正常的<br>左看右看時，才看到預設的 ehter interface 是錯的，需要自行指定<br>command 改為，類似如下<br>`</p>
+<h1 id="For-TCP-Syslog-type-1"><a href="#For-TCP-Syslog-type-1" class="headerlink" title="For TCP Syslog, type"></a>For TCP Syslog, type</h1><p>$ tcpdump -i ens192 -s 0 -A host Device_Address and port 514</p>
+<h1 id="For-UDP-Syslog-type-1"><a href="#For-UDP-Syslog-type-1" class="headerlink" title="For UDP Syslog, type"></a>For UDP Syslog, type</h1><p>$ tcpdump -i ens192 -s 0 -A host Device_Address and udp port 514<br>`</p>
+<p>有看到 tcpdump 有流量進來，不過在 log activity 上，還是一直看不到資料</p>
+<p>最後是一場大烏龍，重啟 QRadar server 就可以正常收 log 囉</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a href="https://www.ibm.com/support/pages/qradar-using-command-line-troubleshoot-syslog-event-source" target="_blank" rel="noopener">QRadar: Using the command-line to troubleshoot a Syslog event source</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/10/15/qradar-syslog/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/website/">website<span>1</span></a></li>
+		
+			<li><a href="/tags/kindle/">kindle<span>3</span></a></li>
+		
+			<li><a href="/tags/aws-module/">aws-module<span>1</span></a></li>
+		
+			<li><a href="/tags/ssh-tunnel/">ssh-tunnel<span>1</span></a></li>
+		
+			<li><a href="/tags/multiple-account/">multiple-account<span>1</span></a></li>
+		
+			<li><a href="/tags/bluetooth/">bluetooth<span>1</span></a></li>
+		
+			<li><a href="/tags/WMAA/">WMAA<span>1</span></a></li>
+		
+			<li><a href="/tags/data-warehouse/">data-warehouse<span>1</span></a></li>
+		
+			<li><a href="/tags/aws-sdk/">aws-sdk<span>1</span></a></li>
+		
+			<li><a href="/tags/checklist/">checklist<span>1</span></a></li>
+		
+			<li><a href="/tags/buddhism/">buddhism<span>1</span></a></li>
+		
+			<li><a href="/tags/parquet/">parquet<span>5</span></a></li>
+		
+			<li><a href="/tags/url/">url<span>1</span></a></li>
+		
+			<li><a href="/tags/hexo/">hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/splunk/">splunk<span>14</span></a></li>
+		
+			<li><a href="/tags/word/">word<span>1</span></a></li>
+		
+			<li><a href="/tags/cmd/">cmd<span>6</span></a></li>
+		
+			<li><a href="/tags/vpc/">vpc<span>1</span></a></li>
+		
+			<li><a href="/tags/amazon/">amazon<span>1</span></a></li>
+		
+			<li><a href="/tags/ios/">ios<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

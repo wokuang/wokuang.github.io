@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>log | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">log</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-08 </div>
+			<div class="article-title"><a href="/2021/12/08/python-log-function/" >python-log-function</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在 debug python 的時候，總想知道有沒有 call 到某個 function，目前是有用 decorator 來用<br>進階的方式為使用 dataclass，這還要找時間來試試囉</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dev.to/duyixian1234/three-ways-to-automatically-add-functions-and-methods-calling-log-for-python-code-5fd0" target="_blank" rel="noopener">Three ways to automatically add functions and methods calling log for Python code - DEV Community</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/08/python-log-function/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-07-29 </div>
+			<div class="article-title"><a href="/2020/07/29/use-vpc-flow-log/" >use-vpc-flow-log</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近開始打 E2E 後，有遇到幾次在 VPC 中，出現 lambda 連不到 RDS 的情形，所以就開 VPC flow log 來看看<br>VPC flow log, 可以設定到 CloudWatch &amp; S3 中，考慮到 cloudwatch 太貴，想說就用 S3 來試試看</p>
+<h2 id="設定的動作"><a href="#設定的動作" class="headerlink" title="設定的動作"></a>設定的動作</h2><ul>
+<li>開啟 VPC flow log, <a href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html" target="_blank" rel="noopener">Publishing flow logs to Amazon S3</a></li>
+<li>設定 Anthena 可以 query, <a href="https://docs.aws.amazon.com/zh_tw/athena/latest/ug/vpc-flow-logs.html#create-vpc-logs-table" target="_blank" rel="noopener">查詢 Amazon VPC 流程日誌</a><ul>
+<li>先建立好 table 後，還需要 alter table 將日期設定為 partition 後，才查得到資料</li>
+</ul>
+</li>
+</ul>
+<h2 id="advance-reference"><a href="#advance-reference" class="headerlink" title="advance reference"></a>advance reference</h2><ul>
+<li><a href="https://shazi.info/aws-athena-%E6%9F%A5%E8%A9%A2-vpc-flow-logs-%E7%9A%84-top-10-%E8%AA%9E%E6%B3%95/" target="_blank" rel="noopener">AWS Athena 查詢 VPC Flow logs 的 TOP 10 語法 – Mr. 沙先生</a></li>
+<li><a href="https://docs.aws.amazon.com/athena/latest/ug/vpc-flow-logs.html" target="_blank" rel="noopener">Querying Amazon VPC flow logs - Amazon Athena</a> 官方 athena 文件，很值得一看</li>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/analyzing-vpc-flow-logs-with-amazon-kinesis-firehose-amazon-athena-and-amazon-quicksight/" target="_blank" rel="noopener">Analyzing VPC Flow Logs with Amazon Kinesis Firehose, Amazon Athena, and Amazon QuickSight</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/07/29/use-vpc-flow-log/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/quality/">quality<span>1</span></a></li>
+		
+			<li><a href="/tags/https/">https<span>1</span></a></li>
+		
+			<li><a href="/tags/redis/">redis<span>1</span></a></li>
+		
+			<li><a href="/tags/resource-group/">resource_group<span>1</span></a></li>
+		
+			<li><a href="/tags/design-pattern/">design-pattern<span>3</span></a></li>
+		
+			<li><a href="/tags/proxy/">proxy<span>2</span></a></li>
+		
+			<li><a href="/tags/aws-sdk/">aws-sdk<span>1</span></a></li>
+		
+			<li><a href="/tags/data-lake/">data-lake<span>1</span></a></li>
+		
+			<li><a href="/tags/psql/">psql<span>1</span></a></li>
+		
+			<li><a href="/tags/lifecycle/">lifecycle<span>1</span></a></li>
+		
+			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
+		
+			<li><a href="/tags/data-analysis/">data_analysis<span>1</span></a></li>
+		
+			<li><a href="/tags/style-guide/">style-guide<span>1</span></a></li>
+		
+			<li><a href="/tags/ui/">ui<span>1</span></a></li>
+		
+			<li><a href="/tags/crumb/">crumb<span>1</span></a></li>
+		
+			<li><a href="/tags/ci/">ci<span>1</span></a></li>
+		
+			<li><a href="/tags/IDE/">IDE<span>3</span></a></li>
+		
+			<li><a href="/tags/Well-Architected/">Well-Architected<span>1</span></a></li>
+		
+			<li><a href="/tags/skip-test/">skip-test<span>1</span></a></li>
+		
+			<li><a href="/tags/decimal/">decimal<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

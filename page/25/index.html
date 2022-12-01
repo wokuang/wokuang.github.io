@@ -1,0 +1,728 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Page 25 | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      <div class="page-header page-header-inverse ">
+  <h1 class="title title-inverse ">老布這麼說</h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+      <i class="fa fa-heart"></i>
+      Yet another bootstrap theme.
+</div>    
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+        <!-- render top articles firstly -->
+        
+        <!-- render other articles -->
+        
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-02 </div>
+			<div class="article-title"><a href="/2020/06/02/aws-glue-study-note/" >aws_glue_study_note</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li>Data Store</li>
+</ul>
+<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
+<li>設定 connection 後，無法連結到 RDS<ul>
+<li>出現的 error code 為 “At least one security group must open all ingress ports.To limit traffic, the source security group in your inbound rule can be restricted to the same security group”</li>
+<li>google 後，Error的情形為<a href="https://docs.aws.amazon.com/glue/latest/dg/glue-troubleshooting-errors.html#error-inbound-self-reference-rule" target="_blank" rel="noopener">Error: Inbound Rule in Security Group Required</a>，照著說明的方式進行，test connection 就通過囉</li>
+<li>原因：security group 沒有設定好，沒有 allow security-group 本身所有的 tcp 都可以連</li>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html" target="_blank" rel="noopener">Setting Up a VPC to Connect to JDBC Data Stores</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="轉換-json-的資料"><a href="#轉換-json-的資料" class="headerlink" title="轉換 json 的資料"></a>轉換 json 的資料</h2><ul>
+<li><a href="https://medium.com/@ly.lee/transform-and-import-a-json-file-into-amazon-redshift-with-aws-glue-3371006e03ca" target="_blank" rel="noopener">Transform and Import a JSON file into Amazon Redshift with AWS Glue</a></li>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/simplify-querying-nested-json-with-the-aws-glue-relationalize-transform/" target="_blank" rel="noopener">Simplify Querying Nested JSON with the AWS Glue Relationalize Transform</a></li>
+</ul>
+<h2 id="連動的方式"><a href="#連動的方式" class="headerlink" title="連動的方式"></a>連動的方式</h2><ul>
+<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-after-crawler-workflow/" target="_blank" rel="noopener">How can I use AWS Glue workflows to automatically start a job when a crawler run completes?</a></li>
+<li><a href="https://aws.amazon.com/tw/premiumsupport/knowledge-center/start-glue-job-crawler-completes-lambda/" target="_blank" rel="noopener">How can I use a Lambda function to automatically start an AWS Glue job when a crawler run completes?</a></li>
+</ul>
+<h2 id="ETL-job"><a href="#ETL-job" class="headerlink" title="ETL job"></a>ETL job</h2><p>  目前 glue 的 job, 可以用 純 python or PySpark 來寫 script code, 我目前是用 PySpark 來嘗試</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python.html" target="_blank" rel="noopener">Program AWS Glue ETL Scripts in Python</a></li>
+<li><a href="https://github.com/aws-samples/aws-glue-samples" target="_blank" rel="noopener">AWS Glue ETL Code Samples</a> 有關 ETL job 的範例</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li>
+<li><a href="https://www.cdata.com/kb/tech/mysql-jdbc-aws-glue.rst" target="_blank" rel="noopener">Connect to MySQL Data in AWS Glue Jobs Using JDBC</a></li>
+<li><a href="https://towardsdatascience.com/a-complete-guide-on-serverless-data-lake-using-aws-glue-athena-and-quicksight-3a8a24cfa4af" target="_blank" rel="noopener">A Complete Guide On Serverless Data Lake Using AWS Glue, Athena and QuickSight</a> 有滿完整的說明 glue &amp; athena </li>
+<li><a href="https://medium.com/swlh/serverless-data-lake-storing-and-analysing-streaming-data-using-aws-60cf3bfe1efd" target="_blank" rel="noopener">Serverless Data Lake: Storing and Analysing Streaming Data using AWS</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/02/aws-glue-study-note/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-02 </div>
+			<div class="article-title"><a href="/2020/06/02/aws-parquet-data/" >aws_parquet_data</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在嘗試使用 parquet &amp; AWS athena，剛好有 google 到一些資料，先隨手記錄一下</p>
+<h2 id="有關-AWS-Glue-相關資料"><a href="#有關-AWS-Glue-相關資料" class="headerlink" title="有關 AWS Glue 相關資料"></a>有關 AWS Glue 相關資料</h2><ul>
+<li><a href="https://www.mssqltips.com/sqlservertip/5918/serverless-etl-using-aws-glue-for-rds-databases/" target="_blank" rel="noopener">Serverless ETL using AWS Glue for RDS databases</a> ** 要來看看</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/tw/blogs/big-data/how-factset-automated-exporting-data-from-amazon-dynamodb-to-amazon-s3-parquet-to-build-a-data-analytics-platform/" target="_blank" rel="noopener">How FactSet automated exporting data from Amazon DynamoDB to Amazon S3 Parquet to build a data analytics platform</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/02/aws-parquet-data/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-01 </div>
+			<div class="article-title"><a href="/2020/06/01/another-grep-rg-command/" >another_grep_rg_command</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<ul>
+<li><p>在看 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> 的介紹影片<a href="https://www.youtube.com/watch?v=qgG5Jhi_Els" target="_blank" rel="noopener">Vim universe. fzf - command line fuzzy finder</a> 時，有介紹到 rg 這個工具。用了之後，還真的滿快的啊</p>
+</li>
+<li><p>是一種方便使用 grep 的方式</p>
+</li>
+<li><p>使用 command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rg SEARCH_KEYWORD PATH</span><br><span class="line">$ rg xxx .&#x2F;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="GitHub-project"><a href="#GitHub-project" class="headerlink" title="GitHub project"></a>GitHub project</h2><ul>
+<li><a href="https://github.com/BurntSushi/ripgrep" target="_blank" rel="noopener">BurntSushi/ripgrep</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://mariusschulz.com/blog/fast-searching-with-ripgrep" target="_blank" rel="noopener">Fast Searching with ripgrep</a></li>
+<li><a href="https://www.hi-linux.com/posts/29245.html" target="_blank" rel="noopener">推荐一款命令行下最快的文本搜索神器 RipGrep</a></li>
+<li><a href="https://segmentfault.com/a/1190000016170184" target="_blank" rel="noopener">最快的文本搜索神器ripgrep – grep的最好代替者</a></li>
+<li><a href="https://github.com/chinanf-boy/ripgrep-zh" target="_blank" rel="noopener">中文翻译:&lt;BurntSushi/ripgrep&gt; 一个面向行的搜索工具</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/01/another-grep-rg-command/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-06-01 </div>
+			<div class="article-title"><a href="/2020/06/01/another-find/" >another_find</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在試用 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> 時，有看到這個類似的 find 指令。裝了之後，覺得滿好用的</p>
+<ul>
+<li>使用 command<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fd PATTERN</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="gitHub-project"><a href="#gitHub-project" class="headerlink" title="gitHub project"></a>gitHub project</h2><ul>
+<li><a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener">sharkdp/fd</a><ul>
+<li>A simple, fast and user-friendly alternative to ‘find’</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/chinanf-boy/fd-zh" target="_blank" rel="noopener">翻译: <fd> 一种简单,快速和用户友好的 find 替代方案</a> </li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/06/01/another-find/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-23 </div>
+			<div class="article-title"><a href="/2020/05/23/Dao-Qinghua-Secret/" >Dao_Qinghua_Secret</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近剛好想看青華秘文，實體的書本不好買，就上網找來看囉</p>
+<h2 id="青華秘文"><a href="#青華秘文" class="headerlink" title="青華秘文"></a>青華秘文</h2><ul>
+<li><p><a href="https://ctext.org/wiki.pl?if=gb&res=775468" target="_blank" rel="noopener">《青華秘文》- 中國哲學書電子化計劃</a></p>
+</li>
+<li><p><a href="https://www.kanripo.org/text/KR5a0241/" target="_blank" rel="noopener">KR5a0241 玉清金笥青華祕文</a></p>
+</li>
+<li><p><a href="http://www.daotext.org/toc4.php?docid=2214" target="_blank" rel="noopener">青華秘文卷上</a></p>
+</li>
+<li><p><a href="http://www.daotext.org/toc4.php?docid=2215" target="_blank" rel="noopener">青華秘文卷中</a></p>
+</li>
+<li><p><a href="http://www.daotext.org/toc4.php?docid=2216" target="_blank" rel="noopener">青華秘文卷下</a></p>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/23/Dao-Qinghua-Secret/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-23 </div>
+			<div class="article-title"><a href="/2020/05/23/dao-classic-book/" >dao_classic_book</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近常會查看道教的典籍，茲蒐集目前找到，覺得還滿好的網站</p>
+<h2 id="典籍網站"><a href="#典籍網站" class="headerlink" title="典籍網站"></a>典籍網站</h2><ul>
+<li><a href="https://ctext.org/library.pl?if=gb&collection=132" target="_blank" rel="noopener">正統道藏(圖書館) - 中國哲學書電子化計劃</a> ** 還滿好的網站</li>
+<li><a href="https://www.kanripo.org/catalog?coll=DZ&label=%E6%AD%A3%E7%B5%B1%E9%81%93%E8%97%8F" target="_blank" rel="noopener">Kanseki Repository Catalog  正統道藏</a> ** 資料放在 gitHub 上，我滿喜歡這版的 </li>
+<li><a href="https://www.kanripo.org/catalog?coll=JY&label=%E9%81%93%E8%97%8F%E8%BC%AF%E8%A6%81" target="_blank" rel="noopener">Kanseki Repository Catalog 道藏輯要</a> </li>
+<li><a href="https://ctext.org/library.pl?if=gb&collection=132" target="_blank" rel="noopener">正統道藏(圖書館) - 中國哲學書電子化計劃</a></li>
+<li><a href="http://www.ctcwri.idv.tw/godking.htm" target="_blank" rel="noopener">道教學術資訊站</a></li>
+<li><a href="http://www.daotext.org" target="_blank" rel="noopener">道藏典籍全文数据库</a></li>
+<li><a href="https://taiwanebook.ncl.edu.tw/zh-tw" target="_blank" rel="noopener">台灣華文電子書</a> <ul>
+<li>這網站，我覺得掃描的品質滿好的。不過，就是道藏的資料不多，期待可以多多掃道藏</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/23/dao-classic-book/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/watch-cloudwatch-tag/" >watch_cloudwatch_tag</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
+<li>近來在加 AWS resource 的 tag，其中 cloudwatch 的 tag，無法由 AWS console 來看。用程式加了之後，一直找不到 cloud watch 的 tag 是否有加成功</li>
+</ul>
+<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><ul>
+<li>找了一段時間後，才發現原來要用 aws logs help 來找，用 aws clodwatch 是找不到的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ aws logs list-tags-log-group --log-group-name &#x2F;aws&#x2F;lambda&#x2F;log-group-name</span><br><span class="line">&#123;</span><br><span class="line">    &quot;tags&quot;: &#123;</span><br><span class="line">        &quot;env&quot;: &quot;dev&quot;,</span><br><span class="line">        &quot;service&quot;: &quot;xxx-service&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-using.html" target="_blank" rel="noopener">Using the AWS CLI</a></li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li>要看 aws cloud watch log 的話，可以用 awslogs，還滿好用的</li>
+<li><a href="https://github.com/jorgebastida/awslogs" target="_blank" rel="noopener">jorgebastida/awslogs</a></li>
+<li>要找需要看的 log group 時，還滿方便的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awslogs groups | grep -i v3 | grep -i dev</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/watch-cloudwatch-tag/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/add-tag-on-serverless/" >add_tag_on_serverless</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
+<li>為了要細分 AWS cost 用到那部分，常見的方式為使用 Tag 來區分</li>
+</ul>
+<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><ul>
+<li>在 serverless.conf 中的 provider block  加 stackTags , 可以標註 tag<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">provider:</span><br><span class="line">   stackTags:</span><br><span class="line">     owner: owner</span><br><span class="line">     env: $&#123;self:custom.stage&#125;</span><br><span class="line">     service: service</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="可以加強的部分"><a href="#可以加強的部分" class="headerlink" title="可以加強的部分"></a>可以加強的部分</h2><ul>
+<li>因為 stack tag，會有些 AWS resources 沒有加到 tag, 可以用 “Serverless Repository apps” 來加強</li>
+<li><a href="https://github.com/lumigo-io/SAR-Propagate-CFN-Tags" target="_blank" rel="noopener">lumigo-io/SAR-Propagate-CFN-Tags</a><ul>
+<li>SAR app to propagate CloudFormation’s stack tags to resources that are currently not propagated automatically - e.g. CloudWatch Logs</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.datree.io/resources/serverless-best-practices" target="_blank" rel="noopener">Top 10 Serverless best practices</a></li>
+<li><a href="https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/" target="_blank" rel="noopener">Serverless.yml Reference</a><ul>
+<li>Here is a list of all available properties in serverless.yml when the provider is set to aws.</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/add-tag-on-serverless/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-05-22 </div>
+			<div class="article-title"><a href="/2020/05/22/pip-success-but-not-found/" >pip_success_but_not_found</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><ul>
+<li>今天在 EC2 上，使用 virtualenv 來安裝 pandas 時，遇到 pip 有安裝成功，但是進去 ipython 時，找不到 pandas module 的情形</li>
+<li>找了一段時間後，發現 package 被安裝在 lib64 的path，而 pip 是找 lib folder，所以找不到 pandas module<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas&#x2F;tests&#x2F;io&#x2F;json&#x2F;__pycache__&#x2F;test_pandas.cpython-36.pyc</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas&#x2F;tests&#x2F;io&#x2F;json&#x2F;test_pandas.py</span><br><span class="line">&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;dist-packages&#x2F;pandas-1.0.3.dist-info</span><br></pre></td></tr></table></figure></li>
+<li>看起來應該是某版本的 amazon linux 的問題</li>
+</ul>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
+<li><p>用指定路徑的方式，來執行 pip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install --upgrade --target &#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;dist-packages pandas</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>看 python 的 path</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import sys</span><br><span class="line">&gt;&gt;&gt; sys.path</span><br><span class="line">[&#39;&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib64&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib&#x2F;python3.6&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib&#x2F;python3.6&#x2F;site-packages&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;lib64&#x2F;python3.6&#x2F;lib-dynload&#39;, &#39;&#x2F;home&#x2F;ec2-user&#x2F;.virtualenvs&#x2F;data&#x2F;local&#x2F;lib&#x2F;python3.6&#x2F;dist-packages&#39;, &#39;&#x2F;usr&#x2F;lib64&#x2F;python3.6&#39;, &#39;&#x2F;usr&#x2F;lib&#x2F;python3.6&#39;]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Refrerence"><a href="#Refrerence" class="headerlink" title="Refrerence"></a>Refrerence</h2><ul>
+<li><a href="https://github.com/pypa/pip/issues/4464" target="_blank" rel="noopener">Packages installed by pip in lib64 are not recognized by pip</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/05/22/pip-success-but-not-found/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-04-24 </div>
+			<div class="article-title"><a href="/2020/04/24/aws-custom-domain-not-work/" >aws custom domain not work</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>這幾天在測試的時候，發現 dev 環境的 API Gateway Custom domain names 壞了一段時間，也就是說連到 dev 的 custom url 出現連不到網頁的 error</p>
+<p>測試過程中，發現有如下的情形</p>
+<h2 id="出現的情形"><a href="#出現的情形" class="headerlink" title="出現的情形"></a>出現的情形</h2><ul>
+<li>測試 api 程式，出現 error 連不到網址</li>
+<li>直接由 browser 連，也連不到網址</li>
+<li>用 AWS 建立出來的 api gateway 連，是可以的。透過 custom domain 無法連</li>
+<li>查 R53 的 record 時，原來的對應消失了，就手動加回去</li>
+<li>手動加回 R53 record 後，用 nslookup 查 DNS 時，出現有時查得到、有時查不出來的情形</li>
+</ul>
+<p>綜合上述的情形，推測應該是由 AWS 建立出來的 ALB 怪怪的，需要重建  </p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><ul>
+<li>手動將 Custom domain names 設定刪除，然後重建。重建後，API mappings 也是手動加進去</li>
+<li>到 R53 的設定頁，將 DNS 設好</li>
+</ul>
+<h2 id="Endpoint-type-的種類"><a href="#Endpoint-type-的種類" class="headerlink" title="Endpoint type 的種類"></a>Endpoint type 的種類</h2><ul>
+<li>Regional<ul>
+<li>使用 ALB 的方式</li>
+</ul>
+</li>
+<li>Edge-optimized<ul>
+<li>使用 CloudFront 的方式</li>
+</ul>
+</li>
+</ul>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-regional-api-custom-domain-create.html" target="_blank" rel="noopener">Setting up a regional custom domain name in API Gateway</a> API Gateway 的設定</li>
+<li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-api-gateway.html#routing-to-api-gateway-config" target="_blank" rel="noopener">Routing traffic to an Amazon API Gateway API by using your domain name</a> R53 的設定</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/04/24/aws-custom-domain-not-work/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+<ul class="pagination">
+	 
+		
+    	<li class="prev"><a href="/page/24/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i> Prev</a></li>
+  		
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+		   <li class="next"> <a href="/page/26/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
+</ul>
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/dimensional-mode/">dimensional_mode<span>1</span></a></li>
+		
+			<li><a href="/tags/practices/">practices<span>1</span></a></li>
+		
+			<li><a href="/tags/cost/">cost<span>2</span></a></li>
+		
+			<li><a href="/tags/AWS/">AWS<span>2</span></a></li>
+		
+			<li><a href="/tags/keyboard/">keyboard<span>1</span></a></li>
+		
+			<li><a href="/tags/search-engine/">search-engine<span>1</span></a></li>
+		
+			<li><a href="/tags/pack/">pack<span>1</span></a></li>
+		
+			<li><a href="/tags/elearn/">elearn<span>1</span></a></li>
+		
+			<li><a href="/tags/jq/">jq<span>1</span></a></li>
+		
+			<li><a href="/tags/smtp/">smtp<span>1</span></a></li>
+		
+			<li><a href="/tags/web-security/">web-security<span>1</span></a></li>
+		
+			<li><a href="/tags/content-type/">content-type<span>1</span></a></li>
+		
+			<li><a href="/tags/gdoc/">gdoc<span>1</span></a></li>
+		
+			<li><a href="/tags/hackmd/">hackmd<span>1</span></a></li>
+		
+			<li><a href="/tags/data/">data<span>1</span></a></li>
+		
+			<li><a href="/tags/package/">package<span>1</span></a></li>
+		
+			<li><a href="/tags/apache/">apache<span>2</span></a></li>
+		
+			<li><a href="/tags/database/">database<span>1</span></a></li>
+		
+			<li><a href="/tags/DataGrip/">DataGrip<span>1</span></a></li>
+		
+			<li><a href="/tags/ssh-tunnel/">ssh-tunnel<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

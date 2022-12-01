@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iTerm2 | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">iTerm2</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-14 </div>
+			<div class="article-title"><a href="/2020/09/14/iterm2-install-and-setting/" >zsh and iterm2 install then setting</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近剛換新的 Mac Book Pro，之前都是用 time machine 轉的。這次因為種種緣故，無法使用 time machine 換新機。就剛好趁這次，將一些許久都沒有用到的 tool &amp; folder 一次斷捨離吧。<br>藉著這次重新開始裝 iTerm &amp; 設定 zsh，紀錄一些必要的設定</p>
+<h2 id="簡易的步驟"><a href="#簡易的步驟" class="headerlink" title="簡易的步驟"></a>簡易的步驟</h2><ul>
+<li>安裝 <a href="https://ohmyz.sh/" target="_blank" rel="noopener">oh-my-zsh</a></li>
+<li>安裝 &amp; 修改 zsh theme to <a href="https://github.com/agnoster/agnoster-zsh-theme" target="_blank" rel="noopener">agnoster</a><ul>
+<li>裝好後，會發現有些 亂碼 &amp; 顏色不像，需要安裝 font &amp; color</li>
+</ul>
+</li>
+<li>安裝字型, <a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">Powerline Fonts</a></li>
+<li>安裝 color ，Solarized Dark</li>
+</ul>
+<h2 id="zsh-的-theme"><a href="#zsh-的-theme" class="headerlink" title="zsh 的 theme"></a>zsh 的 theme</h2><ul>
+<li>zsh <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes" target="_blank" rel="noopener">External themes</a>, 有許多的 theme 可以參考</li>
+</ul>
+<h2 id="在-vs-code-加上字型"><a href="#在-vs-code-加上字型" class="headerlink" title="在 vs code 加上字型"></a>在 vs code 加上字型</h2><ul>
+<li><a href="https://gist.github.com/480/3b41f449686a089f34edb45d00672f28" target="_blank" rel="noopener">MacOS X + oh my zsh + powerline fonts + visual studio code (vscode) terminal settings</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/@chialin/%E4%BD%BF%E7%94%A8-oh-my-zsh-%E7%9A%84-agnoster-theme-a07842f79f71" target="_blank" rel="noopener">使用 oh-my-zsh 的 agnoster theme</a></li>
+<li><a href="https://medium.com/@hazelwu/%E7%94%A8oh-my-zsh%E6%8A%8Aiterm%E8%AE%8A%E7%BE%8E%E7%BE%8E-8a18daa8eac" target="_blank" rel="noopener">用Oh My Zsh把iTerm變美美</a></li>
+<li><a href="https://pjchender.blogspot.com/2017/02/mac-terminal-iterm-2-oh-my-zsh.html" target="_blank" rel="noopener">為 MAC 的 Terminal 上色 - 透過 iTerm 2 和 Oh My Zsh 高亮你的終端機</a> * 這篇滿好的</li>
+<li><a href="https://wangwang4git.github.io/blog/2017/04/22/mac-iterm2-solarized-theme-config/" target="_blank" rel="noopener">Mac终端iTerm2 Solarized主题配置</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/14/iterm2-install-and-setting/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/repent/">repent<span>1</span></a></li>
+		
+			<li><a href="/tags/gherkin/">gherkin<span>1</span></a></li>
+		
+			<li><a href="/tags/iMazing/">iMazing<span>1</span></a></li>
+		
+			<li><a href="/tags/kubernetes/">kubernetes<span>1</span></a></li>
+		
+			<li><a href="/tags/ec2/">ec2<span>1</span></a></li>
+		
+			<li><a href="/tags/log/">log<span>2</span></a></li>
+		
+			<li><a href="/tags/cmd/">cmd<span>6</span></a></li>
+		
+			<li><a href="/tags/tree/">tree<span>1</span></a></li>
+		
+			<li><a href="/tags/airtable/">airtable<span>1</span></a></li>
+		
+			<li><a href="/tags/jq/">jq<span>1</span></a></li>
+		
+			<li><a href="/tags/microservice/">microservice<span>1</span></a></li>
+		
+			<li><a href="/tags/sdk/">sdk<span>1</span></a></li>
+		
+			<li><a href="/tags/online/">online<span>1</span></a></li>
+		
+			<li><a href="/tags/identity/">identity<span>1</span></a></li>
+		
+			<li><a href="/tags/buddhism/">buddhism<span>1</span></a></li>
+		
+			<li><a href="/tags/iphone/">iphone<span>1</span></a></li>
+		
+			<li><a href="/tags/vmware/">vmware<span>1</span></a></li>
+		
+			<li><a href="/tags/development/">development<span>2</span></a></li>
+		
+			<li><a href="/tags/cloudwatch/">cloudwatch<span>1</span></a></li>
+		
+			<li><a href="/tags/pipeline/">pipeline<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>lambda | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">lambda</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-27 </div>
+			<div class="article-title"><a href="/2022/10/27/aws-lambda-sqs/" >aws-lambda-sqs</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近將改為使用 sqs 來 trigger lambda 程式，為之記錄<br>主要是將 events 改為是用聽 sqs event</p>
+<h2 id="有-fanout-需求時"><a href="#有-fanout-需求時" class="headerlink" title="有 fanout 需求時"></a>有 fanout 需求時</h2><ul>
+<li>搭配 SNS 使用</li>
+<li><a href="https://docs.aws.amazon.com/sns/latest/dg/sns-common-scenarios.html" target="_blank" rel="noopener">Common Amazon SNS scenarios - Amazon Simple Notification Service</a></li>
+<li><a href="https://aws.plainenglish.io/event-driven-architecture-implement-the-fan-out-messaging-pattern-in-aws-using-terraform-f58234d9e208" target="_blank" rel="noopener">Event-driven architecture🪐. Implement the fan-out messaging pattern… | by Tirlea Ionut | AWS in Plain English</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.serverless.com/framework/docs/providers/aws/events/sqs" target="_blank" rel="noopener">Serverless Framework - AWS Lambda Events - SQS Queues</a> 官方 sqs event</li>
+<li><a href="https://medium.com/consulner/aws-lambda-sqs-events-with-serverless-framework-7429471ac664" target="_blank" rel="noopener">AWS Lambda SQS events with Serverless Framework | by marcin piczkowski | Marcin Piczkowski | Medium</a><ul>
+<li><a href="https://github.com/piczmar/sls-sqs-triggers-demo" target="_blank" rel="noopener">piczmar/sls-sqs-triggers-demo: AWS Lambda SQS events with Serverless Framework</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="進階閱讀"><a href="#進階閱讀" class="headerlink" title="進階閱讀"></a>進階閱讀</h2><ul>
+<li><a href="https://blog.serverlessq.com/aws-sns-vs-sqs-what-are-the-main-differences" target="_blank" rel="noopener">AWS SNS vs. SQS - What are the main differences?</a></li>
+<li><a href="https://dev.to/byrro/crash-course-on-fan-out-fan-in-with-aws-lambda-47g0" target="_blank" rel="noopener">Crash Course on Fan-out &amp; Fan-in with AWS Lambda - DEV Community 👩‍💻👨‍💻</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/10/27/aws-lambda-sqs/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-21 </div>
+			<div class="article-title"><a href="/2022/10/21/aws-lambda-lifecycle/" >aws-lambda-lifecycle</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>記錄 lambda 的 lifecycle</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html#runtimes-extensions-api-lifecycle" target="_blank" rel="noopener">Lambda execution environment lifecycle</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/10/21/aws-lambda-lifecycle/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-09-28 </div>
+			<div class="article-title"><a href="/2022/09/28/aws-rds-proxy/" >aws-rds-proxy</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近在嘗試改用 RDS proxy 來連到 RDS<br>因為既有的方式來使用 python sqlalchemy 來連結到 db，使用 RDS proxy 時，會遇到些問題<br>先將目前找到的資料，加以記錄</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://stackoverflow.com/questions/63766860/how-to-set-tls-for-a-rds-proxy-with-sqlalchemy#answers-header" target="_blank" rel="noopener">mysql - How to set TLS for a RDS proxy with SQLAlchemy - Stack Overflow</a></li>
+<li><a href="https://www.anycodings.com/1questions/2373815/how-to-set-tls-for-a-rds-proxy-with-sqlalchemy" target="_blank" rel="noopener">How to set TLS for a RDS proxy with SQLAlchemy…anycodings</a></li>
+<li><a href="https://medium.com/@james.li/working-with-aws-rds-proxy-endpoint-on-read-replica-with-sqlalchemy-6209353151f1" target="_blank" rel="noopener">Working with AWS RDS proxy endpoint on read replica with SQLAlchemy | by James Li | Medium</a> 這篇可以再看看</li>
+<li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Python.html" target="_blank" rel="noopener">Connecting to your DB instance using IAM authentication and the AWS SDK for Python (Boto3) - Amazon Relational Database Service</a></li>
+<li><a href="https://github.com/aws-samples/aws-serverless-app-with-aurora-and-python-sql-alchemy-example" target="_blank" rel="noopener">aws-samples/aws-serverless-app-with-aurora-and-python-sql-alchemy-example</a> 使用 postgresql 的方式</li>
+<li><a href="https://aw5.academy/2020/09/19/amazon-rds-proxy-improved-application-security-resilience-and-scalability/" target="_blank" rel="noopener">Amazon RDS Proxy – Improved Application Security, Resilience and Scalability – AW5 Academy</a></li>
+<li><a href="https://fitdevops.in/how-to-connect-to-rds-mysql-db-instance-using-rds-proxy/" target="_blank" rel="noopener">How to Connect to RDS MySQL DB Instance using RDS proxy | Fit-DevOps</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/09/28/aws-rds-proxy/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-08-30 </div>
+			<div class="article-title"><a href="/2022/08/30/serverless-lambda-performance/" >serverless-lambda-performance</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>有關 lambda performance 的相關資料</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/" target="_blank" rel="noopener">Operating Lambda: Performance optimization – Part 1 | AWS Compute Blog</a></li>
+<li><a href="https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-2/" target="_blank" rel="noopener">Operating Lambda: Performance optimization – Part 2 | AWS Compute Blog</a></li>
+</ul>
+<h2 id="同場加映"><a href="#同場加映" class="headerlink" title="同場加映"></a>同場加映</h2><ul>
+<li><a href="https://serverlessland.com/" target="_blank" rel="noopener">Serverless Land | Resources for learning about AWS serverless technology</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/08/30/serverless-lambda-performance/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-08-18 </div>
+			<div class="article-title"><a href="/2022/08/18/lambda-custom-authorizer/" >lambda-custom-authorizer</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>近期在修改 api-gateway 中 custom authorizer 回傳的錯誤訊息。<br>原本是希望可以回傳 http status code 400 的錯誤，試了一段時間後。因為是以 custom authorizer 的方式實作，在 auth 中，僅能回傳 401 &amp; 403 的錯誤</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://aws.amazon.com/blogs/compute/introducing-custom-authorizers-in-amazon-api-gateway/" target="_blank" rel="noopener">Introducing custom authorizers in Amazon API Gateway | AWS Compute Blog</a> overall 的說明 blog</li>
+<li><a href="https://github.com/awslabs/aws-apigateway-lambda-authorizer-blueprints" target="_blank" rel="noopener">awslabs/aws-apigateway-lambda-authorizer-blueprints: Blueprints and examples for Lambda-based custom Authorizers for use in API Gateway.</a> 以這份參考，來修改 python custom authorizer 的實作</li>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html" target="_blank" rel="noopener">Use API Gateway Lambda authorizers - Amazon API Gateway</a> 使用 lambda 來實作 api-gateway custom authorizer 的說明文件</li>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html" target="_blank" rel="noopener">Output from an Amazon API Gateway Lambda authorizer - Amazon API Gateway</a> lambda authorizer 回傳的結果。<ul>
+<li>其中回傳 json 中，所帶的 <code>context</code> 資料，會傳到下個 lambda 的<code>event</code> 變數中</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2022/08/18/lambda-custom-authorizer/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-09-03 </div>
+			<div class="article-title"><a href="/2020/09/03/sentry-with-aws-lambda/" >sentry_with_aws_lambda</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>用 sentry 來收集 aws lambda 的exception資料，底下列出一些參考文件</p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><ul>
+<li><a href="https://www.fullstackpython.com/blog/monitor-python-functions-aws-lambda-sentry.html" target="_blank" rel="noopener">How to Monitor Python Functions on AWS Lambda with Sentry - Full Stack Python</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://sentry.io/for/pythonawslambda/" target="_blank" rel="noopener">AWS Lambda Error and Performance Monitoring</a></li>
+<li><a href="https://docs.sentry.io/platforms/python/guides/aws-lambda/" target="_blank" rel="noopener">Sentry - AWS Lambda</a></li>
+<li><a href="https://github.com/getsentry/examples/tree/master/aws-lambda/python" target="_blank" rel="noopener">examples/aws-lambda/python/</a></li>
+<li><a href="https://docs.sentry.io/platforms/python/migration/" target="_blank" rel="noopener">sentry-python SDK Migration Guide</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/09/03/sentry-with-aws-lambda/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/instapaper/">instapaper<span>1</span></a></li>
+		
+			<li><a href="/tags/framework/">framework<span>1</span></a></li>
+		
+			<li><a href="/tags/response/">response<span>1</span></a></li>
+		
+			<li><a href="/tags/unity/">unity<span>1</span></a></li>
+		
+			<li><a href="/tags/travis-ci/">travis-ci<span>2</span></a></li>
+		
+			<li><a href="/tags/post/">post<span>1</span></a></li>
+		
+			<li><a href="/tags/8bitdo/">8bitdo<span>1</span></a></li>
+		
+			<li><a href="/tags/lambda/">lambda<span>6</span></a></li>
+		
+			<li><a href="/tags/anomaly/">anomaly<span>1</span></a></li>
+		
+			<li><a href="/tags/timestamp/">timestamp<span>1</span></a></li>
+		
+			<li><a href="/tags/psql/">psql<span>1</span></a></li>
+		
+			<li><a href="/tags/cdk/">cdk<span>1</span></a></li>
+		
+			<li><a href="/tags/code-navigate/">code-navigate<span>1</span></a></li>
+		
+			<li><a href="/tags/blog/">blog<span>1</span></a></li>
+		
+			<li><a href="/tags/online/">online<span>1</span></a></li>
+		
+			<li><a href="/tags/quick-note/">quick-note<span>1</span></a></li>
+		
+			<li><a href="/tags/bi/">bi<span>2</span></a></li>
+		
+			<li><a href="/tags/design-pattern/">design-pattern<span>3</span></a></li>
+		
+			<li><a href="/tags/slide/">slide<span>1</span></a></li>
+		
+			<li><a href="/tags/python/">python<span>27</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

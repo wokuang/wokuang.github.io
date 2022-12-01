@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>step-function | 老布這麼說</title>
+  <meta name="author" content="老布">
+  
+  <meta name="description" content="寫寫有關修行、工作、生活的相關紀錄">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="老布這麼說"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">老布這麼說</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">step-function</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-02 </div>
+			<div class="article-title"><a href="/2021/12/02/aws-step-function-terraform/" >aws-step-function-terraform</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在 deploy aws 架構時，使用 terraform 是滿好的 IaC 方式，在這次的 project 中，想嘗試看看<br>因為這次嘗試的 aws service 較多，用 terraform 的方式，是屬於 deploy 進階部分，先將 google 到的資料記錄起來</p>
+<p>待完成目前的 job 後，再來看看如何自動化</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dev.to/thakurrishabh/aws-step-functions-workflow-for-an-etl-job-on-covid-19-and-deploying-it-with-terraform-cloudguruchallenge-series-part-2-3-6f7" target="_blank" rel="noopener">AWS Step Functions workflow for an ETL Job on COVID-19 and deploying it with Terraform (#CloudGuruChallenge Series) (Part 2/3) - DEV Community</a><br>到的資料記錄起來</li>
+</ul>
+<p>待完成目前的 job  後，再來看看如何自動化</p>
+<h2 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://dev.to/thakurrishabh/aws-step-functions-workflow-for-an-etl-job-on-covid-19-and-deploying-it-with-terraform-cloudguruchallenge-series-part-2-3-6f7" target="_blank" rel="noopener">AWS Step Functions workflow for an ETL Job on COVID-19 and deploying it with Terraform (#CloudGuruChallenge Series) (Part 2/3) - DEV Community</a></li>
+<li><a href="https://stackoverflow.com/questions/65580652/how-to-use-terraform-to-define-cloundwatch-event-rules-to-trigger-stepfunction-s" target="_blank" rel="noopener">amazon web services - How to use Terraform to define cloundwatch event rules to trigger StepFunction statemachine - Stack Overflow</a> 要用 Event Bridge (cloudwatch event) 來 trigger Step Function 需要自行增加的 iam_role 設定</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/02/aws-step-function-terraform/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-12-01 </div>
+			<div class="article-title"><a href="/2021/12/01/aws-s3-trigger-step-function/" >aws-s3-trigger-step-function</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>由 S3 trigger 到 step function 需要經過一個 event 的步驟，目前測試出來的方式為</p>
+<ol>
+<li>S3 設定送給 Event Bridge</li>
+<li>設定 Event Bridge rule</li>
+<li>Event Bridge 送給 step function</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-log-s3-data-events.html" target="_blank" rel="noopener">Tutorial: Log Amazon S3 object-level operations using EventBridge - Amazon EventBridge</a></li>
+<li><a href="https://medium.com/@bowbaq/trigger-an-ecs-job-when-an-s3-upload-completes-3559c44c37d1" target="_blank" rel="noopener">Trigger an ECS job when an S3 upload completes | by Maxime Bury | Medium</a></li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-cloudwatch-events-s3.html#tutorial-cloudwatch-events-s3-cwe" target="_blank" rel="noopener">Starting a State Machine Execution in Response to Amazon S3 Events - AWS Step Functions</a> 範例中是用 AWS CloudTrail 為中介，實作上是改用 Event Bridge 來做</li>
+<li><a href="https://noise.getoto.net/2021/11/30/new-use-amazon-s3-event-notifications-with-amazon-eventbridge/" target="_blank" rel="noopener">New – Use Amazon S3 Event Notifications with Amazon EventBridge | Noise</a> 參考這篇，微調後進行的設定</li>
+<li><a href="https://dev.to/ravimaharjan/eventbridge-as-s3-events-carrier-29bn" target="_blank" rel="noopener">AWS EventBridge vs S3 Notification - DEV Community</a></li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule" target="_blank" rel="noopener">terraform EventBridge</a></li>
+</ul>
+<h2 id="進階參考"><a href="#進階參考" class="headerlink" title="進階參考"></a>進階參考</h2><ul>
+<li><a href="https://awsfeed.com/uncategorized/build-a-serverless-event-driven-workflow-with-aws-glue-and-amazon-eventbridge" target="_blank" rel="noopener">Build a serverless event-driven workflow with AWS Glue and Amazon EventBridge - AWS Feed</a></li>
+<li><a href="https://aws.amazon.com/blogs/compute/introducing-the-amazon-eventbridge-service-integration-for-aws-step-functions/" target="_blank" rel="noopener">Introducing the Amazon EventBridge service integration for AWS Step Functions | AWS Compute Blog</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/12/01/aws-s3-trigger-step-function/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-11-19 </div>
+			<div class="article-title"><a href="/2021/11/19/serverless-step-function/" >serverless-step-function</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>最近工作上需要用到 step function，趁此機會來試試這一個 plugin 如何使用</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/serverless-operations/serverless-step-functions" target="_blank" rel="noopener">serverless-operations/serverless-step-functions: AWS Step Functions plugin for Serverless Framework ⚡️</a> - AWS Step Functions plugin for Serverless Framework</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/11/19/serverless-step-function/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2021-11-05 </div>
+			<div class="article-title"><a href="/2021/11/05/aws-ecs-step-function/" >aws-ecs-step-function</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在 ETL 設計的過程中，想要用 step-function 來執行 ECS task</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://iam-j.github.io/ecs/pipelines/aws-step-function-run/" target="_blank" rel="noopener">AWS Step function to run ECS task</a> * 這說明簡要，可以先看，之後再看複雜的 case</li>
+<li><a href="https://nuvalence.io/blog/aws-step-function-integration-with-ecs-or-fargate-tasks-data-in-and-out" target="_blank" rel="noopener">AWS Step Function Integration with ECS or Fargate Tasks: Data In and Out — Nuvalence</a></li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-ecs.html" target="_blank" rel="noopener">Manage Amazon ECS or Fargate Tasks with Step Functions - AWS Step Functions</a> * 這篇要看看</li>
+<li><a href="https://github.com/aws-samples/aws-stepfunctions-ecs-fargate-process" target="_blank" rel="noopener">aws-samples/aws-stepfunctions-ecs-fargate-process</a></li>
+<li><a href="https://github.com/aws-samples/amazon-ecs-and-aws-step-functions-design-patterns-starter-kit" target="_blank" rel="noopener">aws-samples/amazon-ecs-and-aws-step-functions-design-patterns-starter-kit</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2021/11/05/aws-ecs-step-function/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/security-group/">security_group<span>1</span></a></li>
+		
+			<li><a href="/tags/dimensional-mode/">dimensional_mode<span>1</span></a></li>
+		
+			<li><a href="/tags/repent/">repent<span>1</span></a></li>
+		
+			<li><a href="/tags/instapaper/">instapaper<span>1</span></a></li>
+		
+			<li><a href="/tags/gutenberg/">gutenberg<span>1</span></a></li>
+		
+			<li><a href="/tags/language/">language<span>1</span></a></li>
+		
+			<li><a href="/tags/bi/">bi<span>2</span></a></li>
+		
+			<li><a href="/tags/word/">word<span>1</span></a></li>
+		
+			<li><a href="/tags/kms/">kms<span>1</span></a></li>
+		
+			<li><a href="/tags/vmware/">vmware<span>1</span></a></li>
+		
+			<li><a href="/tags/ecs/">ecs<span>4</span></a></li>
+		
+			<li><a href="/tags/bluetooth/">bluetooth<span>1</span></a></li>
+		
+			<li><a href="/tags/office-365/">office-365<span>1</span></a></li>
+		
+			<li><a href="/tags/database/">database<span>1</span></a></li>
+		
+			<li><a href="/tags/peering/">peering<span>1</span></a></li>
+		
+			<li><a href="/tags/vespa/">vespa<span>1</span></a></li>
+		
+			<li><a href="/tags/https/">https<span>1</span></a></li>
+		
+			<li><a href="/tags/sql/">sql<span>1</span></a></li>
+		
+			<li><a href="/tags/gutenberg-block/">gutenberg-block<span>1</span></a></li>
+		
+			<li><a href="/tags/linux/">linux<span>2</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>334</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/12/01/python-timestamp/" ><i class="fa fa-file-o"></i>python-timestamp</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/29/aws-sns-sqs/" ><i class="fa fa-file-o"></i>aws-sns-sqs</a>
+      </li>
+    
+      <li>
+        <a href="/2022/11/23/software-architecture/" ><i class="fa fa-file-o"></i>software-architecture</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/31/aws-api-gateway-private/" ><i class="fa fa-file-o"></i>aws-api-gateway-private</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/27/aws-lambda-sqs/" ><i class="fa fa-file-o"></i>aws-lambda-sqs</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wokuang" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 老布
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>
